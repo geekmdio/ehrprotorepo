@@ -3,6 +3,9 @@ syntax = "proto3";
 package medicalissues;
 option go_package = "clinicalnotepb";
 
+// This will be a list of the most common medical issues. There are around 70,000
+// ICD-10 entries, and that's challenging to structure so v1 will be a minimalist
+// attempt.
 enum MedicalIssue {
     NO_MEDICAL_ISSUE = 0;
     ELEVATED_BLOOD_PRESSURE = 1;

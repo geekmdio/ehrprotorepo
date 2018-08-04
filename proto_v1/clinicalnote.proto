@@ -8,27 +8,29 @@ import "medicalissues.proto";
 
 message Note {
     int32 id = 1;
-    string guid = 2;
-    string visit_guid = 3;
-    string author_guid = 4;
-    google.protobuf.Timestamp date_created = 5;
-    NoteType type = 6;
-    repeated NoteFragment fragments = 7;
+    google.protobuf.Timestamp date_created = 2;
+    string note_guid = 3;
+    string visit_guid = 4;
+    string author_guid = 5;
+    string patient_guid = 6;
+    NoteType type = 7;
+    repeated NoteFragment fragments = 8;
 }
 
 message NoteFragment {
     int32 id = 1;
-    string guid = 2;
-    string visit_guid = 3;
-    string author_guid = 4;
-    string note_guid = 5;
-    google.protobuf.Timestamp date_created = 6;
-    medicalissues.MedicalIssue issue = 7;
-    string icd_10_code = 8;
-    NoteFragmentStatus status = 9;
-    FragmentPriority priority = 10;
-    FragmentTopic topic = 11;
-    string markdown_content = 12;
+    google.protobuf.Timestamp date_created = 2;
+    string note_fragment_guid = 3;
+    string note_guid = 4;
+    string visit_guid = 5;
+    string author_guid = 6;
+    string patient_guid = 7;
+    medicalissues.MedicalIssue issue = 8;
+    string icd_10_code = 9;
+    NoteFragmentStatus status = 10;
+    FragmentPriority priority = 11;
+    FragmentTopic topic = 12;
+    string markdown_content = 13;
 }
 
 enum FragmentTopic {

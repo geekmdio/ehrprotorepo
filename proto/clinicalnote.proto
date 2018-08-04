@@ -1,0 +1,70 @@
+syntax = "proto3";
+
+package clinicalnote;
+option go_package = "clinicalnotepb";
+
+import "google/protobuf/timestamp.proto";
+import "medicalissues.proto";
+
+message Note {
+    int32 id = 1;
+    string guid = 2;
+    string visit_guid = 3;
+    string author_guid = 4;
+    google.protobuf.Timestamp date_created = 5;
+    NoteType type = 6;
+    repeated NoteFragment fragments = 7;
+}
+
+message NoteFragment {
+    int32 id = 1;
+    string guid = 2;
+    string visit_guid = 3;
+    string author_guid = 4;
+    string note_guid = 5;
+    google.protobuf.Timestamp date_created = 6;
+    medicalissues.MedicalIssue issue = 7;
+    string icd_10_code = 8;
+    NoteFragmentStatus status = 9;
+    FragmentPriority priority = 10;
+    FragmentTopic topic = 11;
+    string markdown_content = 12;
+}
+
+enum FragmentTopic {
+    NO_TOPIC = 0;
+    SUBJECTIVE = 1;
+    MEDICAL_HISTORY = 2;
+    ALLERGIES = 3;
+    MEDICATIONS = 4;
+    FAMILY_HISTORY = 5;
+    SOCIAL_HISTORY = 6;
+    VITALS = 7;
+    PHYSICAL_EXAM = 8;
+    MEDICAL_PROBLEM = 9;
+}
+
+enum FragmentPriority {
+    NO_PRIORITY = 0;
+    HIGH = 1;
+    NORMAL = 2;
+    LOW = 3;
+}
+
+enum NoteFragmentStatus {
+    NO_STATUS = 0;
+    INCOMPLETE = 1;
+    ACTIVE = 2;
+    REPLACED = 3;
+}
+
+enum NoteType {
+    NO_NOTE_TYPE = 0;
+    FOLLOW_UP = 1;
+    PHONE_CALL = 2;
+    CONTINUED_CARE_DOCUMENTATION = 4;
+    REFILL_DOCUMENTATION = 5;
+    INTAKE = 6;
+    PROCEDURE = 7;
+    HISTORY_AND_PHYSICAL = 8;
+}

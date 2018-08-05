@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package ehr.clinicalnote;
+package ehr.note;
 option go_package = "ehrpb";
 
 import "google/protobuf/timestamp.proto";

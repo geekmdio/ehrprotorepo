@@ -7,12 +7,12 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.ehr.clinicalnote.NoteType');
+goog.provide('proto.ehr.note.NoteType');
 
 /**
  * @enum {number}
  */
-proto.ehr.clinicalnote.NoteType = {
+proto.ehr.note.NoteType = {
   NO_NOTE_TYPE: 0,
   FOLLOW_UP: 1,
   PHONE_CALL: 2,

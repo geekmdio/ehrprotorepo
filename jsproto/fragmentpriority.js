@@ -7,12 +7,12 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.ehr.clinicalnote.FragmentPriority');
+goog.provide('proto.ehr.note.FragmentPriority');
 
 /**
  * @enum {number}
  */
-proto.ehr.clinicalnote.FragmentPriority = {
+proto.ehr.note.FragmentPriority = {
   NO_PRIORITY: 0,
   HIGH: 1,
   NORMAL: 2,

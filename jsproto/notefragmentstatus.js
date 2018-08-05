@@ -7,12 +7,12 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.ehr.clinicalnote.NoteFragmentStatus');
+goog.provide('proto.ehr.note.NoteFragmentStatus');
 
 /**
  * @enum {number}
  */
-proto.ehr.clinicalnote.NoteFragmentStatus = {
+proto.ehr.note.NoteFragmentStatus = {
   NO_STATUS: 0,
   INCOMPLETE: 1,
   ACTIVE: 2,

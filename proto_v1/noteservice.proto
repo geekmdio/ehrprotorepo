@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package ehr.noteservice;
+option go_package = "ehrpb";
+
+import "note.proto";
+
+message CreateNoteRequest {
+    note.Note note = 1;
+}
+
+message CreateNoteResponse {
+    
+}
+
+message DeleteNoteRequest {
+
+}
+
+message DeleteNoteResponse {
+
+}
+
+message RetrieveNoteRequest {
+
+}
+
+message RetrieveNoteResponse {
+
+}
+
+message FindNoteRequest {
+
+}
+
+message FindNoteResponse {
+
+}
+
+message UpdateNoteRequest {
+
+}
+
+message UpdateNoteResponse {
+
+}
+
+
+service NoteService {
+    rpc NewNote(CreateNoteRequest) returns (CreateNoteResponse) {};
+
+    rpc DeleteNote(DeleteNoteRequest) returns (DeleteNoteResponse) {};
+
+    rpc RetrieveNote(RetrieveNoteRequest) returns (RetrieveNoteResponse) {};
+
+    rpc FindNote(FindNoteRequest) returns (FindNoteResponse) {};
+
+    rpc UpdateNote(UpdateNoteRequest) returns (UpdateNoteResponse) {};
+}

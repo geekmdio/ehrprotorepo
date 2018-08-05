@@ -7,12 +7,12 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.ehr.clinicalnote.FragmentTopic');
+goog.provide('proto.ehr.note.FragmentTopic');
 
 /**
  * @enum {number}
  */
-proto.ehr.clinicalnote.FragmentTopic = {
+proto.ehr.note.FragmentTopic = {
   NO_TOPIC: 0,
   SUBJECTIVE: 1,
   MEDICAL_HISTORY: 2,

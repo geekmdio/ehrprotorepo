@@ -12,6 +12,8 @@ goog.provide('proto.ehr.noteservice.CreateNoteResponse');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
+goog.require('proto.ehr.note.Note');
+goog.require('proto.ehr.noteservice.NoteServiceResponseStatus');
 
 
 /**
@@ -60,7 +62,8 @@ proto.ehr.noteservice.CreateNoteResponse.prototype.toObject = function(opt_inclu
  */
 proto.ehr.noteservice.CreateNoteResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-
+    status: (f = msg.getStatus()) && proto.ehr.noteservice.NoteServiceResponseStatus.toObject(includeInstance, f),
+    note: (f = msg.getNote()) && proto.ehr.note.Note.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -97,6 +100,16 @@ proto.ehr.noteservice.CreateNoteResponse.deserializeBinaryFromReader = function(
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 1:
+      var value = new proto.ehr.noteservice.NoteServiceResponseStatus;
+      reader.readMessage(value,proto.ehr.noteservice.NoteServiceResponseStatus.deserializeBinaryFromReader);
+      msg.setStatus(value);
+      break;
+    case 2:
+      var value = new proto.ehr.note.Note;
+      reader.readMessage(value,proto.ehr.note.Note.deserializeBinaryFromReader);
+      msg.setNote(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -126,6 +139,82 @@ proto.ehr.noteservice.CreateNoteResponse.prototype.serializeBinary = function() 
  */
 proto.ehr.noteservice.CreateNoteResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getStatus();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.ehr.noteservice.NoteServiceResponseStatus.serializeBinaryToWriter
+    );
+  }
+  f = message.getNote();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.ehr.note.Note.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional NoteServiceResponseStatus status = 1;
+ * @return {?proto.ehr.noteservice.NoteServiceResponseStatus}
+ */
+proto.ehr.noteservice.CreateNoteResponse.prototype.getStatus = function() {
+  return /** @type{?proto.ehr.noteservice.NoteServiceResponseStatus} */ (
+    jspb.Message.getWrapperField(this, proto.ehr.noteservice.NoteServiceResponseStatus, 1));
+};
+
+
+/** @param {?proto.ehr.noteservice.NoteServiceResponseStatus|undefined} value */
+proto.ehr.noteservice.CreateNoteResponse.prototype.setStatus = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.ehr.noteservice.CreateNoteResponse.prototype.clearStatus = function() {
+  this.setStatus(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.ehr.noteservice.CreateNoteResponse.prototype.hasStatus = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional ehr.note.Note note = 2;
+ * @return {?proto.ehr.note.Note}
+ */
+proto.ehr.noteservice.CreateNoteResponse.prototype.getNote = function() {
+  return /** @type{?proto.ehr.note.Note} */ (
+    jspb.Message.getWrapperField(this, proto.ehr.note.Note, 2));
+};
+
+
+/** @param {?proto.ehr.note.Note|undefined} value */
+proto.ehr.noteservice.CreateNoteResponse.prototype.setNote = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.ehr.noteservice.CreateNoteResponse.prototype.clearNote = function() {
+  this.setNote(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.ehr.noteservice.CreateNoteResponse.prototype.hasNote = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 

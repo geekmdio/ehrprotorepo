@@ -7,7 +7,7 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.ehr.noteservice.DeleteNoteRequest');
+goog.provide('proto.ehr.noteservice.NoteServiceResponseStatus');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -24,12 +24,12 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ehr.noteservice.DeleteNoteRequest = function(opt_data) {
+proto.ehr.noteservice.NoteServiceResponseStatus = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ehr.noteservice.DeleteNoteRequest, jspb.Message);
+goog.inherits(proto.ehr.noteservice.NoteServiceResponseStatus, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.ehr.noteservice.DeleteNoteRequest.displayName = 'proto.ehr.noteservice.DeleteNoteRequest';
+  proto.ehr.noteservice.NoteServiceResponseStatus.displayName = 'proto.ehr.noteservice.NoteServiceResponseStatus';
 }
 
 
@@ -44,8 +44,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ehr.noteservice.DeleteNoteRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ehr.noteservice.DeleteNoteRequest.toObject(opt_includeInstance, this);
+proto.ehr.noteservice.NoteServiceResponseStatus.prototype.toObject = function(opt_includeInstance) {
+  return proto.ehr.noteservice.NoteServiceResponseStatus.toObject(opt_includeInstance, this);
 };
 
 
@@ -54,13 +54,14 @@ proto.ehr.noteservice.DeleteNoteRequest.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ehr.noteservice.DeleteNoteRequest} msg The msg instance to transform.
+ * @param {!proto.ehr.noteservice.NoteServiceResponseStatus} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ehr.noteservice.DeleteNoteRequest.toObject = function(includeInstance, msg) {
+proto.ehr.noteservice.NoteServiceResponseStatus.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    httpCode: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    message: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -74,23 +75,23 @@ proto.ehr.noteservice.DeleteNoteRequest.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ehr.noteservice.DeleteNoteRequest}
+ * @return {!proto.ehr.noteservice.NoteServiceResponseStatus}
  */
-proto.ehr.noteservice.DeleteNoteRequest.deserializeBinary = function(bytes) {
+proto.ehr.noteservice.NoteServiceResponseStatus.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ehr.noteservice.DeleteNoteRequest;
-  return proto.ehr.noteservice.DeleteNoteRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ehr.noteservice.NoteServiceResponseStatus;
+  return proto.ehr.noteservice.NoteServiceResponseStatus.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ehr.noteservice.DeleteNoteRequest} msg The message object to deserialize into.
+ * @param {!proto.ehr.noteservice.NoteServiceResponseStatus} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ehr.noteservice.DeleteNoteRequest}
+ * @return {!proto.ehr.noteservice.NoteServiceResponseStatus}
  */
-proto.ehr.noteservice.DeleteNoteRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.ehr.noteservice.NoteServiceResponseStatus.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -99,7 +100,11 @@ proto.ehr.noteservice.DeleteNoteRequest.deserializeBinaryFromReader = function(m
     switch (field) {
     case 1:
       var value = /** @type {number} */ (reader.readInt32());
-      msg.setId(value);
+      msg.setHttpCode(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setMessage(value);
       break;
     default:
       reader.skipField();
@@ -114,9 +119,9 @@ proto.ehr.noteservice.DeleteNoteRequest.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ehr.noteservice.DeleteNoteRequest.prototype.serializeBinary = function() {
+proto.ehr.noteservice.NoteServiceResponseStatus.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ehr.noteservice.DeleteNoteRequest.serializeBinaryToWriter(this, writer);
+  proto.ehr.noteservice.NoteServiceResponseStatus.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -124,16 +129,23 @@ proto.ehr.noteservice.DeleteNoteRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ehr.noteservice.DeleteNoteRequest} message
+ * @param {!proto.ehr.noteservice.NoteServiceResponseStatus} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ehr.noteservice.DeleteNoteRequest.serializeBinaryToWriter = function(message, writer) {
+proto.ehr.noteservice.NoteServiceResponseStatus.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getId();
+  f = message.getHttpCode();
   if (f !== 0) {
     writer.writeInt32(
       1,
+      f
+    );
+  }
+  f = message.getMessage();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
       f
     );
   }
@@ -141,17 +153,32 @@ proto.ehr.noteservice.DeleteNoteRequest.serializeBinaryToWriter = function(messa
 
 
 /**
- * optional int32 id = 1;
+ * optional int32 http_code = 1;
  * @return {number}
  */
-proto.ehr.noteservice.DeleteNoteRequest.prototype.getId = function() {
+proto.ehr.noteservice.NoteServiceResponseStatus.prototype.getHttpCode = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /** @param {number} value */
-proto.ehr.noteservice.DeleteNoteRequest.prototype.setId = function(value) {
+proto.ehr.noteservice.NoteServiceResponseStatus.prototype.setHttpCode = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+/**
+ * optional string message = 2;
+ * @return {string}
+ */
+proto.ehr.noteservice.NoteServiceResponseStatus.prototype.getMessage = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.ehr.noteservice.NoteServiceResponseStatus.prototype.setMessage = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 

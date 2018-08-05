@@ -60,7 +60,10 @@ proto.ehr.noteservice.FindNoteRequest.prototype.toObject = function(opt_includeI
  */
 proto.ehr.noteservice.FindNoteRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-
+    searchTerms: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    authorGuid: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    patientGuid: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    visitGuid: jspb.Message.getFieldWithDefault(msg, 4, "")
   };
 
   if (includeInstance) {
@@ -97,6 +100,22 @@ proto.ehr.noteservice.FindNoteRequest.deserializeBinaryFromReader = function(msg
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSearchTerms(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setAuthorGuid(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPatientGuid(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setVisitGuid(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -126,6 +145,94 @@ proto.ehr.noteservice.FindNoteRequest.prototype.serializeBinary = function() {
  */
 proto.ehr.noteservice.FindNoteRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getSearchTerms();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getAuthorGuid();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+  f = message.getPatientGuid();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+  f = message.getVisitGuid();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string search_terms = 1;
+ * @return {string}
+ */
+proto.ehr.noteservice.FindNoteRequest.prototype.getSearchTerms = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.ehr.noteservice.FindNoteRequest.prototype.setSearchTerms = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string author_guid = 2;
+ * @return {string}
+ */
+proto.ehr.noteservice.FindNoteRequest.prototype.getAuthorGuid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.ehr.noteservice.FindNoteRequest.prototype.setAuthorGuid = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional string patient_guid = 3;
+ * @return {string}
+ */
+proto.ehr.noteservice.FindNoteRequest.prototype.getPatientGuid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/** @param {string} value */
+proto.ehr.noteservice.FindNoteRequest.prototype.setPatientGuid = function(value) {
+  jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional string visit_guid = 4;
+ * @return {string}
+ */
+proto.ehr.noteservice.FindNoteRequest.prototype.getVisitGuid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/** @param {string} value */
+proto.ehr.noteservice.FindNoteRequest.prototype.setVisitGuid = function(value) {
+  jspb.Message.setProto3StringField(this, 4, value);
 };
 
 

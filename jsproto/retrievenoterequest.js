@@ -60,7 +60,7 @@ proto.ehr.noteservice.RetrieveNoteRequest.prototype.toObject = function(opt_incl
  */
 proto.ehr.noteservice.RetrieveNoteRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-
+    id: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -97,6 +97,10 @@ proto.ehr.noteservice.RetrieveNoteRequest.deserializeBinaryFromReader = function
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setId(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -126,6 +130,28 @@ proto.ehr.noteservice.RetrieveNoteRequest.prototype.serializeBinary = function()
  */
 proto.ehr.noteservice.RetrieveNoteRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getId();
+  if (f !== 0) {
+    writer.writeInt32(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional int32 id = 1;
+ * @return {number}
+ */
+proto.ehr.noteservice.RetrieveNoteRequest.prototype.getId = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {number} value */
+proto.ehr.noteservice.RetrieveNoteRequest.prototype.setId = function(value) {
+  jspb.Message.setProto3IntField(this, 1, value);
 };
 
 

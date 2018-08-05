@@ -12,6 +12,7 @@ goog.provide('proto.ehr.noteservice.UpdateNoteRequest');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
+goog.require('proto.ehr.note.Note');
 
 
 /**
@@ -60,7 +61,8 @@ proto.ehr.noteservice.UpdateNoteRequest.prototype.toObject = function(opt_includ
  */
 proto.ehr.noteservice.UpdateNoteRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-
+    id: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    note: (f = msg.getNote()) && proto.ehr.note.Note.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -97,6 +99,15 @@ proto.ehr.noteservice.UpdateNoteRequest.deserializeBinaryFromReader = function(m
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setId(value);
+      break;
+    case 2:
+      var value = new proto.ehr.note.Note;
+      reader.readMessage(value,proto.ehr.note.Note.deserializeBinaryFromReader);
+      msg.setNote(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -126,6 +137,66 @@ proto.ehr.noteservice.UpdateNoteRequest.prototype.serializeBinary = function() {
  */
 proto.ehr.noteservice.UpdateNoteRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getId();
+  if (f !== 0) {
+    writer.writeInt32(
+      1,
+      f
+    );
+  }
+  f = message.getNote();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.ehr.note.Note.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional int32 id = 1;
+ * @return {number}
+ */
+proto.ehr.noteservice.UpdateNoteRequest.prototype.getId = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {number} value */
+proto.ehr.noteservice.UpdateNoteRequest.prototype.setId = function(value) {
+  jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+/**
+ * optional ehr.note.Note note = 2;
+ * @return {?proto.ehr.note.Note}
+ */
+proto.ehr.noteservice.UpdateNoteRequest.prototype.getNote = function() {
+  return /** @type{?proto.ehr.note.Note} */ (
+    jspb.Message.getWrapperField(this, proto.ehr.note.Note, 2));
+};
+
+
+/** @param {?proto.ehr.note.Note|undefined} value */
+proto.ehr.noteservice.UpdateNoteRequest.prototype.setNote = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.ehr.noteservice.UpdateNoteRequest.prototype.clearNote = function() {
+  this.setNote(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.ehr.noteservice.UpdateNoteRequest.prototype.hasNote = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 

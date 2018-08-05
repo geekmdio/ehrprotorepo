@@ -7,6 +7,11 @@ import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
 
+import (
+	context "golang.org/x/net/context"
+	grpc "google.golang.org/grpc"
+)
+
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
 var _ = fmt.Errorf
@@ -496,6 +501,210 @@ func init() {
 	proto.RegisterType((*FindNoteResponse)(nil), "ehr.noteservice.FindNoteResponse")
 	proto.RegisterType((*UpdateNoteRequest)(nil), "ehr.noteservice.UpdateNoteRequest")
 	proto.RegisterType((*UpdateNoteResponse)(nil), "ehr.noteservice.UpdateNoteResponse")
+}
+
+// Reference imports to suppress errors if they are not otherwise used.
+var _ context.Context
+var _ grpc.ClientConn
+
+// This is a compile-time assertion to ensure that this generated file
+// is compatible with the grpc package it is being compiled against.
+const _ = grpc.SupportPackageIsVersion4
+
+// NoteServiceClient is the client API for NoteService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type NoteServiceClient interface {
+	NewNote(ctx context.Context, in *CreateNoteRequest, opts ...grpc.CallOption) (*CreateNoteResponse, error)
+	DeleteNote(ctx context.Context, in *DeleteNoteRequest, opts ...grpc.CallOption) (*DeleteNoteResponse, error)
+	RetrieveNote(ctx context.Context, in *RetrieveNoteRequest, opts ...grpc.CallOption) (*RetrieveNoteResponse, error)
+	FindNote(ctx context.Context, in *FindNoteRequest, opts ...grpc.CallOption) (*FindNoteResponse, error)
+	UpdateNote(ctx context.Context, in *UpdateNoteRequest, opts ...grpc.CallOption) (*UpdateNoteResponse, error)
+}
+
+type noteServiceClient struct {
+	cc *grpc.ClientConn
+}
+
+func NewNoteServiceClient(cc *grpc.ClientConn) NoteServiceClient {
+	return &noteServiceClient{cc}
+}
+
+func (c *noteServiceClient) NewNote(ctx context.Context, in *CreateNoteRequest, opts ...grpc.CallOption) (*CreateNoteResponse, error) {
+	out := new(CreateNoteResponse)
+	err := c.cc.Invoke(ctx, "/ehr.noteservice.NoteService/NewNote", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *noteServiceClient) DeleteNote(ctx context.Context, in *DeleteNoteRequest, opts ...grpc.CallOption) (*DeleteNoteResponse, error) {
+	out := new(DeleteNoteResponse)
+	err := c.cc.Invoke(ctx, "/ehr.noteservice.NoteService/DeleteNote", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *noteServiceClient) RetrieveNote(ctx context.Context, in *RetrieveNoteRequest, opts ...grpc.CallOption) (*RetrieveNoteResponse, error) {
+	out := new(RetrieveNoteResponse)
+	err := c.cc.Invoke(ctx, "/ehr.noteservice.NoteService/RetrieveNote", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *noteServiceClient) FindNote(ctx context.Context, in *FindNoteRequest, opts ...grpc.CallOption) (*FindNoteResponse, error) {
+	out := new(FindNoteResponse)
+	err := c.cc.Invoke(ctx, "/ehr.noteservice.NoteService/FindNote", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *noteServiceClient) UpdateNote(ctx context.Context, in *UpdateNoteRequest, opts ...grpc.CallOption) (*UpdateNoteResponse, error) {
+	out := new(UpdateNoteResponse)
+	err := c.cc.Invoke(ctx, "/ehr.noteservice.NoteService/UpdateNote", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// NoteServiceServer is the server API for NoteService service.
+type NoteServiceServer interface {
+	NewNote(context.Context, *CreateNoteRequest) (*CreateNoteResponse, error)
+	DeleteNote(context.Context, *DeleteNoteRequest) (*DeleteNoteResponse, error)
+	RetrieveNote(context.Context, *RetrieveNoteRequest) (*RetrieveNoteResponse, error)
+	FindNote(context.Context, *FindNoteRequest) (*FindNoteResponse, error)
+	UpdateNote(context.Context, *UpdateNoteRequest) (*UpdateNoteResponse, error)
+}
+
+func RegisterNoteServiceServer(s *grpc.Server, srv NoteServiceServer) {
+	s.RegisterService(&_NoteService_serviceDesc, srv)
+}
+
+func _NoteService_NewNote_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateNoteRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NoteServiceServer).NewNote(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/ehr.noteservice.NoteService/NewNote",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NoteServiceServer).NewNote(ctx, req.(*CreateNoteRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _NoteService_DeleteNote_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DeleteNoteRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NoteServiceServer).DeleteNote(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/ehr.noteservice.NoteService/DeleteNote",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NoteServiceServer).DeleteNote(ctx, req.(*DeleteNoteRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _NoteService_RetrieveNote_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RetrieveNoteRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NoteServiceServer).RetrieveNote(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/ehr.noteservice.NoteService/RetrieveNote",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NoteServiceServer).RetrieveNote(ctx, req.(*RetrieveNoteRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _NoteService_FindNote_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(FindNoteRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NoteServiceServer).FindNote(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/ehr.noteservice.NoteService/FindNote",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NoteServiceServer).FindNote(ctx, req.(*FindNoteRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _NoteService_UpdateNote_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UpdateNoteRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NoteServiceServer).UpdateNote(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/ehr.noteservice.NoteService/UpdateNote",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NoteServiceServer).UpdateNote(ctx, req.(*UpdateNoteRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _NoteService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "ehr.noteservice.NoteService",
+	HandlerType: (*NoteServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "NewNote",
+			Handler:    _NoteService_NewNote_Handler,
+		},
+		{
+			MethodName: "DeleteNote",
+			Handler:    _NoteService_DeleteNote_Handler,
+		},
+		{
+			MethodName: "RetrieveNote",
+			Handler:    _NoteService_RetrieveNote_Handler,
+		},
+		{
+			MethodName: "FindNote",
+			Handler:    _NoteService_FindNote_Handler,
+		},
+		{
+			MethodName: "UpdateNote",
+			Handler:    _NoteService_UpdateNote_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "noteservice.proto",
 }
 
 func init() { proto.RegisterFile("noteservice.proto", fileDescriptor_noteservice_33774777f008d1d7) }

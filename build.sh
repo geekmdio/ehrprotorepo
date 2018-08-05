@@ -46,7 +46,7 @@ compile_for () {
         echo "Running the protocol buffers compiler to make $1 files in the $2."
         case $1 in
             go)
-                protoc -I=proto_v1  proto_v1/*.proto --go_out=$2
+                protoc -I=proto_v1  proto_v1/*.proto --go_out=plugins=grpc:$2
                 ;;
             csharp)
                 protoc -I=proto_v1  proto_v1/*.proto --csharp_out=$2

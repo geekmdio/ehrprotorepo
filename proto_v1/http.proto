@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package ehr.http;
+option go_package = "ehrpb";
+
+// Sticking to only HTTP status codes that can be mapped to a gRPC code.
+enum StatusCodes {
+    OK = 0; // OK | 200
+    NOT_MODIFIED = 1; // CANCELLED | 304
+    NOT_AUTHORIZED = 3; // PERMISSION_DENIED or UNAUTHENTICATED | 401
+    NOT_FOUND = 4; // NOT_FOUND | 404
+    CONFLICT = 5; // ALREADY_EXISTS | 409
+    INTERNAL_SERVER_ERROR = 6; // INTERNAL | 500
+    SERVICE_UNAVAILABLE = 7; // UNAVAILABLE | 503
+}
+    // https://github.com/grpc/grpc-go/blob/master/codes/codes.go
+    // UNKONWN
+    // INVALID
+    // DEADLINE_EXCEEDED
+    // RESOURCE_EXHAUSTED
+    // FAILED_PRECONDITION
+    // ABORTED
+    // OUT_OF_RANGE
+    // UNIMPLEMENTED
+    // DATA_LOSS

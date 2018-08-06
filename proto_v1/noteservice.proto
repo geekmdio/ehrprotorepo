@@ -34,6 +34,7 @@ message RetrieveNoteRequest {
 
 message RetrieveNoteResponse {
     NoteServiceResponseStatus status = 1;
+    note.Note note = 2;
 }
 
 message FindNoteRequest {
@@ -45,6 +46,7 @@ message FindNoteRequest {
 
 message FindNoteResponse {
     NoteServiceResponseStatus status = 1;
+    repeated note.Note note = 2;
 }
 
 message UpdateNoteRequest {

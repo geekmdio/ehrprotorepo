@@ -12,6 +12,7 @@ goog.provide('proto.ehr.noteservice.FindNoteResponse');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
+goog.require('proto.ehr.note.Note');
 goog.require('proto.ehr.noteservice.NoteServiceResponseStatus');
 
 
@@ -26,12 +27,19 @@ goog.require('proto.ehr.noteservice.NoteServiceResponseStatus');
  * @constructor
  */
 proto.ehr.noteservice.FindNoteResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.ehr.noteservice.FindNoteResponse.repeatedFields_, null);
 };
 goog.inherits(proto.ehr.noteservice.FindNoteResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ehr.noteservice.FindNoteResponse.displayName = 'proto.ehr.noteservice.FindNoteResponse';
 }
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.ehr.noteservice.FindNoteResponse.repeatedFields_ = [2];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -61,7 +69,9 @@ proto.ehr.noteservice.FindNoteResponse.prototype.toObject = function(opt_include
  */
 proto.ehr.noteservice.FindNoteResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    status: (f = msg.getStatus()) && proto.ehr.noteservice.NoteServiceResponseStatus.toObject(includeInstance, f)
+    status: (f = msg.getStatus()) && proto.ehr.noteservice.NoteServiceResponseStatus.toObject(includeInstance, f),
+    noteList: jspb.Message.toObjectList(msg.getNoteList(),
+    proto.ehr.note.Note.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -103,6 +113,11 @@ proto.ehr.noteservice.FindNoteResponse.deserializeBinaryFromReader = function(ms
       reader.readMessage(value,proto.ehr.noteservice.NoteServiceResponseStatus.deserializeBinaryFromReader);
       msg.setStatus(value);
       break;
+    case 2:
+      var value = new proto.ehr.note.Note;
+      reader.readMessage(value,proto.ehr.note.Note.deserializeBinaryFromReader);
+      msg.addNote(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -140,6 +155,14 @@ proto.ehr.noteservice.FindNoteResponse.serializeBinaryToWriter = function(messag
       proto.ehr.noteservice.NoteServiceResponseStatus.serializeBinaryToWriter
     );
   }
+  f = message.getNoteList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.ehr.note.Note.serializeBinaryToWriter
+    );
+  }
 };
 
 
@@ -170,6 +193,37 @@ proto.ehr.noteservice.FindNoteResponse.prototype.clearStatus = function() {
  */
 proto.ehr.noteservice.FindNoteResponse.prototype.hasStatus = function() {
   return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * repeated ehr.note.Note note = 2;
+ * @return {!Array<!proto.ehr.note.Note>}
+ */
+proto.ehr.noteservice.FindNoteResponse.prototype.getNoteList = function() {
+  return /** @type{!Array<!proto.ehr.note.Note>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ehr.note.Note, 2));
+};
+
+
+/** @param {!Array<!proto.ehr.note.Note>} value */
+proto.ehr.noteservice.FindNoteResponse.prototype.setNoteList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.ehr.note.Note=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ehr.note.Note}
+ */
+proto.ehr.noteservice.FindNoteResponse.prototype.addNote = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.ehr.note.Note, opt_index);
+};
+
+
+proto.ehr.noteservice.FindNoteResponse.prototype.clearNoteList = function() {
+  this.setNoteList([]);
 };
 
 

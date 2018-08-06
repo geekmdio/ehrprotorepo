@@ -12,6 +12,7 @@ goog.provide('proto.ehr.noteservice.RetrieveNoteResponse');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
+goog.require('proto.ehr.note.Note');
 goog.require('proto.ehr.noteservice.NoteServiceResponseStatus');
 
 
@@ -61,7 +62,8 @@ proto.ehr.noteservice.RetrieveNoteResponse.prototype.toObject = function(opt_inc
  */
 proto.ehr.noteservice.RetrieveNoteResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    status: (f = msg.getStatus()) && proto.ehr.noteservice.NoteServiceResponseStatus.toObject(includeInstance, f)
+    status: (f = msg.getStatus()) && proto.ehr.noteservice.NoteServiceResponseStatus.toObject(includeInstance, f),
+    note: (f = msg.getNote()) && proto.ehr.note.Note.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -103,6 +105,11 @@ proto.ehr.noteservice.RetrieveNoteResponse.deserializeBinaryFromReader = functio
       reader.readMessage(value,proto.ehr.noteservice.NoteServiceResponseStatus.deserializeBinaryFromReader);
       msg.setStatus(value);
       break;
+    case 2:
+      var value = new proto.ehr.note.Note;
+      reader.readMessage(value,proto.ehr.note.Note.deserializeBinaryFromReader);
+      msg.setNote(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -140,6 +147,14 @@ proto.ehr.noteservice.RetrieveNoteResponse.serializeBinaryToWriter = function(me
       proto.ehr.noteservice.NoteServiceResponseStatus.serializeBinaryToWriter
     );
   }
+  f = message.getNote();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.ehr.note.Note.serializeBinaryToWriter
+    );
+  }
 };
 
 
@@ -170,6 +185,36 @@ proto.ehr.noteservice.RetrieveNoteResponse.prototype.clearStatus = function() {
  */
 proto.ehr.noteservice.RetrieveNoteResponse.prototype.hasStatus = function() {
   return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional ehr.note.Note note = 2;
+ * @return {?proto.ehr.note.Note}
+ */
+proto.ehr.noteservice.RetrieveNoteResponse.prototype.getNote = function() {
+  return /** @type{?proto.ehr.note.Note} */ (
+    jspb.Message.getWrapperField(this, proto.ehr.note.Note, 2));
+};
+
+
+/** @param {?proto.ehr.note.Note|undefined} value */
+proto.ehr.noteservice.RetrieveNoteResponse.prototype.setNote = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.ehr.noteservice.RetrieveNoteResponse.prototype.clearNote = function() {
+  this.setNote(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.ehr.noteservice.RetrieveNoteResponse.prototype.hasNote = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 

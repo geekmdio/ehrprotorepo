@@ -4,9 +4,10 @@ package ehr.noteservice;
 option go_package = "ehrpb";
 
 import "note.proto";
+import "http.proto";
 
 message NoteServiceResponseStatus {
-    int32 http_code = 1;
+    http.StatusCodes http_code = 1;
     string message = 2;
 }
 

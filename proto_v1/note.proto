@@ -22,12 +22,13 @@ message NoteFragment {
     google.protobuf.Timestamp date_created = 2;
     string note_fragment_guid = 3;
     string note_guid = 4;
-    medicalissues.MedicalIssue issue = 8;
-    string icd_10_code = 9;
-    NoteFragmentStatus status = 10;
-    FragmentPriority priority = 11;
-    FragmentTopic topic = 12;
-    string markdown_content = 13;
+    string icd_10_code = 5; // recommend using watson api to determine from description
+    string icd_10_long = 6; // recommend using watson api to determine from description
+    string description = 7; // free text, human readable
+    NoteFragmentStatus status = 8;
+    FragmentPriority priority = 9;
+    FragmentTopic topic = 10;
+    string markdown_content = 11;
 }
 
 enum FragmentTopic {

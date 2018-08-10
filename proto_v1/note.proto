@@ -15,6 +15,7 @@ message Note {
     string patient_guid = 6;
     NoteType type = 7;
     repeated NoteFragment fragments = 8;
+    repeated string tags = 9;
 }
 
 message NoteFragment {
@@ -29,6 +30,7 @@ message NoteFragment {
     FragmentPriority priority = 9;
     FragmentTopic topic = 10;
     string markdown_content = 11;
+    repeated string tags = 12;
 }
 
 enum FragmentTopic {

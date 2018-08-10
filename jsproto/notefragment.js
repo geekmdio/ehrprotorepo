@@ -69,9 +69,6 @@ proto.ehr.note.NoteFragment.toObject = function(includeInstance, msg) {
     dateCreated: (f = msg.getDateCreated()) && proto.google.protobuf.Timestamp.toObject(includeInstance, f),
     noteFragmentGuid: jspb.Message.getFieldWithDefault(msg, 3, ""),
     noteGuid: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    visitGuid: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    authorGuid: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    patientGuid: jspb.Message.getFieldWithDefault(msg, 7, ""),
     issue: jspb.Message.getFieldWithDefault(msg, 8, 0),
     icd10Code: jspb.Message.getFieldWithDefault(msg, 9, ""),
     status: jspb.Message.getFieldWithDefault(msg, 10, 0),
@@ -130,18 +127,6 @@ proto.ehr.note.NoteFragment.deserializeBinaryFromReader = function(msg, reader) 
     case 4:
       var value = /** @type {string} */ (reader.readString());
       msg.setNoteGuid(value);
-      break;
-    case 5:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setVisitGuid(value);
-      break;
-    case 6:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setAuthorGuid(value);
-      break;
-    case 7:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPatientGuid(value);
       break;
     case 8:
       var value = /** @type {!proto.ehr.medicalissues.MedicalIssue} */ (reader.readEnum());
@@ -222,27 +207,6 @@ proto.ehr.note.NoteFragment.serializeBinaryToWriter = function(message, writer) 
   if (f.length > 0) {
     writer.writeString(
       4,
-      f
-    );
-  }
-  f = message.getVisitGuid();
-  if (f.length > 0) {
-    writer.writeString(
-      5,
-      f
-    );
-  }
-  f = message.getAuthorGuid();
-  if (f.length > 0) {
-    writer.writeString(
-      6,
-      f
-    );
-  }
-  f = message.getPatientGuid();
-  if (f.length > 0) {
-    writer.writeString(
-      7,
       f
     );
   }
@@ -363,51 +327,6 @@ proto.ehr.note.NoteFragment.prototype.getNoteGuid = function() {
 /** @param {string} value */
 proto.ehr.note.NoteFragment.prototype.setNoteGuid = function(value) {
   jspb.Message.setProto3StringField(this, 4, value);
-};
-
-
-/**
- * optional string visit_guid = 5;
- * @return {string}
- */
-proto.ehr.note.NoteFragment.prototype.getVisitGuid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
-};
-
-
-/** @param {string} value */
-proto.ehr.note.NoteFragment.prototype.setVisitGuid = function(value) {
-  jspb.Message.setProto3StringField(this, 5, value);
-};
-
-
-/**
- * optional string author_guid = 6;
- * @return {string}
- */
-proto.ehr.note.NoteFragment.prototype.getAuthorGuid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
-};
-
-
-/** @param {string} value */
-proto.ehr.note.NoteFragment.prototype.setAuthorGuid = function(value) {
-  jspb.Message.setProto3StringField(this, 6, value);
-};
-
-
-/**
- * optional string patient_guid = 7;
- * @return {string}
- */
-proto.ehr.note.NoteFragment.prototype.getPatientGuid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
-};
-
-
-/** @param {string} value */
-proto.ehr.note.NoteFragment.prototype.setPatientGuid = function(value) {
-  jspb.Message.setProto3StringField(this, 7, value);
 };
 
 

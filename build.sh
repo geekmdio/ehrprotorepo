@@ -3,11 +3,11 @@
 DIR_SUFFIX=proto
 GOLANG=go
 GODIR=${GOLANG}${DIR_SUFFIX}
-CSHARPLANG=js
+CSHARPLANG=csharp
 CSHARPDIR=${CSHARPLANG}${DIR_SUFFIX}
 JSLANG=js
 JSDIR=${JSLANG}${DIR_SUFFIX}
-JAVALANG=js
+JAVALANG=java
 JAVADIR=${JAVALANG}${DIR_SUFFIX}
 CPPLANG=cpp
 CPPDIR=${CPPLANG}${DIR_SUFFIX}
@@ -42,6 +42,7 @@ ensure () {
 compile_for () {
     # $1 = langauge; go, csharp, js, java, python, cpp, php, python, ruby, objc
     # $2 = directory
+    # $3 = true/false GRPC is supported
     if [ $? -eq 0 ]; then
         echo "Running the protocol buffers compiler to make $1 files in the $2."
         case $1 in
@@ -64,7 +65,7 @@ compile_for () {
                 protoc -I=proto_v1  proto_v1/*.proto --php_out=$2
                 ;;      
             python) 
-                protoc -I=proto_v1  proto_v1/*.proto --python_out=$2
+                protoc -I=proto_v1  proto_v1/*.proto --python_out=plugins=grpc:$2
                 ;;
             ruby) 
                 protoc -I=proto_v1  proto_v1/*.proto --ruby_out=$2
@@ -76,35 +77,52 @@ compile_for () {
     fi
 
     if [ $? -eq 0 ]; then  
-        echo "- Successfully compiled to $1".
+        echo "- Successfully compiled to $1."
     else    
-        echo " - !! Failed to compile for $1".
+        echo " - !! Failed to compile for $1."
+    fi
+
+    if [ ${3} == "false" ]; then 
+        grcp_not_supported $1
     fi
 }
 
-ensure ${GODIR}
-compile_for ${GOLANG} ${GODIR}
+grcp_not_supported() {
+    echo "-- GRPC is not currently automatically implemented for $1."
+}
 
-# ensure ${CPPDIR}
-# compile_for ${CPPLANG} ${CPPDIR}
+ensure ${GODIR}
+compile_for ${GOLANG} ${GODIR} true
+echo ''
+
+ensure ${CPPDIR}
+compile_for ${CPPLANG} ${CPPDIR} false
+echo ''
 
 ensure ${CSHARPDIR}
-compile_for ${CSHARPLANG} ${CSHARPDIR}
+compile_for ${CSHARPLANG} ${CSHARPDIR} false
+echo ''
 
-# ensure ${JAVADIR}
-# compile_for ${JAVALANG} ${JAVADIR}
+ensure ${JAVADIR}
+compile_for ${JAVALANG} ${JAVADIR} false
+echo ''
 
 ensure ${JSDIR}
-compile_for ${JSLANG} ${JSDIR}
+compile_for ${JSLANG} ${JSDIR} false
+echo ''
 
-# ensure ${OBJDIR}
-# compile_for ${OBJCLANG} ${OBJDIR}
+ensure ${OBJCDIR}
+compile_for ${OBJCLANG} ${OBJCDIR} false
+echo ''
 
-# ensure ${PHPDIR}
-# compile_for ${PHPLANG} ${PHPDIR}
+ensure ${PHPDIR}
+compile_for ${PHPLANG} ${PHPDIR} false
+echo ''
 
 ensure ${PYTHONDIR}
-compile_for ${PYTHONLANG} ${PYTHONDIR}
+compile_for ${PYTHONLANG} ${PYTHONDIR} true
+echo ''
 
-# ensure ${RUBYDIR}
-# compile_for ${RUBYLANG} ${RUBYDIR}
+ensure ${RUBYDIR}
+compile_for ${RUBYLANG} ${RUBYDIR} true
+echo ''

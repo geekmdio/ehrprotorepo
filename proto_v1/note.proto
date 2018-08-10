@@ -22,9 +22,6 @@ message NoteFragment {
     google.protobuf.Timestamp date_created = 2;
     string note_fragment_guid = 3;
     string note_guid = 4;
-    string visit_guid = 5;
-    string author_guid = 6;
-    string patient_guid = 7;
     medicalissues.MedicalIssue issue = 8;
     string icd_10_code = 9;
     NoteFragmentStatus status = 10;

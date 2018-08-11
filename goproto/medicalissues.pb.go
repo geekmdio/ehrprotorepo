@@ -722,16 +722,16 @@ func (x MedicalIssue) String() string {
 	return proto.EnumName(MedicalIssue_name, int32(x))
 }
 func (MedicalIssue) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_medicalissues_f275ecc2540a75a3, []int{0}
+	return fileDescriptor_medicalissues_73f5585fa44548f1, []int{0}
 }
 
 func init() {
 	proto.RegisterEnum("ehr.medicalissues.MedicalIssue", MedicalIssue_name, MedicalIssue_value)
 }
 
-func init() { proto.RegisterFile("medicalissues.proto", fileDescriptor_medicalissues_f275ecc2540a75a3) }
+func init() { proto.RegisterFile("medicalissues.proto", fileDescriptor_medicalissues_73f5585fa44548f1) }
 
-var fileDescriptor_medicalissues_f275ecc2540a75a3 = []byte{
+var fileDescriptor_medicalissues_73f5585fa44548f1 = []byte{
 	// 2640 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x84, 0x58, 0xf5, 0xdb, 0x1c, 0xb7,
 	0xb5, 0xbe, 0x7b, 0x6f, 0xe2, 0xc4, 0x32, 0xc9, 0x32, 0xc7, 0x8e, 0xe3, 0xc4, 0xe1, 0xe4, 0xe6,

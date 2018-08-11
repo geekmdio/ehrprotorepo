@@ -15,6 +15,7 @@ message Note {
     string patient_guid = 6;
     NoteType type = 7;
     repeated NoteFragment fragments = 8;
+    repeated string tags = 9;
 }
 
 message NoteFragment {
@@ -22,25 +23,30 @@ message NoteFragment {
     google.protobuf.Timestamp date_created = 2;
     string note_fragment_guid = 3;
     string note_guid = 4;
-    medicalissues.MedicalIssue issue = 8;
-    string icd_10_code = 9;
-    NoteFragmentStatus status = 10;
-    FragmentPriority priority = 11;
-    FragmentTopic topic = 12;
-    string markdown_content = 13;
+    string issue_guid = 5;
+    string icd_10_code = 6; // recommend using watson api to determine from description
+    string icd_10_long = 7; // recommend using watson api to determine from description
+    string description = 8; // free text, human readable
+    NoteFragmentStatus status = 9;
+    FragmentPriority priority = 10;
+    FragmentTopic topic = 11;
+    string markdown_content = 12;
+    repeated string tags = 13;
 }
 
 enum FragmentTopic {
     NO_TOPIC = 0;
     SUBJECTIVE = 1;
-    MEDICAL_HISTORY = 2;
-    ALLERGIES = 3;
-    MEDICATIONS = 4;
-    FAMILY_HISTORY = 5;
-    SOCIAL_HISTORY = 6;
-    VITALS = 7;
-    PHYSICAL_EXAM = 8;
-    MEDICAL_PROBLEM = 9;
+    REVIEW_OF_SYSTEMS = 2;
+    MEDICAL_HISTORY = 3;
+    ALLERGIES = 4;
+    MEDICATIONS = 5;
+    FAMILY_HISTORY = 6;
+    SOCIAL_HISTORY = 7;
+    VITALS = 8;
+    PHYSICAL_EXAM = 9;
+    LABORATORY_DATA = 10;
+    MEDICAL_PROBLEM = 11;
 }
 
 enum FragmentPriority {

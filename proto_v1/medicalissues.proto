@@ -3,6 +3,8 @@ syntax = "proto3";
 package ehr.medicalissues;
 option go_package = "ehrpb";
 
+// ?? Depricated??? Can make cannonized issues via ICD 10 code validation
+
 // This will be a list of the most common medical issues. There are around 70,000
 // ICD-10 entries, and that's challenging to structure so v1 will be a minimalist
 // attempt.

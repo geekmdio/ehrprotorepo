@@ -18,36 +18,44 @@ class FragmentTopic
      */
     const SUBJECTIVE = 1;
     /**
-     * Generated from protobuf enum <code>MEDICAL_HISTORY = 2;</code>
+     * Generated from protobuf enum <code>REVIEW_OF_SYSTEMS = 2;</code>
      */
-    const MEDICAL_HISTORY = 2;
+    const REVIEW_OF_SYSTEMS = 2;
     /**
-     * Generated from protobuf enum <code>ALLERGIES = 3;</code>
+     * Generated from protobuf enum <code>MEDICAL_HISTORY = 3;</code>
      */
-    const ALLERGIES = 3;
+    const MEDICAL_HISTORY = 3;
     /**
-     * Generated from protobuf enum <code>MEDICATIONS = 4;</code>
+     * Generated from protobuf enum <code>ALLERGIES = 4;</code>
      */
-    const MEDICATIONS = 4;
+    const ALLERGIES = 4;
     /**
-     * Generated from protobuf enum <code>FAMILY_HISTORY = 5;</code>
+     * Generated from protobuf enum <code>MEDICATIONS = 5;</code>
      */
-    const FAMILY_HISTORY = 5;
+    const MEDICATIONS = 5;
     /**
-     * Generated from protobuf enum <code>SOCIAL_HISTORY = 6;</code>
+     * Generated from protobuf enum <code>FAMILY_HISTORY = 6;</code>
      */
-    const SOCIAL_HISTORY = 6;
+    const FAMILY_HISTORY = 6;
     /**
-     * Generated from protobuf enum <code>VITALS = 7;</code>
+     * Generated from protobuf enum <code>SOCIAL_HISTORY = 7;</code>
      */
-    const VITALS = 7;
+    const SOCIAL_HISTORY = 7;
     /**
-     * Generated from protobuf enum <code>PHYSICAL_EXAM = 8;</code>
+     * Generated from protobuf enum <code>VITALS = 8;</code>
      */
-    const PHYSICAL_EXAM = 8;
+    const VITALS = 8;
     /**
-     * Generated from protobuf enum <code>MEDICAL_PROBLEM = 9;</code>
+     * Generated from protobuf enum <code>PHYSICAL_EXAM = 9;</code>
      */
-    const MEDICAL_PROBLEM = 9;
+    const PHYSICAL_EXAM = 9;
+    /**
+     * Generated from protobuf enum <code>LABORATORY_DATA = 10;</code>
+     */
+    const LABORATORY_DATA = 10;
+    /**
+     * Generated from protobuf enum <code>MEDICAL_PROBLEM = 11;</code>
+     */
+    const MEDICAL_PROBLEM = 11;
 }
 

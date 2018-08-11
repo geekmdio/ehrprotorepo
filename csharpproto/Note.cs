@@ -25,37 +25,39 @@ namespace Ehr.Note {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cgpub3RlLnByb3RvEghlaHIubm90ZRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
-            "dGFtcC5wcm90bxoTbWVkaWNhbGlzc3Vlcy5wcm90byLjAQoETm90ZRIKCgJp",
+            "dGFtcC5wcm90bxoTbWVkaWNhbGlzc3Vlcy5wcm90byLxAQoETm90ZRIKCgJp",
             "ZBgBIAEoBRIwCgxkYXRlX2NyZWF0ZWQYAiABKAsyGi5nb29nbGUucHJvdG9i",
             "dWYuVGltZXN0YW1wEhEKCW5vdGVfZ3VpZBgDIAEoCRISCgp2aXNpdF9ndWlk",
             "GAQgASgJEhMKC2F1dGhvcl9ndWlkGAUgASgJEhQKDHBhdGllbnRfZ3VpZBgG",
             "IAEoCRIgCgR0eXBlGAcgASgOMhIuZWhyLm5vdGUuTm90ZVR5cGUSKQoJZnJh",
-            "Z21lbnRzGAggAygLMhYuZWhyLm5vdGUuTm90ZUZyYWdtZW50It4CCgxOb3Rl",
-            "RnJhZ21lbnQSCgoCaWQYASABKAUSMAoMZGF0ZV9jcmVhdGVkGAIgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIaChJub3RlX2ZyYWdtZW50X2d1",
-            "aWQYAyABKAkSEQoJbm90ZV9ndWlkGAQgASgJEi4KBWlzc3VlGAggASgOMh8u",
-            "ZWhyLm1lZGljYWxpc3N1ZXMuTWVkaWNhbElzc3VlEhMKC2ljZF8xMF9jb2Rl",
-            "GAkgASgJEiwKBnN0YXR1cxgKIAEoDjIcLmVoci5ub3RlLk5vdGVGcmFnbWVu",
-            "dFN0YXR1cxIsCghwcmlvcml0eRgLIAEoDjIaLmVoci5ub3RlLkZyYWdtZW50",
-            "UHJpb3JpdHkSJgoFdG9waWMYDCABKA4yFy5laHIubm90ZS5GcmFnbWVudFRv",
-            "cGljEhgKEG1hcmtkb3duX2NvbnRlbnQYDSABKAkqvgEKDUZyYWdtZW50VG9w",
-            "aWMSDAoITk9fVE9QSUMQABIOCgpTVUJKRUNUSVZFEAESEwoPTUVESUNBTF9I",
-            "SVNUT1JZEAISDQoJQUxMRVJHSUVTEAMSDwoLTUVESUNBVElPTlMQBBISCg5G",
-            "QU1JTFlfSElTVE9SWRAFEhIKDlNPQ0lBTF9ISVNUT1JZEAYSCgoGVklUQUxT",
-            "EAcSEQoNUEhZU0lDQUxfRVhBTRAIEhMKD01FRElDQUxfUFJPQkxFTRAJKkIK",
-            "EEZyYWdtZW50UHJpb3JpdHkSDwoLTk9fUFJJT1JJVFkQABIICgRISUdIEAES",
-            "CgoGTk9STUFMEAISBwoDTE9XEAMqTQoSTm90ZUZyYWdtZW50U3RhdHVzEg0K",
-            "CU5PX1NUQVRVUxAAEg4KCklOQ09NUExFVEUQARIKCgZBQ1RJVkUQAhIMCghS",
-            "RVBMQUNFRBADKqwBCghOb3RlVHlwZRIQCgxOT19OT1RFX1RZUEUQABINCglG",
-            "T0xMT1dfVVAQARIOCgpQSE9ORV9DQUxMEAISIAocQ09OVElOVUVEX0NBUkVf",
-            "RE9DVU1FTlRBVElPThAEEhgKFFJFRklMTF9ET0NVTUVOVEFUSU9OEAUSCgoG",
-            "SU5UQUtFEAYSDQoJUFJPQ0VEVVJFEAcSGAoUSElTVE9SWV9BTkRfUEhZU0lD",
-            "QUwQCEIHWgVlaHJwYmIGcHJvdG8z"));
+            "Z21lbnRzGAggAygLMhYuZWhyLm5vdGUuTm90ZUZyYWdtZW50EgwKBHRhZ3MY",
+            "CSADKAki+gIKDE5vdGVGcmFnbWVudBIKCgJpZBgBIAEoBRIwCgxkYXRlX2Ny",
+            "ZWF0ZWQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhoKEm5v",
+            "dGVfZnJhZ21lbnRfZ3VpZBgDIAEoCRIRCglub3RlX2d1aWQYBCABKAkSEgoK",
+            "aXNzdWVfZ3VpZBgFIAEoCRITCgtpY2RfMTBfY29kZRgGIAEoCRITCgtpY2Rf",
+            "MTBfbG9uZxgHIAEoCRITCgtkZXNjcmlwdGlvbhgIIAEoCRIsCgZzdGF0dXMY",
+            "CSABKA4yHC5laHIubm90ZS5Ob3RlRnJhZ21lbnRTdGF0dXMSLAoIcHJpb3Jp",
+            "dHkYCiABKA4yGi5laHIubm90ZS5GcmFnbWVudFByaW9yaXR5EiYKBXRvcGlj",
+            "GAsgASgOMhcuZWhyLm5vdGUuRnJhZ21lbnRUb3BpYxIYChBtYXJrZG93bl9j",
+            "b250ZW50GAwgASgJEgwKBHRhZ3MYDSADKAkq6gEKDUZyYWdtZW50VG9waWMS",
+            "DAoITk9fVE9QSUMQABIOCgpTVUJKRUNUSVZFEAESFQoRUkVWSUVXX09GX1NZ",
+            "U1RFTVMQAhITCg9NRURJQ0FMX0hJU1RPUlkQAxINCglBTExFUkdJRVMQBBIP",
+            "CgtNRURJQ0FUSU9OUxAFEhIKDkZBTUlMWV9ISVNUT1JZEAYSEgoOU09DSUFM",
+            "X0hJU1RPUlkQBxIKCgZWSVRBTFMQCBIRCg1QSFlTSUNBTF9FWEFNEAkSEwoP",
+            "TEFCT1JBVE9SWV9EQVRBEAoSEwoPTUVESUNBTF9QUk9CTEVNEAsqQgoQRnJh",
+            "Z21lbnRQcmlvcml0eRIPCgtOT19QUklPUklUWRAAEggKBEhJR0gQARIKCgZO",
+            "T1JNQUwQAhIHCgNMT1cQAypNChJOb3RlRnJhZ21lbnRTdGF0dXMSDQoJTk9f",
+            "U1RBVFVTEAASDgoKSU5DT01QTEVURRABEgoKBkFDVElWRRACEgwKCFJFUExB",
+            "Q0VEEAMqrAEKCE5vdGVUeXBlEhAKDE5PX05PVEVfVFlQRRAAEg0KCUZPTExP",
+            "V19VUBABEg4KClBIT05FX0NBTEwQAhIgChxDT05USU5VRURfQ0FSRV9ET0NV",
+            "TUVOVEFUSU9OEAQSGAoUUkVGSUxMX0RPQ1VNRU5UQVRJT04QBRIKCgZJTlRB",
+            "S0UQBhINCglQUk9DRURVUkUQBxIYChRISVNUT1JZX0FORF9QSFlTSUNBTBAI",
+            "QgdaBWVocnBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Ehr.Medicalissues.MedicalissuesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ehr.Note.FragmentTopic), typeof(global::Ehr.Note.FragmentPriority), typeof(global::Ehr.Note.NoteFragmentStatus), typeof(global::Ehr.Note.NoteType), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Note.Note), global::Ehr.Note.Note.Parser, new[]{ "Id", "DateCreated", "NoteGuid", "VisitGuid", "AuthorGuid", "PatientGuid", "Type", "Fragments" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Note.NoteFragment), global::Ehr.Note.NoteFragment.Parser, new[]{ "Id", "DateCreated", "NoteFragmentGuid", "NoteGuid", "Issue", "Icd10Code", "Status", "Priority", "Topic", "MarkdownContent" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Note.Note), global::Ehr.Note.Note.Parser, new[]{ "Id", "DateCreated", "NoteGuid", "VisitGuid", "AuthorGuid", "PatientGuid", "Type", "Fragments", "Tags" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Note.NoteFragment), global::Ehr.Note.NoteFragment.Parser, new[]{ "Id", "DateCreated", "NoteFragmentGuid", "NoteGuid", "IssueGuid", "Icd10Code", "Icd10Long", "Description", "Status", "Priority", "Topic", "MarkdownContent", "Tags" }, null, null, null)
           }));
     }
     #endregion
@@ -65,14 +67,16 @@ namespace Ehr.Note {
   public enum FragmentTopic {
     [pbr::OriginalName("NO_TOPIC")] NoTopic = 0,
     [pbr::OriginalName("SUBJECTIVE")] Subjective = 1,
-    [pbr::OriginalName("MEDICAL_HISTORY")] MedicalHistory = 2,
-    [pbr::OriginalName("ALLERGIES")] Allergies = 3,
-    [pbr::OriginalName("MEDICATIONS")] Medications = 4,
-    [pbr::OriginalName("FAMILY_HISTORY")] FamilyHistory = 5,
-    [pbr::OriginalName("SOCIAL_HISTORY")] SocialHistory = 6,
-    [pbr::OriginalName("VITALS")] Vitals = 7,
-    [pbr::OriginalName("PHYSICAL_EXAM")] PhysicalExam = 8,
-    [pbr::OriginalName("MEDICAL_PROBLEM")] MedicalProblem = 9,
+    [pbr::OriginalName("REVIEW_OF_SYSTEMS")] ReviewOfSystems = 2,
+    [pbr::OriginalName("MEDICAL_HISTORY")] MedicalHistory = 3,
+    [pbr::OriginalName("ALLERGIES")] Allergies = 4,
+    [pbr::OriginalName("MEDICATIONS")] Medications = 5,
+    [pbr::OriginalName("FAMILY_HISTORY")] FamilyHistory = 6,
+    [pbr::OriginalName("SOCIAL_HISTORY")] SocialHistory = 7,
+    [pbr::OriginalName("VITALS")] Vitals = 8,
+    [pbr::OriginalName("PHYSICAL_EXAM")] PhysicalExam = 9,
+    [pbr::OriginalName("LABORATORY_DATA")] LaboratoryData = 10,
+    [pbr::OriginalName("MEDICAL_PROBLEM")] MedicalProblem = 11,
   }
 
   public enum FragmentPriority {
@@ -136,6 +140,7 @@ namespace Ehr.Note {
       patientGuid_ = other.patientGuid_;
       type_ = other.type_;
       fragments_ = other.fragments_.Clone();
+      tags_ = other.tags_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -231,6 +236,16 @@ namespace Ehr.Note {
       get { return fragments_; }
     }
 
+    /// <summary>Field number for the "tags" field.</summary>
+    public const int TagsFieldNumber = 9;
+    private static readonly pb::FieldCodec<string> _repeated_tags_codec
+        = pb::FieldCodec.ForString(74);
+    private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Tags {
+      get { return tags_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Note);
@@ -252,6 +267,7 @@ namespace Ehr.Note {
       if (PatientGuid != other.PatientGuid) return false;
       if (Type != other.Type) return false;
       if(!fragments_.Equals(other.fragments_)) return false;
+      if(!tags_.Equals(other.tags_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -266,6 +282,7 @@ namespace Ehr.Note {
       if (PatientGuid.Length != 0) hash ^= PatientGuid.GetHashCode();
       if (Type != 0) hash ^= Type.GetHashCode();
       hash ^= fragments_.GetHashCode();
+      hash ^= tags_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -308,6 +325,7 @@ namespace Ehr.Note {
         output.WriteEnum((int) Type);
       }
       fragments_.WriteTo(output, _repeated_fragments_codec);
+      tags_.WriteTo(output, _repeated_tags_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -338,6 +356,7 @@ namespace Ehr.Note {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       size += fragments_.CalculateSize(_repeated_fragments_codec);
+      size += tags_.CalculateSize(_repeated_tags_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -374,6 +393,7 @@ namespace Ehr.Note {
         Type = other.Type;
       }
       fragments_.Add(other.fragments_);
+      tags_.Add(other.tags_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -420,6 +440,10 @@ namespace Ehr.Note {
             fragments_.AddEntriesFrom(input, _repeated_fragments_codec);
             break;
           }
+          case 74: {
+            tags_.AddEntriesFrom(input, _repeated_tags_codec);
+            break;
+          }
         }
       }
     }
@@ -455,12 +479,15 @@ namespace Ehr.Note {
       dateCreated_ = other.dateCreated_ != null ? other.dateCreated_.Clone() : null;
       noteFragmentGuid_ = other.noteFragmentGuid_;
       noteGuid_ = other.noteGuid_;
-      issue_ = other.issue_;
+      issueGuid_ = other.issueGuid_;
       icd10Code_ = other.icd10Code_;
+      icd10Long_ = other.icd10Long_;
+      description_ = other.description_;
       status_ = other.status_;
       priority_ = other.priority_;
       topic_ = other.topic_;
       markdownContent_ = other.markdownContent_;
+      tags_ = other.tags_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -513,20 +540,23 @@ namespace Ehr.Note {
       }
     }
 
-    /// <summary>Field number for the "issue" field.</summary>
-    public const int IssueFieldNumber = 8;
-    private global::Ehr.Medicalissues.MedicalIssue issue_ = 0;
+    /// <summary>Field number for the "issue_guid" field.</summary>
+    public const int IssueGuidFieldNumber = 5;
+    private string issueGuid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Ehr.Medicalissues.MedicalIssue Issue {
-      get { return issue_; }
+    public string IssueGuid {
+      get { return issueGuid_; }
       set {
-        issue_ = value;
+        issueGuid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "icd_10_code" field.</summary>
-    public const int Icd10CodeFieldNumber = 9;
+    public const int Icd10CodeFieldNumber = 6;
     private string icd10Code_ = "";
+    /// <summary>
+    /// recommend using watson api to determine from description
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Icd10Code {
       get { return icd10Code_; }
@@ -535,8 +565,36 @@ namespace Ehr.Note {
       }
     }
 
+    /// <summary>Field number for the "icd_10_long" field.</summary>
+    public const int Icd10LongFieldNumber = 7;
+    private string icd10Long_ = "";
+    /// <summary>
+    /// recommend using watson api to determine from description
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Icd10Long {
+      get { return icd10Long_; }
+      set {
+        icd10Long_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 8;
+    private string description_ = "";
+    /// <summary>
+    /// free text, human readable
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 10;
+    public const int StatusFieldNumber = 9;
     private global::Ehr.Note.NoteFragmentStatus status_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Ehr.Note.NoteFragmentStatus Status {
@@ -547,7 +605,7 @@ namespace Ehr.Note {
     }
 
     /// <summary>Field number for the "priority" field.</summary>
-    public const int PriorityFieldNumber = 11;
+    public const int PriorityFieldNumber = 10;
     private global::Ehr.Note.FragmentPriority priority_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Ehr.Note.FragmentPriority Priority {
@@ -558,7 +616,7 @@ namespace Ehr.Note {
     }
 
     /// <summary>Field number for the "topic" field.</summary>
-    public const int TopicFieldNumber = 12;
+    public const int TopicFieldNumber = 11;
     private global::Ehr.Note.FragmentTopic topic_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Ehr.Note.FragmentTopic Topic {
@@ -569,7 +627,7 @@ namespace Ehr.Note {
     }
 
     /// <summary>Field number for the "markdown_content" field.</summary>
-    public const int MarkdownContentFieldNumber = 13;
+    public const int MarkdownContentFieldNumber = 12;
     private string markdownContent_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MarkdownContent {
@@ -577,6 +635,16 @@ namespace Ehr.Note {
       set {
         markdownContent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "tags" field.</summary>
+    public const int TagsFieldNumber = 13;
+    private static readonly pb::FieldCodec<string> _repeated_tags_codec
+        = pb::FieldCodec.ForString(106);
+    private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Tags {
+      get { return tags_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -596,12 +664,15 @@ namespace Ehr.Note {
       if (!object.Equals(DateCreated, other.DateCreated)) return false;
       if (NoteFragmentGuid != other.NoteFragmentGuid) return false;
       if (NoteGuid != other.NoteGuid) return false;
-      if (Issue != other.Issue) return false;
+      if (IssueGuid != other.IssueGuid) return false;
       if (Icd10Code != other.Icd10Code) return false;
+      if (Icd10Long != other.Icd10Long) return false;
+      if (Description != other.Description) return false;
       if (Status != other.Status) return false;
       if (Priority != other.Priority) return false;
       if (Topic != other.Topic) return false;
       if (MarkdownContent != other.MarkdownContent) return false;
+      if(!tags_.Equals(other.tags_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -612,12 +683,15 @@ namespace Ehr.Note {
       if (dateCreated_ != null) hash ^= DateCreated.GetHashCode();
       if (NoteFragmentGuid.Length != 0) hash ^= NoteFragmentGuid.GetHashCode();
       if (NoteGuid.Length != 0) hash ^= NoteGuid.GetHashCode();
-      if (Issue != 0) hash ^= Issue.GetHashCode();
+      if (IssueGuid.Length != 0) hash ^= IssueGuid.GetHashCode();
       if (Icd10Code.Length != 0) hash ^= Icd10Code.GetHashCode();
+      if (Icd10Long.Length != 0) hash ^= Icd10Long.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (Status != 0) hash ^= Status.GetHashCode();
       if (Priority != 0) hash ^= Priority.GetHashCode();
       if (Topic != 0) hash ^= Topic.GetHashCode();
       if (MarkdownContent.Length != 0) hash ^= MarkdownContent.GetHashCode();
+      hash ^= tags_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -647,30 +721,39 @@ namespace Ehr.Note {
         output.WriteRawTag(34);
         output.WriteString(NoteGuid);
       }
-      if (Issue != 0) {
-        output.WriteRawTag(64);
-        output.WriteEnum((int) Issue);
+      if (IssueGuid.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(IssueGuid);
       }
       if (Icd10Code.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(50);
         output.WriteString(Icd10Code);
       }
+      if (Icd10Long.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Icd10Long);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Description);
+      }
       if (Status != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteEnum((int) Status);
       }
       if (Priority != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(80);
         output.WriteEnum((int) Priority);
       }
       if (Topic != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteEnum((int) Topic);
       }
       if (MarkdownContent.Length != 0) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(98);
         output.WriteString(MarkdownContent);
       }
+      tags_.WriteTo(output, _repeated_tags_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -691,11 +774,17 @@ namespace Ehr.Note {
       if (NoteGuid.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NoteGuid);
       }
-      if (Issue != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Issue);
+      if (IssueGuid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IssueGuid);
       }
       if (Icd10Code.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Icd10Code);
+      }
+      if (Icd10Long.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Icd10Long);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
       if (Status != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
@@ -709,6 +798,7 @@ namespace Ehr.Note {
       if (MarkdownContent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MarkdownContent);
       }
+      size += tags_.CalculateSize(_repeated_tags_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -735,11 +825,17 @@ namespace Ehr.Note {
       if (other.NoteGuid.Length != 0) {
         NoteGuid = other.NoteGuid;
       }
-      if (other.Issue != 0) {
-        Issue = other.Issue;
+      if (other.IssueGuid.Length != 0) {
+        IssueGuid = other.IssueGuid;
       }
       if (other.Icd10Code.Length != 0) {
         Icd10Code = other.Icd10Code;
+      }
+      if (other.Icd10Long.Length != 0) {
+        Icd10Long = other.Icd10Long;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
       }
       if (other.Status != 0) {
         Status = other.Status;
@@ -753,6 +849,7 @@ namespace Ehr.Note {
       if (other.MarkdownContent.Length != 0) {
         MarkdownContent = other.MarkdownContent;
       }
+      tags_.Add(other.tags_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -783,28 +880,40 @@ namespace Ehr.Note {
             NoteGuid = input.ReadString();
             break;
           }
-          case 64: {
-            issue_ = (global::Ehr.Medicalissues.MedicalIssue) input.ReadEnum();
+          case 42: {
+            IssueGuid = input.ReadString();
             break;
           }
-          case 74: {
+          case 50: {
             Icd10Code = input.ReadString();
             break;
           }
-          case 80: {
+          case 58: {
+            Icd10Long = input.ReadString();
+            break;
+          }
+          case 66: {
+            Description = input.ReadString();
+            break;
+          }
+          case 72: {
             status_ = (global::Ehr.Note.NoteFragmentStatus) input.ReadEnum();
             break;
           }
-          case 88: {
+          case 80: {
             priority_ = (global::Ehr.Note.FragmentPriority) input.ReadEnum();
             break;
           }
-          case 96: {
+          case 88: {
             topic_ = (global::Ehr.Note.FragmentTopic) input.ReadEnum();
             break;
           }
-          case 106: {
+          case 98: {
             MarkdownContent = input.ReadString();
+            break;
+          }
+          case 106: {
+            tags_.AddEntriesFrom(input, _repeated_tags_codec);
             break;
           }
         }

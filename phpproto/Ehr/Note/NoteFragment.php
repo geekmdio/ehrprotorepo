@@ -30,29 +30,47 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
      */
     private $note_guid = '';
     /**
-     * Generated from protobuf field <code>.ehr.medicalissues.MedicalIssue issue = 8;</code>
+     * Generated from protobuf field <code>string issue_guid = 5;</code>
      */
-    private $issue = 0;
+    private $issue_guid = '';
     /**
-     * Generated from protobuf field <code>string icd_10_code = 9;</code>
+     * recommend using watson api to determine from description
+     *
+     * Generated from protobuf field <code>string icd_10_code = 6;</code>
      */
     private $icd_10_code = '';
     /**
-     * Generated from protobuf field <code>.ehr.note.NoteFragmentStatus status = 10;</code>
+     * recommend using watson api to determine from description
+     *
+     * Generated from protobuf field <code>string icd_10_long = 7;</code>
+     */
+    private $icd_10_long = '';
+    /**
+     * free text, human readable
+     *
+     * Generated from protobuf field <code>string description = 8;</code>
+     */
+    private $description = '';
+    /**
+     * Generated from protobuf field <code>.ehr.note.NoteFragmentStatus status = 9;</code>
      */
     private $status = 0;
     /**
-     * Generated from protobuf field <code>.ehr.note.FragmentPriority priority = 11;</code>
+     * Generated from protobuf field <code>.ehr.note.FragmentPriority priority = 10;</code>
      */
     private $priority = 0;
     /**
-     * Generated from protobuf field <code>.ehr.note.FragmentTopic topic = 12;</code>
+     * Generated from protobuf field <code>.ehr.note.FragmentTopic topic = 11;</code>
      */
     private $topic = 0;
     /**
-     * Generated from protobuf field <code>string markdown_content = 13;</code>
+     * Generated from protobuf field <code>string markdown_content = 12;</code>
      */
     private $markdown_content = '';
+    /**
+     * Generated from protobuf field <code>repeated string tags = 13;</code>
+     */
+    private $tags;
 
     /**
      * Constructor.
@@ -64,12 +82,18 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $date_created
      *     @type string $note_fragment_guid
      *     @type string $note_guid
-     *     @type int $issue
+     *     @type string $issue_guid
      *     @type string $icd_10_code
+     *           recommend using watson api to determine from description
+     *     @type string $icd_10_long
+     *           recommend using watson api to determine from description
+     *     @type string $description
+     *           free text, human readable
      *     @type int $status
      *     @type int $priority
      *     @type int $topic
      *     @type string $markdown_content
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $tags
      * }
      */
     public function __construct($data = NULL) {
@@ -166,29 +190,31 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ehr.medicalissues.MedicalIssue issue = 8;</code>
-     * @return int
+     * Generated from protobuf field <code>string issue_guid = 5;</code>
+     * @return string
      */
-    public function getIssue()
+    public function getIssueGuid()
     {
-        return $this->issue;
+        return $this->issue_guid;
     }
 
     /**
-     * Generated from protobuf field <code>.ehr.medicalissues.MedicalIssue issue = 8;</code>
-     * @param int $var
+     * Generated from protobuf field <code>string issue_guid = 5;</code>
+     * @param string $var
      * @return $this
      */
-    public function setIssue($var)
+    public function setIssueGuid($var)
     {
-        GPBUtil::checkEnum($var, \Ehr\Medicalissues\MedicalIssue::class);
-        $this->issue = $var;
+        GPBUtil::checkString($var, True);
+        $this->issue_guid = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>string icd_10_code = 9;</code>
+     * recommend using watson api to determine from description
+     *
+     * Generated from protobuf field <code>string icd_10_code = 6;</code>
      * @return string
      */
     public function getIcd10Code()
@@ -197,7 +223,9 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string icd_10_code = 9;</code>
+     * recommend using watson api to determine from description
+     *
+     * Generated from protobuf field <code>string icd_10_code = 6;</code>
      * @param string $var
      * @return $this
      */
@@ -210,7 +238,59 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ehr.note.NoteFragmentStatus status = 10;</code>
+     * recommend using watson api to determine from description
+     *
+     * Generated from protobuf field <code>string icd_10_long = 7;</code>
+     * @return string
+     */
+    public function getIcd10Long()
+    {
+        return $this->icd_10_long;
+    }
+
+    /**
+     * recommend using watson api to determine from description
+     *
+     * Generated from protobuf field <code>string icd_10_long = 7;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setIcd10Long($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->icd_10_long = $var;
+
+        return $this;
+    }
+
+    /**
+     * free text, human readable
+     *
+     * Generated from protobuf field <code>string description = 8;</code>
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * free text, human readable
+     *
+     * Generated from protobuf field <code>string description = 8;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setDescription($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->description = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.ehr.note.NoteFragmentStatus status = 9;</code>
      * @return int
      */
     public function getStatus()
@@ -219,7 +299,7 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ehr.note.NoteFragmentStatus status = 10;</code>
+     * Generated from protobuf field <code>.ehr.note.NoteFragmentStatus status = 9;</code>
      * @param int $var
      * @return $this
      */
@@ -232,7 +312,7 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ehr.note.FragmentPriority priority = 11;</code>
+     * Generated from protobuf field <code>.ehr.note.FragmentPriority priority = 10;</code>
      * @return int
      */
     public function getPriority()
@@ -241,7 +321,7 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ehr.note.FragmentPriority priority = 11;</code>
+     * Generated from protobuf field <code>.ehr.note.FragmentPriority priority = 10;</code>
      * @param int $var
      * @return $this
      */
@@ -254,7 +334,7 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ehr.note.FragmentTopic topic = 12;</code>
+     * Generated from protobuf field <code>.ehr.note.FragmentTopic topic = 11;</code>
      * @return int
      */
     public function getTopic()
@@ -263,7 +343,7 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ehr.note.FragmentTopic topic = 12;</code>
+     * Generated from protobuf field <code>.ehr.note.FragmentTopic topic = 11;</code>
      * @param int $var
      * @return $this
      */
@@ -276,7 +356,7 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string markdown_content = 13;</code>
+     * Generated from protobuf field <code>string markdown_content = 12;</code>
      * @return string
      */
     public function getMarkdownContent()
@@ -285,7 +365,7 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string markdown_content = 13;</code>
+     * Generated from protobuf field <code>string markdown_content = 12;</code>
      * @param string $var
      * @return $this
      */
@@ -293,6 +373,28 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->markdown_content = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string tags = 13;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string tags = 13;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setTags($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->tags = $arr;
 
         return $this;
     }

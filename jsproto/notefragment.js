@@ -14,7 +14,6 @@ goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
 goog.require('proto.google.protobuf.Timestamp');
 
-goog.forwardDeclare('proto.ehr.medicalissues.MedicalIssue');
 goog.forwardDeclare('proto.ehr.note.FragmentPriority');
 goog.forwardDeclare('proto.ehr.note.FragmentTopic');
 goog.forwardDeclare('proto.ehr.note.NoteFragmentStatus');
@@ -30,12 +29,19 @@ goog.forwardDeclare('proto.ehr.note.NoteFragmentStatus');
  * @constructor
  */
 proto.ehr.note.NoteFragment = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.ehr.note.NoteFragment.repeatedFields_, null);
 };
 goog.inherits(proto.ehr.note.NoteFragment, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ehr.note.NoteFragment.displayName = 'proto.ehr.note.NoteFragment';
 }
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.ehr.note.NoteFragment.repeatedFields_ = [13];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -69,12 +75,15 @@ proto.ehr.note.NoteFragment.toObject = function(includeInstance, msg) {
     dateCreated: (f = msg.getDateCreated()) && proto.google.protobuf.Timestamp.toObject(includeInstance, f),
     noteFragmentGuid: jspb.Message.getFieldWithDefault(msg, 3, ""),
     noteGuid: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    issue: jspb.Message.getFieldWithDefault(msg, 8, 0),
-    icd10Code: jspb.Message.getFieldWithDefault(msg, 9, ""),
-    status: jspb.Message.getFieldWithDefault(msg, 10, 0),
-    priority: jspb.Message.getFieldWithDefault(msg, 11, 0),
-    topic: jspb.Message.getFieldWithDefault(msg, 12, 0),
-    markdownContent: jspb.Message.getFieldWithDefault(msg, 13, "")
+    issueGuid: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    icd10Code: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    icd10Long: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    description: jspb.Message.getFieldWithDefault(msg, 8, ""),
+    status: jspb.Message.getFieldWithDefault(msg, 9, 0),
+    priority: jspb.Message.getFieldWithDefault(msg, 10, 0),
+    topic: jspb.Message.getFieldWithDefault(msg, 11, 0),
+    markdownContent: jspb.Message.getFieldWithDefault(msg, 12, ""),
+    tagsList: jspb.Message.getRepeatedField(msg, 13)
   };
 
   if (includeInstance) {
@@ -128,29 +137,41 @@ proto.ehr.note.NoteFragment.deserializeBinaryFromReader = function(msg, reader) 
       var value = /** @type {string} */ (reader.readString());
       msg.setNoteGuid(value);
       break;
-    case 8:
-      var value = /** @type {!proto.ehr.medicalissues.MedicalIssue} */ (reader.readEnum());
-      msg.setIssue(value);
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setIssueGuid(value);
       break;
-    case 9:
+    case 6:
       var value = /** @type {string} */ (reader.readString());
       msg.setIcd10Code(value);
       break;
-    case 10:
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setIcd10Long(value);
+      break;
+    case 8:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDescription(value);
+      break;
+    case 9:
       var value = /** @type {!proto.ehr.note.NoteFragmentStatus} */ (reader.readEnum());
       msg.setStatus(value);
       break;
-    case 11:
+    case 10:
       var value = /** @type {!proto.ehr.note.FragmentPriority} */ (reader.readEnum());
       msg.setPriority(value);
       break;
-    case 12:
+    case 11:
       var value = /** @type {!proto.ehr.note.FragmentTopic} */ (reader.readEnum());
       msg.setTopic(value);
       break;
-    case 13:
+    case 12:
       var value = /** @type {string} */ (reader.readString());
       msg.setMarkdownContent(value);
+      break;
+    case 13:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addTags(value);
       break;
     default:
       reader.skipField();
@@ -210,44 +231,65 @@ proto.ehr.note.NoteFragment.serializeBinaryToWriter = function(message, writer) 
       f
     );
   }
-  f = message.getIssue();
-  if (f !== 0.0) {
-    writer.writeEnum(
-      8,
+  f = message.getIssueGuid();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
       f
     );
   }
   f = message.getIcd10Code();
   if (f.length > 0) {
     writer.writeString(
-      9,
+      6,
+      f
+    );
+  }
+  f = message.getIcd10Long();
+  if (f.length > 0) {
+    writer.writeString(
+      7,
+      f
+    );
+  }
+  f = message.getDescription();
+  if (f.length > 0) {
+    writer.writeString(
+      8,
       f
     );
   }
   f = message.getStatus();
   if (f !== 0.0) {
     writer.writeEnum(
-      10,
+      9,
       f
     );
   }
   f = message.getPriority();
   if (f !== 0.0) {
     writer.writeEnum(
-      11,
+      10,
       f
     );
   }
   f = message.getTopic();
   if (f !== 0.0) {
     writer.writeEnum(
-      12,
+      11,
       f
     );
   }
   f = message.getMarkdownContent();
   if (f.length > 0) {
     writer.writeString(
+      12,
+      f
+    );
+  }
+  f = message.getTagsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
       13,
       f
     );
@@ -331,92 +373,151 @@ proto.ehr.note.NoteFragment.prototype.setNoteGuid = function(value) {
 
 
 /**
- * optional ehr.medicalissues.MedicalIssue issue = 8;
- * @return {!proto.ehr.medicalissues.MedicalIssue}
+ * optional string issue_guid = 5;
+ * @return {string}
  */
-proto.ehr.note.NoteFragment.prototype.getIssue = function() {
-  return /** @type {!proto.ehr.medicalissues.MedicalIssue} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
+proto.ehr.note.NoteFragment.prototype.getIssueGuid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
-/** @param {!proto.ehr.medicalissues.MedicalIssue} value */
-proto.ehr.note.NoteFragment.prototype.setIssue = function(value) {
-  jspb.Message.setProto3EnumField(this, 8, value);
+/** @param {string} value */
+proto.ehr.note.NoteFragment.prototype.setIssueGuid = function(value) {
+  jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
 /**
- * optional string icd_10_code = 9;
+ * optional string icd_10_code = 6;
  * @return {string}
  */
 proto.ehr.note.NoteFragment.prototype.getIcd10Code = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
 
 /** @param {string} value */
 proto.ehr.note.NoteFragment.prototype.setIcd10Code = function(value) {
-  jspb.Message.setProto3StringField(this, 9, value);
+  jspb.Message.setProto3StringField(this, 6, value);
 };
 
 
 /**
- * optional NoteFragmentStatus status = 10;
+ * optional string icd_10_long = 7;
+ * @return {string}
+ */
+proto.ehr.note.NoteFragment.prototype.getIcd10Long = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/** @param {string} value */
+proto.ehr.note.NoteFragment.prototype.setIcd10Long = function(value) {
+  jspb.Message.setProto3StringField(this, 7, value);
+};
+
+
+/**
+ * optional string description = 8;
+ * @return {string}
+ */
+proto.ehr.note.NoteFragment.prototype.getDescription = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
+};
+
+
+/** @param {string} value */
+proto.ehr.note.NoteFragment.prototype.setDescription = function(value) {
+  jspb.Message.setProto3StringField(this, 8, value);
+};
+
+
+/**
+ * optional NoteFragmentStatus status = 9;
  * @return {!proto.ehr.note.NoteFragmentStatus}
  */
 proto.ehr.note.NoteFragment.prototype.getStatus = function() {
-  return /** @type {!proto.ehr.note.NoteFragmentStatus} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
+  return /** @type {!proto.ehr.note.NoteFragmentStatus} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
 };
 
 
 /** @param {!proto.ehr.note.NoteFragmentStatus} value */
 proto.ehr.note.NoteFragment.prototype.setStatus = function(value) {
-  jspb.Message.setProto3EnumField(this, 10, value);
+  jspb.Message.setProto3EnumField(this, 9, value);
 };
 
 
 /**
- * optional FragmentPriority priority = 11;
+ * optional FragmentPriority priority = 10;
  * @return {!proto.ehr.note.FragmentPriority}
  */
 proto.ehr.note.NoteFragment.prototype.getPriority = function() {
-  return /** @type {!proto.ehr.note.FragmentPriority} */ (jspb.Message.getFieldWithDefault(this, 11, 0));
+  return /** @type {!proto.ehr.note.FragmentPriority} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
 };
 
 
 /** @param {!proto.ehr.note.FragmentPriority} value */
 proto.ehr.note.NoteFragment.prototype.setPriority = function(value) {
-  jspb.Message.setProto3EnumField(this, 11, value);
+  jspb.Message.setProto3EnumField(this, 10, value);
 };
 
 
 /**
- * optional FragmentTopic topic = 12;
+ * optional FragmentTopic topic = 11;
  * @return {!proto.ehr.note.FragmentTopic}
  */
 proto.ehr.note.NoteFragment.prototype.getTopic = function() {
-  return /** @type {!proto.ehr.note.FragmentTopic} */ (jspb.Message.getFieldWithDefault(this, 12, 0));
+  return /** @type {!proto.ehr.note.FragmentTopic} */ (jspb.Message.getFieldWithDefault(this, 11, 0));
 };
 
 
 /** @param {!proto.ehr.note.FragmentTopic} value */
 proto.ehr.note.NoteFragment.prototype.setTopic = function(value) {
-  jspb.Message.setProto3EnumField(this, 12, value);
+  jspb.Message.setProto3EnumField(this, 11, value);
 };
 
 
 /**
- * optional string markdown_content = 13;
+ * optional string markdown_content = 12;
  * @return {string}
  */
 proto.ehr.note.NoteFragment.prototype.getMarkdownContent = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 13, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 12, ""));
 };
 
 
 /** @param {string} value */
 proto.ehr.note.NoteFragment.prototype.setMarkdownContent = function(value) {
-  jspb.Message.setProto3StringField(this, 13, value);
+  jspb.Message.setProto3StringField(this, 12, value);
+};
+
+
+/**
+ * repeated string tags = 13;
+ * @return {!Array<string>}
+ */
+proto.ehr.note.NoteFragment.prototype.getTagsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 13));
+};
+
+
+/** @param {!Array<string>} value */
+proto.ehr.note.NoteFragment.prototype.setTagsList = function(value) {
+  jspb.Message.setField(this, 13, value || []);
+};
+
+
+/**
+ * @param {!string} value
+ * @param {number=} opt_index
+ */
+proto.ehr.note.NoteFragment.prototype.addTags = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 13, value, opt_index);
+};
+
+
+proto.ehr.note.NoteFragment.prototype.clearTagsList = function() {
+  this.setTagsList([]);
 };
 
 

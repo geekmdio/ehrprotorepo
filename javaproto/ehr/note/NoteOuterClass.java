@@ -28,37 +28,45 @@ public final class NoteOuterClass {
      */
     SUBJECTIVE(1),
     /**
-     * <code>MEDICAL_HISTORY = 2;</code>
+     * <code>REVIEW_OF_SYSTEMS = 2;</code>
      */
-    MEDICAL_HISTORY(2),
+    REVIEW_OF_SYSTEMS(2),
     /**
-     * <code>ALLERGIES = 3;</code>
+     * <code>MEDICAL_HISTORY = 3;</code>
      */
-    ALLERGIES(3),
+    MEDICAL_HISTORY(3),
     /**
-     * <code>MEDICATIONS = 4;</code>
+     * <code>ALLERGIES = 4;</code>
      */
-    MEDICATIONS(4),
+    ALLERGIES(4),
     /**
-     * <code>FAMILY_HISTORY = 5;</code>
+     * <code>MEDICATIONS = 5;</code>
      */
-    FAMILY_HISTORY(5),
+    MEDICATIONS(5),
     /**
-     * <code>SOCIAL_HISTORY = 6;</code>
+     * <code>FAMILY_HISTORY = 6;</code>
      */
-    SOCIAL_HISTORY(6),
+    FAMILY_HISTORY(6),
     /**
-     * <code>VITALS = 7;</code>
+     * <code>SOCIAL_HISTORY = 7;</code>
      */
-    VITALS(7),
+    SOCIAL_HISTORY(7),
     /**
-     * <code>PHYSICAL_EXAM = 8;</code>
+     * <code>VITALS = 8;</code>
      */
-    PHYSICAL_EXAM(8),
+    VITALS(8),
     /**
-     * <code>MEDICAL_PROBLEM = 9;</code>
+     * <code>PHYSICAL_EXAM = 9;</code>
      */
-    MEDICAL_PROBLEM(9),
+    PHYSICAL_EXAM(9),
+    /**
+     * <code>LABORATORY_DATA = 10;</code>
+     */
+    LABORATORY_DATA(10),
+    /**
+     * <code>MEDICAL_PROBLEM = 11;</code>
+     */
+    MEDICAL_PROBLEM(11),
     UNRECOGNIZED(-1),
     ;
 
@@ -71,37 +79,45 @@ public final class NoteOuterClass {
      */
     public static final int SUBJECTIVE_VALUE = 1;
     /**
-     * <code>MEDICAL_HISTORY = 2;</code>
+     * <code>REVIEW_OF_SYSTEMS = 2;</code>
      */
-    public static final int MEDICAL_HISTORY_VALUE = 2;
+    public static final int REVIEW_OF_SYSTEMS_VALUE = 2;
     /**
-     * <code>ALLERGIES = 3;</code>
+     * <code>MEDICAL_HISTORY = 3;</code>
      */
-    public static final int ALLERGIES_VALUE = 3;
+    public static final int MEDICAL_HISTORY_VALUE = 3;
     /**
-     * <code>MEDICATIONS = 4;</code>
+     * <code>ALLERGIES = 4;</code>
      */
-    public static final int MEDICATIONS_VALUE = 4;
+    public static final int ALLERGIES_VALUE = 4;
     /**
-     * <code>FAMILY_HISTORY = 5;</code>
+     * <code>MEDICATIONS = 5;</code>
      */
-    public static final int FAMILY_HISTORY_VALUE = 5;
+    public static final int MEDICATIONS_VALUE = 5;
     /**
-     * <code>SOCIAL_HISTORY = 6;</code>
+     * <code>FAMILY_HISTORY = 6;</code>
      */
-    public static final int SOCIAL_HISTORY_VALUE = 6;
+    public static final int FAMILY_HISTORY_VALUE = 6;
     /**
-     * <code>VITALS = 7;</code>
+     * <code>SOCIAL_HISTORY = 7;</code>
      */
-    public static final int VITALS_VALUE = 7;
+    public static final int SOCIAL_HISTORY_VALUE = 7;
     /**
-     * <code>PHYSICAL_EXAM = 8;</code>
+     * <code>VITALS = 8;</code>
      */
-    public static final int PHYSICAL_EXAM_VALUE = 8;
+    public static final int VITALS_VALUE = 8;
     /**
-     * <code>MEDICAL_PROBLEM = 9;</code>
+     * <code>PHYSICAL_EXAM = 9;</code>
      */
-    public static final int MEDICAL_PROBLEM_VALUE = 9;
+    public static final int PHYSICAL_EXAM_VALUE = 9;
+    /**
+     * <code>LABORATORY_DATA = 10;</code>
+     */
+    public static final int LABORATORY_DATA_VALUE = 10;
+    /**
+     * <code>MEDICAL_PROBLEM = 11;</code>
+     */
+    public static final int MEDICAL_PROBLEM_VALUE = 11;
 
 
     public final int getNumber() {
@@ -124,14 +140,16 @@ public final class NoteOuterClass {
       switch (value) {
         case 0: return NO_TOPIC;
         case 1: return SUBJECTIVE;
-        case 2: return MEDICAL_HISTORY;
-        case 3: return ALLERGIES;
-        case 4: return MEDICATIONS;
-        case 5: return FAMILY_HISTORY;
-        case 6: return SOCIAL_HISTORY;
-        case 7: return VITALS;
-        case 8: return PHYSICAL_EXAM;
-        case 9: return MEDICAL_PROBLEM;
+        case 2: return REVIEW_OF_SYSTEMS;
+        case 3: return MEDICAL_HISTORY;
+        case 4: return ALLERGIES;
+        case 5: return MEDICATIONS;
+        case 6: return FAMILY_HISTORY;
+        case 7: return SOCIAL_HISTORY;
+        case 8: return VITALS;
+        case 9: return PHYSICAL_EXAM;
+        case 10: return LABORATORY_DATA;
+        case 11: return MEDICAL_PROBLEM;
         default: return null;
       }
     }
@@ -662,6 +680,25 @@ public final class NoteOuterClass {
      */
     ehr.note.NoteOuterClass.NoteFragmentOrBuilder getFragmentsOrBuilder(
         int index);
+
+    /**
+     * <code>repeated string tags = 9;</code>
+     */
+    java.util.List<java.lang.String>
+        getTagsList();
+    /**
+     * <code>repeated string tags = 9;</code>
+     */
+    int getTagsCount();
+    /**
+     * <code>repeated string tags = 9;</code>
+     */
+    java.lang.String getTags(int index);
+    /**
+     * <code>repeated string tags = 9;</code>
+     */
+    com.google.protobuf.ByteString
+        getTagsBytes(int index);
   }
   /**
    * Protobuf type {@code ehr.note.Note}
@@ -683,6 +720,7 @@ public final class NoteOuterClass {
       patientGuid_ = "";
       type_ = 0;
       fragments_ = java.util.Collections.emptyList();
+      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -766,6 +804,15 @@ public final class NoteOuterClass {
                   input.readMessage(ehr.note.NoteOuterClass.NoteFragment.parser(), extensionRegistry));
               break;
             }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+                tags_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000100;
+              }
+              tags_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -783,6 +830,9 @@ public final class NoteOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
           fragments_ = java.util.Collections.unmodifiableList(fragments_);
+        }
+        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+          tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1020,6 +1070,35 @@ public final class NoteOuterClass {
       return fragments_.get(index);
     }
 
+    public static final int TAGS_FIELD_NUMBER = 9;
+    private com.google.protobuf.LazyStringList tags_;
+    /**
+     * <code>repeated string tags = 9;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTagsList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated string tags = 9;</code>
+     */
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <code>repeated string tags = 9;</code>
+     */
+    public java.lang.String getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <code>repeated string tags = 9;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTagsBytes(int index) {
+      return tags_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1058,6 +1137,9 @@ public final class NoteOuterClass {
       for (int i = 0; i < fragments_.size(); i++) {
         output.writeMessage(8, fragments_.get(i));
       }
+      for (int i = 0; i < tags_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, tags_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1095,6 +1177,14 @@ public final class NoteOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, fragments_.get(i));
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tags_.size(); i++) {
+          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTagsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1129,6 +1219,8 @@ public final class NoteOuterClass {
       result = result && type_ == other.type_;
       result = result && getFragmentsList()
           .equals(other.getFragmentsList());
+      result = result && getTagsList()
+          .equals(other.getTagsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1159,6 +1251,10 @@ public final class NoteOuterClass {
       if (getFragmentsCount() > 0) {
         hash = (37 * hash) + FRAGMENTS_FIELD_NUMBER;
         hash = (53 * hash) + getFragmentsList().hashCode();
+      }
+      if (getTagsCount() > 0) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTagsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1318,6 +1414,8 @@ public final class NoteOuterClass {
         } else {
           fragmentsBuilder_.clear();
         }
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -1366,6 +1464,11 @@ public final class NoteOuterClass {
         } else {
           result.fragments_ = fragmentsBuilder_.build();
         }
+        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.tags_ = tags_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1465,6 +1568,16 @@ public final class NoteOuterClass {
               fragmentsBuilder_.addAllMessages(other.fragments_);
             }
           }
+        }
+        if (!other.tags_.isEmpty()) {
+          if (tags_.isEmpty()) {
+            tags_ = other.tags_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+          } else {
+            ensureTagsIsMutable();
+            tags_.addAll(other.tags_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2199,6 +2312,100 @@ public final class NoteOuterClass {
         }
         return fragmentsBuilder_;
       }
+
+      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTagsIsMutable() {
+        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTagsList() {
+        return tags_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       */
+      public int getTagsCount() {
+        return tags_.size();
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       */
+      public java.lang.String getTags(int index) {
+        return tags_.get(index);
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTagsBytes(int index) {
+        return tags_.getByteString(index);
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       */
+      public Builder setTags(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       */
+      public Builder addTags(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTagsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tags_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       */
+      public Builder clearTags() {
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       */
+      public Builder addTagsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2295,60 +2502,124 @@ public final class NoteOuterClass {
         getNoteGuidBytes();
 
     /**
-     * <code>.ehr.medicalissues.MedicalIssue issue = 8;</code>
+     * <code>string issue_guid = 5;</code>
      */
-    int getIssueValue();
+    java.lang.String getIssueGuid();
     /**
-     * <code>.ehr.medicalissues.MedicalIssue issue = 8;</code>
+     * <code>string issue_guid = 5;</code>
      */
-    ehr.medicalissues.Medicalissues.MedicalIssue getIssue();
+    com.google.protobuf.ByteString
+        getIssueGuidBytes();
 
     /**
-     * <code>string icd_10_code = 9;</code>
+     * <pre>
+     * recommend using watson api to determine from description
+     * </pre>
+     *
+     * <code>string icd_10_code = 6;</code>
      */
     java.lang.String getIcd10Code();
     /**
-     * <code>string icd_10_code = 9;</code>
+     * <pre>
+     * recommend using watson api to determine from description
+     * </pre>
+     *
+     * <code>string icd_10_code = 6;</code>
      */
     com.google.protobuf.ByteString
         getIcd10CodeBytes();
 
     /**
-     * <code>.ehr.note.NoteFragmentStatus status = 10;</code>
+     * <pre>
+     * recommend using watson api to determine from description
+     * </pre>
+     *
+     * <code>string icd_10_long = 7;</code>
+     */
+    java.lang.String getIcd10Long();
+    /**
+     * <pre>
+     * recommend using watson api to determine from description
+     * </pre>
+     *
+     * <code>string icd_10_long = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getIcd10LongBytes();
+
+    /**
+     * <pre>
+     * free text, human readable
+     * </pre>
+     *
+     * <code>string description = 8;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * free text, human readable
+     * </pre>
+     *
+     * <code>string description = 8;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
      */
     int getStatusValue();
     /**
-     * <code>.ehr.note.NoteFragmentStatus status = 10;</code>
+     * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
      */
     ehr.note.NoteOuterClass.NoteFragmentStatus getStatus();
 
     /**
-     * <code>.ehr.note.FragmentPriority priority = 11;</code>
+     * <code>.ehr.note.FragmentPriority priority = 10;</code>
      */
     int getPriorityValue();
     /**
-     * <code>.ehr.note.FragmentPriority priority = 11;</code>
+     * <code>.ehr.note.FragmentPriority priority = 10;</code>
      */
     ehr.note.NoteOuterClass.FragmentPriority getPriority();
 
     /**
-     * <code>.ehr.note.FragmentTopic topic = 12;</code>
+     * <code>.ehr.note.FragmentTopic topic = 11;</code>
      */
     int getTopicValue();
     /**
-     * <code>.ehr.note.FragmentTopic topic = 12;</code>
+     * <code>.ehr.note.FragmentTopic topic = 11;</code>
      */
     ehr.note.NoteOuterClass.FragmentTopic getTopic();
 
     /**
-     * <code>string markdown_content = 13;</code>
+     * <code>string markdown_content = 12;</code>
      */
     java.lang.String getMarkdownContent();
     /**
-     * <code>string markdown_content = 13;</code>
+     * <code>string markdown_content = 12;</code>
      */
     com.google.protobuf.ByteString
         getMarkdownContentBytes();
+
+    /**
+     * <code>repeated string tags = 13;</code>
+     */
+    java.util.List<java.lang.String>
+        getTagsList();
+    /**
+     * <code>repeated string tags = 13;</code>
+     */
+    int getTagsCount();
+    /**
+     * <code>repeated string tags = 13;</code>
+     */
+    java.lang.String getTags(int index);
+    /**
+     * <code>repeated string tags = 13;</code>
+     */
+    com.google.protobuf.ByteString
+        getTagsBytes(int index);
   }
   /**
    * Protobuf type {@code ehr.note.NoteFragment}
@@ -2366,12 +2637,15 @@ public final class NoteOuterClass {
       id_ = 0;
       noteFragmentGuid_ = "";
       noteGuid_ = "";
-      issue_ = 0;
+      issueGuid_ = "";
       icd10Code_ = "";
+      icd10Long_ = "";
+      description_ = "";
       status_ = 0;
       priority_ = 0;
       topic_ = 0;
       markdownContent_ = "";
+      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -2428,40 +2702,61 @@ public final class NoteOuterClass {
               noteGuid_ = s;
               break;
             }
-            case 64: {
-              int rawValue = input.readEnum();
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              issue_ = rawValue;
+              issueGuid_ = s;
               break;
             }
-            case 74: {
+            case 50: {
               java.lang.String s = input.readStringRequireUtf8();
 
               icd10Code_ = s;
               break;
             }
-            case 80: {
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              icd10Long_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 72: {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
               break;
             }
-            case 88: {
+            case 80: {
               int rawValue = input.readEnum();
 
               priority_ = rawValue;
               break;
             }
-            case 96: {
+            case 88: {
               int rawValue = input.readEnum();
 
               topic_ = rawValue;
               break;
             }
-            case 106: {
+            case 98: {
               java.lang.String s = input.readStringRequireUtf8();
 
               markdownContent_ = s;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+                tags_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00001000;
+              }
+              tags_.add(s);
               break;
             }
             default: {
@@ -2479,6 +2774,9 @@ public final class NoteOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+          tags_ = tags_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -2496,6 +2794,7 @@ public final class NoteOuterClass {
               ehr.note.NoteOuterClass.NoteFragment.class, ehr.note.NoteOuterClass.NoteFragment.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private int id_;
     /**
@@ -2594,27 +2893,48 @@ public final class NoteOuterClass {
       }
     }
 
-    public static final int ISSUE_FIELD_NUMBER = 8;
-    private int issue_;
+    public static final int ISSUE_GUID_FIELD_NUMBER = 5;
+    private volatile java.lang.Object issueGuid_;
     /**
-     * <code>.ehr.medicalissues.MedicalIssue issue = 8;</code>
+     * <code>string issue_guid = 5;</code>
      */
-    public int getIssueValue() {
-      return issue_;
+    public java.lang.String getIssueGuid() {
+      java.lang.Object ref = issueGuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        issueGuid_ = s;
+        return s;
+      }
     }
     /**
-     * <code>.ehr.medicalissues.MedicalIssue issue = 8;</code>
+     * <code>string issue_guid = 5;</code>
      */
-    public ehr.medicalissues.Medicalissues.MedicalIssue getIssue() {
-      @SuppressWarnings("deprecation")
-      ehr.medicalissues.Medicalissues.MedicalIssue result = ehr.medicalissues.Medicalissues.MedicalIssue.valueOf(issue_);
-      return result == null ? ehr.medicalissues.Medicalissues.MedicalIssue.UNRECOGNIZED : result;
+    public com.google.protobuf.ByteString
+        getIssueGuidBytes() {
+      java.lang.Object ref = issueGuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        issueGuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int ICD_10_CODE_FIELD_NUMBER = 9;
+    public static final int ICD_10_CODE_FIELD_NUMBER = 6;
     private volatile java.lang.Object icd10Code_;
     /**
-     * <code>string icd_10_code = 9;</code>
+     * <pre>
+     * recommend using watson api to determine from description
+     * </pre>
+     *
+     * <code>string icd_10_code = 6;</code>
      */
     public java.lang.String getIcd10Code() {
       java.lang.Object ref = icd10Code_;
@@ -2629,7 +2949,11 @@ public final class NoteOuterClass {
       }
     }
     /**
-     * <code>string icd_10_code = 9;</code>
+     * <pre>
+     * recommend using watson api to determine from description
+     * </pre>
+     *
+     * <code>string icd_10_code = 6;</code>
      */
     public com.google.protobuf.ByteString
         getIcd10CodeBytes() {
@@ -2645,16 +2969,100 @@ public final class NoteOuterClass {
       }
     }
 
-    public static final int STATUS_FIELD_NUMBER = 10;
+    public static final int ICD_10_LONG_FIELD_NUMBER = 7;
+    private volatile java.lang.Object icd10Long_;
+    /**
+     * <pre>
+     * recommend using watson api to determine from description
+     * </pre>
+     *
+     * <code>string icd_10_long = 7;</code>
+     */
+    public java.lang.String getIcd10Long() {
+      java.lang.Object ref = icd10Long_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        icd10Long_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * recommend using watson api to determine from description
+     * </pre>
+     *
+     * <code>string icd_10_long = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIcd10LongBytes() {
+      java.lang.Object ref = icd10Long_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        icd10Long_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 8;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * free text, human readable
+     * </pre>
+     *
+     * <code>string description = 8;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * free text, human readable
+     * </pre>
+     *
+     * <code>string description = 8;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 9;
     private int status_;
     /**
-     * <code>.ehr.note.NoteFragmentStatus status = 10;</code>
+     * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
-     * <code>.ehr.note.NoteFragmentStatus status = 10;</code>
+     * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
      */
     public ehr.note.NoteOuterClass.NoteFragmentStatus getStatus() {
       @SuppressWarnings("deprecation")
@@ -2662,16 +3070,16 @@ public final class NoteOuterClass {
       return result == null ? ehr.note.NoteOuterClass.NoteFragmentStatus.UNRECOGNIZED : result;
     }
 
-    public static final int PRIORITY_FIELD_NUMBER = 11;
+    public static final int PRIORITY_FIELD_NUMBER = 10;
     private int priority_;
     /**
-     * <code>.ehr.note.FragmentPriority priority = 11;</code>
+     * <code>.ehr.note.FragmentPriority priority = 10;</code>
      */
     public int getPriorityValue() {
       return priority_;
     }
     /**
-     * <code>.ehr.note.FragmentPriority priority = 11;</code>
+     * <code>.ehr.note.FragmentPriority priority = 10;</code>
      */
     public ehr.note.NoteOuterClass.FragmentPriority getPriority() {
       @SuppressWarnings("deprecation")
@@ -2679,16 +3087,16 @@ public final class NoteOuterClass {
       return result == null ? ehr.note.NoteOuterClass.FragmentPriority.UNRECOGNIZED : result;
     }
 
-    public static final int TOPIC_FIELD_NUMBER = 12;
+    public static final int TOPIC_FIELD_NUMBER = 11;
     private int topic_;
     /**
-     * <code>.ehr.note.FragmentTopic topic = 12;</code>
+     * <code>.ehr.note.FragmentTopic topic = 11;</code>
      */
     public int getTopicValue() {
       return topic_;
     }
     /**
-     * <code>.ehr.note.FragmentTopic topic = 12;</code>
+     * <code>.ehr.note.FragmentTopic topic = 11;</code>
      */
     public ehr.note.NoteOuterClass.FragmentTopic getTopic() {
       @SuppressWarnings("deprecation")
@@ -2696,10 +3104,10 @@ public final class NoteOuterClass {
       return result == null ? ehr.note.NoteOuterClass.FragmentTopic.UNRECOGNIZED : result;
     }
 
-    public static final int MARKDOWN_CONTENT_FIELD_NUMBER = 13;
+    public static final int MARKDOWN_CONTENT_FIELD_NUMBER = 12;
     private volatile java.lang.Object markdownContent_;
     /**
-     * <code>string markdown_content = 13;</code>
+     * <code>string markdown_content = 12;</code>
      */
     public java.lang.String getMarkdownContent() {
       java.lang.Object ref = markdownContent_;
@@ -2714,7 +3122,7 @@ public final class NoteOuterClass {
       }
     }
     /**
-     * <code>string markdown_content = 13;</code>
+     * <code>string markdown_content = 12;</code>
      */
     public com.google.protobuf.ByteString
         getMarkdownContentBytes() {
@@ -2728,6 +3136,35 @@ public final class NoteOuterClass {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 13;
+    private com.google.protobuf.LazyStringList tags_;
+    /**
+     * <code>repeated string tags = 13;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTagsList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated string tags = 13;</code>
+     */
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <code>repeated string tags = 13;</code>
+     */
+    public java.lang.String getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <code>repeated string tags = 13;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTagsBytes(int index) {
+      return tags_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2756,23 +3193,32 @@ public final class NoteOuterClass {
       if (!getNoteGuidBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, noteGuid_);
       }
-      if (issue_ != ehr.medicalissues.Medicalissues.MedicalIssue.NO_MEDICAL_ISSUE.getNumber()) {
-        output.writeEnum(8, issue_);
+      if (!getIssueGuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, issueGuid_);
       }
       if (!getIcd10CodeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, icd10Code_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, icd10Code_);
+      }
+      if (!getIcd10LongBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, icd10Long_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, description_);
       }
       if (status_ != ehr.note.NoteOuterClass.NoteFragmentStatus.NO_STATUS.getNumber()) {
-        output.writeEnum(10, status_);
+        output.writeEnum(9, status_);
       }
       if (priority_ != ehr.note.NoteOuterClass.FragmentPriority.NO_PRIORITY.getNumber()) {
-        output.writeEnum(11, priority_);
+        output.writeEnum(10, priority_);
       }
       if (topic_ != ehr.note.NoteOuterClass.FragmentTopic.NO_TOPIC.getNumber()) {
-        output.writeEnum(12, topic_);
+        output.writeEnum(11, topic_);
       }
       if (!getMarkdownContentBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, markdownContent_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, markdownContent_);
+      }
+      for (int i = 0; i < tags_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, tags_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -2797,27 +3243,40 @@ public final class NoteOuterClass {
       if (!getNoteGuidBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, noteGuid_);
       }
-      if (issue_ != ehr.medicalissues.Medicalissues.MedicalIssue.NO_MEDICAL_ISSUE.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(8, issue_);
+      if (!getIssueGuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, issueGuid_);
       }
       if (!getIcd10CodeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, icd10Code_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, icd10Code_);
+      }
+      if (!getIcd10LongBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, icd10Long_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, description_);
       }
       if (status_ != ehr.note.NoteOuterClass.NoteFragmentStatus.NO_STATUS.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(10, status_);
+          .computeEnumSize(9, status_);
       }
       if (priority_ != ehr.note.NoteOuterClass.FragmentPriority.NO_PRIORITY.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(11, priority_);
+          .computeEnumSize(10, priority_);
       }
       if (topic_ != ehr.note.NoteOuterClass.FragmentTopic.NO_TOPIC.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(12, topic_);
+          .computeEnumSize(11, topic_);
       }
       if (!getMarkdownContentBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, markdownContent_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, markdownContent_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tags_.size(); i++) {
+          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTagsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2846,14 +3305,21 @@ public final class NoteOuterClass {
           .equals(other.getNoteFragmentGuid());
       result = result && getNoteGuid()
           .equals(other.getNoteGuid());
-      result = result && issue_ == other.issue_;
+      result = result && getIssueGuid()
+          .equals(other.getIssueGuid());
       result = result && getIcd10Code()
           .equals(other.getIcd10Code());
+      result = result && getIcd10Long()
+          .equals(other.getIcd10Long());
+      result = result && getDescription()
+          .equals(other.getDescription());
       result = result && status_ == other.status_;
       result = result && priority_ == other.priority_;
       result = result && topic_ == other.topic_;
       result = result && getMarkdownContent()
           .equals(other.getMarkdownContent());
+      result = result && getTagsList()
+          .equals(other.getTagsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2875,10 +3341,14 @@ public final class NoteOuterClass {
       hash = (53 * hash) + getNoteFragmentGuid().hashCode();
       hash = (37 * hash) + NOTE_GUID_FIELD_NUMBER;
       hash = (53 * hash) + getNoteGuid().hashCode();
-      hash = (37 * hash) + ISSUE_FIELD_NUMBER;
-      hash = (53 * hash) + issue_;
+      hash = (37 * hash) + ISSUE_GUID_FIELD_NUMBER;
+      hash = (53 * hash) + getIssueGuid().hashCode();
       hash = (37 * hash) + ICD_10_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getIcd10Code().hashCode();
+      hash = (37 * hash) + ICD_10_LONG_FIELD_NUMBER;
+      hash = (53 * hash) + getIcd10Long().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
       hash = (37 * hash) + PRIORITY_FIELD_NUMBER;
@@ -2887,6 +3357,10 @@ public final class NoteOuterClass {
       hash = (53 * hash) + topic_;
       hash = (37 * hash) + MARKDOWN_CONTENT_FIELD_NUMBER;
       hash = (53 * hash) + getMarkdownContent().hashCode();
+      if (getTagsCount() > 0) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTagsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3032,9 +3506,13 @@ public final class NoteOuterClass {
 
         noteGuid_ = "";
 
-        issue_ = 0;
+        issueGuid_ = "";
 
         icd10Code_ = "";
+
+        icd10Long_ = "";
+
+        description_ = "";
 
         status_ = 0;
 
@@ -3044,6 +3522,8 @@ public final class NoteOuterClass {
 
         markdownContent_ = "";
 
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -3070,6 +3550,8 @@ public final class NoteOuterClass {
       @java.lang.Override
       public ehr.note.NoteOuterClass.NoteFragment buildPartial() {
         ehr.note.NoteOuterClass.NoteFragment result = new ehr.note.NoteOuterClass.NoteFragment(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.id_ = id_;
         if (dateCreatedBuilder_ == null) {
           result.dateCreated_ = dateCreated_;
@@ -3078,12 +3560,20 @@ public final class NoteOuterClass {
         }
         result.noteFragmentGuid_ = noteFragmentGuid_;
         result.noteGuid_ = noteGuid_;
-        result.issue_ = issue_;
+        result.issueGuid_ = issueGuid_;
         result.icd10Code_ = icd10Code_;
+        result.icd10Long_ = icd10Long_;
+        result.description_ = description_;
         result.status_ = status_;
         result.priority_ = priority_;
         result.topic_ = topic_;
         result.markdownContent_ = markdownContent_;
+        if (((bitField0_ & 0x00001000) == 0x00001000)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00001000);
+        }
+        result.tags_ = tags_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -3146,11 +3636,20 @@ public final class NoteOuterClass {
           noteGuid_ = other.noteGuid_;
           onChanged();
         }
-        if (other.issue_ != 0) {
-          setIssueValue(other.getIssueValue());
+        if (!other.getIssueGuid().isEmpty()) {
+          issueGuid_ = other.issueGuid_;
+          onChanged();
         }
         if (!other.getIcd10Code().isEmpty()) {
           icd10Code_ = other.icd10Code_;
+          onChanged();
+        }
+        if (!other.getIcd10Long().isEmpty()) {
+          icd10Long_ = other.icd10Long_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
           onChanged();
         }
         if (other.status_ != 0) {
@@ -3164,6 +3663,16 @@ public final class NoteOuterClass {
         }
         if (!other.getMarkdownContent().isEmpty()) {
           markdownContent_ = other.markdownContent_;
+          onChanged();
+        }
+        if (!other.tags_.isEmpty()) {
+          if (tags_.isEmpty()) {
+            tags_ = other.tags_;
+            bitField0_ = (bitField0_ & ~0x00001000);
+          } else {
+            ensureTagsIsMutable();
+            tags_.addAll(other.tags_);
+          }
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -3194,6 +3703,7 @@ public final class NoteOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private int id_ ;
       /**
@@ -3476,54 +3986,82 @@ public final class NoteOuterClass {
         return this;
       }
 
-      private int issue_ = 0;
+      private java.lang.Object issueGuid_ = "";
       /**
-       * <code>.ehr.medicalissues.MedicalIssue issue = 8;</code>
+       * <code>string issue_guid = 5;</code>
        */
-      public int getIssueValue() {
-        return issue_;
-      }
-      /**
-       * <code>.ehr.medicalissues.MedicalIssue issue = 8;</code>
-       */
-      public Builder setIssueValue(int value) {
-        issue_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.ehr.medicalissues.MedicalIssue issue = 8;</code>
-       */
-      public ehr.medicalissues.Medicalissues.MedicalIssue getIssue() {
-        @SuppressWarnings("deprecation")
-        ehr.medicalissues.Medicalissues.MedicalIssue result = ehr.medicalissues.Medicalissues.MedicalIssue.valueOf(issue_);
-        return result == null ? ehr.medicalissues.Medicalissues.MedicalIssue.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.ehr.medicalissues.MedicalIssue issue = 8;</code>
-       */
-      public Builder setIssue(ehr.medicalissues.Medicalissues.MedicalIssue value) {
-        if (value == null) {
-          throw new NullPointerException();
+      public java.lang.String getIssueGuid() {
+        java.lang.Object ref = issueGuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          issueGuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
         }
-        
-        issue_ = value.getNumber();
+      }
+      /**
+       * <code>string issue_guid = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIssueGuidBytes() {
+        java.lang.Object ref = issueGuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          issueGuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string issue_guid = 5;</code>
+       */
+      public Builder setIssueGuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        issueGuid_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>.ehr.medicalissues.MedicalIssue issue = 8;</code>
+       * <code>string issue_guid = 5;</code>
        */
-      public Builder clearIssue() {
+      public Builder clearIssueGuid() {
         
-        issue_ = 0;
+        issueGuid_ = getDefaultInstance().getIssueGuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string issue_guid = 5;</code>
+       */
+      public Builder setIssueGuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        issueGuid_ = value;
         onChanged();
         return this;
       }
 
       private java.lang.Object icd10Code_ = "";
       /**
-       * <code>string icd_10_code = 9;</code>
+       * <pre>
+       * recommend using watson api to determine from description
+       * </pre>
+       *
+       * <code>string icd_10_code = 6;</code>
        */
       public java.lang.String getIcd10Code() {
         java.lang.Object ref = icd10Code_;
@@ -3538,7 +4076,11 @@ public final class NoteOuterClass {
         }
       }
       /**
-       * <code>string icd_10_code = 9;</code>
+       * <pre>
+       * recommend using watson api to determine from description
+       * </pre>
+       *
+       * <code>string icd_10_code = 6;</code>
        */
       public com.google.protobuf.ByteString
           getIcd10CodeBytes() {
@@ -3554,7 +4096,11 @@ public final class NoteOuterClass {
         }
       }
       /**
-       * <code>string icd_10_code = 9;</code>
+       * <pre>
+       * recommend using watson api to determine from description
+       * </pre>
+       *
+       * <code>string icd_10_code = 6;</code>
        */
       public Builder setIcd10Code(
           java.lang.String value) {
@@ -3567,7 +4113,11 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>string icd_10_code = 9;</code>
+       * <pre>
+       * recommend using watson api to determine from description
+       * </pre>
+       *
+       * <code>string icd_10_code = 6;</code>
        */
       public Builder clearIcd10Code() {
         
@@ -3576,7 +4126,11 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>string icd_10_code = 9;</code>
+       * <pre>
+       * recommend using watson api to determine from description
+       * </pre>
+       *
+       * <code>string icd_10_code = 6;</code>
        */
       public Builder setIcd10CodeBytes(
           com.google.protobuf.ByteString value) {
@@ -3590,15 +4144,193 @@ public final class NoteOuterClass {
         return this;
       }
 
+      private java.lang.Object icd10Long_ = "";
+      /**
+       * <pre>
+       * recommend using watson api to determine from description
+       * </pre>
+       *
+       * <code>string icd_10_long = 7;</code>
+       */
+      public java.lang.String getIcd10Long() {
+        java.lang.Object ref = icd10Long_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          icd10Long_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * recommend using watson api to determine from description
+       * </pre>
+       *
+       * <code>string icd_10_long = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIcd10LongBytes() {
+        java.lang.Object ref = icd10Long_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          icd10Long_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * recommend using watson api to determine from description
+       * </pre>
+       *
+       * <code>string icd_10_long = 7;</code>
+       */
+      public Builder setIcd10Long(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        icd10Long_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * recommend using watson api to determine from description
+       * </pre>
+       *
+       * <code>string icd_10_long = 7;</code>
+       */
+      public Builder clearIcd10Long() {
+        
+        icd10Long_ = getDefaultInstance().getIcd10Long();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * recommend using watson api to determine from description
+       * </pre>
+       *
+       * <code>string icd_10_long = 7;</code>
+       */
+      public Builder setIcd10LongBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        icd10Long_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * free text, human readable
+       * </pre>
+       *
+       * <code>string description = 8;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * free text, human readable
+       * </pre>
+       *
+       * <code>string description = 8;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * free text, human readable
+       * </pre>
+       *
+       * <code>string description = 8;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * free text, human readable
+       * </pre>
+       *
+       * <code>string description = 8;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * free text, human readable
+       * </pre>
+       *
+       * <code>string description = 8;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
       private int status_ = 0;
       /**
-       * <code>.ehr.note.NoteFragmentStatus status = 10;</code>
+       * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
        */
       public int getStatusValue() {
         return status_;
       }
       /**
-       * <code>.ehr.note.NoteFragmentStatus status = 10;</code>
+       * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
        */
       public Builder setStatusValue(int value) {
         status_ = value;
@@ -3606,7 +4338,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>.ehr.note.NoteFragmentStatus status = 10;</code>
+       * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
        */
       public ehr.note.NoteOuterClass.NoteFragmentStatus getStatus() {
         @SuppressWarnings("deprecation")
@@ -3614,7 +4346,7 @@ public final class NoteOuterClass {
         return result == null ? ehr.note.NoteOuterClass.NoteFragmentStatus.UNRECOGNIZED : result;
       }
       /**
-       * <code>.ehr.note.NoteFragmentStatus status = 10;</code>
+       * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
        */
       public Builder setStatus(ehr.note.NoteOuterClass.NoteFragmentStatus value) {
         if (value == null) {
@@ -3626,7 +4358,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>.ehr.note.NoteFragmentStatus status = 10;</code>
+       * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
        */
       public Builder clearStatus() {
         
@@ -3637,13 +4369,13 @@ public final class NoteOuterClass {
 
       private int priority_ = 0;
       /**
-       * <code>.ehr.note.FragmentPriority priority = 11;</code>
+       * <code>.ehr.note.FragmentPriority priority = 10;</code>
        */
       public int getPriorityValue() {
         return priority_;
       }
       /**
-       * <code>.ehr.note.FragmentPriority priority = 11;</code>
+       * <code>.ehr.note.FragmentPriority priority = 10;</code>
        */
       public Builder setPriorityValue(int value) {
         priority_ = value;
@@ -3651,7 +4383,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>.ehr.note.FragmentPriority priority = 11;</code>
+       * <code>.ehr.note.FragmentPriority priority = 10;</code>
        */
       public ehr.note.NoteOuterClass.FragmentPriority getPriority() {
         @SuppressWarnings("deprecation")
@@ -3659,7 +4391,7 @@ public final class NoteOuterClass {
         return result == null ? ehr.note.NoteOuterClass.FragmentPriority.UNRECOGNIZED : result;
       }
       /**
-       * <code>.ehr.note.FragmentPriority priority = 11;</code>
+       * <code>.ehr.note.FragmentPriority priority = 10;</code>
        */
       public Builder setPriority(ehr.note.NoteOuterClass.FragmentPriority value) {
         if (value == null) {
@@ -3671,7 +4403,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>.ehr.note.FragmentPriority priority = 11;</code>
+       * <code>.ehr.note.FragmentPriority priority = 10;</code>
        */
       public Builder clearPriority() {
         
@@ -3682,13 +4414,13 @@ public final class NoteOuterClass {
 
       private int topic_ = 0;
       /**
-       * <code>.ehr.note.FragmentTopic topic = 12;</code>
+       * <code>.ehr.note.FragmentTopic topic = 11;</code>
        */
       public int getTopicValue() {
         return topic_;
       }
       /**
-       * <code>.ehr.note.FragmentTopic topic = 12;</code>
+       * <code>.ehr.note.FragmentTopic topic = 11;</code>
        */
       public Builder setTopicValue(int value) {
         topic_ = value;
@@ -3696,7 +4428,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>.ehr.note.FragmentTopic topic = 12;</code>
+       * <code>.ehr.note.FragmentTopic topic = 11;</code>
        */
       public ehr.note.NoteOuterClass.FragmentTopic getTopic() {
         @SuppressWarnings("deprecation")
@@ -3704,7 +4436,7 @@ public final class NoteOuterClass {
         return result == null ? ehr.note.NoteOuterClass.FragmentTopic.UNRECOGNIZED : result;
       }
       /**
-       * <code>.ehr.note.FragmentTopic topic = 12;</code>
+       * <code>.ehr.note.FragmentTopic topic = 11;</code>
        */
       public Builder setTopic(ehr.note.NoteOuterClass.FragmentTopic value) {
         if (value == null) {
@@ -3716,7 +4448,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>.ehr.note.FragmentTopic topic = 12;</code>
+       * <code>.ehr.note.FragmentTopic topic = 11;</code>
        */
       public Builder clearTopic() {
         
@@ -3727,7 +4459,7 @@ public final class NoteOuterClass {
 
       private java.lang.Object markdownContent_ = "";
       /**
-       * <code>string markdown_content = 13;</code>
+       * <code>string markdown_content = 12;</code>
        */
       public java.lang.String getMarkdownContent() {
         java.lang.Object ref = markdownContent_;
@@ -3742,7 +4474,7 @@ public final class NoteOuterClass {
         }
       }
       /**
-       * <code>string markdown_content = 13;</code>
+       * <code>string markdown_content = 12;</code>
        */
       public com.google.protobuf.ByteString
           getMarkdownContentBytes() {
@@ -3758,7 +4490,7 @@ public final class NoteOuterClass {
         }
       }
       /**
-       * <code>string markdown_content = 13;</code>
+       * <code>string markdown_content = 12;</code>
        */
       public Builder setMarkdownContent(
           java.lang.String value) {
@@ -3771,7 +4503,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>string markdown_content = 13;</code>
+       * <code>string markdown_content = 12;</code>
        */
       public Builder clearMarkdownContent() {
         
@@ -3780,7 +4512,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>string markdown_content = 13;</code>
+       * <code>string markdown_content = 12;</code>
        */
       public Builder setMarkdownContentBytes(
           com.google.protobuf.ByteString value) {
@@ -3790,6 +4522,100 @@ public final class NoteOuterClass {
   checkByteStringIsUtf8(value);
         
         markdownContent_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTagsIsMutable() {
+        if (!((bitField0_ & 0x00001000) == 0x00001000)) {
+          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
+          bitField0_ |= 0x00001000;
+         }
+      }
+      /**
+       * <code>repeated string tags = 13;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTagsList() {
+        return tags_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string tags = 13;</code>
+       */
+      public int getTagsCount() {
+        return tags_.size();
+      }
+      /**
+       * <code>repeated string tags = 13;</code>
+       */
+      public java.lang.String getTags(int index) {
+        return tags_.get(index);
+      }
+      /**
+       * <code>repeated string tags = 13;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTagsBytes(int index) {
+        return tags_.getByteString(index);
+      }
+      /**
+       * <code>repeated string tags = 13;</code>
+       */
+      public Builder setTags(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 13;</code>
+       */
+      public Builder addTags(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 13;</code>
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTagsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tags_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 13;</code>
+       */
+      public Builder clearTags() {
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 13;</code>
+       */
+      public Builder addTagsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTagsIsMutable();
+        tags_.add(value);
         onChanged();
         return this;
       }
@@ -3866,35 +4692,37 @@ public final class NoteOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\nnote.proto\022\010ehr.note\032\037google/protobuf/" +
-      "timestamp.proto\032\023medicalissues.proto\"\343\001\n" +
+      "timestamp.proto\032\023medicalissues.proto\"\361\001\n" +
       "\004Note\022\n\n\002id\030\001 \001(\005\0220\n\014date_created\030\002 \001(\0132" +
       "\032.google.protobuf.Timestamp\022\021\n\tnote_guid" +
       "\030\003 \001(\t\022\022\n\nvisit_guid\030\004 \001(\t\022\023\n\013author_gui" +
       "d\030\005 \001(\t\022\024\n\014patient_guid\030\006 \001(\t\022 \n\004type\030\007 " +
       "\001(\0162\022.ehr.note.NoteType\022)\n\tfragments\030\010 \003" +
-      "(\0132\026.ehr.note.NoteFragment\"\336\002\n\014NoteFragm" +
-      "ent\022\n\n\002id\030\001 \001(\005\0220\n\014date_created\030\002 \001(\0132\032." +
-      "google.protobuf.Timestamp\022\032\n\022note_fragme" +
-      "nt_guid\030\003 \001(\t\022\021\n\tnote_guid\030\004 \001(\t\022.\n\005issu" +
-      "e\030\010 \001(\0162\037.ehr.medicalissues.MedicalIssue" +
-      "\022\023\n\013icd_10_code\030\t \001(\t\022,\n\006status\030\n \001(\0162\034." +
-      "ehr.note.NoteFragmentStatus\022,\n\010priority\030" +
-      "\013 \001(\0162\032.ehr.note.FragmentPriority\022&\n\005top" +
-      "ic\030\014 \001(\0162\027.ehr.note.FragmentTopic\022\030\n\020mar" +
-      "kdown_content\030\r \001(\t*\276\001\n\rFragmentTopic\022\014\n" +
-      "\010NO_TOPIC\020\000\022\016\n\nSUBJECTIVE\020\001\022\023\n\017MEDICAL_H" +
-      "ISTORY\020\002\022\r\n\tALLERGIES\020\003\022\017\n\013MEDICATIONS\020\004" +
-      "\022\022\n\016FAMILY_HISTORY\020\005\022\022\n\016SOCIAL_HISTORY\020\006" +
-      "\022\n\n\006VITALS\020\007\022\021\n\rPHYSICAL_EXAM\020\010\022\023\n\017MEDIC" +
-      "AL_PROBLEM\020\t*B\n\020FragmentPriority\022\017\n\013NO_P" +
-      "RIORITY\020\000\022\010\n\004HIGH\020\001\022\n\n\006NORMAL\020\002\022\007\n\003LOW\020\003" +
-      "*M\n\022NoteFragmentStatus\022\r\n\tNO_STATUS\020\000\022\016\n" +
-      "\nINCOMPLETE\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010REPLACED\020\003*" +
-      "\254\001\n\010NoteType\022\020\n\014NO_NOTE_TYPE\020\000\022\r\n\tFOLLOW" +
-      "_UP\020\001\022\016\n\nPHONE_CALL\020\002\022 \n\034CONTINUED_CARE_" +
-      "DOCUMENTATION\020\004\022\030\n\024REFILL_DOCUMENTATION\020" +
-      "\005\022\n\n\006INTAKE\020\006\022\r\n\tPROCEDURE\020\007\022\030\n\024HISTORY_" +
-      "AND_PHYSICAL\020\010B\007Z\005ehrpbb\006proto3"
+      "(\0132\026.ehr.note.NoteFragment\022\014\n\004tags\030\t \003(\t" +
+      "\"\372\002\n\014NoteFragment\022\n\n\002id\030\001 \001(\005\0220\n\014date_cr" +
+      "eated\030\002 \001(\0132\032.google.protobuf.Timestamp\022" +
+      "\032\n\022note_fragment_guid\030\003 \001(\t\022\021\n\tnote_guid" +
+      "\030\004 \001(\t\022\022\n\nissue_guid\030\005 \001(\t\022\023\n\013icd_10_cod" +
+      "e\030\006 \001(\t\022\023\n\013icd_10_long\030\007 \001(\t\022\023\n\013descript" +
+      "ion\030\010 \001(\t\022,\n\006status\030\t \001(\0162\034.ehr.note.Not" +
+      "eFragmentStatus\022,\n\010priority\030\n \001(\0162\032.ehr." +
+      "note.FragmentPriority\022&\n\005topic\030\013 \001(\0162\027.e" +
+      "hr.note.FragmentTopic\022\030\n\020markdown_conten" +
+      "t\030\014 \001(\t\022\014\n\004tags\030\r \003(\t*\352\001\n\rFragmentTopic\022" +
+      "\014\n\010NO_TOPIC\020\000\022\016\n\nSUBJECTIVE\020\001\022\025\n\021REVIEW_" +
+      "OF_SYSTEMS\020\002\022\023\n\017MEDICAL_HISTORY\020\003\022\r\n\tALL" +
+      "ERGIES\020\004\022\017\n\013MEDICATIONS\020\005\022\022\n\016FAMILY_HIST" +
+      "ORY\020\006\022\022\n\016SOCIAL_HISTORY\020\007\022\n\n\006VITALS\020\010\022\021\n" +
+      "\rPHYSICAL_EXAM\020\t\022\023\n\017LABORATORY_DATA\020\n\022\023\n" +
+      "\017MEDICAL_PROBLEM\020\013*B\n\020FragmentPriority\022\017" +
+      "\n\013NO_PRIORITY\020\000\022\010\n\004HIGH\020\001\022\n\n\006NORMAL\020\002\022\007\n" +
+      "\003LOW\020\003*M\n\022NoteFragmentStatus\022\r\n\tNO_STATU" +
+      "S\020\000\022\016\n\nINCOMPLETE\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010REPLA" +
+      "CED\020\003*\254\001\n\010NoteType\022\020\n\014NO_NOTE_TYPE\020\000\022\r\n\t" +
+      "FOLLOW_UP\020\001\022\016\n\nPHONE_CALL\020\002\022 \n\034CONTINUED" +
+      "_CARE_DOCUMENTATION\020\004\022\030\n\024REFILL_DOCUMENT" +
+      "ATION\020\005\022\n\n\006INTAKE\020\006\022\r\n\tPROCEDURE\020\007\022\030\n\024HI" +
+      "STORY_AND_PHYSICAL\020\010B\007Z\005ehrpbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3915,13 +4743,13 @@ public final class NoteOuterClass {
     internal_static_ehr_note_Note_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ehr_note_Note_descriptor,
-        new java.lang.String[] { "Id", "DateCreated", "NoteGuid", "VisitGuid", "AuthorGuid", "PatientGuid", "Type", "Fragments", });
+        new java.lang.String[] { "Id", "DateCreated", "NoteGuid", "VisitGuid", "AuthorGuid", "PatientGuid", "Type", "Fragments", "Tags", });
     internal_static_ehr_note_NoteFragment_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ehr_note_NoteFragment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ehr_note_NoteFragment_descriptor,
-        new java.lang.String[] { "Id", "DateCreated", "NoteFragmentGuid", "NoteGuid", "Issue", "Icd10Code", "Status", "Priority", "Topic", "MarkdownContent", });
+        new java.lang.String[] { "Id", "DateCreated", "NoteFragmentGuid", "NoteGuid", "IssueGuid", "Icd10Code", "Icd10Long", "Description", "Status", "Priority", "Topic", "MarkdownContent", "Tags", });
     com.google.protobuf.TimestampProto.getDescriptor();
     ehr.medicalissues.Medicalissues.getDescriptor();
   }

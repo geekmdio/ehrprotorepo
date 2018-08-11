@@ -39,7 +39,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ehr.note.Note.repeatedFields_ = [8];
+proto.ehr.note.Note.repeatedFields_ = [8,9];
 
 
 
@@ -78,7 +78,8 @@ proto.ehr.note.Note.toObject = function(includeInstance, msg) {
     patientGuid: jspb.Message.getFieldWithDefault(msg, 6, ""),
     type: jspb.Message.getFieldWithDefault(msg, 7, 0),
     fragmentsList: jspb.Message.toObjectList(msg.getFragmentsList(),
-    proto.ehr.note.NoteFragment.toObject, includeInstance)
+    proto.ehr.note.NoteFragment.toObject, includeInstance),
+    tagsList: jspb.Message.getRepeatedField(msg, 9)
   };
 
   if (includeInstance) {
@@ -148,6 +149,10 @@ proto.ehr.note.Note.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.ehr.note.NoteFragment;
       reader.readMessage(value,proto.ehr.note.NoteFragment.deserializeBinaryFromReader);
       msg.addFragments(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addTags(value);
       break;
     default:
       reader.skipField();
@@ -234,6 +239,13 @@ proto.ehr.note.Note.serializeBinaryToWriter = function(message, writer) {
       8,
       f,
       proto.ehr.note.NoteFragment.serializeBinaryToWriter
+    );
+  }
+  f = message.getTagsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      9,
+      f
     );
   }
 };
@@ -387,6 +399,35 @@ proto.ehr.note.Note.prototype.addFragments = function(opt_value, opt_index) {
 
 proto.ehr.note.Note.prototype.clearFragmentsList = function() {
   this.setFragmentsList([]);
+};
+
+
+/**
+ * repeated string tags = 9;
+ * @return {!Array<string>}
+ */
+proto.ehr.note.Note.prototype.getTagsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 9));
+};
+
+
+/** @param {!Array<string>} value */
+proto.ehr.note.Note.prototype.setTagsList = function(value) {
+  jspb.Message.setField(this, 9, value || []);
+};
+
+
+/**
+ * @param {!string} value
+ * @param {number=} opt_index
+ */
+proto.ehr.note.Note.prototype.addTags = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 9, value, opt_index);
+};
+
+
+proto.ehr.note.Note.prototype.clearTagsList = function() {
+  this.setTagsList([]);
 };
 
 

@@ -29,7 +29,6 @@ CF_EXTERN_C_BEGIN
 
 @class GPBTimestamp;
 @class NoteFragment;
-GPB_ENUM_FWD_DECLARE(MedicalIssue);
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -44,14 +43,16 @@ typedef GPB_ENUM(FragmentTopic) {
   FragmentTopic_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
   FragmentTopic_NoTopic = 0,
   FragmentTopic_Subjective = 1,
-  FragmentTopic_MedicalHistory = 2,
-  FragmentTopic_Allergies = 3,
-  FragmentTopic_Medications = 4,
-  FragmentTopic_FamilyHistory = 5,
-  FragmentTopic_SocialHistory = 6,
-  FragmentTopic_Vitals = 7,
-  FragmentTopic_PhysicalExam = 8,
-  FragmentTopic_MedicalProblem = 9,
+  FragmentTopic_ReviewOfSystems = 2,
+  FragmentTopic_MedicalHistory = 3,
+  FragmentTopic_Allergies = 4,
+  FragmentTopic_Medications = 5,
+  FragmentTopic_FamilyHistory = 6,
+  FragmentTopic_SocialHistory = 7,
+  FragmentTopic_Vitals = 8,
+  FragmentTopic_PhysicalExam = 9,
+  FragmentTopic_LaboratoryData = 10,
+  FragmentTopic_MedicalProblem = 11,
 };
 
 GPBEnumDescriptor *FragmentTopic_EnumDescriptor(void);
@@ -161,6 +162,7 @@ typedef GPB_ENUM(Note_FieldNumber) {
   Note_FieldNumber_PatientGuid = 6,
   Note_FieldNumber_Type = 7,
   Note_FieldNumber_FragmentsArray = 8,
+  Note_FieldNumber_TagsArray = 9,
 };
 
 @interface Note : GPBMessage
@@ -185,6 +187,10 @@ typedef GPB_ENUM(Note_FieldNumber) {
 /** The number of items in @c fragmentsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger fragmentsArray_Count;
 
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *tagsArray;
+/** The number of items in @c tagsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger tagsArray_Count;
+
 @end
 
 /**
@@ -206,12 +212,15 @@ typedef GPB_ENUM(NoteFragment_FieldNumber) {
   NoteFragment_FieldNumber_DateCreated = 2,
   NoteFragment_FieldNumber_NoteFragmentGuid = 3,
   NoteFragment_FieldNumber_NoteGuid = 4,
-  NoteFragment_FieldNumber_Issue = 8,
-  NoteFragment_FieldNumber_Icd10Code = 9,
-  NoteFragment_FieldNumber_Status = 10,
-  NoteFragment_FieldNumber_Priority = 11,
-  NoteFragment_FieldNumber_Topic = 12,
-  NoteFragment_FieldNumber_MarkdownContent = 13,
+  NoteFragment_FieldNumber_IssueGuid = 5,
+  NoteFragment_FieldNumber_Icd10Code = 6,
+  NoteFragment_FieldNumber_Icd10Long = 7,
+  NoteFragment_FieldNumber_Description_p = 8,
+  NoteFragment_FieldNumber_Status = 9,
+  NoteFragment_FieldNumber_Priority = 10,
+  NoteFragment_FieldNumber_Topic = 11,
+  NoteFragment_FieldNumber_MarkdownContent = 12,
+  NoteFragment_FieldNumber_TagsArray = 13,
 };
 
 @interface NoteFragment : GPBMessage
@@ -226,9 +235,16 @@ typedef GPB_ENUM(NoteFragment_FieldNumber) {
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *noteGuid;
 
-@property(nonatomic, readwrite) enum MedicalIssue issue;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *issueGuid;
 
+/** recommend using watson api to determine from description */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *icd10Code;
+
+/** recommend using watson api to determine from description */
+@property(nonatomic, readwrite, copy, null_resettable) NSString *icd10Long;
+
+/** free text, human readable */
+@property(nonatomic, readwrite, copy, null_resettable) NSString *description_p;
 
 @property(nonatomic, readwrite) NoteFragmentStatus status;
 
@@ -238,19 +254,11 @@ typedef GPB_ENUM(NoteFragment_FieldNumber) {
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *markdownContent;
 
-@end
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *tagsArray;
+/** The number of items in @c tagsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger tagsArray_Count;
 
-/**
- * Fetches the raw value of a @c NoteFragment's @c issue property, even
- * if the value was not defined by the enum at the time the code was generated.
- **/
-int32_t NoteFragment_Issue_RawValue(NoteFragment *message);
-/**
- * Sets the raw value of an @c NoteFragment's @c issue property, allowing
- * it to be set to a value that was not defined by the enum at the time the code
- * was generated.
- **/
-void SetNoteFragment_Issue_RawValue(NoteFragment *message, int32_t value);
+@end
 
 /**
  * Fetches the raw value of a @c NoteFragment's @c status property, even

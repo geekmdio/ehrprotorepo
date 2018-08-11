@@ -45,6 +45,10 @@ class Note extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
      */
     private $fragments;
+    /**
+     * Generated from protobuf field <code>repeated string tags = 9;</code>
+     */
+    private $tags;
 
     /**
      * Constructor.
@@ -60,6 +64,7 @@ class Note extends \Google\Protobuf\Internal\Message
      *     @type string $patient_guid
      *     @type int $type
      *     @type \Ehr\Note\NoteFragment[]|\Google\Protobuf\Internal\RepeatedField $fragments
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $tags
      * }
      */
     public function __construct($data = NULL) {
@@ -239,6 +244,28 @@ class Note extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Ehr\Note\NoteFragment::class);
         $this->fragments = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string tags = 9;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string tags = 9;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setTags($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->tags = $arr;
 
         return $this;
     }

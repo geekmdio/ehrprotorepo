@@ -51,12 +51,14 @@ GPBEnumDescriptor *FragmentTopic_EnumDescriptor(void) {
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "NoTopic\000Subjective\000MedicalHistory\000Allerg"
-        "ies\000Medications\000FamilyHistory\000SocialHist"
-        "ory\000Vitals\000PhysicalExam\000MedicalProblem\000";
+        "NoTopic\000Subjective\000ReviewOfSystems\000Medic"
+        "alHistory\000Allergies\000Medications\000FamilyHi"
+        "story\000SocialHistory\000Vitals\000PhysicalExam\000"
+        "LaboratoryData\000MedicalProblem\000";
     static const int32_t values[] = {
         FragmentTopic_NoTopic,
         FragmentTopic_Subjective,
+        FragmentTopic_ReviewOfSystems,
         FragmentTopic_MedicalHistory,
         FragmentTopic_Allergies,
         FragmentTopic_Medications,
@@ -64,6 +66,7 @@ GPBEnumDescriptor *FragmentTopic_EnumDescriptor(void) {
         FragmentTopic_SocialHistory,
         FragmentTopic_Vitals,
         FragmentTopic_PhysicalExam,
+        FragmentTopic_LaboratoryData,
         FragmentTopic_MedicalProblem,
     };
     GPBEnumDescriptor *worker =
@@ -84,6 +87,7 @@ BOOL FragmentTopic_IsValidValue(int32_t value__) {
   switch (value__) {
     case FragmentTopic_NoTopic:
     case FragmentTopic_Subjective:
+    case FragmentTopic_ReviewOfSystems:
     case FragmentTopic_MedicalHistory:
     case FragmentTopic_Allergies:
     case FragmentTopic_Medications:
@@ -91,6 +95,7 @@ BOOL FragmentTopic_IsValidValue(int32_t value__) {
     case FragmentTopic_SocialHistory:
     case FragmentTopic_Vitals:
     case FragmentTopic_PhysicalExam:
+    case FragmentTopic_LaboratoryData:
     case FragmentTopic_MedicalProblem:
       return YES;
     default:
@@ -237,6 +242,7 @@ BOOL NoteType_IsValidValue(int32_t value__) {
 @dynamic patientGuid;
 @dynamic type;
 @dynamic fragmentsArray, fragmentsArray_Count;
+@dynamic tagsArray, tagsArray_Count;
 
 typedef struct Note__storage_ {
   uint32_t _has_storage_[1];
@@ -248,6 +254,7 @@ typedef struct Note__storage_ {
   NSString *authorGuid;
   NSString *patientGuid;
   NSMutableArray *fragmentsArray;
+  NSMutableArray *tagsArray;
 } Note__storage_;
 
 // This method is threadsafe because it is initially called
@@ -328,6 +335,15 @@ typedef struct Note__storage_ {
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
       },
+      {
+        .name = "tagsArray",
+        .dataTypeSpecific.className = NULL,
+        .number = Note_FieldNumber_TagsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(Note__storage_, tagsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeString,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Note class]
@@ -365,25 +381,31 @@ void SetNote_Type_RawValue(Note *message, int32_t value) {
 @dynamic hasDateCreated, dateCreated;
 @dynamic noteFragmentGuid;
 @dynamic noteGuid;
-@dynamic issue;
+@dynamic issueGuid;
 @dynamic icd10Code;
+@dynamic icd10Long;
+@dynamic description_p;
 @dynamic status;
 @dynamic priority;
 @dynamic topic;
 @dynamic markdownContent;
+@dynamic tagsArray, tagsArray_Count;
 
 typedef struct NoteFragment__storage_ {
   uint32_t _has_storage_[1];
   int32_t id_p;
-  MedicalIssue issue;
   NoteFragmentStatus status;
   FragmentPriority priority;
   FragmentTopic topic;
   GPBTimestamp *dateCreated;
   NSString *noteFragmentGuid;
   NSString *noteGuid;
+  NSString *issueGuid;
   NSString *icd10Code;
+  NSString *icd10Long;
+  NSString *description_p;
   NSString *markdownContent;
+  NSMutableArray *tagsArray;
 } NoteFragment__storage_;
 
 // This method is threadsafe because it is initially called
@@ -429,13 +451,13 @@ typedef struct NoteFragment__storage_ {
         .dataType = GPBDataTypeString,
       },
       {
-        .name = "issue",
-        .dataTypeSpecific.enumDescFunc = MedicalIssue_EnumDescriptor,
-        .number = NoteFragment_FieldNumber_Issue,
+        .name = "issueGuid",
+        .dataTypeSpecific.className = NULL,
+        .number = NoteFragment_FieldNumber_IssueGuid,
         .hasIndex = 4,
-        .offset = (uint32_t)offsetof(NoteFragment__storage_, issue),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
-        .dataType = GPBDataTypeEnum,
+        .offset = (uint32_t)offsetof(NoteFragment__storage_, issueGuid),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
         .name = "icd10Code",
@@ -447,10 +469,28 @@ typedef struct NoteFragment__storage_ {
         .dataType = GPBDataTypeString,
       },
       {
+        .name = "icd10Long",
+        .dataTypeSpecific.className = NULL,
+        .number = NoteFragment_FieldNumber_Icd10Long,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(NoteFragment__storage_, icd10Long),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "description_p",
+        .dataTypeSpecific.className = NULL,
+        .number = NoteFragment_FieldNumber_Description_p,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(NoteFragment__storage_, description_p),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
         .name = "status",
         .dataTypeSpecific.enumDescFunc = NoteFragmentStatus_EnumDescriptor,
         .number = NoteFragment_FieldNumber_Status,
-        .hasIndex = 6,
+        .hasIndex = 8,
         .offset = (uint32_t)offsetof(NoteFragment__storage_, status),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
@@ -459,7 +499,7 @@ typedef struct NoteFragment__storage_ {
         .name = "priority",
         .dataTypeSpecific.enumDescFunc = FragmentPriority_EnumDescriptor,
         .number = NoteFragment_FieldNumber_Priority,
-        .hasIndex = 7,
+        .hasIndex = 9,
         .offset = (uint32_t)offsetof(NoteFragment__storage_, priority),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
@@ -468,7 +508,7 @@ typedef struct NoteFragment__storage_ {
         .name = "topic",
         .dataTypeSpecific.enumDescFunc = FragmentTopic_EnumDescriptor,
         .number = NoteFragment_FieldNumber_Topic,
-        .hasIndex = 8,
+        .hasIndex = 10,
         .offset = (uint32_t)offsetof(NoteFragment__storage_, topic),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
@@ -477,9 +517,18 @@ typedef struct NoteFragment__storage_ {
         .name = "markdownContent",
         .dataTypeSpecific.className = NULL,
         .number = NoteFragment_FieldNumber_MarkdownContent,
-        .hasIndex = 9,
+        .hasIndex = 11,
         .offset = (uint32_t)offsetof(NoteFragment__storage_, markdownContent),
         .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "tagsArray",
+        .dataTypeSpecific.className = NULL,
+        .number = NoteFragment_FieldNumber_TagsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(NoteFragment__storage_, tagsArray),
+        .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeString,
       },
     };
@@ -493,7 +542,7 @@ typedef struct NoteFragment__storage_ {
                                          flags:GPBDescriptorInitializationFlag_None];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
-        "\001\t\003\202\244\000";
+        "\002\006\003\202\244\000\007\003\202\244\000";
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
@@ -503,18 +552,6 @@ typedef struct NoteFragment__storage_ {
 }
 
 @end
-
-int32_t NoteFragment_Issue_RawValue(NoteFragment *message) {
-  GPBDescriptor *descriptor = [NoteFragment descriptor];
-  GPBFieldDescriptor *field = [descriptor fieldWithNumber:NoteFragment_FieldNumber_Issue];
-  return GPBGetMessageInt32Field(message, field);
-}
-
-void SetNoteFragment_Issue_RawValue(NoteFragment *message, int32_t value) {
-  GPBDescriptor *descriptor = [NoteFragment descriptor];
-  GPBFieldDescriptor *field = [descriptor fieldWithNumber:NoteFragment_FieldNumber_Issue];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
-}
 
 int32_t NoteFragment_Status_RawValue(NoteFragment *message) {
   GPBDescriptor *descriptor = [NoteFragment descriptor];

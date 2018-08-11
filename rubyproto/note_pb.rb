@@ -15,30 +15,36 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     optional :patient_guid, :string, 6
     optional :type, :enum, 7, "ehr.note.NoteType"
     repeated :fragments, :message, 8, "ehr.note.NoteFragment"
+    repeated :tags, :string, 9
   end
   add_message "ehr.note.NoteFragment" do
     optional :id, :int32, 1
     optional :date_created, :message, 2, "google.protobuf.Timestamp"
     optional :note_fragment_guid, :string, 3
     optional :note_guid, :string, 4
-    optional :issue, :enum, 8, "ehr.medicalissues.MedicalIssue"
-    optional :icd_10_code, :string, 9
-    optional :status, :enum, 10, "ehr.note.NoteFragmentStatus"
-    optional :priority, :enum, 11, "ehr.note.FragmentPriority"
-    optional :topic, :enum, 12, "ehr.note.FragmentTopic"
-    optional :markdown_content, :string, 13
+    optional :issue_guid, :string, 5
+    optional :icd_10_code, :string, 6
+    optional :icd_10_long, :string, 7
+    optional :description, :string, 8
+    optional :status, :enum, 9, "ehr.note.NoteFragmentStatus"
+    optional :priority, :enum, 10, "ehr.note.FragmentPriority"
+    optional :topic, :enum, 11, "ehr.note.FragmentTopic"
+    optional :markdown_content, :string, 12
+    repeated :tags, :string, 13
   end
   add_enum "ehr.note.FragmentTopic" do
     value :NO_TOPIC, 0
     value :SUBJECTIVE, 1
-    value :MEDICAL_HISTORY, 2
-    value :ALLERGIES, 3
-    value :MEDICATIONS, 4
-    value :FAMILY_HISTORY, 5
-    value :SOCIAL_HISTORY, 6
-    value :VITALS, 7
-    value :PHYSICAL_EXAM, 8
-    value :MEDICAL_PROBLEM, 9
+    value :REVIEW_OF_SYSTEMS, 2
+    value :MEDICAL_HISTORY, 3
+    value :ALLERGIES, 4
+    value :MEDICATIONS, 5
+    value :FAMILY_HISTORY, 6
+    value :SOCIAL_HISTORY, 7
+    value :VITALS, 8
+    value :PHYSICAL_EXAM, 9
+    value :LABORATORY_DATA, 10
+    value :MEDICAL_PROBLEM, 11
   end
   add_enum "ehr.note.FragmentPriority" do
     value :NO_PRIORITY, 0

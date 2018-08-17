@@ -7,19 +7,20 @@ import "google/protobuf/timestamp.proto";
 import "medicalissues.proto";
 
 message Note {
-    int32 id = 1;
+    int64 id = 1;
     google.protobuf.Timestamp date_created = 2;
     string note_guid = 3;
     string visit_guid = 4;
     string author_guid = 5;
     string patient_guid = 6;
     NoteType type = 7;
-    repeated NoteFragment fragments = 8;
-    repeated string tags = 9;
+    RecordStatus status = 8;
+    repeated NoteFragment fragments = 9;
+    repeated string tags = 10;
 }
 
 message NoteFragment {
-    int32 id = 1;
+    int64 id = 1;
     google.protobuf.Timestamp date_created = 2;
     string note_fragment_guid = 3;
     string note_guid = 4;
@@ -27,14 +28,25 @@ message NoteFragment {
     string icd_10_code = 6; // recommend using watson api to determine from description
     string icd_10_long = 7; // recommend using watson api to determine from description
     string description = 8; // free text, human readable
-    NoteFragmentStatus status = 9;
-    FragmentPriority priority = 10;
-    FragmentTopic topic = 11;
-    string markdown_content = 12;
+    RecordStatus status = 9;
+    RecordPriority priority = 10;
+    FragmentType topic = 11;
+    string content = 12;
     repeated string tags = 13;
 }
 
-enum FragmentTopic {
+enum NoteType {
+    NO_NOTE_TYPE = 0;
+    FOLLOW_UP = 1;
+    PHONE_CALL = 2;
+    CONTINUED_CARE_DOCUMENTATION = 4;
+    REFILL_DOCUMENTATION = 5;
+    INTAKE = 6;
+    PROCEDURE = 7;
+    HISTORY_AND_PHYSICAL = 8;
+}
+
+enum FragmentType {
     NO_TOPIC = 0;
     SUBJECTIVE = 1;
     REVIEW_OF_SYSTEMS = 2;
@@ -49,27 +61,18 @@ enum FragmentTopic {
     MEDICAL_PROBLEM = 11;
 }
 
-enum FragmentPriority {
+enum RecordPriority {
     NO_PRIORITY = 0;
     HIGH = 1;
     NORMAL = 2;
     LOW = 3;
 }
 
-enum NoteFragmentStatus {
+enum RecordStatus {
     NO_STATUS = 0;
     INCOMPLETE = 1;
     ACTIVE = 2;
     REPLACED = 3;
+    DELETED = 4;
 }
 
-enum NoteType {
-    NO_NOTE_TYPE = 0;
-    FOLLOW_UP = 1;
-    PHONE_CALL = 2;
-    CONTINUED_CARE_DOCUMENTATION = 4;
-    REFILL_DOCUMENTATION = 5;
-    INTAKE = 6;
-    PROCEDURE = 7;
-    HISTORY_AND_PHYSICAL = 8;
-}

@@ -32,83 +32,6 @@ CF_EXTERN_C_BEGIN
 
 NS_ASSUME_NONNULL_BEGIN
 
-#pragma mark - Enum FragmentTopic
-
-typedef GPB_ENUM(FragmentTopic) {
-  /**
-   * Value used if any message's field encounters a value that is not defined
-   * by this enum. The message will also have C functions to get/set the rawValue
-   * of the field.
-   **/
-  FragmentTopic_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  FragmentTopic_NoTopic = 0,
-  FragmentTopic_Subjective = 1,
-  FragmentTopic_ReviewOfSystems = 2,
-  FragmentTopic_MedicalHistory = 3,
-  FragmentTopic_Allergies = 4,
-  FragmentTopic_Medications = 5,
-  FragmentTopic_FamilyHistory = 6,
-  FragmentTopic_SocialHistory = 7,
-  FragmentTopic_Vitals = 8,
-  FragmentTopic_PhysicalExam = 9,
-  FragmentTopic_LaboratoryData = 10,
-  FragmentTopic_MedicalProblem = 11,
-};
-
-GPBEnumDescriptor *FragmentTopic_EnumDescriptor(void);
-
-/**
- * Checks to see if the given value is defined by the enum or was not known at
- * the time this source was generated.
- **/
-BOOL FragmentTopic_IsValidValue(int32_t value);
-
-#pragma mark - Enum FragmentPriority
-
-typedef GPB_ENUM(FragmentPriority) {
-  /**
-   * Value used if any message's field encounters a value that is not defined
-   * by this enum. The message will also have C functions to get/set the rawValue
-   * of the field.
-   **/
-  FragmentPriority_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  FragmentPriority_NoPriority = 0,
-  FragmentPriority_High = 1,
-  FragmentPriority_Normal = 2,
-  FragmentPriority_Low = 3,
-};
-
-GPBEnumDescriptor *FragmentPriority_EnumDescriptor(void);
-
-/**
- * Checks to see if the given value is defined by the enum or was not known at
- * the time this source was generated.
- **/
-BOOL FragmentPriority_IsValidValue(int32_t value);
-
-#pragma mark - Enum NoteFragmentStatus
-
-typedef GPB_ENUM(NoteFragmentStatus) {
-  /**
-   * Value used if any message's field encounters a value that is not defined
-   * by this enum. The message will also have C functions to get/set the rawValue
-   * of the field.
-   **/
-  NoteFragmentStatus_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  NoteFragmentStatus_NoStatus = 0,
-  NoteFragmentStatus_Incomplete = 1,
-  NoteFragmentStatus_Active = 2,
-  NoteFragmentStatus_Replaced = 3,
-};
-
-GPBEnumDescriptor *NoteFragmentStatus_EnumDescriptor(void);
-
-/**
- * Checks to see if the given value is defined by the enum or was not known at
- * the time this source was generated.
- **/
-BOOL NoteFragmentStatus_IsValidValue(int32_t value);
-
 #pragma mark - Enum NoteType
 
 typedef GPB_ENUM(NoteType) {
@@ -136,6 +59,84 @@ GPBEnumDescriptor *NoteType_EnumDescriptor(void);
  **/
 BOOL NoteType_IsValidValue(int32_t value);
 
+#pragma mark - Enum FragmentType
+
+typedef GPB_ENUM(FragmentType) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  FragmentType_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  FragmentType_NoTopic = 0,
+  FragmentType_Subjective = 1,
+  FragmentType_ReviewOfSystems = 2,
+  FragmentType_MedicalHistory = 3,
+  FragmentType_Allergies = 4,
+  FragmentType_Medications = 5,
+  FragmentType_FamilyHistory = 6,
+  FragmentType_SocialHistory = 7,
+  FragmentType_Vitals = 8,
+  FragmentType_PhysicalExam = 9,
+  FragmentType_LaboratoryData = 10,
+  FragmentType_MedicalProblem = 11,
+};
+
+GPBEnumDescriptor *FragmentType_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL FragmentType_IsValidValue(int32_t value);
+
+#pragma mark - Enum RecordPriority
+
+typedef GPB_ENUM(RecordPriority) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  RecordPriority_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  RecordPriority_NoPriority = 0,
+  RecordPriority_High = 1,
+  RecordPriority_Normal = 2,
+  RecordPriority_Low = 3,
+};
+
+GPBEnumDescriptor *RecordPriority_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL RecordPriority_IsValidValue(int32_t value);
+
+#pragma mark - Enum RecordStatus
+
+typedef GPB_ENUM(RecordStatus) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  RecordStatus_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  RecordStatus_NoStatus = 0,
+  RecordStatus_Incomplete = 1,
+  RecordStatus_Active = 2,
+  RecordStatus_Replaced = 3,
+  RecordStatus_Deleted = 4,
+};
+
+GPBEnumDescriptor *RecordStatus_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL RecordStatus_IsValidValue(int32_t value);
+
 #pragma mark - NoteRoot
 
 /**
@@ -161,13 +162,14 @@ typedef GPB_ENUM(Note_FieldNumber) {
   Note_FieldNumber_AuthorGuid = 5,
   Note_FieldNumber_PatientGuid = 6,
   Note_FieldNumber_Type = 7,
-  Note_FieldNumber_FragmentsArray = 8,
-  Note_FieldNumber_TagsArray = 9,
+  Note_FieldNumber_Status = 8,
+  Note_FieldNumber_FragmentsArray = 9,
+  Note_FieldNumber_TagsArray = 10,
 };
 
 @interface Note : GPBMessage
 
-@property(nonatomic, readwrite) int32_t id_p;
+@property(nonatomic, readwrite) int64_t id_p;
 
 @property(nonatomic, readwrite, strong, null_resettable) GPBTimestamp *dateCreated;
 /** Test to see if @c dateCreated has been set. */
@@ -182,6 +184,8 @@ typedef GPB_ENUM(Note_FieldNumber) {
 @property(nonatomic, readwrite, copy, null_resettable) NSString *patientGuid;
 
 @property(nonatomic, readwrite) NoteType type;
+
+@property(nonatomic, readwrite) RecordStatus status;
 
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NoteFragment*> *fragmentsArray;
 /** The number of items in @c fragmentsArray without causing the array to be created. */
@@ -205,6 +209,18 @@ int32_t Note_Type_RawValue(Note *message);
  **/
 void SetNote_Type_RawValue(Note *message, int32_t value);
 
+/**
+ * Fetches the raw value of a @c Note's @c status property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t Note_Status_RawValue(Note *message);
+/**
+ * Sets the raw value of an @c Note's @c status property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetNote_Status_RawValue(Note *message, int32_t value);
+
 #pragma mark - NoteFragment
 
 typedef GPB_ENUM(NoteFragment_FieldNumber) {
@@ -219,13 +235,13 @@ typedef GPB_ENUM(NoteFragment_FieldNumber) {
   NoteFragment_FieldNumber_Status = 9,
   NoteFragment_FieldNumber_Priority = 10,
   NoteFragment_FieldNumber_Topic = 11,
-  NoteFragment_FieldNumber_MarkdownContent = 12,
+  NoteFragment_FieldNumber_Content = 12,
   NoteFragment_FieldNumber_TagsArray = 13,
 };
 
 @interface NoteFragment : GPBMessage
 
-@property(nonatomic, readwrite) int32_t id_p;
+@property(nonatomic, readwrite) int64_t id_p;
 
 @property(nonatomic, readwrite, strong, null_resettable) GPBTimestamp *dateCreated;
 /** Test to see if @c dateCreated has been set. */
@@ -246,13 +262,13 @@ typedef GPB_ENUM(NoteFragment_FieldNumber) {
 /** free text, human readable */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *description_p;
 
-@property(nonatomic, readwrite) NoteFragmentStatus status;
+@property(nonatomic, readwrite) RecordStatus status;
 
-@property(nonatomic, readwrite) FragmentPriority priority;
+@property(nonatomic, readwrite) RecordPriority priority;
 
-@property(nonatomic, readwrite) FragmentTopic topic;
+@property(nonatomic, readwrite) FragmentType topic;
 
-@property(nonatomic, readwrite, copy, null_resettable) NSString *markdownContent;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *content;
 
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *tagsArray;
 /** The number of items in @c tagsArray without causing the array to be created. */

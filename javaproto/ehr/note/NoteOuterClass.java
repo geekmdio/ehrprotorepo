@@ -15,426 +15,6 @@ public final class NoteOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * Protobuf enum {@code ehr.note.FragmentTopic}
-   */
-  public enum FragmentTopic
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>NO_TOPIC = 0;</code>
-     */
-    NO_TOPIC(0),
-    /**
-     * <code>SUBJECTIVE = 1;</code>
-     */
-    SUBJECTIVE(1),
-    /**
-     * <code>REVIEW_OF_SYSTEMS = 2;</code>
-     */
-    REVIEW_OF_SYSTEMS(2),
-    /**
-     * <code>MEDICAL_HISTORY = 3;</code>
-     */
-    MEDICAL_HISTORY(3),
-    /**
-     * <code>ALLERGIES = 4;</code>
-     */
-    ALLERGIES(4),
-    /**
-     * <code>MEDICATIONS = 5;</code>
-     */
-    MEDICATIONS(5),
-    /**
-     * <code>FAMILY_HISTORY = 6;</code>
-     */
-    FAMILY_HISTORY(6),
-    /**
-     * <code>SOCIAL_HISTORY = 7;</code>
-     */
-    SOCIAL_HISTORY(7),
-    /**
-     * <code>VITALS = 8;</code>
-     */
-    VITALS(8),
-    /**
-     * <code>PHYSICAL_EXAM = 9;</code>
-     */
-    PHYSICAL_EXAM(9),
-    /**
-     * <code>LABORATORY_DATA = 10;</code>
-     */
-    LABORATORY_DATA(10),
-    /**
-     * <code>MEDICAL_PROBLEM = 11;</code>
-     */
-    MEDICAL_PROBLEM(11),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>NO_TOPIC = 0;</code>
-     */
-    public static final int NO_TOPIC_VALUE = 0;
-    /**
-     * <code>SUBJECTIVE = 1;</code>
-     */
-    public static final int SUBJECTIVE_VALUE = 1;
-    /**
-     * <code>REVIEW_OF_SYSTEMS = 2;</code>
-     */
-    public static final int REVIEW_OF_SYSTEMS_VALUE = 2;
-    /**
-     * <code>MEDICAL_HISTORY = 3;</code>
-     */
-    public static final int MEDICAL_HISTORY_VALUE = 3;
-    /**
-     * <code>ALLERGIES = 4;</code>
-     */
-    public static final int ALLERGIES_VALUE = 4;
-    /**
-     * <code>MEDICATIONS = 5;</code>
-     */
-    public static final int MEDICATIONS_VALUE = 5;
-    /**
-     * <code>FAMILY_HISTORY = 6;</code>
-     */
-    public static final int FAMILY_HISTORY_VALUE = 6;
-    /**
-     * <code>SOCIAL_HISTORY = 7;</code>
-     */
-    public static final int SOCIAL_HISTORY_VALUE = 7;
-    /**
-     * <code>VITALS = 8;</code>
-     */
-    public static final int VITALS_VALUE = 8;
-    /**
-     * <code>PHYSICAL_EXAM = 9;</code>
-     */
-    public static final int PHYSICAL_EXAM_VALUE = 9;
-    /**
-     * <code>LABORATORY_DATA = 10;</code>
-     */
-    public static final int LABORATORY_DATA_VALUE = 10;
-    /**
-     * <code>MEDICAL_PROBLEM = 11;</code>
-     */
-    public static final int MEDICAL_PROBLEM_VALUE = 11;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static FragmentTopic valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static FragmentTopic forNumber(int value) {
-      switch (value) {
-        case 0: return NO_TOPIC;
-        case 1: return SUBJECTIVE;
-        case 2: return REVIEW_OF_SYSTEMS;
-        case 3: return MEDICAL_HISTORY;
-        case 4: return ALLERGIES;
-        case 5: return MEDICATIONS;
-        case 6: return FAMILY_HISTORY;
-        case 7: return SOCIAL_HISTORY;
-        case 8: return VITALS;
-        case 9: return PHYSICAL_EXAM;
-        case 10: return LABORATORY_DATA;
-        case 11: return MEDICAL_PROBLEM;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<FragmentTopic>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        FragmentTopic> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<FragmentTopic>() {
-            public FragmentTopic findValueByNumber(int number) {
-              return FragmentTopic.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return ehr.note.NoteOuterClass.getDescriptor().getEnumTypes().get(0);
-    }
-
-    private static final FragmentTopic[] VALUES = values();
-
-    public static FragmentTopic valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private FragmentTopic(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:ehr.note.FragmentTopic)
-  }
-
-  /**
-   * Protobuf enum {@code ehr.note.FragmentPriority}
-   */
-  public enum FragmentPriority
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>NO_PRIORITY = 0;</code>
-     */
-    NO_PRIORITY(0),
-    /**
-     * <code>HIGH = 1;</code>
-     */
-    HIGH(1),
-    /**
-     * <code>NORMAL = 2;</code>
-     */
-    NORMAL(2),
-    /**
-     * <code>LOW = 3;</code>
-     */
-    LOW(3),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>NO_PRIORITY = 0;</code>
-     */
-    public static final int NO_PRIORITY_VALUE = 0;
-    /**
-     * <code>HIGH = 1;</code>
-     */
-    public static final int HIGH_VALUE = 1;
-    /**
-     * <code>NORMAL = 2;</code>
-     */
-    public static final int NORMAL_VALUE = 2;
-    /**
-     * <code>LOW = 3;</code>
-     */
-    public static final int LOW_VALUE = 3;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static FragmentPriority valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static FragmentPriority forNumber(int value) {
-      switch (value) {
-        case 0: return NO_PRIORITY;
-        case 1: return HIGH;
-        case 2: return NORMAL;
-        case 3: return LOW;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<FragmentPriority>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        FragmentPriority> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<FragmentPriority>() {
-            public FragmentPriority findValueByNumber(int number) {
-              return FragmentPriority.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return ehr.note.NoteOuterClass.getDescriptor().getEnumTypes().get(1);
-    }
-
-    private static final FragmentPriority[] VALUES = values();
-
-    public static FragmentPriority valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private FragmentPriority(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:ehr.note.FragmentPriority)
-  }
-
-  /**
-   * Protobuf enum {@code ehr.note.NoteFragmentStatus}
-   */
-  public enum NoteFragmentStatus
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>NO_STATUS = 0;</code>
-     */
-    NO_STATUS(0),
-    /**
-     * <code>INCOMPLETE = 1;</code>
-     */
-    INCOMPLETE(1),
-    /**
-     * <code>ACTIVE = 2;</code>
-     */
-    ACTIVE(2),
-    /**
-     * <code>REPLACED = 3;</code>
-     */
-    REPLACED(3),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>NO_STATUS = 0;</code>
-     */
-    public static final int NO_STATUS_VALUE = 0;
-    /**
-     * <code>INCOMPLETE = 1;</code>
-     */
-    public static final int INCOMPLETE_VALUE = 1;
-    /**
-     * <code>ACTIVE = 2;</code>
-     */
-    public static final int ACTIVE_VALUE = 2;
-    /**
-     * <code>REPLACED = 3;</code>
-     */
-    public static final int REPLACED_VALUE = 3;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static NoteFragmentStatus valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static NoteFragmentStatus forNumber(int value) {
-      switch (value) {
-        case 0: return NO_STATUS;
-        case 1: return INCOMPLETE;
-        case 2: return ACTIVE;
-        case 3: return REPLACED;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<NoteFragmentStatus>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        NoteFragmentStatus> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<NoteFragmentStatus>() {
-            public NoteFragmentStatus findValueByNumber(int number) {
-              return NoteFragmentStatus.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return ehr.note.NoteOuterClass.getDescriptor().getEnumTypes().get(2);
-    }
-
-    private static final NoteFragmentStatus[] VALUES = values();
-
-    public static NoteFragmentStatus valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private NoteFragmentStatus(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:ehr.note.NoteFragmentStatus)
-  }
-
-  /**
    * Protobuf enum {@code ehr.note.NoteType}
    */
   public enum NoteType
@@ -560,7 +140,7 @@ public final class NoteOuterClass {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return ehr.note.NoteOuterClass.getDescriptor().getEnumTypes().get(3);
+      return ehr.note.NoteOuterClass.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final NoteType[] VALUES = values();
@@ -586,14 +166,443 @@ public final class NoteOuterClass {
     // @@protoc_insertion_point(enum_scope:ehr.note.NoteType)
   }
 
+  /**
+   * Protobuf enum {@code ehr.note.FragmentType}
+   */
+  public enum FragmentType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>NO_TOPIC = 0;</code>
+     */
+    NO_TOPIC(0),
+    /**
+     * <code>SUBJECTIVE = 1;</code>
+     */
+    SUBJECTIVE(1),
+    /**
+     * <code>REVIEW_OF_SYSTEMS = 2;</code>
+     */
+    REVIEW_OF_SYSTEMS(2),
+    /**
+     * <code>MEDICAL_HISTORY = 3;</code>
+     */
+    MEDICAL_HISTORY(3),
+    /**
+     * <code>ALLERGIES = 4;</code>
+     */
+    ALLERGIES(4),
+    /**
+     * <code>MEDICATIONS = 5;</code>
+     */
+    MEDICATIONS(5),
+    /**
+     * <code>FAMILY_HISTORY = 6;</code>
+     */
+    FAMILY_HISTORY(6),
+    /**
+     * <code>SOCIAL_HISTORY = 7;</code>
+     */
+    SOCIAL_HISTORY(7),
+    /**
+     * <code>VITALS = 8;</code>
+     */
+    VITALS(8),
+    /**
+     * <code>PHYSICAL_EXAM = 9;</code>
+     */
+    PHYSICAL_EXAM(9),
+    /**
+     * <code>LABORATORY_DATA = 10;</code>
+     */
+    LABORATORY_DATA(10),
+    /**
+     * <code>MEDICAL_PROBLEM = 11;</code>
+     */
+    MEDICAL_PROBLEM(11),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>NO_TOPIC = 0;</code>
+     */
+    public static final int NO_TOPIC_VALUE = 0;
+    /**
+     * <code>SUBJECTIVE = 1;</code>
+     */
+    public static final int SUBJECTIVE_VALUE = 1;
+    /**
+     * <code>REVIEW_OF_SYSTEMS = 2;</code>
+     */
+    public static final int REVIEW_OF_SYSTEMS_VALUE = 2;
+    /**
+     * <code>MEDICAL_HISTORY = 3;</code>
+     */
+    public static final int MEDICAL_HISTORY_VALUE = 3;
+    /**
+     * <code>ALLERGIES = 4;</code>
+     */
+    public static final int ALLERGIES_VALUE = 4;
+    /**
+     * <code>MEDICATIONS = 5;</code>
+     */
+    public static final int MEDICATIONS_VALUE = 5;
+    /**
+     * <code>FAMILY_HISTORY = 6;</code>
+     */
+    public static final int FAMILY_HISTORY_VALUE = 6;
+    /**
+     * <code>SOCIAL_HISTORY = 7;</code>
+     */
+    public static final int SOCIAL_HISTORY_VALUE = 7;
+    /**
+     * <code>VITALS = 8;</code>
+     */
+    public static final int VITALS_VALUE = 8;
+    /**
+     * <code>PHYSICAL_EXAM = 9;</code>
+     */
+    public static final int PHYSICAL_EXAM_VALUE = 9;
+    /**
+     * <code>LABORATORY_DATA = 10;</code>
+     */
+    public static final int LABORATORY_DATA_VALUE = 10;
+    /**
+     * <code>MEDICAL_PROBLEM = 11;</code>
+     */
+    public static final int MEDICAL_PROBLEM_VALUE = 11;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static FragmentType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static FragmentType forNumber(int value) {
+      switch (value) {
+        case 0: return NO_TOPIC;
+        case 1: return SUBJECTIVE;
+        case 2: return REVIEW_OF_SYSTEMS;
+        case 3: return MEDICAL_HISTORY;
+        case 4: return ALLERGIES;
+        case 5: return MEDICATIONS;
+        case 6: return FAMILY_HISTORY;
+        case 7: return SOCIAL_HISTORY;
+        case 8: return VITALS;
+        case 9: return PHYSICAL_EXAM;
+        case 10: return LABORATORY_DATA;
+        case 11: return MEDICAL_PROBLEM;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<FragmentType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        FragmentType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<FragmentType>() {
+            public FragmentType findValueByNumber(int number) {
+              return FragmentType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return ehr.note.NoteOuterClass.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final FragmentType[] VALUES = values();
+
+    public static FragmentType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private FragmentType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ehr.note.FragmentType)
+  }
+
+  /**
+   * Protobuf enum {@code ehr.note.RecordPriority}
+   */
+  public enum RecordPriority
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>NO_PRIORITY = 0;</code>
+     */
+    NO_PRIORITY(0),
+    /**
+     * <code>HIGH = 1;</code>
+     */
+    HIGH(1),
+    /**
+     * <code>NORMAL = 2;</code>
+     */
+    NORMAL(2),
+    /**
+     * <code>LOW = 3;</code>
+     */
+    LOW(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>NO_PRIORITY = 0;</code>
+     */
+    public static final int NO_PRIORITY_VALUE = 0;
+    /**
+     * <code>HIGH = 1;</code>
+     */
+    public static final int HIGH_VALUE = 1;
+    /**
+     * <code>NORMAL = 2;</code>
+     */
+    public static final int NORMAL_VALUE = 2;
+    /**
+     * <code>LOW = 3;</code>
+     */
+    public static final int LOW_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static RecordPriority valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static RecordPriority forNumber(int value) {
+      switch (value) {
+        case 0: return NO_PRIORITY;
+        case 1: return HIGH;
+        case 2: return NORMAL;
+        case 3: return LOW;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<RecordPriority>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        RecordPriority> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<RecordPriority>() {
+            public RecordPriority findValueByNumber(int number) {
+              return RecordPriority.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return ehr.note.NoteOuterClass.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final RecordPriority[] VALUES = values();
+
+    public static RecordPriority valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private RecordPriority(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ehr.note.RecordPriority)
+  }
+
+  /**
+   * Protobuf enum {@code ehr.note.RecordStatus}
+   */
+  public enum RecordStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>NO_STATUS = 0;</code>
+     */
+    NO_STATUS(0),
+    /**
+     * <code>INCOMPLETE = 1;</code>
+     */
+    INCOMPLETE(1),
+    /**
+     * <code>ACTIVE = 2;</code>
+     */
+    ACTIVE(2),
+    /**
+     * <code>REPLACED = 3;</code>
+     */
+    REPLACED(3),
+    /**
+     * <code>DELETED = 4;</code>
+     */
+    DELETED(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>NO_STATUS = 0;</code>
+     */
+    public static final int NO_STATUS_VALUE = 0;
+    /**
+     * <code>INCOMPLETE = 1;</code>
+     */
+    public static final int INCOMPLETE_VALUE = 1;
+    /**
+     * <code>ACTIVE = 2;</code>
+     */
+    public static final int ACTIVE_VALUE = 2;
+    /**
+     * <code>REPLACED = 3;</code>
+     */
+    public static final int REPLACED_VALUE = 3;
+    /**
+     * <code>DELETED = 4;</code>
+     */
+    public static final int DELETED_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static RecordStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static RecordStatus forNumber(int value) {
+      switch (value) {
+        case 0: return NO_STATUS;
+        case 1: return INCOMPLETE;
+        case 2: return ACTIVE;
+        case 3: return REPLACED;
+        case 4: return DELETED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<RecordStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        RecordStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<RecordStatus>() {
+            public RecordStatus findValueByNumber(int number) {
+              return RecordStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return ehr.note.NoteOuterClass.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final RecordStatus[] VALUES = values();
+
+    public static RecordStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private RecordStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ehr.note.RecordStatus)
+  }
+
   public interface NoteOrBuilder extends
       // @@protoc_insertion_point(interface_extends:ehr.note.Note)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 id = 1;</code>
+     * <code>int64 id = 1;</code>
      */
-    int getId();
+    long getId();
 
     /**
      * <code>.google.protobuf.Timestamp date_created = 2;</code>
@@ -658,44 +667,53 @@ public final class NoteOuterClass {
     ehr.note.NoteOuterClass.NoteType getType();
 
     /**
-     * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+     * <code>.ehr.note.RecordStatus status = 8;</code>
+     */
+    int getStatusValue();
+    /**
+     * <code>.ehr.note.RecordStatus status = 8;</code>
+     */
+    ehr.note.NoteOuterClass.RecordStatus getStatus();
+
+    /**
+     * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
      */
     java.util.List<ehr.note.NoteOuterClass.NoteFragment> 
         getFragmentsList();
     /**
-     * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+     * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
      */
     ehr.note.NoteOuterClass.NoteFragment getFragments(int index);
     /**
-     * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+     * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
      */
     int getFragmentsCount();
     /**
-     * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+     * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
      */
     java.util.List<? extends ehr.note.NoteOuterClass.NoteFragmentOrBuilder> 
         getFragmentsOrBuilderList();
     /**
-     * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+     * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
      */
     ehr.note.NoteOuterClass.NoteFragmentOrBuilder getFragmentsOrBuilder(
         int index);
 
     /**
-     * <code>repeated string tags = 9;</code>
+     * <code>repeated string tags = 10;</code>
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
-     * <code>repeated string tags = 9;</code>
+     * <code>repeated string tags = 10;</code>
      */
     int getTagsCount();
     /**
-     * <code>repeated string tags = 9;</code>
+     * <code>repeated string tags = 10;</code>
      */
     java.lang.String getTags(int index);
     /**
-     * <code>repeated string tags = 9;</code>
+     * <code>repeated string tags = 10;</code>
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
@@ -713,12 +731,13 @@ public final class NoteOuterClass {
       super(builder);
     }
     private Note() {
-      id_ = 0;
+      id_ = 0L;
       noteGuid_ = "";
       visitGuid_ = "";
       authorGuid_ = "";
       patientGuid_ = "";
       type_ = 0;
+      status_ = 0;
       fragments_ = java.util.Collections.emptyList();
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
@@ -749,7 +768,7 @@ public final class NoteOuterClass {
               break;
             case 8: {
 
-              id_ = input.readInt32();
+              id_ = input.readInt64();
               break;
             }
             case 18: {
@@ -795,20 +814,26 @@ public final class NoteOuterClass {
               type_ = rawValue;
               break;
             }
-            case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+            case 64: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
                 fragments_ = new java.util.ArrayList<ehr.note.NoteOuterClass.NoteFragment>();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000100;
               }
               fragments_.add(
                   input.readMessage(ehr.note.NoteOuterClass.NoteFragment.parser(), extensionRegistry));
               break;
             }
-            case 74: {
+            case 82: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000100;
+                mutable_bitField0_ |= 0x00000200;
               }
               tags_.add(s);
               break;
@@ -828,10 +853,10 @@ public final class NoteOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
           fragments_ = java.util.Collections.unmodifiableList(fragments_);
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
           tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -853,11 +878,11 @@ public final class NoteOuterClass {
 
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
-    private int id_;
+    private long id_;
     /**
-     * <code>int32 id = 1;</code>
+     * <code>int64 id = 1;</code>
      */
-    public int getId() {
+    public long getId() {
       return id_;
     }
 
@@ -1035,64 +1060,81 @@ public final class NoteOuterClass {
       return result == null ? ehr.note.NoteOuterClass.NoteType.UNRECOGNIZED : result;
     }
 
-    public static final int FRAGMENTS_FIELD_NUMBER = 8;
+    public static final int STATUS_FIELD_NUMBER = 8;
+    private int status_;
+    /**
+     * <code>.ehr.note.RecordStatus status = 8;</code>
+     */
+    public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.ehr.note.RecordStatus status = 8;</code>
+     */
+    public ehr.note.NoteOuterClass.RecordStatus getStatus() {
+      @SuppressWarnings("deprecation")
+      ehr.note.NoteOuterClass.RecordStatus result = ehr.note.NoteOuterClass.RecordStatus.valueOf(status_);
+      return result == null ? ehr.note.NoteOuterClass.RecordStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int FRAGMENTS_FIELD_NUMBER = 9;
     private java.util.List<ehr.note.NoteOuterClass.NoteFragment> fragments_;
     /**
-     * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+     * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
      */
     public java.util.List<ehr.note.NoteOuterClass.NoteFragment> getFragmentsList() {
       return fragments_;
     }
     /**
-     * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+     * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
      */
     public java.util.List<? extends ehr.note.NoteOuterClass.NoteFragmentOrBuilder> 
         getFragmentsOrBuilderList() {
       return fragments_;
     }
     /**
-     * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+     * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
      */
     public int getFragmentsCount() {
       return fragments_.size();
     }
     /**
-     * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+     * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
      */
     public ehr.note.NoteOuterClass.NoteFragment getFragments(int index) {
       return fragments_.get(index);
     }
     /**
-     * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+     * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
      */
     public ehr.note.NoteOuterClass.NoteFragmentOrBuilder getFragmentsOrBuilder(
         int index) {
       return fragments_.get(index);
     }
 
-    public static final int TAGS_FIELD_NUMBER = 9;
+    public static final int TAGS_FIELD_NUMBER = 10;
     private com.google.protobuf.LazyStringList tags_;
     /**
-     * <code>repeated string tags = 9;</code>
+     * <code>repeated string tags = 10;</code>
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
       return tags_;
     }
     /**
-     * <code>repeated string tags = 9;</code>
+     * <code>repeated string tags = 10;</code>
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
-     * <code>repeated string tags = 9;</code>
+     * <code>repeated string tags = 10;</code>
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
-     * <code>repeated string tags = 9;</code>
+     * <code>repeated string tags = 10;</code>
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -1113,8 +1155,8 @@ public final class NoteOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (id_ != 0) {
-        output.writeInt32(1, id_);
+      if (id_ != 0L) {
+        output.writeInt64(1, id_);
       }
       if (dateCreated_ != null) {
         output.writeMessage(2, getDateCreated());
@@ -1134,11 +1176,14 @@ public final class NoteOuterClass {
       if (type_ != ehr.note.NoteOuterClass.NoteType.NO_NOTE_TYPE.getNumber()) {
         output.writeEnum(7, type_);
       }
+      if (status_ != ehr.note.NoteOuterClass.RecordStatus.NO_STATUS.getNumber()) {
+        output.writeEnum(8, status_);
+      }
       for (int i = 0; i < fragments_.size(); i++) {
-        output.writeMessage(8, fragments_.get(i));
+        output.writeMessage(9, fragments_.get(i));
       }
       for (int i = 0; i < tags_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, tags_.getRaw(i));
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, tags_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1149,9 +1194,9 @@ public final class NoteOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (id_ != 0) {
+      if (id_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, id_);
+          .computeInt64Size(1, id_);
       }
       if (dateCreated_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -1173,9 +1218,13 @@ public final class NoteOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(7, type_);
       }
+      if (status_ != ehr.note.NoteOuterClass.RecordStatus.NO_STATUS.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, status_);
+      }
       for (int i = 0; i < fragments_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, fragments_.get(i));
+          .computeMessageSize(9, fragments_.get(i));
       }
       {
         int dataSize = 0;
@@ -1217,6 +1266,7 @@ public final class NoteOuterClass {
       result = result && getPatientGuid()
           .equals(other.getPatientGuid());
       result = result && type_ == other.type_;
+      result = result && status_ == other.status_;
       result = result && getFragmentsList()
           .equals(other.getFragmentsList());
       result = result && getTagsList()
@@ -1233,7 +1283,8 @@ public final class NoteOuterClass {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId();
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
       if (hasDateCreated()) {
         hash = (37 * hash) + DATE_CREATED_FIELD_NUMBER;
         hash = (53 * hash) + getDateCreated().hashCode();
@@ -1248,6 +1299,8 @@ public final class NoteOuterClass {
       hash = (53 * hash) + getPatientGuid().hashCode();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + type_;
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
       if (getFragmentsCount() > 0) {
         hash = (37 * hash) + FRAGMENTS_FIELD_NUMBER;
         hash = (53 * hash) + getFragmentsList().hashCode();
@@ -1390,7 +1443,7 @@ public final class NoteOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = 0;
+        id_ = 0L;
 
         if (dateCreatedBuilder_ == null) {
           dateCreated_ = null;
@@ -1408,14 +1461,16 @@ public final class NoteOuterClass {
 
         type_ = 0;
 
+        status_ = 0;
+
         if (fragmentsBuilder_ == null) {
           fragments_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000100);
         } else {
           fragmentsBuilder_.clear();
         }
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -1455,18 +1510,19 @@ public final class NoteOuterClass {
         result.authorGuid_ = authorGuid_;
         result.patientGuid_ = patientGuid_;
         result.type_ = type_;
+        result.status_ = status_;
         if (fragmentsBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          if (((bitField0_ & 0x00000100) == 0x00000100)) {
             fragments_ = java.util.Collections.unmodifiableList(fragments_);
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000100);
           }
           result.fragments_ = fragments_;
         } else {
           result.fragments_ = fragmentsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((bitField0_ & 0x00000200) == 0x00000200)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000200);
         }
         result.tags_ = tags_;
         result.bitField0_ = to_bitField0_;
@@ -1518,7 +1574,7 @@ public final class NoteOuterClass {
 
       public Builder mergeFrom(ehr.note.NoteOuterClass.Note other) {
         if (other == ehr.note.NoteOuterClass.Note.getDefaultInstance()) return this;
-        if (other.getId() != 0) {
+        if (other.getId() != 0L) {
           setId(other.getId());
         }
         if (other.hasDateCreated()) {
@@ -1543,11 +1599,14 @@ public final class NoteOuterClass {
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
         }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
         if (fragmentsBuilder_ == null) {
           if (!other.fragments_.isEmpty()) {
             if (fragments_.isEmpty()) {
               fragments_ = other.fragments_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000100);
             } else {
               ensureFragmentsIsMutable();
               fragments_.addAll(other.fragments_);
@@ -1560,7 +1619,7 @@ public final class NoteOuterClass {
               fragmentsBuilder_.dispose();
               fragmentsBuilder_ = null;
               fragments_ = other.fragments_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000100);
               fragmentsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getFragmentsFieldBuilder() : null;
@@ -1572,7 +1631,7 @@ public final class NoteOuterClass {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000200);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -1609,28 +1668,28 @@ public final class NoteOuterClass {
       }
       private int bitField0_;
 
-      private int id_ ;
+      private long id_ ;
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        */
-      public int getId() {
+      public long getId() {
         return id_;
       }
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        */
-      public Builder setId(int value) {
+      public Builder setId(long value) {
         
         id_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        */
       public Builder clearId() {
         
-        id_ = 0;
+        id_ = 0L;
         onChanged();
         return this;
       }
@@ -2073,12 +2132,57 @@ public final class NoteOuterClass {
         return this;
       }
 
+      private int status_ = 0;
+      /**
+       * <code>.ehr.note.RecordStatus status = 8;</code>
+       */
+      public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.ehr.note.RecordStatus status = 8;</code>
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ehr.note.RecordStatus status = 8;</code>
+       */
+      public ehr.note.NoteOuterClass.RecordStatus getStatus() {
+        @SuppressWarnings("deprecation")
+        ehr.note.NoteOuterClass.RecordStatus result = ehr.note.NoteOuterClass.RecordStatus.valueOf(status_);
+        return result == null ? ehr.note.NoteOuterClass.RecordStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.ehr.note.RecordStatus status = 8;</code>
+       */
+      public Builder setStatus(ehr.note.NoteOuterClass.RecordStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ehr.note.RecordStatus status = 8;</code>
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<ehr.note.NoteOuterClass.NoteFragment> fragments_ =
         java.util.Collections.emptyList();
       private void ensureFragmentsIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
           fragments_ = new java.util.ArrayList<ehr.note.NoteOuterClass.NoteFragment>(fragments_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000100;
          }
       }
 
@@ -2086,7 +2190,7 @@ public final class NoteOuterClass {
           ehr.note.NoteOuterClass.NoteFragment, ehr.note.NoteOuterClass.NoteFragment.Builder, ehr.note.NoteOuterClass.NoteFragmentOrBuilder> fragmentsBuilder_;
 
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public java.util.List<ehr.note.NoteOuterClass.NoteFragment> getFragmentsList() {
         if (fragmentsBuilder_ == null) {
@@ -2096,7 +2200,7 @@ public final class NoteOuterClass {
         }
       }
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public int getFragmentsCount() {
         if (fragmentsBuilder_ == null) {
@@ -2106,7 +2210,7 @@ public final class NoteOuterClass {
         }
       }
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public ehr.note.NoteOuterClass.NoteFragment getFragments(int index) {
         if (fragmentsBuilder_ == null) {
@@ -2116,7 +2220,7 @@ public final class NoteOuterClass {
         }
       }
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public Builder setFragments(
           int index, ehr.note.NoteOuterClass.NoteFragment value) {
@@ -2133,7 +2237,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public Builder setFragments(
           int index, ehr.note.NoteOuterClass.NoteFragment.Builder builderForValue) {
@@ -2147,7 +2251,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public Builder addFragments(ehr.note.NoteOuterClass.NoteFragment value) {
         if (fragmentsBuilder_ == null) {
@@ -2163,7 +2267,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public Builder addFragments(
           int index, ehr.note.NoteOuterClass.NoteFragment value) {
@@ -2180,7 +2284,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public Builder addFragments(
           ehr.note.NoteOuterClass.NoteFragment.Builder builderForValue) {
@@ -2194,7 +2298,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public Builder addFragments(
           int index, ehr.note.NoteOuterClass.NoteFragment.Builder builderForValue) {
@@ -2208,7 +2312,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public Builder addAllFragments(
           java.lang.Iterable<? extends ehr.note.NoteOuterClass.NoteFragment> values) {
@@ -2223,12 +2327,12 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public Builder clearFragments() {
         if (fragmentsBuilder_ == null) {
           fragments_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000100);
           onChanged();
         } else {
           fragmentsBuilder_.clear();
@@ -2236,7 +2340,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public Builder removeFragments(int index) {
         if (fragmentsBuilder_ == null) {
@@ -2249,14 +2353,14 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public ehr.note.NoteOuterClass.NoteFragment.Builder getFragmentsBuilder(
           int index) {
         return getFragmentsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public ehr.note.NoteOuterClass.NoteFragmentOrBuilder getFragmentsOrBuilder(
           int index) {
@@ -2266,7 +2370,7 @@ public final class NoteOuterClass {
         }
       }
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public java.util.List<? extends ehr.note.NoteOuterClass.NoteFragmentOrBuilder> 
            getFragmentsOrBuilderList() {
@@ -2277,14 +2381,14 @@ public final class NoteOuterClass {
         }
       }
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public ehr.note.NoteOuterClass.NoteFragment.Builder addFragmentsBuilder() {
         return getFragmentsFieldBuilder().addBuilder(
             ehr.note.NoteOuterClass.NoteFragment.getDefaultInstance());
       }
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public ehr.note.NoteOuterClass.NoteFragment.Builder addFragmentsBuilder(
           int index) {
@@ -2292,7 +2396,7 @@ public final class NoteOuterClass {
             index, ehr.note.NoteOuterClass.NoteFragment.getDefaultInstance());
       }
       /**
-       * <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+       * <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
        */
       public java.util.List<ehr.note.NoteOuterClass.NoteFragment.Builder> 
            getFragmentsBuilderList() {
@@ -2305,7 +2409,7 @@ public final class NoteOuterClass {
           fragmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ehr.note.NoteOuterClass.NoteFragment, ehr.note.NoteOuterClass.NoteFragment.Builder, ehr.note.NoteOuterClass.NoteFragmentOrBuilder>(
                   fragments_,
-                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  ((bitField0_ & 0x00000100) == 0x00000100),
                   getParentForChildren(),
                   isClean());
           fragments_ = null;
@@ -2315,39 +2419,39 @@ public final class NoteOuterClass {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000200;
          }
       }
       /**
-       * <code>repeated string tags = 9;</code>
+       * <code>repeated string tags = 10;</code>
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
         return tags_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string tags = 9;</code>
+       * <code>repeated string tags = 10;</code>
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
-       * <code>repeated string tags = 9;</code>
+       * <code>repeated string tags = 10;</code>
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
-       * <code>repeated string tags = 9;</code>
+       * <code>repeated string tags = 10;</code>
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
         return tags_.getByteString(index);
       }
       /**
-       * <code>repeated string tags = 9;</code>
+       * <code>repeated string tags = 10;</code>
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -2360,7 +2464,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 9;</code>
+       * <code>repeated string tags = 10;</code>
        */
       public Builder addTags(
           java.lang.String value) {
@@ -2373,7 +2477,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 9;</code>
+       * <code>repeated string tags = 10;</code>
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -2384,16 +2488,16 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 9;</code>
+       * <code>repeated string tags = 10;</code>
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string tags = 9;</code>
+       * <code>repeated string tags = 10;</code>
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -2464,9 +2568,9 @@ public final class NoteOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 id = 1;</code>
+     * <code>int64 id = 1;</code>
      */
-    int getId();
+    long getId();
 
     /**
      * <code>.google.protobuf.Timestamp date_created = 2;</code>
@@ -2566,41 +2670,41 @@ public final class NoteOuterClass {
         getDescriptionBytes();
 
     /**
-     * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
+     * <code>.ehr.note.RecordStatus status = 9;</code>
      */
     int getStatusValue();
     /**
-     * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
+     * <code>.ehr.note.RecordStatus status = 9;</code>
      */
-    ehr.note.NoteOuterClass.NoteFragmentStatus getStatus();
+    ehr.note.NoteOuterClass.RecordStatus getStatus();
 
     /**
-     * <code>.ehr.note.FragmentPriority priority = 10;</code>
+     * <code>.ehr.note.RecordPriority priority = 10;</code>
      */
     int getPriorityValue();
     /**
-     * <code>.ehr.note.FragmentPriority priority = 10;</code>
+     * <code>.ehr.note.RecordPriority priority = 10;</code>
      */
-    ehr.note.NoteOuterClass.FragmentPriority getPriority();
+    ehr.note.NoteOuterClass.RecordPriority getPriority();
 
     /**
-     * <code>.ehr.note.FragmentTopic topic = 11;</code>
+     * <code>.ehr.note.FragmentType topic = 11;</code>
      */
     int getTopicValue();
     /**
-     * <code>.ehr.note.FragmentTopic topic = 11;</code>
+     * <code>.ehr.note.FragmentType topic = 11;</code>
      */
-    ehr.note.NoteOuterClass.FragmentTopic getTopic();
+    ehr.note.NoteOuterClass.FragmentType getTopic();
 
     /**
-     * <code>string markdown_content = 12;</code>
+     * <code>string content = 12;</code>
      */
-    java.lang.String getMarkdownContent();
+    java.lang.String getContent();
     /**
-     * <code>string markdown_content = 12;</code>
+     * <code>string content = 12;</code>
      */
     com.google.protobuf.ByteString
-        getMarkdownContentBytes();
+        getContentBytes();
 
     /**
      * <code>repeated string tags = 13;</code>
@@ -2634,7 +2738,7 @@ public final class NoteOuterClass {
       super(builder);
     }
     private NoteFragment() {
-      id_ = 0;
+      id_ = 0L;
       noteFragmentGuid_ = "";
       noteGuid_ = "";
       issueGuid_ = "";
@@ -2644,7 +2748,7 @@ public final class NoteOuterClass {
       status_ = 0;
       priority_ = 0;
       topic_ = 0;
-      markdownContent_ = "";
+      content_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
@@ -2674,7 +2778,7 @@ public final class NoteOuterClass {
               break;
             case 8: {
 
-              id_ = input.readInt32();
+              id_ = input.readInt64();
               break;
             }
             case 18: {
@@ -2747,7 +2851,7 @@ public final class NoteOuterClass {
             case 98: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              markdownContent_ = s;
+              content_ = s;
               break;
             }
             case 106: {
@@ -2796,11 +2900,11 @@ public final class NoteOuterClass {
 
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
-    private int id_;
+    private long id_;
     /**
-     * <code>int32 id = 1;</code>
+     * <code>int64 id = 1;</code>
      */
-    public int getId() {
+    public long getId() {
       return id_;
     }
 
@@ -3056,82 +3160,82 @@ public final class NoteOuterClass {
     public static final int STATUS_FIELD_NUMBER = 9;
     private int status_;
     /**
-     * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
+     * <code>.ehr.note.RecordStatus status = 9;</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
-     * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
+     * <code>.ehr.note.RecordStatus status = 9;</code>
      */
-    public ehr.note.NoteOuterClass.NoteFragmentStatus getStatus() {
+    public ehr.note.NoteOuterClass.RecordStatus getStatus() {
       @SuppressWarnings("deprecation")
-      ehr.note.NoteOuterClass.NoteFragmentStatus result = ehr.note.NoteOuterClass.NoteFragmentStatus.valueOf(status_);
-      return result == null ? ehr.note.NoteOuterClass.NoteFragmentStatus.UNRECOGNIZED : result;
+      ehr.note.NoteOuterClass.RecordStatus result = ehr.note.NoteOuterClass.RecordStatus.valueOf(status_);
+      return result == null ? ehr.note.NoteOuterClass.RecordStatus.UNRECOGNIZED : result;
     }
 
     public static final int PRIORITY_FIELD_NUMBER = 10;
     private int priority_;
     /**
-     * <code>.ehr.note.FragmentPriority priority = 10;</code>
+     * <code>.ehr.note.RecordPriority priority = 10;</code>
      */
     public int getPriorityValue() {
       return priority_;
     }
     /**
-     * <code>.ehr.note.FragmentPriority priority = 10;</code>
+     * <code>.ehr.note.RecordPriority priority = 10;</code>
      */
-    public ehr.note.NoteOuterClass.FragmentPriority getPriority() {
+    public ehr.note.NoteOuterClass.RecordPriority getPriority() {
       @SuppressWarnings("deprecation")
-      ehr.note.NoteOuterClass.FragmentPriority result = ehr.note.NoteOuterClass.FragmentPriority.valueOf(priority_);
-      return result == null ? ehr.note.NoteOuterClass.FragmentPriority.UNRECOGNIZED : result;
+      ehr.note.NoteOuterClass.RecordPriority result = ehr.note.NoteOuterClass.RecordPriority.valueOf(priority_);
+      return result == null ? ehr.note.NoteOuterClass.RecordPriority.UNRECOGNIZED : result;
     }
 
     public static final int TOPIC_FIELD_NUMBER = 11;
     private int topic_;
     /**
-     * <code>.ehr.note.FragmentTopic topic = 11;</code>
+     * <code>.ehr.note.FragmentType topic = 11;</code>
      */
     public int getTopicValue() {
       return topic_;
     }
     /**
-     * <code>.ehr.note.FragmentTopic topic = 11;</code>
+     * <code>.ehr.note.FragmentType topic = 11;</code>
      */
-    public ehr.note.NoteOuterClass.FragmentTopic getTopic() {
+    public ehr.note.NoteOuterClass.FragmentType getTopic() {
       @SuppressWarnings("deprecation")
-      ehr.note.NoteOuterClass.FragmentTopic result = ehr.note.NoteOuterClass.FragmentTopic.valueOf(topic_);
-      return result == null ? ehr.note.NoteOuterClass.FragmentTopic.UNRECOGNIZED : result;
+      ehr.note.NoteOuterClass.FragmentType result = ehr.note.NoteOuterClass.FragmentType.valueOf(topic_);
+      return result == null ? ehr.note.NoteOuterClass.FragmentType.UNRECOGNIZED : result;
     }
 
-    public static final int MARKDOWN_CONTENT_FIELD_NUMBER = 12;
-    private volatile java.lang.Object markdownContent_;
+    public static final int CONTENT_FIELD_NUMBER = 12;
+    private volatile java.lang.Object content_;
     /**
-     * <code>string markdown_content = 12;</code>
+     * <code>string content = 12;</code>
      */
-    public java.lang.String getMarkdownContent() {
-      java.lang.Object ref = markdownContent_;
+    public java.lang.String getContent() {
+      java.lang.Object ref = content_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        markdownContent_ = s;
+        content_ = s;
         return s;
       }
     }
     /**
-     * <code>string markdown_content = 12;</code>
+     * <code>string content = 12;</code>
      */
     public com.google.protobuf.ByteString
-        getMarkdownContentBytes() {
-      java.lang.Object ref = markdownContent_;
+        getContentBytes() {
+      java.lang.Object ref = content_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        markdownContent_ = b;
+        content_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -3181,8 +3285,8 @@ public final class NoteOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (id_ != 0) {
-        output.writeInt32(1, id_);
+      if (id_ != 0L) {
+        output.writeInt64(1, id_);
       }
       if (dateCreated_ != null) {
         output.writeMessage(2, getDateCreated());
@@ -3205,17 +3309,17 @@ public final class NoteOuterClass {
       if (!getDescriptionBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, description_);
       }
-      if (status_ != ehr.note.NoteOuterClass.NoteFragmentStatus.NO_STATUS.getNumber()) {
+      if (status_ != ehr.note.NoteOuterClass.RecordStatus.NO_STATUS.getNumber()) {
         output.writeEnum(9, status_);
       }
-      if (priority_ != ehr.note.NoteOuterClass.FragmentPriority.NO_PRIORITY.getNumber()) {
+      if (priority_ != ehr.note.NoteOuterClass.RecordPriority.NO_PRIORITY.getNumber()) {
         output.writeEnum(10, priority_);
       }
-      if (topic_ != ehr.note.NoteOuterClass.FragmentTopic.NO_TOPIC.getNumber()) {
+      if (topic_ != ehr.note.NoteOuterClass.FragmentType.NO_TOPIC.getNumber()) {
         output.writeEnum(11, topic_);
       }
-      if (!getMarkdownContentBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, markdownContent_);
+      if (!getContentBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, content_);
       }
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, tags_.getRaw(i));
@@ -3229,9 +3333,9 @@ public final class NoteOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (id_ != 0) {
+      if (id_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, id_);
+          .computeInt64Size(1, id_);
       }
       if (dateCreated_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -3255,20 +3359,20 @@ public final class NoteOuterClass {
       if (!getDescriptionBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, description_);
       }
-      if (status_ != ehr.note.NoteOuterClass.NoteFragmentStatus.NO_STATUS.getNumber()) {
+      if (status_ != ehr.note.NoteOuterClass.RecordStatus.NO_STATUS.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(9, status_);
       }
-      if (priority_ != ehr.note.NoteOuterClass.FragmentPriority.NO_PRIORITY.getNumber()) {
+      if (priority_ != ehr.note.NoteOuterClass.RecordPriority.NO_PRIORITY.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(10, priority_);
       }
-      if (topic_ != ehr.note.NoteOuterClass.FragmentTopic.NO_TOPIC.getNumber()) {
+      if (topic_ != ehr.note.NoteOuterClass.FragmentType.NO_TOPIC.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(11, topic_);
       }
-      if (!getMarkdownContentBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, markdownContent_);
+      if (!getContentBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, content_);
       }
       {
         int dataSize = 0;
@@ -3316,8 +3420,8 @@ public final class NoteOuterClass {
       result = result && status_ == other.status_;
       result = result && priority_ == other.priority_;
       result = result && topic_ == other.topic_;
-      result = result && getMarkdownContent()
-          .equals(other.getMarkdownContent());
+      result = result && getContent()
+          .equals(other.getContent());
       result = result && getTagsList()
           .equals(other.getTagsList());
       result = result && unknownFields.equals(other.unknownFields);
@@ -3332,7 +3436,8 @@ public final class NoteOuterClass {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId();
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
       if (hasDateCreated()) {
         hash = (37 * hash) + DATE_CREATED_FIELD_NUMBER;
         hash = (53 * hash) + getDateCreated().hashCode();
@@ -3355,8 +3460,8 @@ public final class NoteOuterClass {
       hash = (53 * hash) + priority_;
       hash = (37 * hash) + TOPIC_FIELD_NUMBER;
       hash = (53 * hash) + topic_;
-      hash = (37 * hash) + MARKDOWN_CONTENT_FIELD_NUMBER;
-      hash = (53 * hash) + getMarkdownContent().hashCode();
+      hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+      hash = (53 * hash) + getContent().hashCode();
       if (getTagsCount() > 0) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
@@ -3494,7 +3599,7 @@ public final class NoteOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = 0;
+        id_ = 0L;
 
         if (dateCreatedBuilder_ == null) {
           dateCreated_ = null;
@@ -3520,7 +3625,7 @@ public final class NoteOuterClass {
 
         topic_ = 0;
 
-        markdownContent_ = "";
+        content_ = "";
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00001000);
@@ -3567,7 +3672,7 @@ public final class NoteOuterClass {
         result.status_ = status_;
         result.priority_ = priority_;
         result.topic_ = topic_;
-        result.markdownContent_ = markdownContent_;
+        result.content_ = content_;
         if (((bitField0_ & 0x00001000) == 0x00001000)) {
           tags_ = tags_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00001000);
@@ -3622,7 +3727,7 @@ public final class NoteOuterClass {
 
       public Builder mergeFrom(ehr.note.NoteOuterClass.NoteFragment other) {
         if (other == ehr.note.NoteOuterClass.NoteFragment.getDefaultInstance()) return this;
-        if (other.getId() != 0) {
+        if (other.getId() != 0L) {
           setId(other.getId());
         }
         if (other.hasDateCreated()) {
@@ -3661,8 +3766,8 @@ public final class NoteOuterClass {
         if (other.topic_ != 0) {
           setTopicValue(other.getTopicValue());
         }
-        if (!other.getMarkdownContent().isEmpty()) {
-          markdownContent_ = other.markdownContent_;
+        if (!other.getContent().isEmpty()) {
+          content_ = other.content_;
           onChanged();
         }
         if (!other.tags_.isEmpty()) {
@@ -3705,28 +3810,28 @@ public final class NoteOuterClass {
       }
       private int bitField0_;
 
-      private int id_ ;
+      private long id_ ;
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        */
-      public int getId() {
+      public long getId() {
         return id_;
       }
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        */
-      public Builder setId(int value) {
+      public Builder setId(long value) {
         
         id_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        */
       public Builder clearId() {
         
-        id_ = 0;
+        id_ = 0L;
         onChanged();
         return this;
       }
@@ -4324,13 +4429,13 @@ public final class NoteOuterClass {
 
       private int status_ = 0;
       /**
-       * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
+       * <code>.ehr.note.RecordStatus status = 9;</code>
        */
       public int getStatusValue() {
         return status_;
       }
       /**
-       * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
+       * <code>.ehr.note.RecordStatus status = 9;</code>
        */
       public Builder setStatusValue(int value) {
         status_ = value;
@@ -4338,17 +4443,17 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
+       * <code>.ehr.note.RecordStatus status = 9;</code>
        */
-      public ehr.note.NoteOuterClass.NoteFragmentStatus getStatus() {
+      public ehr.note.NoteOuterClass.RecordStatus getStatus() {
         @SuppressWarnings("deprecation")
-        ehr.note.NoteOuterClass.NoteFragmentStatus result = ehr.note.NoteOuterClass.NoteFragmentStatus.valueOf(status_);
-        return result == null ? ehr.note.NoteOuterClass.NoteFragmentStatus.UNRECOGNIZED : result;
+        ehr.note.NoteOuterClass.RecordStatus result = ehr.note.NoteOuterClass.RecordStatus.valueOf(status_);
+        return result == null ? ehr.note.NoteOuterClass.RecordStatus.UNRECOGNIZED : result;
       }
       /**
-       * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
+       * <code>.ehr.note.RecordStatus status = 9;</code>
        */
-      public Builder setStatus(ehr.note.NoteOuterClass.NoteFragmentStatus value) {
+      public Builder setStatus(ehr.note.NoteOuterClass.RecordStatus value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -4358,7 +4463,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>.ehr.note.NoteFragmentStatus status = 9;</code>
+       * <code>.ehr.note.RecordStatus status = 9;</code>
        */
       public Builder clearStatus() {
         
@@ -4369,13 +4474,13 @@ public final class NoteOuterClass {
 
       private int priority_ = 0;
       /**
-       * <code>.ehr.note.FragmentPriority priority = 10;</code>
+       * <code>.ehr.note.RecordPriority priority = 10;</code>
        */
       public int getPriorityValue() {
         return priority_;
       }
       /**
-       * <code>.ehr.note.FragmentPriority priority = 10;</code>
+       * <code>.ehr.note.RecordPriority priority = 10;</code>
        */
       public Builder setPriorityValue(int value) {
         priority_ = value;
@@ -4383,17 +4488,17 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>.ehr.note.FragmentPriority priority = 10;</code>
+       * <code>.ehr.note.RecordPriority priority = 10;</code>
        */
-      public ehr.note.NoteOuterClass.FragmentPriority getPriority() {
+      public ehr.note.NoteOuterClass.RecordPriority getPriority() {
         @SuppressWarnings("deprecation")
-        ehr.note.NoteOuterClass.FragmentPriority result = ehr.note.NoteOuterClass.FragmentPriority.valueOf(priority_);
-        return result == null ? ehr.note.NoteOuterClass.FragmentPriority.UNRECOGNIZED : result;
+        ehr.note.NoteOuterClass.RecordPriority result = ehr.note.NoteOuterClass.RecordPriority.valueOf(priority_);
+        return result == null ? ehr.note.NoteOuterClass.RecordPriority.UNRECOGNIZED : result;
       }
       /**
-       * <code>.ehr.note.FragmentPriority priority = 10;</code>
+       * <code>.ehr.note.RecordPriority priority = 10;</code>
        */
-      public Builder setPriority(ehr.note.NoteOuterClass.FragmentPriority value) {
+      public Builder setPriority(ehr.note.NoteOuterClass.RecordPriority value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -4403,7 +4508,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>.ehr.note.FragmentPriority priority = 10;</code>
+       * <code>.ehr.note.RecordPriority priority = 10;</code>
        */
       public Builder clearPriority() {
         
@@ -4414,13 +4519,13 @@ public final class NoteOuterClass {
 
       private int topic_ = 0;
       /**
-       * <code>.ehr.note.FragmentTopic topic = 11;</code>
+       * <code>.ehr.note.FragmentType topic = 11;</code>
        */
       public int getTopicValue() {
         return topic_;
       }
       /**
-       * <code>.ehr.note.FragmentTopic topic = 11;</code>
+       * <code>.ehr.note.FragmentType topic = 11;</code>
        */
       public Builder setTopicValue(int value) {
         topic_ = value;
@@ -4428,17 +4533,17 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>.ehr.note.FragmentTopic topic = 11;</code>
+       * <code>.ehr.note.FragmentType topic = 11;</code>
        */
-      public ehr.note.NoteOuterClass.FragmentTopic getTopic() {
+      public ehr.note.NoteOuterClass.FragmentType getTopic() {
         @SuppressWarnings("deprecation")
-        ehr.note.NoteOuterClass.FragmentTopic result = ehr.note.NoteOuterClass.FragmentTopic.valueOf(topic_);
-        return result == null ? ehr.note.NoteOuterClass.FragmentTopic.UNRECOGNIZED : result;
+        ehr.note.NoteOuterClass.FragmentType result = ehr.note.NoteOuterClass.FragmentType.valueOf(topic_);
+        return result == null ? ehr.note.NoteOuterClass.FragmentType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.ehr.note.FragmentTopic topic = 11;</code>
+       * <code>.ehr.note.FragmentType topic = 11;</code>
        */
-      public Builder setTopic(ehr.note.NoteOuterClass.FragmentTopic value) {
+      public Builder setTopic(ehr.note.NoteOuterClass.FragmentType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -4448,7 +4553,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>.ehr.note.FragmentTopic topic = 11;</code>
+       * <code>.ehr.note.FragmentType topic = 11;</code>
        */
       public Builder clearTopic() {
         
@@ -4457,71 +4562,71 @@ public final class NoteOuterClass {
         return this;
       }
 
-      private java.lang.Object markdownContent_ = "";
+      private java.lang.Object content_ = "";
       /**
-       * <code>string markdown_content = 12;</code>
+       * <code>string content = 12;</code>
        */
-      public java.lang.String getMarkdownContent() {
-        java.lang.Object ref = markdownContent_;
+      public java.lang.String getContent() {
+        java.lang.Object ref = content_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          markdownContent_ = s;
+          content_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string markdown_content = 12;</code>
+       * <code>string content = 12;</code>
        */
       public com.google.protobuf.ByteString
-          getMarkdownContentBytes() {
-        java.lang.Object ref = markdownContent_;
+          getContentBytes() {
+        java.lang.Object ref = content_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          markdownContent_ = b;
+          content_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string markdown_content = 12;</code>
+       * <code>string content = 12;</code>
        */
-      public Builder setMarkdownContent(
+      public Builder setContent(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        markdownContent_ = value;
+        content_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string markdown_content = 12;</code>
+       * <code>string content = 12;</code>
        */
-      public Builder clearMarkdownContent() {
+      public Builder clearContent() {
         
-        markdownContent_ = getDefaultInstance().getMarkdownContent();
+        content_ = getDefaultInstance().getContent();
         onChanged();
         return this;
       }
       /**
-       * <code>string markdown_content = 12;</code>
+       * <code>string content = 12;</code>
        */
-      public Builder setMarkdownContentBytes(
+      public Builder setContentBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        markdownContent_ = value;
+        content_ = value;
         onChanged();
         return this;
       }
@@ -4692,37 +4797,38 @@ public final class NoteOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\nnote.proto\022\010ehr.note\032\037google/protobuf/" +
-      "timestamp.proto\032\023medicalissues.proto\"\361\001\n" +
-      "\004Note\022\n\n\002id\030\001 \001(\005\0220\n\014date_created\030\002 \001(\0132" +
+      "timestamp.proto\032\023medicalissues.proto\"\231\002\n" +
+      "\004Note\022\n\n\002id\030\001 \001(\003\0220\n\014date_created\030\002 \001(\0132" +
       "\032.google.protobuf.Timestamp\022\021\n\tnote_guid" +
       "\030\003 \001(\t\022\022\n\nvisit_guid\030\004 \001(\t\022\023\n\013author_gui" +
       "d\030\005 \001(\t\022\024\n\014patient_guid\030\006 \001(\t\022 \n\004type\030\007 " +
-      "\001(\0162\022.ehr.note.NoteType\022)\n\tfragments\030\010 \003" +
-      "(\0132\026.ehr.note.NoteFragment\022\014\n\004tags\030\t \003(\t" +
-      "\"\372\002\n\014NoteFragment\022\n\n\002id\030\001 \001(\005\0220\n\014date_cr" +
+      "\001(\0162\022.ehr.note.NoteType\022&\n\006status\030\010 \001(\0162" +
+      "\026.ehr.note.RecordStatus\022)\n\tfragments\030\t \003" +
+      "(\0132\026.ehr.note.NoteFragment\022\014\n\004tags\030\n \003(\t" +
+      "\"\350\002\n\014NoteFragment\022\n\n\002id\030\001 \001(\003\0220\n\014date_cr" +
       "eated\030\002 \001(\0132\032.google.protobuf.Timestamp\022" +
       "\032\n\022note_fragment_guid\030\003 \001(\t\022\021\n\tnote_guid" +
       "\030\004 \001(\t\022\022\n\nissue_guid\030\005 \001(\t\022\023\n\013icd_10_cod" +
       "e\030\006 \001(\t\022\023\n\013icd_10_long\030\007 \001(\t\022\023\n\013descript" +
-      "ion\030\010 \001(\t\022,\n\006status\030\t \001(\0162\034.ehr.note.Not" +
-      "eFragmentStatus\022,\n\010priority\030\n \001(\0162\032.ehr." +
-      "note.FragmentPriority\022&\n\005topic\030\013 \001(\0162\027.e" +
-      "hr.note.FragmentTopic\022\030\n\020markdown_conten" +
-      "t\030\014 \001(\t\022\014\n\004tags\030\r \003(\t*\352\001\n\rFragmentTopic\022" +
-      "\014\n\010NO_TOPIC\020\000\022\016\n\nSUBJECTIVE\020\001\022\025\n\021REVIEW_" +
-      "OF_SYSTEMS\020\002\022\023\n\017MEDICAL_HISTORY\020\003\022\r\n\tALL" +
-      "ERGIES\020\004\022\017\n\013MEDICATIONS\020\005\022\022\n\016FAMILY_HIST" +
-      "ORY\020\006\022\022\n\016SOCIAL_HISTORY\020\007\022\n\n\006VITALS\020\010\022\021\n" +
-      "\rPHYSICAL_EXAM\020\t\022\023\n\017LABORATORY_DATA\020\n\022\023\n" +
-      "\017MEDICAL_PROBLEM\020\013*B\n\020FragmentPriority\022\017" +
-      "\n\013NO_PRIORITY\020\000\022\010\n\004HIGH\020\001\022\n\n\006NORMAL\020\002\022\007\n" +
-      "\003LOW\020\003*M\n\022NoteFragmentStatus\022\r\n\tNO_STATU" +
-      "S\020\000\022\016\n\nINCOMPLETE\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010REPLA" +
-      "CED\020\003*\254\001\n\010NoteType\022\020\n\014NO_NOTE_TYPE\020\000\022\r\n\t" +
-      "FOLLOW_UP\020\001\022\016\n\nPHONE_CALL\020\002\022 \n\034CONTINUED" +
-      "_CARE_DOCUMENTATION\020\004\022\030\n\024REFILL_DOCUMENT" +
-      "ATION\020\005\022\n\n\006INTAKE\020\006\022\r\n\tPROCEDURE\020\007\022\030\n\024HI" +
-      "STORY_AND_PHYSICAL\020\010B\007Z\005ehrpbb\006proto3"
+      "ion\030\010 \001(\t\022&\n\006status\030\t \001(\0162\026.ehr.note.Rec" +
+      "ordStatus\022*\n\010priority\030\n \001(\0162\030.ehr.note.R" +
+      "ecordPriority\022%\n\005topic\030\013 \001(\0162\026.ehr.note." +
+      "FragmentType\022\017\n\007content\030\014 \001(\t\022\014\n\004tags\030\r " +
+      "\003(\t*\254\001\n\010NoteType\022\020\n\014NO_NOTE_TYPE\020\000\022\r\n\tFO" +
+      "LLOW_UP\020\001\022\016\n\nPHONE_CALL\020\002\022 \n\034CONTINUED_C" +
+      "ARE_DOCUMENTATION\020\004\022\030\n\024REFILL_DOCUMENTAT" +
+      "ION\020\005\022\n\n\006INTAKE\020\006\022\r\n\tPROCEDURE\020\007\022\030\n\024HIST" +
+      "ORY_AND_PHYSICAL\020\010*\351\001\n\014FragmentType\022\014\n\010N" +
+      "O_TOPIC\020\000\022\016\n\nSUBJECTIVE\020\001\022\025\n\021REVIEW_OF_S" +
+      "YSTEMS\020\002\022\023\n\017MEDICAL_HISTORY\020\003\022\r\n\tALLERGI" +
+      "ES\020\004\022\017\n\013MEDICATIONS\020\005\022\022\n\016FAMILY_HISTORY\020" +
+      "\006\022\022\n\016SOCIAL_HISTORY\020\007\022\n\n\006VITALS\020\010\022\021\n\rPHY" +
+      "SICAL_EXAM\020\t\022\023\n\017LABORATORY_DATA\020\n\022\023\n\017MED" +
+      "ICAL_PROBLEM\020\013*@\n\016RecordPriority\022\017\n\013NO_P" +
+      "RIORITY\020\000\022\010\n\004HIGH\020\001\022\n\n\006NORMAL\020\002\022\007\n\003LOW\020\003" +
+      "*T\n\014RecordStatus\022\r\n\tNO_STATUS\020\000\022\016\n\nINCOM" +
+      "PLETE\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010REPLACED\020\003\022\013\n\007DEL" +
+      "ETED\020\004B\007Z\005ehrpbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4743,13 +4849,13 @@ public final class NoteOuterClass {
     internal_static_ehr_note_Note_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ehr_note_Note_descriptor,
-        new java.lang.String[] { "Id", "DateCreated", "NoteGuid", "VisitGuid", "AuthorGuid", "PatientGuid", "Type", "Fragments", "Tags", });
+        new java.lang.String[] { "Id", "DateCreated", "NoteGuid", "VisitGuid", "AuthorGuid", "PatientGuid", "Type", "Status", "Fragments", "Tags", });
     internal_static_ehr_note_NoteFragment_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ehr_note_NoteFragment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ehr_note_NoteFragment_descriptor,
-        new java.lang.String[] { "Id", "DateCreated", "NoteFragmentGuid", "NoteGuid", "IssueGuid", "Icd10Code", "Icd10Long", "Description", "Status", "Priority", "Topic", "MarkdownContent", "Tags", });
+        new java.lang.String[] { "Id", "DateCreated", "NoteFragmentGuid", "NoteGuid", "IssueGuid", "Icd10Code", "Icd10Long", "Description", "Status", "Priority", "Topic", "Content", "Tags", });
     com.google.protobuf.TimestampProto.getDescriptor();
     ehr.medicalissues.Medicalissues.getDescriptor();
   }

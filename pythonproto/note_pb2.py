@@ -22,13 +22,60 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ehr.note',
   syntax='proto3',
   serialized_options=_b('Z\005ehrpb'),
-  serialized_pb=_b('\n\nnote.proto\x12\x08\x65hr.note\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x13medicalissues.proto\"\xf1\x01\n\x04Note\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x30\n\x0c\x64\x61te_created\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x11\n\tnote_guid\x18\x03 \x01(\t\x12\x12\n\nvisit_guid\x18\x04 \x01(\t\x12\x13\n\x0b\x61uthor_guid\x18\x05 \x01(\t\x12\x14\n\x0cpatient_guid\x18\x06 \x01(\t\x12 \n\x04type\x18\x07 \x01(\x0e\x32\x12.ehr.note.NoteType\x12)\n\tfragments\x18\x08 \x03(\x0b\x32\x16.ehr.note.NoteFragment\x12\x0c\n\x04tags\x18\t \x03(\t\"\xfa\x02\n\x0cNoteFragment\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x30\n\x0c\x64\x61te_created\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x1a\n\x12note_fragment_guid\x18\x03 \x01(\t\x12\x11\n\tnote_guid\x18\x04 \x01(\t\x12\x12\n\nissue_guid\x18\x05 \x01(\t\x12\x13\n\x0bicd_10_code\x18\x06 \x01(\t\x12\x13\n\x0bicd_10_long\x18\x07 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x08 \x01(\t\x12,\n\x06status\x18\t \x01(\x0e\x32\x1c.ehr.note.NoteFragmentStatus\x12,\n\x08priority\x18\n \x01(\x0e\x32\x1a.ehr.note.FragmentPriority\x12&\n\x05topic\x18\x0b \x01(\x0e\x32\x17.ehr.note.FragmentTopic\x12\x18\n\x10markdown_content\x18\x0c \x01(\t\x12\x0c\n\x04tags\x18\r \x03(\t*\xea\x01\n\rFragmentTopic\x12\x0c\n\x08NO_TOPIC\x10\x00\x12\x0e\n\nSUBJECTIVE\x10\x01\x12\x15\n\x11REVIEW_OF_SYSTEMS\x10\x02\x12\x13\n\x0fMEDICAL_HISTORY\x10\x03\x12\r\n\tALLERGIES\x10\x04\x12\x0f\n\x0bMEDICATIONS\x10\x05\x12\x12\n\x0e\x46\x41MILY_HISTORY\x10\x06\x12\x12\n\x0eSOCIAL_HISTORY\x10\x07\x12\n\n\x06VITALS\x10\x08\x12\x11\n\rPHYSICAL_EXAM\x10\t\x12\x13\n\x0fLABORATORY_DATA\x10\n\x12\x13\n\x0fMEDICAL_PROBLEM\x10\x0b*B\n\x10\x46ragmentPriority\x12\x0f\n\x0bNO_PRIORITY\x10\x00\x12\x08\n\x04HIGH\x10\x01\x12\n\n\x06NORMAL\x10\x02\x12\x07\n\x03LOW\x10\x03*M\n\x12NoteFragmentStatus\x12\r\n\tNO_STATUS\x10\x00\x12\x0e\n\nINCOMPLETE\x10\x01\x12\n\n\x06\x41\x43TIVE\x10\x02\x12\x0c\n\x08REPLACED\x10\x03*\xac\x01\n\x08NoteType\x12\x10\n\x0cNO_NOTE_TYPE\x10\x00\x12\r\n\tFOLLOW_UP\x10\x01\x12\x0e\n\nPHONE_CALL\x10\x02\x12 \n\x1c\x43ONTINUED_CARE_DOCUMENTATION\x10\x04\x12\x18\n\x14REFILL_DOCUMENTATION\x10\x05\x12\n\n\x06INTAKE\x10\x06\x12\r\n\tPROCEDURE\x10\x07\x12\x18\n\x14HISTORY_AND_PHYSICAL\x10\x08\x42\x07Z\x05\x65hrpbb\x06proto3')
+  serialized_pb=_b('\n\nnote.proto\x12\x08\x65hr.note\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x13medicalissues.proto\"\x99\x02\n\x04Note\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x30\n\x0c\x64\x61te_created\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x11\n\tnote_guid\x18\x03 \x01(\t\x12\x12\n\nvisit_guid\x18\x04 \x01(\t\x12\x13\n\x0b\x61uthor_guid\x18\x05 \x01(\t\x12\x14\n\x0cpatient_guid\x18\x06 \x01(\t\x12 \n\x04type\x18\x07 \x01(\x0e\x32\x12.ehr.note.NoteType\x12&\n\x06status\x18\x08 \x01(\x0e\x32\x16.ehr.note.RecordStatus\x12)\n\tfragments\x18\t \x03(\x0b\x32\x16.ehr.note.NoteFragment\x12\x0c\n\x04tags\x18\n \x03(\t\"\xe8\x02\n\x0cNoteFragment\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x30\n\x0c\x64\x61te_created\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x1a\n\x12note_fragment_guid\x18\x03 \x01(\t\x12\x11\n\tnote_guid\x18\x04 \x01(\t\x12\x12\n\nissue_guid\x18\x05 \x01(\t\x12\x13\n\x0bicd_10_code\x18\x06 \x01(\t\x12\x13\n\x0bicd_10_long\x18\x07 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x08 \x01(\t\x12&\n\x06status\x18\t \x01(\x0e\x32\x16.ehr.note.RecordStatus\x12*\n\x08priority\x18\n \x01(\x0e\x32\x18.ehr.note.RecordPriority\x12%\n\x05topic\x18\x0b \x01(\x0e\x32\x16.ehr.note.FragmentType\x12\x0f\n\x07\x63ontent\x18\x0c \x01(\t\x12\x0c\n\x04tags\x18\r \x03(\t*\xac\x01\n\x08NoteType\x12\x10\n\x0cNO_NOTE_TYPE\x10\x00\x12\r\n\tFOLLOW_UP\x10\x01\x12\x0e\n\nPHONE_CALL\x10\x02\x12 \n\x1c\x43ONTINUED_CARE_DOCUMENTATION\x10\x04\x12\x18\n\x14REFILL_DOCUMENTATION\x10\x05\x12\n\n\x06INTAKE\x10\x06\x12\r\n\tPROCEDURE\x10\x07\x12\x18\n\x14HISTORY_AND_PHYSICAL\x10\x08*\xe9\x01\n\x0c\x46ragmentType\x12\x0c\n\x08NO_TOPIC\x10\x00\x12\x0e\n\nSUBJECTIVE\x10\x01\x12\x15\n\x11REVIEW_OF_SYSTEMS\x10\x02\x12\x13\n\x0fMEDICAL_HISTORY\x10\x03\x12\r\n\tALLERGIES\x10\x04\x12\x0f\n\x0bMEDICATIONS\x10\x05\x12\x12\n\x0e\x46\x41MILY_HISTORY\x10\x06\x12\x12\n\x0eSOCIAL_HISTORY\x10\x07\x12\n\n\x06VITALS\x10\x08\x12\x11\n\rPHYSICAL_EXAM\x10\t\x12\x13\n\x0fLABORATORY_DATA\x10\n\x12\x13\n\x0fMEDICAL_PROBLEM\x10\x0b*@\n\x0eRecordPriority\x12\x0f\n\x0bNO_PRIORITY\x10\x00\x12\x08\n\x04HIGH\x10\x01\x12\n\n\x06NORMAL\x10\x02\x12\x07\n\x03LOW\x10\x03*T\n\x0cRecordStatus\x12\r\n\tNO_STATUS\x10\x00\x12\x0e\n\nINCOMPLETE\x10\x01\x12\n\n\x06\x41\x43TIVE\x10\x02\x12\x0c\n\x08REPLACED\x10\x03\x12\x0b\n\x07\x44\x45LETED\x10\x04\x42\x07Z\x05\x65hrpbb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,medicalissues__pb2.DESCRIPTOR,])
 
-_FRAGMENTTOPIC = _descriptor.EnumDescriptor(
-  name='FragmentTopic',
-  full_name='ehr.note.FragmentTopic',
+_NOTETYPE = _descriptor.EnumDescriptor(
+  name='NoteType',
+  full_name='ehr.note.NoteType',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='NO_NOTE_TYPE', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FOLLOW_UP', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PHONE_CALL', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CONTINUED_CARE_DOCUMENTATION', index=3, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='REFILL_DOCUMENTATION', index=4, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INTAKE', index=5, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PROCEDURE', index=6, number=7,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HISTORY_AND_PHYSICAL', index=7, number=8,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=726,
+  serialized_end=898,
+)
+_sym_db.RegisterEnumDescriptor(_NOTETYPE)
+
+NoteType = enum_type_wrapper.EnumTypeWrapper(_NOTETYPE)
+_FRAGMENTTYPE = _descriptor.EnumDescriptor(
+  name='FragmentType',
+  full_name='ehr.note.FragmentType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -83,15 +130,15 @@ _FRAGMENTTOPIC = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=704,
-  serialized_end=938,
+  serialized_start=901,
+  serialized_end=1134,
 )
-_sym_db.RegisterEnumDescriptor(_FRAGMENTTOPIC)
+_sym_db.RegisterEnumDescriptor(_FRAGMENTTYPE)
 
-FragmentTopic = enum_type_wrapper.EnumTypeWrapper(_FRAGMENTTOPIC)
-_FRAGMENTPRIORITY = _descriptor.EnumDescriptor(
-  name='FragmentPriority',
-  full_name='ehr.note.FragmentPriority',
+FragmentType = enum_type_wrapper.EnumTypeWrapper(_FRAGMENTTYPE)
+_RECORDPRIORITY = _descriptor.EnumDescriptor(
+  name='RecordPriority',
+  full_name='ehr.note.RecordPriority',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -114,15 +161,15 @@ _FRAGMENTPRIORITY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=940,
-  serialized_end=1006,
+  serialized_start=1136,
+  serialized_end=1200,
 )
-_sym_db.RegisterEnumDescriptor(_FRAGMENTPRIORITY)
+_sym_db.RegisterEnumDescriptor(_RECORDPRIORITY)
 
-FragmentPriority = enum_type_wrapper.EnumTypeWrapper(_FRAGMENTPRIORITY)
-_NOTEFRAGMENTSTATUS = _descriptor.EnumDescriptor(
-  name='NoteFragmentStatus',
-  full_name='ehr.note.NoteFragmentStatus',
+RecordPriority = enum_type_wrapper.EnumTypeWrapper(_RECORDPRIORITY)
+_RECORDSTATUS = _descriptor.EnumDescriptor(
+  name='RecordStatus',
+  full_name='ehr.note.RecordStatus',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -142,62 +189,27 @@ _NOTEFRAGMENTSTATUS = _descriptor.EnumDescriptor(
       name='REPLACED', index=3, number=3,
       serialized_options=None,
       type=None),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=1008,
-  serialized_end=1085,
-)
-_sym_db.RegisterEnumDescriptor(_NOTEFRAGMENTSTATUS)
-
-NoteFragmentStatus = enum_type_wrapper.EnumTypeWrapper(_NOTEFRAGMENTSTATUS)
-_NOTETYPE = _descriptor.EnumDescriptor(
-  name='NoteType',
-  full_name='ehr.note.NoteType',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
     _descriptor.EnumValueDescriptor(
-      name='NO_NOTE_TYPE', index=0, number=0,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FOLLOW_UP', index=1, number=1,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='PHONE_CALL', index=2, number=2,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CONTINUED_CARE_DOCUMENTATION', index=3, number=4,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='REFILL_DOCUMENTATION', index=4, number=5,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INTAKE', index=5, number=6,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='PROCEDURE', index=6, number=7,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='HISTORY_AND_PHYSICAL', index=7, number=8,
+      name='DELETED', index=4, number=4,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1088,
-  serialized_end=1260,
+  serialized_start=1202,
+  serialized_end=1286,
 )
-_sym_db.RegisterEnumDescriptor(_NOTETYPE)
+_sym_db.RegisterEnumDescriptor(_RECORDSTATUS)
 
-NoteType = enum_type_wrapper.EnumTypeWrapper(_NOTETYPE)
+RecordStatus = enum_type_wrapper.EnumTypeWrapper(_RECORDSTATUS)
+NO_NOTE_TYPE = 0
+FOLLOW_UP = 1
+PHONE_CALL = 2
+CONTINUED_CARE_DOCUMENTATION = 4
+REFILL_DOCUMENTATION = 5
+INTAKE = 6
+PROCEDURE = 7
+HISTORY_AND_PHYSICAL = 8
 NO_TOPIC = 0
 SUBJECTIVE = 1
 REVIEW_OF_SYSTEMS = 2
@@ -218,14 +230,7 @@ NO_STATUS = 0
 INCOMPLETE = 1
 ACTIVE = 2
 REPLACED = 3
-NO_NOTE_TYPE = 0
-FOLLOW_UP = 1
-PHONE_CALL = 2
-CONTINUED_CARE_DOCUMENTATION = 4
-REFILL_DOCUMENTATION = 5
-INTAKE = 6
-PROCEDURE = 7
-HISTORY_AND_PHYSICAL = 8
+DELETED = 4
 
 
 
@@ -238,7 +243,7 @@ _NOTE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='ehr.note.Note.id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -286,15 +291,22 @@ _NOTE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='fragments', full_name='ehr.note.Note.fragments', index=7,
-      number=8, type=11, cpp_type=10, label=3,
+      name='status', full_name='ehr.note.Note.status', index=7,
+      number=8, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='fragments', full_name='ehr.note.Note.fragments', index=8,
+      number=9, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='ehr.note.Note.tags', index=8,
-      number=9, type=9, cpp_type=9, label=3,
+      name='tags', full_name='ehr.note.Note.tags', index=9,
+      number=10, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -312,7 +324,7 @@ _NOTE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=79,
-  serialized_end=320,
+  serialized_end=360,
 )
 
 
@@ -325,7 +337,7 @@ _NOTEFRAGMENT = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='ehr.note.NoteFragment.id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -401,7 +413,7 @@ _NOTEFRAGMENT = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='markdown_content', full_name='ehr.note.NoteFragment.markdown_content', index=11,
+      name='content', full_name='ehr.note.NoteFragment.content', index=11,
       number=12, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -426,23 +438,24 @@ _NOTEFRAGMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=323,
-  serialized_end=701,
+  serialized_start=363,
+  serialized_end=723,
 )
 
 _NOTE.fields_by_name['date_created'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _NOTE.fields_by_name['type'].enum_type = _NOTETYPE
+_NOTE.fields_by_name['status'].enum_type = _RECORDSTATUS
 _NOTE.fields_by_name['fragments'].message_type = _NOTEFRAGMENT
 _NOTEFRAGMENT.fields_by_name['date_created'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_NOTEFRAGMENT.fields_by_name['status'].enum_type = _NOTEFRAGMENTSTATUS
-_NOTEFRAGMENT.fields_by_name['priority'].enum_type = _FRAGMENTPRIORITY
-_NOTEFRAGMENT.fields_by_name['topic'].enum_type = _FRAGMENTTOPIC
+_NOTEFRAGMENT.fields_by_name['status'].enum_type = _RECORDSTATUS
+_NOTEFRAGMENT.fields_by_name['priority'].enum_type = _RECORDPRIORITY
+_NOTEFRAGMENT.fields_by_name['topic'].enum_type = _FRAGMENTTYPE
 DESCRIPTOR.message_types_by_name['Note'] = _NOTE
 DESCRIPTOR.message_types_by_name['NoteFragment'] = _NOTEFRAGMENT
-DESCRIPTOR.enum_types_by_name['FragmentTopic'] = _FRAGMENTTOPIC
-DESCRIPTOR.enum_types_by_name['FragmentPriority'] = _FRAGMENTPRIORITY
-DESCRIPTOR.enum_types_by_name['NoteFragmentStatus'] = _NOTEFRAGMENTSTATUS
 DESCRIPTOR.enum_types_by_name['NoteType'] = _NOTETYPE
+DESCRIPTOR.enum_types_by_name['FragmentType'] = _FRAGMENTTYPE
+DESCRIPTOR.enum_types_by_name['RecordPriority'] = _RECORDPRIORITY
+DESCRIPTOR.enum_types_by_name['RecordStatus'] = _RECORDSTATUS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Note = _reflection.GeneratedProtocolMessageType('Note', (_message.Message,), dict(

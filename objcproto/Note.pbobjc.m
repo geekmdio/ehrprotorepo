@@ -45,142 +45,6 @@ static GPBFileDescriptor *NoteRoot_FileDescriptor(void) {
   return descriptor;
 }
 
-#pragma mark - Enum FragmentTopic
-
-GPBEnumDescriptor *FragmentTopic_EnumDescriptor(void) {
-  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
-  if (!descriptor) {
-    static const char *valueNames =
-        "NoTopic\000Subjective\000ReviewOfSystems\000Medic"
-        "alHistory\000Allergies\000Medications\000FamilyHi"
-        "story\000SocialHistory\000Vitals\000PhysicalExam\000"
-        "LaboratoryData\000MedicalProblem\000";
-    static const int32_t values[] = {
-        FragmentTopic_NoTopic,
-        FragmentTopic_Subjective,
-        FragmentTopic_ReviewOfSystems,
-        FragmentTopic_MedicalHistory,
-        FragmentTopic_Allergies,
-        FragmentTopic_Medications,
-        FragmentTopic_FamilyHistory,
-        FragmentTopic_SocialHistory,
-        FragmentTopic_Vitals,
-        FragmentTopic_PhysicalExam,
-        FragmentTopic_LaboratoryData,
-        FragmentTopic_MedicalProblem,
-    };
-    GPBEnumDescriptor *worker =
-        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(FragmentTopic)
-                                       valueNames:valueNames
-                                           values:values
-                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
-                                     enumVerifier:FragmentTopic_IsValidValue];
-    GPBEnumDescriptor *expected = nil;
-    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
-      [worker release];
-    }
-  }
-  return descriptor;
-}
-
-BOOL FragmentTopic_IsValidValue(int32_t value__) {
-  switch (value__) {
-    case FragmentTopic_NoTopic:
-    case FragmentTopic_Subjective:
-    case FragmentTopic_ReviewOfSystems:
-    case FragmentTopic_MedicalHistory:
-    case FragmentTopic_Allergies:
-    case FragmentTopic_Medications:
-    case FragmentTopic_FamilyHistory:
-    case FragmentTopic_SocialHistory:
-    case FragmentTopic_Vitals:
-    case FragmentTopic_PhysicalExam:
-    case FragmentTopic_LaboratoryData:
-    case FragmentTopic_MedicalProblem:
-      return YES;
-    default:
-      return NO;
-  }
-}
-
-#pragma mark - Enum FragmentPriority
-
-GPBEnumDescriptor *FragmentPriority_EnumDescriptor(void) {
-  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
-  if (!descriptor) {
-    static const char *valueNames =
-        "NoPriority\000High\000Normal\000Low\000";
-    static const int32_t values[] = {
-        FragmentPriority_NoPriority,
-        FragmentPriority_High,
-        FragmentPriority_Normal,
-        FragmentPriority_Low,
-    };
-    GPBEnumDescriptor *worker =
-        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(FragmentPriority)
-                                       valueNames:valueNames
-                                           values:values
-                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
-                                     enumVerifier:FragmentPriority_IsValidValue];
-    GPBEnumDescriptor *expected = nil;
-    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
-      [worker release];
-    }
-  }
-  return descriptor;
-}
-
-BOOL FragmentPriority_IsValidValue(int32_t value__) {
-  switch (value__) {
-    case FragmentPriority_NoPriority:
-    case FragmentPriority_High:
-    case FragmentPriority_Normal:
-    case FragmentPriority_Low:
-      return YES;
-    default:
-      return NO;
-  }
-}
-
-#pragma mark - Enum NoteFragmentStatus
-
-GPBEnumDescriptor *NoteFragmentStatus_EnumDescriptor(void) {
-  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
-  if (!descriptor) {
-    static const char *valueNames =
-        "NoStatus\000Incomplete\000Active\000Replaced\000";
-    static const int32_t values[] = {
-        NoteFragmentStatus_NoStatus,
-        NoteFragmentStatus_Incomplete,
-        NoteFragmentStatus_Active,
-        NoteFragmentStatus_Replaced,
-    };
-    GPBEnumDescriptor *worker =
-        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(NoteFragmentStatus)
-                                       valueNames:valueNames
-                                           values:values
-                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
-                                     enumVerifier:NoteFragmentStatus_IsValidValue];
-    GPBEnumDescriptor *expected = nil;
-    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
-      [worker release];
-    }
-  }
-  return descriptor;
-}
-
-BOOL NoteFragmentStatus_IsValidValue(int32_t value__) {
-  switch (value__) {
-    case NoteFragmentStatus_NoStatus:
-    case NoteFragmentStatus_Incomplete:
-    case NoteFragmentStatus_Active:
-    case NoteFragmentStatus_Replaced:
-      return YES;
-    default:
-      return NO;
-  }
-}
-
 #pragma mark - Enum NoteType
 
 GPBEnumDescriptor *NoteType_EnumDescriptor(void) {
@@ -230,6 +94,145 @@ BOOL NoteType_IsValidValue(int32_t value__) {
   }
 }
 
+#pragma mark - Enum FragmentType
+
+GPBEnumDescriptor *FragmentType_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "NoTopic\000Subjective\000ReviewOfSystems\000Medic"
+        "alHistory\000Allergies\000Medications\000FamilyHi"
+        "story\000SocialHistory\000Vitals\000PhysicalExam\000"
+        "LaboratoryData\000MedicalProblem\000";
+    static const int32_t values[] = {
+        FragmentType_NoTopic,
+        FragmentType_Subjective,
+        FragmentType_ReviewOfSystems,
+        FragmentType_MedicalHistory,
+        FragmentType_Allergies,
+        FragmentType_Medications,
+        FragmentType_FamilyHistory,
+        FragmentType_SocialHistory,
+        FragmentType_Vitals,
+        FragmentType_PhysicalExam,
+        FragmentType_LaboratoryData,
+        FragmentType_MedicalProblem,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(FragmentType)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:FragmentType_IsValidValue];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL FragmentType_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case FragmentType_NoTopic:
+    case FragmentType_Subjective:
+    case FragmentType_ReviewOfSystems:
+    case FragmentType_MedicalHistory:
+    case FragmentType_Allergies:
+    case FragmentType_Medications:
+    case FragmentType_FamilyHistory:
+    case FragmentType_SocialHistory:
+    case FragmentType_Vitals:
+    case FragmentType_PhysicalExam:
+    case FragmentType_LaboratoryData:
+    case FragmentType_MedicalProblem:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
+#pragma mark - Enum RecordPriority
+
+GPBEnumDescriptor *RecordPriority_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "NoPriority\000High\000Normal\000Low\000";
+    static const int32_t values[] = {
+        RecordPriority_NoPriority,
+        RecordPriority_High,
+        RecordPriority_Normal,
+        RecordPriority_Low,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RecordPriority)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:RecordPriority_IsValidValue];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL RecordPriority_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case RecordPriority_NoPriority:
+    case RecordPriority_High:
+    case RecordPriority_Normal:
+    case RecordPriority_Low:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
+#pragma mark - Enum RecordStatus
+
+GPBEnumDescriptor *RecordStatus_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "NoStatus\000Incomplete\000Active\000Replaced\000Dele"
+        "ted\000";
+    static const int32_t values[] = {
+        RecordStatus_NoStatus,
+        RecordStatus_Incomplete,
+        RecordStatus_Active,
+        RecordStatus_Replaced,
+        RecordStatus_Deleted,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RecordStatus)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:RecordStatus_IsValidValue];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL RecordStatus_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case RecordStatus_NoStatus:
+    case RecordStatus_Incomplete:
+    case RecordStatus_Active:
+    case RecordStatus_Replaced:
+    case RecordStatus_Deleted:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
 #pragma mark - Note
 
 @implementation Note
@@ -241,13 +244,14 @@ BOOL NoteType_IsValidValue(int32_t value__) {
 @dynamic authorGuid;
 @dynamic patientGuid;
 @dynamic type;
+@dynamic status;
 @dynamic fragmentsArray, fragmentsArray_Count;
 @dynamic tagsArray, tagsArray_Count;
 
 typedef struct Note__storage_ {
   uint32_t _has_storage_[1];
-  int32_t id_p;
   NoteType type;
+  RecordStatus status;
   GPBTimestamp *dateCreated;
   NSString *noteGuid;
   NSString *visitGuid;
@@ -255,6 +259,7 @@ typedef struct Note__storage_ {
   NSString *patientGuid;
   NSMutableArray *fragmentsArray;
   NSMutableArray *tagsArray;
+  int64_t id_p;
 } Note__storage_;
 
 // This method is threadsafe because it is initially called
@@ -270,7 +275,7 @@ typedef struct Note__storage_ {
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(Note__storage_, id_p),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeInt32,
+        .dataType = GPBDataTypeInt64,
       },
       {
         .name = "dateCreated",
@@ -327,6 +332,15 @@ typedef struct Note__storage_ {
         .dataType = GPBDataTypeEnum,
       },
       {
+        .name = "status",
+        .dataTypeSpecific.enumDescFunc = RecordStatus_EnumDescriptor,
+        .number = Note_FieldNumber_Status,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(Note__storage_, status),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
         .name = "fragmentsArray",
         .dataTypeSpecific.className = GPBStringifySymbol(NoteFragment),
         .number = Note_FieldNumber_FragmentsArray,
@@ -373,6 +387,18 @@ void SetNote_Type_RawValue(Note *message, int32_t value) {
   GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
 }
 
+int32_t Note_Status_RawValue(Note *message) {
+  GPBDescriptor *descriptor = [Note descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:Note_FieldNumber_Status];
+  return GPBGetMessageInt32Field(message, field);
+}
+
+void SetNote_Status_RawValue(Note *message, int32_t value) {
+  GPBDescriptor *descriptor = [Note descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:Note_FieldNumber_Status];
+  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+}
+
 #pragma mark - NoteFragment
 
 @implementation NoteFragment
@@ -388,15 +414,14 @@ void SetNote_Type_RawValue(Note *message, int32_t value) {
 @dynamic status;
 @dynamic priority;
 @dynamic topic;
-@dynamic markdownContent;
+@dynamic content;
 @dynamic tagsArray, tagsArray_Count;
 
 typedef struct NoteFragment__storage_ {
   uint32_t _has_storage_[1];
-  int32_t id_p;
-  NoteFragmentStatus status;
-  FragmentPriority priority;
-  FragmentTopic topic;
+  RecordStatus status;
+  RecordPriority priority;
+  FragmentType topic;
   GPBTimestamp *dateCreated;
   NSString *noteFragmentGuid;
   NSString *noteGuid;
@@ -404,8 +429,9 @@ typedef struct NoteFragment__storage_ {
   NSString *icd10Code;
   NSString *icd10Long;
   NSString *description_p;
-  NSString *markdownContent;
+  NSString *content;
   NSMutableArray *tagsArray;
+  int64_t id_p;
 } NoteFragment__storage_;
 
 // This method is threadsafe because it is initially called
@@ -421,7 +447,7 @@ typedef struct NoteFragment__storage_ {
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(NoteFragment__storage_, id_p),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeInt32,
+        .dataType = GPBDataTypeInt64,
       },
       {
         .name = "dateCreated",
@@ -488,7 +514,7 @@ typedef struct NoteFragment__storage_ {
       },
       {
         .name = "status",
-        .dataTypeSpecific.enumDescFunc = NoteFragmentStatus_EnumDescriptor,
+        .dataTypeSpecific.enumDescFunc = RecordStatus_EnumDescriptor,
         .number = NoteFragment_FieldNumber_Status,
         .hasIndex = 8,
         .offset = (uint32_t)offsetof(NoteFragment__storage_, status),
@@ -497,7 +523,7 @@ typedef struct NoteFragment__storage_ {
       },
       {
         .name = "priority",
-        .dataTypeSpecific.enumDescFunc = FragmentPriority_EnumDescriptor,
+        .dataTypeSpecific.enumDescFunc = RecordPriority_EnumDescriptor,
         .number = NoteFragment_FieldNumber_Priority,
         .hasIndex = 9,
         .offset = (uint32_t)offsetof(NoteFragment__storage_, priority),
@@ -506,7 +532,7 @@ typedef struct NoteFragment__storage_ {
       },
       {
         .name = "topic",
-        .dataTypeSpecific.enumDescFunc = FragmentTopic_EnumDescriptor,
+        .dataTypeSpecific.enumDescFunc = FragmentType_EnumDescriptor,
         .number = NoteFragment_FieldNumber_Topic,
         .hasIndex = 10,
         .offset = (uint32_t)offsetof(NoteFragment__storage_, topic),
@@ -514,11 +540,11 @@ typedef struct NoteFragment__storage_ {
         .dataType = GPBDataTypeEnum,
       },
       {
-        .name = "markdownContent",
+        .name = "content",
         .dataTypeSpecific.className = NULL,
-        .number = NoteFragment_FieldNumber_MarkdownContent,
+        .number = NoteFragment_FieldNumber_Content,
         .hasIndex = 11,
-        .offset = (uint32_t)offsetof(NoteFragment__storage_, markdownContent),
+        .offset = (uint32_t)offsetof(NoteFragment__storage_, content),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },

@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class NoteFragment extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int32 id = 1;</code>
+     * Generated from protobuf field <code>int64 id = 1;</code>
      */
     private $id = 0;
     /**
@@ -52,21 +52,21 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
      */
     private $description = '';
     /**
-     * Generated from protobuf field <code>.ehr.note.NoteFragmentStatus status = 9;</code>
+     * Generated from protobuf field <code>.ehr.note.RecordStatus status = 9;</code>
      */
     private $status = 0;
     /**
-     * Generated from protobuf field <code>.ehr.note.FragmentPriority priority = 10;</code>
+     * Generated from protobuf field <code>.ehr.note.RecordPriority priority = 10;</code>
      */
     private $priority = 0;
     /**
-     * Generated from protobuf field <code>.ehr.note.FragmentTopic topic = 11;</code>
+     * Generated from protobuf field <code>.ehr.note.FragmentType topic = 11;</code>
      */
     private $topic = 0;
     /**
-     * Generated from protobuf field <code>string markdown_content = 12;</code>
+     * Generated from protobuf field <code>string content = 12;</code>
      */
-    private $markdown_content = '';
+    private $content = '';
     /**
      * Generated from protobuf field <code>repeated string tags = 13;</code>
      */
@@ -78,7 +78,7 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $id
+     *     @type int|string $id
      *     @type \Google\Protobuf\Timestamp $date_created
      *     @type string $note_fragment_guid
      *     @type string $note_guid
@@ -92,7 +92,7 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
      *     @type int $status
      *     @type int $priority
      *     @type int $topic
-     *     @type string $markdown_content
+     *     @type string $content
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $tags
      * }
      */
@@ -102,8 +102,8 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 id = 1;</code>
-     * @return int
+     * Generated from protobuf field <code>int64 id = 1;</code>
+     * @return int|string
      */
     public function getId()
     {
@@ -111,13 +111,13 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 id = 1;</code>
-     * @param int $var
+     * Generated from protobuf field <code>int64 id = 1;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setId($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkInt64($var);
         $this->id = $var;
 
         return $this;
@@ -290,7 +290,7 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ehr.note.NoteFragmentStatus status = 9;</code>
+     * Generated from protobuf field <code>.ehr.note.RecordStatus status = 9;</code>
      * @return int
      */
     public function getStatus()
@@ -299,20 +299,20 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ehr.note.NoteFragmentStatus status = 9;</code>
+     * Generated from protobuf field <code>.ehr.note.RecordStatus status = 9;</code>
      * @param int $var
      * @return $this
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Ehr\Note\NoteFragmentStatus::class);
+        GPBUtil::checkEnum($var, \Ehr\Note\RecordStatus::class);
         $this->status = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>.ehr.note.FragmentPriority priority = 10;</code>
+     * Generated from protobuf field <code>.ehr.note.RecordPriority priority = 10;</code>
      * @return int
      */
     public function getPriority()
@@ -321,20 +321,20 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ehr.note.FragmentPriority priority = 10;</code>
+     * Generated from protobuf field <code>.ehr.note.RecordPriority priority = 10;</code>
      * @param int $var
      * @return $this
      */
     public function setPriority($var)
     {
-        GPBUtil::checkEnum($var, \Ehr\Note\FragmentPriority::class);
+        GPBUtil::checkEnum($var, \Ehr\Note\RecordPriority::class);
         $this->priority = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>.ehr.note.FragmentTopic topic = 11;</code>
+     * Generated from protobuf field <code>.ehr.note.FragmentType topic = 11;</code>
      * @return int
      */
     public function getTopic()
@@ -343,36 +343,36 @@ class NoteFragment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ehr.note.FragmentTopic topic = 11;</code>
+     * Generated from protobuf field <code>.ehr.note.FragmentType topic = 11;</code>
      * @param int $var
      * @return $this
      */
     public function setTopic($var)
     {
-        GPBUtil::checkEnum($var, \Ehr\Note\FragmentTopic::class);
+        GPBUtil::checkEnum($var, \Ehr\Note\FragmentType::class);
         $this->topic = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>string markdown_content = 12;</code>
+     * Generated from protobuf field <code>string content = 12;</code>
      * @return string
      */
-    public function getMarkdownContent()
+    public function getContent()
     {
-        return $this->markdown_content;
+        return $this->content;
     }
 
     /**
-     * Generated from protobuf field <code>string markdown_content = 12;</code>
+     * Generated from protobuf field <code>string content = 12;</code>
      * @param string $var
      * @return $this
      */
-    public function setMarkdownContent($var)
+    public function setContent($var)
     {
         GPBUtil::checkString($var, True);
-        $this->markdown_content = $var;
+        $this->content = $var;
 
         return $this;
     }

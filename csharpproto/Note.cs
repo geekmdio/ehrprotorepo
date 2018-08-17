@@ -25,46 +25,57 @@ namespace Ehr.Note {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cgpub3RlLnByb3RvEghlaHIubm90ZRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
-            "dGFtcC5wcm90bxoTbWVkaWNhbGlzc3Vlcy5wcm90byLxAQoETm90ZRIKCgJp",
-            "ZBgBIAEoBRIwCgxkYXRlX2NyZWF0ZWQYAiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dGFtcC5wcm90bxoTbWVkaWNhbGlzc3Vlcy5wcm90byKZAgoETm90ZRIKCgJp",
+            "ZBgBIAEoAxIwCgxkYXRlX2NyZWF0ZWQYAiABKAsyGi5nb29nbGUucHJvdG9i",
             "dWYuVGltZXN0YW1wEhEKCW5vdGVfZ3VpZBgDIAEoCRISCgp2aXNpdF9ndWlk",
             "GAQgASgJEhMKC2F1dGhvcl9ndWlkGAUgASgJEhQKDHBhdGllbnRfZ3VpZBgG",
-            "IAEoCRIgCgR0eXBlGAcgASgOMhIuZWhyLm5vdGUuTm90ZVR5cGUSKQoJZnJh",
-            "Z21lbnRzGAggAygLMhYuZWhyLm5vdGUuTm90ZUZyYWdtZW50EgwKBHRhZ3MY",
-            "CSADKAki+gIKDE5vdGVGcmFnbWVudBIKCgJpZBgBIAEoBRIwCgxkYXRlX2Ny",
-            "ZWF0ZWQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhoKEm5v",
-            "dGVfZnJhZ21lbnRfZ3VpZBgDIAEoCRIRCglub3RlX2d1aWQYBCABKAkSEgoK",
-            "aXNzdWVfZ3VpZBgFIAEoCRITCgtpY2RfMTBfY29kZRgGIAEoCRITCgtpY2Rf",
-            "MTBfbG9uZxgHIAEoCRITCgtkZXNjcmlwdGlvbhgIIAEoCRIsCgZzdGF0dXMY",
-            "CSABKA4yHC5laHIubm90ZS5Ob3RlRnJhZ21lbnRTdGF0dXMSLAoIcHJpb3Jp",
-            "dHkYCiABKA4yGi5laHIubm90ZS5GcmFnbWVudFByaW9yaXR5EiYKBXRvcGlj",
-            "GAsgASgOMhcuZWhyLm5vdGUuRnJhZ21lbnRUb3BpYxIYChBtYXJrZG93bl9j",
-            "b250ZW50GAwgASgJEgwKBHRhZ3MYDSADKAkq6gEKDUZyYWdtZW50VG9waWMS",
-            "DAoITk9fVE9QSUMQABIOCgpTVUJKRUNUSVZFEAESFQoRUkVWSUVXX09GX1NZ",
-            "U1RFTVMQAhITCg9NRURJQ0FMX0hJU1RPUlkQAxINCglBTExFUkdJRVMQBBIP",
-            "CgtNRURJQ0FUSU9OUxAFEhIKDkZBTUlMWV9ISVNUT1JZEAYSEgoOU09DSUFM",
-            "X0hJU1RPUlkQBxIKCgZWSVRBTFMQCBIRCg1QSFlTSUNBTF9FWEFNEAkSEwoP",
-            "TEFCT1JBVE9SWV9EQVRBEAoSEwoPTUVESUNBTF9QUk9CTEVNEAsqQgoQRnJh",
-            "Z21lbnRQcmlvcml0eRIPCgtOT19QUklPUklUWRAAEggKBEhJR0gQARIKCgZO",
-            "T1JNQUwQAhIHCgNMT1cQAypNChJOb3RlRnJhZ21lbnRTdGF0dXMSDQoJTk9f",
-            "U1RBVFVTEAASDgoKSU5DT01QTEVURRABEgoKBkFDVElWRRACEgwKCFJFUExB",
-            "Q0VEEAMqrAEKCE5vdGVUeXBlEhAKDE5PX05PVEVfVFlQRRAAEg0KCUZPTExP",
-            "V19VUBABEg4KClBIT05FX0NBTEwQAhIgChxDT05USU5VRURfQ0FSRV9ET0NV",
-            "TUVOVEFUSU9OEAQSGAoUUkVGSUxMX0RPQ1VNRU5UQVRJT04QBRIKCgZJTlRB",
-            "S0UQBhINCglQUk9DRURVUkUQBxIYChRISVNUT1JZX0FORF9QSFlTSUNBTBAI",
-            "QgdaBWVocnBiYgZwcm90bzM="));
+            "IAEoCRIgCgR0eXBlGAcgASgOMhIuZWhyLm5vdGUuTm90ZVR5cGUSJgoGc3Rh",
+            "dHVzGAggASgOMhYuZWhyLm5vdGUuUmVjb3JkU3RhdHVzEikKCWZyYWdtZW50",
+            "cxgJIAMoCzIWLmVoci5ub3RlLk5vdGVGcmFnbWVudBIMCgR0YWdzGAogAygJ",
+            "IugCCgxOb3RlRnJhZ21lbnQSCgoCaWQYASABKAMSMAoMZGF0ZV9jcmVhdGVk",
+            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIaChJub3RlX2Zy",
+            "YWdtZW50X2d1aWQYAyABKAkSEQoJbm90ZV9ndWlkGAQgASgJEhIKCmlzc3Vl",
+            "X2d1aWQYBSABKAkSEwoLaWNkXzEwX2NvZGUYBiABKAkSEwoLaWNkXzEwX2xv",
+            "bmcYByABKAkSEwoLZGVzY3JpcHRpb24YCCABKAkSJgoGc3RhdHVzGAkgASgO",
+            "MhYuZWhyLm5vdGUuUmVjb3JkU3RhdHVzEioKCHByaW9yaXR5GAogASgOMhgu",
+            "ZWhyLm5vdGUuUmVjb3JkUHJpb3JpdHkSJQoFdG9waWMYCyABKA4yFi5laHIu",
+            "bm90ZS5GcmFnbWVudFR5cGUSDwoHY29udGVudBgMIAEoCRIMCgR0YWdzGA0g",
+            "AygJKqwBCghOb3RlVHlwZRIQCgxOT19OT1RFX1RZUEUQABINCglGT0xMT1df",
+            "VVAQARIOCgpQSE9ORV9DQUxMEAISIAocQ09OVElOVUVEX0NBUkVfRE9DVU1F",
+            "TlRBVElPThAEEhgKFFJFRklMTF9ET0NVTUVOVEFUSU9OEAUSCgoGSU5UQUtF",
+            "EAYSDQoJUFJPQ0VEVVJFEAcSGAoUSElTVE9SWV9BTkRfUEhZU0lDQUwQCCrp",
+            "AQoMRnJhZ21lbnRUeXBlEgwKCE5PX1RPUElDEAASDgoKU1VCSkVDVElWRRAB",
+            "EhUKEVJFVklFV19PRl9TWVNURU1TEAISEwoPTUVESUNBTF9ISVNUT1JZEAMS",
+            "DQoJQUxMRVJHSUVTEAQSDwoLTUVESUNBVElPTlMQBRISCg5GQU1JTFlfSElT",
+            "VE9SWRAGEhIKDlNPQ0lBTF9ISVNUT1JZEAcSCgoGVklUQUxTEAgSEQoNUEhZ",
+            "U0lDQUxfRVhBTRAJEhMKD0xBQk9SQVRPUllfREFUQRAKEhMKD01FRElDQUxf",
+            "UFJPQkxFTRALKkAKDlJlY29yZFByaW9yaXR5Eg8KC05PX1BSSU9SSVRZEAAS",
+            "CAoESElHSBABEgoKBk5PUk1BTBACEgcKA0xPVxADKlQKDFJlY29yZFN0YXR1",
+            "cxINCglOT19TVEFUVVMQABIOCgpJTkNPTVBMRVRFEAESCgoGQUNUSVZFEAIS",
+            "DAoIUkVQTEFDRUQQAxILCgdERUxFVEVEEARCB1oFZWhycGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Ehr.Medicalissues.MedicalissuesReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ehr.Note.FragmentTopic), typeof(global::Ehr.Note.FragmentPriority), typeof(global::Ehr.Note.NoteFragmentStatus), typeof(global::Ehr.Note.NoteType), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Note.Note), global::Ehr.Note.Note.Parser, new[]{ "Id", "DateCreated", "NoteGuid", "VisitGuid", "AuthorGuid", "PatientGuid", "Type", "Fragments", "Tags" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Note.NoteFragment), global::Ehr.Note.NoteFragment.Parser, new[]{ "Id", "DateCreated", "NoteFragmentGuid", "NoteGuid", "IssueGuid", "Icd10Code", "Icd10Long", "Description", "Status", "Priority", "Topic", "MarkdownContent", "Tags" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ehr.Note.NoteType), typeof(global::Ehr.Note.FragmentType), typeof(global::Ehr.Note.RecordPriority), typeof(global::Ehr.Note.RecordStatus), }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Note.Note), global::Ehr.Note.Note.Parser, new[]{ "Id", "DateCreated", "NoteGuid", "VisitGuid", "AuthorGuid", "PatientGuid", "Type", "Status", "Fragments", "Tags" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Note.NoteFragment), global::Ehr.Note.NoteFragment.Parser, new[]{ "Id", "DateCreated", "NoteFragmentGuid", "NoteGuid", "IssueGuid", "Icd10Code", "Icd10Long", "Description", "Status", "Priority", "Topic", "Content", "Tags" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Enums
-  public enum FragmentTopic {
+  public enum NoteType {
+    [pbr::OriginalName("NO_NOTE_TYPE")] NoNoteType = 0,
+    [pbr::OriginalName("FOLLOW_UP")] FollowUp = 1,
+    [pbr::OriginalName("PHONE_CALL")] PhoneCall = 2,
+    [pbr::OriginalName("CONTINUED_CARE_DOCUMENTATION")] ContinuedCareDocumentation = 4,
+    [pbr::OriginalName("REFILL_DOCUMENTATION")] RefillDocumentation = 5,
+    [pbr::OriginalName("INTAKE")] Intake = 6,
+    [pbr::OriginalName("PROCEDURE")] Procedure = 7,
+    [pbr::OriginalName("HISTORY_AND_PHYSICAL")] HistoryAndPhysical = 8,
+  }
+
+  public enum FragmentType {
     [pbr::OriginalName("NO_TOPIC")] NoTopic = 0,
     [pbr::OriginalName("SUBJECTIVE")] Subjective = 1,
     [pbr::OriginalName("REVIEW_OF_SYSTEMS")] ReviewOfSystems = 2,
@@ -79,29 +90,19 @@ namespace Ehr.Note {
     [pbr::OriginalName("MEDICAL_PROBLEM")] MedicalProblem = 11,
   }
 
-  public enum FragmentPriority {
+  public enum RecordPriority {
     [pbr::OriginalName("NO_PRIORITY")] NoPriority = 0,
     [pbr::OriginalName("HIGH")] High = 1,
     [pbr::OriginalName("NORMAL")] Normal = 2,
     [pbr::OriginalName("LOW")] Low = 3,
   }
 
-  public enum NoteFragmentStatus {
+  public enum RecordStatus {
     [pbr::OriginalName("NO_STATUS")] NoStatus = 0,
     [pbr::OriginalName("INCOMPLETE")] Incomplete = 1,
     [pbr::OriginalName("ACTIVE")] Active = 2,
     [pbr::OriginalName("REPLACED")] Replaced = 3,
-  }
-
-  public enum NoteType {
-    [pbr::OriginalName("NO_NOTE_TYPE")] NoNoteType = 0,
-    [pbr::OriginalName("FOLLOW_UP")] FollowUp = 1,
-    [pbr::OriginalName("PHONE_CALL")] PhoneCall = 2,
-    [pbr::OriginalName("CONTINUED_CARE_DOCUMENTATION")] ContinuedCareDocumentation = 4,
-    [pbr::OriginalName("REFILL_DOCUMENTATION")] RefillDocumentation = 5,
-    [pbr::OriginalName("INTAKE")] Intake = 6,
-    [pbr::OriginalName("PROCEDURE")] Procedure = 7,
-    [pbr::OriginalName("HISTORY_AND_PHYSICAL")] HistoryAndPhysical = 8,
+    [pbr::OriginalName("DELETED")] Deleted = 4,
   }
 
   #endregion
@@ -139,6 +140,7 @@ namespace Ehr.Note {
       authorGuid_ = other.authorGuid_;
       patientGuid_ = other.patientGuid_;
       type_ = other.type_;
+      status_ = other.status_;
       fragments_ = other.fragments_.Clone();
       tags_ = other.tags_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -151,9 +153,9 @@ namespace Ehr.Note {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private int id_;
+    private long id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Id {
+    public long Id {
       get { return id_; }
       set {
         id_ = value;
@@ -226,10 +228,21 @@ namespace Ehr.Note {
       }
     }
 
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 8;
+    private global::Ehr.Note.RecordStatus status_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Ehr.Note.RecordStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
     /// <summary>Field number for the "fragments" field.</summary>
-    public const int FragmentsFieldNumber = 8;
+    public const int FragmentsFieldNumber = 9;
     private static readonly pb::FieldCodec<global::Ehr.Note.NoteFragment> _repeated_fragments_codec
-        = pb::FieldCodec.ForMessage(66, global::Ehr.Note.NoteFragment.Parser);
+        = pb::FieldCodec.ForMessage(74, global::Ehr.Note.NoteFragment.Parser);
     private readonly pbc::RepeatedField<global::Ehr.Note.NoteFragment> fragments_ = new pbc::RepeatedField<global::Ehr.Note.NoteFragment>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Ehr.Note.NoteFragment> Fragments {
@@ -237,9 +250,9 @@ namespace Ehr.Note {
     }
 
     /// <summary>Field number for the "tags" field.</summary>
-    public const int TagsFieldNumber = 9;
+    public const int TagsFieldNumber = 10;
     private static readonly pb::FieldCodec<string> _repeated_tags_codec
-        = pb::FieldCodec.ForString(74);
+        = pb::FieldCodec.ForString(82);
     private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Tags {
@@ -266,6 +279,7 @@ namespace Ehr.Note {
       if (AuthorGuid != other.AuthorGuid) return false;
       if (PatientGuid != other.PatientGuid) return false;
       if (Type != other.Type) return false;
+      if (Status != other.Status) return false;
       if(!fragments_.Equals(other.fragments_)) return false;
       if(!tags_.Equals(other.tags_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -274,13 +288,14 @@ namespace Ehr.Note {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
+      if (Id != 0L) hash ^= Id.GetHashCode();
       if (dateCreated_ != null) hash ^= DateCreated.GetHashCode();
       if (NoteGuid.Length != 0) hash ^= NoteGuid.GetHashCode();
       if (VisitGuid.Length != 0) hash ^= VisitGuid.GetHashCode();
       if (AuthorGuid.Length != 0) hash ^= AuthorGuid.GetHashCode();
       if (PatientGuid.Length != 0) hash ^= PatientGuid.GetHashCode();
       if (Type != 0) hash ^= Type.GetHashCode();
+      if (Status != 0) hash ^= Status.GetHashCode();
       hash ^= fragments_.GetHashCode();
       hash ^= tags_.GetHashCode();
       if (_unknownFields != null) {
@@ -296,9 +311,9 @@ namespace Ehr.Note {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Id != 0) {
+      if (Id != 0L) {
         output.WriteRawTag(8);
-        output.WriteInt32(Id);
+        output.WriteInt64(Id);
       }
       if (dateCreated_ != null) {
         output.WriteRawTag(18);
@@ -324,6 +339,10 @@ namespace Ehr.Note {
         output.WriteRawTag(56);
         output.WriteEnum((int) Type);
       }
+      if (Status != 0) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) Status);
+      }
       fragments_.WriteTo(output, _repeated_fragments_codec);
       tags_.WriteTo(output, _repeated_tags_codec);
       if (_unknownFields != null) {
@@ -334,8 +353,8 @@ namespace Ehr.Note {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
+      if (Id != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
       }
       if (dateCreated_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DateCreated);
@@ -355,6 +374,9 @@ namespace Ehr.Note {
       if (Type != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
+      if (Status != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
       size += fragments_.CalculateSize(_repeated_fragments_codec);
       size += tags_.CalculateSize(_repeated_tags_codec);
       if (_unknownFields != null) {
@@ -368,7 +390,7 @@ namespace Ehr.Note {
       if (other == null) {
         return;
       }
-      if (other.Id != 0) {
+      if (other.Id != 0L) {
         Id = other.Id;
       }
       if (other.dateCreated_ != null) {
@@ -392,6 +414,9 @@ namespace Ehr.Note {
       if (other.Type != 0) {
         Type = other.Type;
       }
+      if (other.Status != 0) {
+        Status = other.Status;
+      }
       fragments_.Add(other.fragments_);
       tags_.Add(other.tags_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -406,7 +431,7 @@ namespace Ehr.Note {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Id = input.ReadInt32();
+            Id = input.ReadInt64();
             break;
           }
           case 18: {
@@ -436,11 +461,15 @@ namespace Ehr.Note {
             type_ = (global::Ehr.Note.NoteType) input.ReadEnum();
             break;
           }
-          case 66: {
-            fragments_.AddEntriesFrom(input, _repeated_fragments_codec);
+          case 64: {
+            status_ = (global::Ehr.Note.RecordStatus) input.ReadEnum();
             break;
           }
           case 74: {
+            fragments_.AddEntriesFrom(input, _repeated_fragments_codec);
+            break;
+          }
+          case 82: {
             tags_.AddEntriesFrom(input, _repeated_tags_codec);
             break;
           }
@@ -486,7 +515,7 @@ namespace Ehr.Note {
       status_ = other.status_;
       priority_ = other.priority_;
       topic_ = other.topic_;
-      markdownContent_ = other.markdownContent_;
+      content_ = other.content_;
       tags_ = other.tags_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -498,9 +527,9 @@ namespace Ehr.Note {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private int id_;
+    private long id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Id {
+    public long Id {
       get { return id_; }
       set {
         id_ = value;
@@ -595,9 +624,9 @@ namespace Ehr.Note {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 9;
-    private global::Ehr.Note.NoteFragmentStatus status_ = 0;
+    private global::Ehr.Note.RecordStatus status_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Ehr.Note.NoteFragmentStatus Status {
+    public global::Ehr.Note.RecordStatus Status {
       get { return status_; }
       set {
         status_ = value;
@@ -606,9 +635,9 @@ namespace Ehr.Note {
 
     /// <summary>Field number for the "priority" field.</summary>
     public const int PriorityFieldNumber = 10;
-    private global::Ehr.Note.FragmentPriority priority_ = 0;
+    private global::Ehr.Note.RecordPriority priority_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Ehr.Note.FragmentPriority Priority {
+    public global::Ehr.Note.RecordPriority Priority {
       get { return priority_; }
       set {
         priority_ = value;
@@ -617,23 +646,23 @@ namespace Ehr.Note {
 
     /// <summary>Field number for the "topic" field.</summary>
     public const int TopicFieldNumber = 11;
-    private global::Ehr.Note.FragmentTopic topic_ = 0;
+    private global::Ehr.Note.FragmentType topic_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Ehr.Note.FragmentTopic Topic {
+    public global::Ehr.Note.FragmentType Topic {
       get { return topic_; }
       set {
         topic_ = value;
       }
     }
 
-    /// <summary>Field number for the "markdown_content" field.</summary>
-    public const int MarkdownContentFieldNumber = 12;
-    private string markdownContent_ = "";
+    /// <summary>Field number for the "content" field.</summary>
+    public const int ContentFieldNumber = 12;
+    private string content_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string MarkdownContent {
-      get { return markdownContent_; }
+    public string Content {
+      get { return content_; }
       set {
-        markdownContent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        content_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -671,7 +700,7 @@ namespace Ehr.Note {
       if (Status != other.Status) return false;
       if (Priority != other.Priority) return false;
       if (Topic != other.Topic) return false;
-      if (MarkdownContent != other.MarkdownContent) return false;
+      if (Content != other.Content) return false;
       if(!tags_.Equals(other.tags_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -679,7 +708,7 @@ namespace Ehr.Note {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
+      if (Id != 0L) hash ^= Id.GetHashCode();
       if (dateCreated_ != null) hash ^= DateCreated.GetHashCode();
       if (NoteFragmentGuid.Length != 0) hash ^= NoteFragmentGuid.GetHashCode();
       if (NoteGuid.Length != 0) hash ^= NoteGuid.GetHashCode();
@@ -690,7 +719,7 @@ namespace Ehr.Note {
       if (Status != 0) hash ^= Status.GetHashCode();
       if (Priority != 0) hash ^= Priority.GetHashCode();
       if (Topic != 0) hash ^= Topic.GetHashCode();
-      if (MarkdownContent.Length != 0) hash ^= MarkdownContent.GetHashCode();
+      if (Content.Length != 0) hash ^= Content.GetHashCode();
       hash ^= tags_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -705,9 +734,9 @@ namespace Ehr.Note {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Id != 0) {
+      if (Id != 0L) {
         output.WriteRawTag(8);
-        output.WriteInt32(Id);
+        output.WriteInt64(Id);
       }
       if (dateCreated_ != null) {
         output.WriteRawTag(18);
@@ -749,9 +778,9 @@ namespace Ehr.Note {
         output.WriteRawTag(88);
         output.WriteEnum((int) Topic);
       }
-      if (MarkdownContent.Length != 0) {
+      if (Content.Length != 0) {
         output.WriteRawTag(98);
-        output.WriteString(MarkdownContent);
+        output.WriteString(Content);
       }
       tags_.WriteTo(output, _repeated_tags_codec);
       if (_unknownFields != null) {
@@ -762,8 +791,8 @@ namespace Ehr.Note {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
+      if (Id != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
       }
       if (dateCreated_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DateCreated);
@@ -795,8 +824,8 @@ namespace Ehr.Note {
       if (Topic != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Topic);
       }
-      if (MarkdownContent.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(MarkdownContent);
+      if (Content.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
       }
       size += tags_.CalculateSize(_repeated_tags_codec);
       if (_unknownFields != null) {
@@ -810,7 +839,7 @@ namespace Ehr.Note {
       if (other == null) {
         return;
       }
-      if (other.Id != 0) {
+      if (other.Id != 0L) {
         Id = other.Id;
       }
       if (other.dateCreated_ != null) {
@@ -846,8 +875,8 @@ namespace Ehr.Note {
       if (other.Topic != 0) {
         Topic = other.Topic;
       }
-      if (other.MarkdownContent.Length != 0) {
-        MarkdownContent = other.MarkdownContent;
+      if (other.Content.Length != 0) {
+        Content = other.Content;
       }
       tags_.Add(other.tags_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -862,7 +891,7 @@ namespace Ehr.Note {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Id = input.ReadInt32();
+            Id = input.ReadInt64();
             break;
           }
           case 18: {
@@ -897,19 +926,19 @@ namespace Ehr.Note {
             break;
           }
           case 72: {
-            status_ = (global::Ehr.Note.NoteFragmentStatus) input.ReadEnum();
+            status_ = (global::Ehr.Note.RecordStatus) input.ReadEnum();
             break;
           }
           case 80: {
-            priority_ = (global::Ehr.Note.FragmentPriority) input.ReadEnum();
+            priority_ = (global::Ehr.Note.RecordPriority) input.ReadEnum();
             break;
           }
           case 88: {
-            topic_ = (global::Ehr.Note.FragmentTopic) input.ReadEnum();
+            topic_ = (global::Ehr.Note.FragmentType) input.ReadEnum();
             break;
           }
           case 98: {
-            MarkdownContent = input.ReadString();
+            Content = input.ReadString();
             break;
           }
           case 106: {

@@ -220,7 +220,7 @@ typedef struct CreateNoteResponse__storage_ {
 
 typedef struct DeleteNoteRequest__storage_ {
   uint32_t _has_storage_[1];
-  int32_t id_p;
+  int64_t id_p;
 } DeleteNoteRequest__storage_;
 
 // This method is threadsafe because it is initially called
@@ -236,7 +236,7 @@ typedef struct DeleteNoteRequest__storage_ {
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(DeleteNoteRequest__storage_, id_p),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeInt32,
+        .dataType = GPBDataTypeInt64,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -306,7 +306,7 @@ typedef struct DeleteNoteResponse__storage_ {
 
 typedef struct RetrieveNoteRequest__storage_ {
   uint32_t _has_storage_[1];
-  int32_t id_p;
+  int64_t id_p;
 } RetrieveNoteRequest__storage_;
 
 // This method is threadsafe because it is initially called
@@ -322,7 +322,7 @@ typedef struct RetrieveNoteRequest__storage_ {
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RetrieveNoteRequest__storage_, id_p),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeInt32,
+        .dataType = GPBDataTypeInt64,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -534,8 +534,8 @@ typedef struct FindNoteResponse__storage_ {
 
 typedef struct UpdateNoteRequest__storage_ {
   uint32_t _has_storage_[1];
-  int32_t id_p;
   Note *note;
+  int64_t id_p;
 } UpdateNoteRequest__storage_;
 
 // This method is threadsafe because it is initially called
@@ -551,7 +551,7 @@ typedef struct UpdateNoteRequest__storage_ {
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(UpdateNoteRequest__storage_, id_p),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeInt32,
+        .dataType = GPBDataTypeInt64,
       },
       {
         .name = "note",

@@ -2071,9 +2071,9 @@ public final class Noteservice {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 id = 1;</code>
+     * <code>int64 id = 1;</code>
      */
-    int getId();
+    long getId();
   }
   /**
    * Protobuf type {@code ehr.noteservice.DeleteNoteRequest}
@@ -2088,7 +2088,7 @@ public final class Noteservice {
       super(builder);
     }
     private DeleteNoteRequest() {
-      id_ = 0;
+      id_ = 0L;
     }
 
     @java.lang.Override
@@ -2117,7 +2117,7 @@ public final class Noteservice {
               break;
             case 8: {
 
-              id_ = input.readInt32();
+              id_ = input.readInt64();
               break;
             }
             default: {
@@ -2153,11 +2153,11 @@ public final class Noteservice {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private int id_;
+    private long id_;
     /**
-     * <code>int32 id = 1;</code>
+     * <code>int64 id = 1;</code>
      */
-    public int getId() {
+    public long getId() {
       return id_;
     }
 
@@ -2175,8 +2175,8 @@ public final class Noteservice {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (id_ != 0) {
-        output.writeInt32(1, id_);
+      if (id_ != 0L) {
+        output.writeInt64(1, id_);
       }
       unknownFields.writeTo(output);
     }
@@ -2187,9 +2187,9 @@ public final class Noteservice {
       if (size != -1) return size;
 
       size = 0;
-      if (id_ != 0) {
+      if (id_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, id_);
+          .computeInt64Size(1, id_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2221,7 +2221,8 @@ public final class Noteservice {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId();
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2355,7 +2356,7 @@ public final class Noteservice {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = 0;
+        id_ = 0L;
 
         return this;
       }
@@ -2432,7 +2433,7 @@ public final class Noteservice {
 
       public Builder mergeFrom(ehr.noteservice.Noteservice.DeleteNoteRequest other) {
         if (other == ehr.noteservice.Noteservice.DeleteNoteRequest.getDefaultInstance()) return this;
-        if (other.getId() != 0) {
+        if (other.getId() != 0L) {
           setId(other.getId());
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2464,28 +2465,28 @@ public final class Noteservice {
         return this;
       }
 
-      private int id_ ;
+      private long id_ ;
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        */
-      public int getId() {
+      public long getId() {
         return id_;
       }
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        */
-      public Builder setId(int value) {
+      public Builder setId(long value) {
         
         id_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        */
       public Builder clearId() {
         
-        id_ = 0;
+        id_ = 0L;
         onChanged();
         return this;
       }
@@ -3154,9 +3155,9 @@ public final class Noteservice {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 id = 1;</code>
+     * <code>int64 id = 1;</code>
      */
-    int getId();
+    long getId();
   }
   /**
    * Protobuf type {@code ehr.noteservice.RetrieveNoteRequest}
@@ -3171,7 +3172,7 @@ public final class Noteservice {
       super(builder);
     }
     private RetrieveNoteRequest() {
-      id_ = 0;
+      id_ = 0L;
     }
 
     @java.lang.Override
@@ -3200,7 +3201,7 @@ public final class Noteservice {
               break;
             case 8: {
 
-              id_ = input.readInt32();
+              id_ = input.readInt64();
               break;
             }
             default: {
@@ -3236,11 +3237,11 @@ public final class Noteservice {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private int id_;
+    private long id_;
     /**
-     * <code>int32 id = 1;</code>
+     * <code>int64 id = 1;</code>
      */
-    public int getId() {
+    public long getId() {
       return id_;
     }
 
@@ -3258,8 +3259,8 @@ public final class Noteservice {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (id_ != 0) {
-        output.writeInt32(1, id_);
+      if (id_ != 0L) {
+        output.writeInt64(1, id_);
       }
       unknownFields.writeTo(output);
     }
@@ -3270,9 +3271,9 @@ public final class Noteservice {
       if (size != -1) return size;
 
       size = 0;
-      if (id_ != 0) {
+      if (id_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, id_);
+          .computeInt64Size(1, id_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3304,7 +3305,8 @@ public final class Noteservice {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId();
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3438,7 +3440,7 @@ public final class Noteservice {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = 0;
+        id_ = 0L;
 
         return this;
       }
@@ -3515,7 +3517,7 @@ public final class Noteservice {
 
       public Builder mergeFrom(ehr.noteservice.Noteservice.RetrieveNoteRequest other) {
         if (other == ehr.noteservice.Noteservice.RetrieveNoteRequest.getDefaultInstance()) return this;
-        if (other.getId() != 0) {
+        if (other.getId() != 0L) {
           setId(other.getId());
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -3547,28 +3549,28 @@ public final class Noteservice {
         return this;
       }
 
-      private int id_ ;
+      private long id_ ;
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        */
-      public int getId() {
+      public long getId() {
         return id_;
       }
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        */
-      public Builder setId(int value) {
+      public Builder setId(long value) {
         
         id_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        */
       public Builder clearId() {
         
-        id_ = 0;
+        id_ = 0L;
         onChanged();
         return this;
       }
@@ -6371,9 +6373,9 @@ public final class Noteservice {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 id = 1;</code>
+     * <code>int64 id = 1;</code>
      */
-    int getId();
+    long getId();
 
     /**
      * <code>.ehr.note.Note note = 2;</code>
@@ -6401,7 +6403,7 @@ public final class Noteservice {
       super(builder);
     }
     private UpdateNoteRequest() {
-      id_ = 0;
+      id_ = 0L;
     }
 
     @java.lang.Override
@@ -6430,7 +6432,7 @@ public final class Noteservice {
               break;
             case 8: {
 
-              id_ = input.readInt32();
+              id_ = input.readInt64();
               break;
             }
             case 18: {
@@ -6479,11 +6481,11 @@ public final class Noteservice {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private int id_;
+    private long id_;
     /**
-     * <code>int32 id = 1;</code>
+     * <code>int64 id = 1;</code>
      */
-    public int getId() {
+    public long getId() {
       return id_;
     }
 
@@ -6522,8 +6524,8 @@ public final class Noteservice {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (id_ != 0) {
-        output.writeInt32(1, id_);
+      if (id_ != 0L) {
+        output.writeInt64(1, id_);
       }
       if (note_ != null) {
         output.writeMessage(2, getNote());
@@ -6537,9 +6539,9 @@ public final class Noteservice {
       if (size != -1) return size;
 
       size = 0;
-      if (id_ != 0) {
+      if (id_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, id_);
+          .computeInt64Size(1, id_);
       }
       if (note_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -6580,7 +6582,8 @@ public final class Noteservice {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId();
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
       if (hasNote()) {
         hash = (37 * hash) + NOTE_FIELD_NUMBER;
         hash = (53 * hash) + getNote().hashCode();
@@ -6718,7 +6721,7 @@ public final class Noteservice {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = 0;
+        id_ = 0L;
 
         if (noteBuilder_ == null) {
           note_ = null;
@@ -6806,7 +6809,7 @@ public final class Noteservice {
 
       public Builder mergeFrom(ehr.noteservice.Noteservice.UpdateNoteRequest other) {
         if (other == ehr.noteservice.Noteservice.UpdateNoteRequest.getDefaultInstance()) return this;
-        if (other.getId() != 0) {
+        if (other.getId() != 0L) {
           setId(other.getId());
         }
         if (other.hasNote()) {
@@ -6841,28 +6844,28 @@ public final class Noteservice {
         return this;
       }
 
-      private int id_ ;
+      private long id_ ;
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        */
-      public int getId() {
+      public long getId() {
         return id_;
       }
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        */
-      public Builder setId(int value) {
+      public Builder setId(long value) {
         
         id_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        */
       public Builder clearId() {
         
-        id_ = 0;
+        id_ = 0L;
         onChanged();
         return this;
       }
@@ -7715,10 +7718,10 @@ public final class Noteservice {
       "n\n\022CreateNoteResponse\022:\n\006status\030\001 \001(\0132*." +
       "ehr.noteservice.NoteServiceResponseStatu" +
       "s\022\034\n\004note\030\002 \001(\0132\016.ehr.note.Note\"\037\n\021Delet" +
-      "eNoteRequest\022\n\n\002id\030\001 \001(\005\"P\n\022DeleteNoteRe" +
+      "eNoteRequest\022\n\n\002id\030\001 \001(\003\"P\n\022DeleteNoteRe" +
       "sponse\022:\n\006status\030\001 \001(\0132*.ehr.noteservice" +
       ".NoteServiceResponseStatus\"!\n\023RetrieveNo" +
-      "teRequest\022\n\n\002id\030\001 \001(\005\"p\n\024RetrieveNoteRes" +
+      "teRequest\022\n\n\002id\030\001 \001(\003\"p\n\024RetrieveNoteRes" +
       "ponse\022:\n\006status\030\001 \001(\0132*.ehr.noteservice." +
       "NoteServiceResponseStatus\022\034\n\004note\030\002 \001(\0132" +
       "\016.ehr.note.Note\"f\n\017FindNoteRequest\022\024\n\014se" +
@@ -7727,7 +7730,7 @@ public final class Noteservice {
       "l\n\020FindNoteResponse\022:\n\006status\030\001 \001(\0132*.eh" +
       "r.noteservice.NoteServiceResponseStatus\022" +
       "\034\n\004note\030\002 \003(\0132\016.ehr.note.Note\"=\n\021UpdateN" +
-      "oteRequest\022\n\n\002id\030\001 \001(\005\022\034\n\004note\030\002 \001(\0132\016.e" +
+      "oteRequest\022\n\n\002id\030\001 \001(\003\022\034\n\004note\030\002 \001(\0132\016.e" +
       "hr.note.Note\"P\n\022UpdateNoteResponse\022:\n\006st" +
       "atus\030\001 \001(\0132*.ehr.noteservice.NoteService" +
       "ResponseStatus2\307\003\n\013NoteService\022T\n\007NewNot" +

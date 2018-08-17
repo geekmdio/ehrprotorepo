@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class Note extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int32 id = 1;</code>
+     * Generated from protobuf field <code>int64 id = 1;</code>
      */
     private $id = 0;
     /**
@@ -42,11 +42,15 @@ class Note extends \Google\Protobuf\Internal\Message
      */
     private $type = 0;
     /**
-     * Generated from protobuf field <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+     * Generated from protobuf field <code>.ehr.note.RecordStatus status = 8;</code>
+     */
+    private $status = 0;
+    /**
+     * Generated from protobuf field <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
      */
     private $fragments;
     /**
-     * Generated from protobuf field <code>repeated string tags = 9;</code>
+     * Generated from protobuf field <code>repeated string tags = 10;</code>
      */
     private $tags;
 
@@ -56,13 +60,14 @@ class Note extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $id
+     *     @type int|string $id
      *     @type \Google\Protobuf\Timestamp $date_created
      *     @type string $note_guid
      *     @type string $visit_guid
      *     @type string $author_guid
      *     @type string $patient_guid
      *     @type int $type
+     *     @type int $status
      *     @type \Ehr\Note\NoteFragment[]|\Google\Protobuf\Internal\RepeatedField $fragments
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $tags
      * }
@@ -73,8 +78,8 @@ class Note extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 id = 1;</code>
-     * @return int
+     * Generated from protobuf field <code>int64 id = 1;</code>
+     * @return int|string
      */
     public function getId()
     {
@@ -82,13 +87,13 @@ class Note extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 id = 1;</code>
-     * @param int $var
+     * Generated from protobuf field <code>int64 id = 1;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setId($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkInt64($var);
         $this->id = $var;
 
         return $this;
@@ -227,7 +232,29 @@ class Note extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+     * Generated from protobuf field <code>.ehr.note.RecordStatus status = 8;</code>
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Generated from protobuf field <code>.ehr.note.RecordStatus status = 8;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setStatus($var)
+    {
+        GPBUtil::checkEnum($var, \Ehr\Note\RecordStatus::class);
+        $this->status = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getFragments()
@@ -236,7 +263,7 @@ class Note extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .ehr.note.NoteFragment fragments = 8;</code>
+     * Generated from protobuf field <code>repeated .ehr.note.NoteFragment fragments = 9;</code>
      * @param \Ehr\Note\NoteFragment[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -249,7 +276,7 @@ class Note extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated string tags = 9;</code>
+     * Generated from protobuf field <code>repeated string tags = 10;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getTags()
@@ -258,7 +285,7 @@ class Note extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated string tags = 9;</code>
+     * Generated from protobuf field <code>repeated string tags = 10;</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

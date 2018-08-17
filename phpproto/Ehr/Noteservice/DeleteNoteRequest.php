@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class DeleteNoteRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int32 id = 1;</code>
+     * Generated from protobuf field <code>int64 id = 1;</code>
      */
     private $id = 0;
 
@@ -24,7 +24,7 @@ class DeleteNoteRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $id
+     *     @type int|string $id
      * }
      */
     public function __construct($data = NULL) {
@@ -33,8 +33,8 @@ class DeleteNoteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 id = 1;</code>
-     * @return int
+     * Generated from protobuf field <code>int64 id = 1;</code>
+     * @return int|string
      */
     public function getId()
     {
@@ -42,13 +42,13 @@ class DeleteNoteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 id = 1;</code>
-     * @param int $var
+     * Generated from protobuf field <code>int64 id = 1;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setId($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkInt64($var);
         $this->id = $var;
 
         return $this;

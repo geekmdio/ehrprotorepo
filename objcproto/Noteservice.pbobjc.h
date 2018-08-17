@@ -116,7 +116,7 @@ typedef GPB_ENUM(DeleteNoteRequest_FieldNumber) {
 
 @interface DeleteNoteRequest : GPBMessage
 
-@property(nonatomic, readwrite) int32_t id_p;
+@property(nonatomic, readwrite) int64_t id_p;
 
 @end
 
@@ -142,7 +142,7 @@ typedef GPB_ENUM(RetrieveNoteRequest_FieldNumber) {
 
 @interface RetrieveNoteRequest : GPBMessage
 
-@property(nonatomic, readwrite) int32_t id_p;
+@property(nonatomic, readwrite) int64_t id_p;
 
 @end
 
@@ -214,7 +214,7 @@ typedef GPB_ENUM(UpdateNoteRequest_FieldNumber) {
 
 @interface UpdateNoteRequest : GPBMessage
 
-@property(nonatomic, readwrite) int32_t id_p;
+@property(nonatomic, readwrite) int64_t id_p;
 
 @property(nonatomic, readwrite, strong, null_resettable) Note *note;
 /** Test to see if @c note has been set. */

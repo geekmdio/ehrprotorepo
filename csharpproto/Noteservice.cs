@@ -31,10 +31,10 @@ namespace Ehr.Noteservice {
             "ASgLMg4uZWhyLm5vdGUuTm90ZSJuChJDcmVhdGVOb3RlUmVzcG9uc2USOgoG",
             "c3RhdHVzGAEgASgLMiouZWhyLm5vdGVzZXJ2aWNlLk5vdGVTZXJ2aWNlUmVz",
             "cG9uc2VTdGF0dXMSHAoEbm90ZRgCIAEoCzIOLmVoci5ub3RlLk5vdGUiHwoR",
-            "RGVsZXRlTm90ZVJlcXVlc3QSCgoCaWQYASABKAUiUAoSRGVsZXRlTm90ZVJl",
+            "RGVsZXRlTm90ZVJlcXVlc3QSCgoCaWQYASABKAMiUAoSRGVsZXRlTm90ZVJl",
             "c3BvbnNlEjoKBnN0YXR1cxgBIAEoCzIqLmVoci5ub3Rlc2VydmljZS5Ob3Rl",
             "U2VydmljZVJlc3BvbnNlU3RhdHVzIiEKE1JldHJpZXZlTm90ZVJlcXVlc3QS",
-            "CgoCaWQYASABKAUicAoUUmV0cmlldmVOb3RlUmVzcG9uc2USOgoGc3RhdHVz",
+            "CgoCaWQYASABKAMicAoUUmV0cmlldmVOb3RlUmVzcG9uc2USOgoGc3RhdHVz",
             "GAEgASgLMiouZWhyLm5vdGVzZXJ2aWNlLk5vdGVTZXJ2aWNlUmVzcG9uc2VT",
             "dGF0dXMSHAoEbm90ZRgCIAEoCzIOLmVoci5ub3RlLk5vdGUiZgoPRmluZE5v",
             "dGVSZXF1ZXN0EhQKDHNlYXJjaF90ZXJtcxgBIAEoCRITCgthdXRob3JfZ3Vp",
@@ -42,7 +42,7 @@ namespace Ehr.Noteservice {
             "IAEoCSJsChBGaW5kTm90ZVJlc3BvbnNlEjoKBnN0YXR1cxgBIAEoCzIqLmVo",
             "ci5ub3Rlc2VydmljZS5Ob3RlU2VydmljZVJlc3BvbnNlU3RhdHVzEhwKBG5v",
             "dGUYAiADKAsyDi5laHIubm90ZS5Ob3RlIj0KEVVwZGF0ZU5vdGVSZXF1ZXN0",
-            "EgoKAmlkGAEgASgFEhwKBG5vdGUYAiABKAsyDi5laHIubm90ZS5Ob3RlIlAK",
+            "EgoKAmlkGAEgASgDEhwKBG5vdGUYAiABKAsyDi5laHIubm90ZS5Ob3RlIlAK",
             "ElVwZGF0ZU5vdGVSZXNwb25zZRI6CgZzdGF0dXMYASABKAsyKi5laHIubm90",
             "ZXNlcnZpY2UuTm90ZVNlcnZpY2VSZXNwb25zZVN0YXR1czLHAwoLTm90ZVNl",
             "cnZpY2USVAoHTmV3Tm90ZRIiLmVoci5ub3Rlc2VydmljZS5DcmVhdGVOb3Rl",
@@ -573,9 +573,9 @@ namespace Ehr.Noteservice {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private int id_;
+    private long id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Id {
+    public long Id {
       get { return id_; }
       set {
         id_ = value;
@@ -602,7 +602,7 @@ namespace Ehr.Noteservice {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
+      if (Id != 0L) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -616,9 +616,9 @@ namespace Ehr.Noteservice {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Id != 0) {
+      if (Id != 0L) {
         output.WriteRawTag(8);
-        output.WriteInt32(Id);
+        output.WriteInt64(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -628,8 +628,8 @@ namespace Ehr.Noteservice {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
+      if (Id != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -642,7 +642,7 @@ namespace Ehr.Noteservice {
       if (other == null) {
         return;
       }
-      if (other.Id != 0) {
+      if (other.Id != 0L) {
         Id = other.Id;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -657,7 +657,7 @@ namespace Ehr.Noteservice {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Id = input.ReadInt32();
+            Id = input.ReadInt64();
             break;
           }
         }
@@ -837,9 +837,9 @@ namespace Ehr.Noteservice {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private int id_;
+    private long id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Id {
+    public long Id {
       get { return id_; }
       set {
         id_ = value;
@@ -866,7 +866,7 @@ namespace Ehr.Noteservice {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
+      if (Id != 0L) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -880,9 +880,9 @@ namespace Ehr.Noteservice {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Id != 0) {
+      if (Id != 0L) {
         output.WriteRawTag(8);
-        output.WriteInt32(Id);
+        output.WriteInt64(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -892,8 +892,8 @@ namespace Ehr.Noteservice {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
+      if (Id != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -906,7 +906,7 @@ namespace Ehr.Noteservice {
       if (other == null) {
         return;
       }
-      if (other.Id != 0) {
+      if (other.Id != 0L) {
         Id = other.Id;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -921,7 +921,7 @@ namespace Ehr.Noteservice {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Id = input.ReadInt32();
+            Id = input.ReadInt64();
             break;
           }
         }
@@ -1504,9 +1504,9 @@ namespace Ehr.Noteservice {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private int id_;
+    private long id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Id {
+    public long Id {
       get { return id_; }
       set {
         id_ = value;
@@ -1545,7 +1545,7 @@ namespace Ehr.Noteservice {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
+      if (Id != 0L) hash ^= Id.GetHashCode();
       if (note_ != null) hash ^= Note.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1560,9 +1560,9 @@ namespace Ehr.Noteservice {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Id != 0) {
+      if (Id != 0L) {
         output.WriteRawTag(8);
-        output.WriteInt32(Id);
+        output.WriteInt64(Id);
       }
       if (note_ != null) {
         output.WriteRawTag(18);
@@ -1576,8 +1576,8 @@ namespace Ehr.Noteservice {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
+      if (Id != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
       }
       if (note_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Note);
@@ -1593,7 +1593,7 @@ namespace Ehr.Noteservice {
       if (other == null) {
         return;
       }
-      if (other.Id != 0) {
+      if (other.Id != 0L) {
         Id = other.Id;
       }
       if (other.note_ != null) {
@@ -1614,7 +1614,7 @@ namespace Ehr.Noteservice {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Id = input.ReadInt32();
+            Id = input.ReadInt64();
             break;
           }
           case 18: {

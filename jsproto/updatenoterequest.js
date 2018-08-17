@@ -100,7 +100,7 @@ proto.ehr.noteservice.UpdateNoteRequest.deserializeBinaryFromReader = function(m
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readInt32());
+      var value = /** @type {number} */ (reader.readInt64());
       msg.setId(value);
       break;
     case 2:
@@ -139,7 +139,7 @@ proto.ehr.noteservice.UpdateNoteRequest.serializeBinaryToWriter = function(messa
   var f = undefined;
   f = message.getId();
   if (f !== 0) {
-    writer.writeInt32(
+    writer.writeInt64(
       1,
       f
     );
@@ -156,7 +156,7 @@ proto.ehr.noteservice.UpdateNoteRequest.serializeBinaryToWriter = function(messa
 
 
 /**
- * optional int32 id = 1;
+ * optional int64 id = 1;
  * @return {number}
  */
 proto.ehr.noteservice.UpdateNoteRequest.prototype.getId = function() {

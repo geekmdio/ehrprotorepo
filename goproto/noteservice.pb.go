@@ -35,7 +35,7 @@ func (m *NoteServiceResponseStatus) Reset()         { *m = NoteServiceResponseSt
 func (m *NoteServiceResponseStatus) String() string { return proto.CompactTextString(m) }
 func (*NoteServiceResponseStatus) ProtoMessage()    {}
 func (*NoteServiceResponseStatus) Descriptor() ([]byte, []int) {
-	return fileDescriptor_noteservice_82685a2fa37c9ea2, []int{0}
+	return fileDescriptor_noteservice_63f246504ca616ce, []int{0}
 }
 func (m *NoteServiceResponseStatus) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_NoteServiceResponseStatus.Unmarshal(m, b)
@@ -80,7 +80,7 @@ func (m *CreateNoteRequest) Reset()         { *m = CreateNoteRequest{} }
 func (m *CreateNoteRequest) String() string { return proto.CompactTextString(m) }
 func (*CreateNoteRequest) ProtoMessage()    {}
 func (*CreateNoteRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_noteservice_82685a2fa37c9ea2, []int{1}
+	return fileDescriptor_noteservice_63f246504ca616ce, []int{1}
 }
 func (m *CreateNoteRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CreateNoteRequest.Unmarshal(m, b)
@@ -119,7 +119,7 @@ func (m *CreateNoteResponse) Reset()         { *m = CreateNoteResponse{} }
 func (m *CreateNoteResponse) String() string { return proto.CompactTextString(m) }
 func (*CreateNoteResponse) ProtoMessage()    {}
 func (*CreateNoteResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_noteservice_82685a2fa37c9ea2, []int{2}
+	return fileDescriptor_noteservice_63f246504ca616ce, []int{2}
 }
 func (m *CreateNoteResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CreateNoteResponse.Unmarshal(m, b)
@@ -164,7 +164,7 @@ func (m *DeleteNoteRequest) Reset()         { *m = DeleteNoteRequest{} }
 func (m *DeleteNoteRequest) String() string { return proto.CompactTextString(m) }
 func (*DeleteNoteRequest) ProtoMessage()    {}
 func (*DeleteNoteRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_noteservice_82685a2fa37c9ea2, []int{3}
+	return fileDescriptor_noteservice_63f246504ca616ce, []int{3}
 }
 func (m *DeleteNoteRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DeleteNoteRequest.Unmarshal(m, b)
@@ -202,7 +202,7 @@ func (m *DeleteNoteResponse) Reset()         { *m = DeleteNoteResponse{} }
 func (m *DeleteNoteResponse) String() string { return proto.CompactTextString(m) }
 func (*DeleteNoteResponse) ProtoMessage()    {}
 func (*DeleteNoteResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_noteservice_82685a2fa37c9ea2, []int{4}
+	return fileDescriptor_noteservice_63f246504ca616ce, []int{4}
 }
 func (m *DeleteNoteResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DeleteNoteResponse.Unmarshal(m, b)
@@ -240,7 +240,7 @@ func (m *RetrieveNoteRequest) Reset()         { *m = RetrieveNoteRequest{} }
 func (m *RetrieveNoteRequest) String() string { return proto.CompactTextString(m) }
 func (*RetrieveNoteRequest) ProtoMessage()    {}
 func (*RetrieveNoteRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_noteservice_82685a2fa37c9ea2, []int{5}
+	return fileDescriptor_noteservice_63f246504ca616ce, []int{5}
 }
 func (m *RetrieveNoteRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_RetrieveNoteRequest.Unmarshal(m, b)
@@ -279,7 +279,7 @@ func (m *RetrieveNoteResponse) Reset()         { *m = RetrieveNoteResponse{} }
 func (m *RetrieveNoteResponse) String() string { return proto.CompactTextString(m) }
 func (*RetrieveNoteResponse) ProtoMessage()    {}
 func (*RetrieveNoteResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_noteservice_82685a2fa37c9ea2, []int{6}
+	return fileDescriptor_noteservice_63f246504ca616ce, []int{6}
 }
 func (m *RetrieveNoteResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_RetrieveNoteResponse.Unmarshal(m, b)
@@ -313,7 +313,7 @@ func (m *RetrieveNoteResponse) GetNote() *Note {
 	return nil
 }
 
-type FindNoteRequest struct {
+type SearchNoteRequest struct {
 	SearchTerms          string   `protobuf:"bytes,1,opt,name=search_terms,json=searchTerms,proto3" json:"search_terms,omitempty"`
 	AuthorGuid           string   `protobuf:"bytes,2,opt,name=author_guid,json=authorGuid,proto3" json:"author_guid,omitempty"`
 	PatientGuid          string   `protobuf:"bytes,3,opt,name=patient_guid,json=patientGuid,proto3" json:"patient_guid,omitempty"`
@@ -323,59 +323,59 @@ type FindNoteRequest struct {
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *FindNoteRequest) Reset()         { *m = FindNoteRequest{} }
-func (m *FindNoteRequest) String() string { return proto.CompactTextString(m) }
-func (*FindNoteRequest) ProtoMessage()    {}
-func (*FindNoteRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_noteservice_82685a2fa37c9ea2, []int{7}
+func (m *SearchNoteRequest) Reset()         { *m = SearchNoteRequest{} }
+func (m *SearchNoteRequest) String() string { return proto.CompactTextString(m) }
+func (*SearchNoteRequest) ProtoMessage()    {}
+func (*SearchNoteRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_noteservice_63f246504ca616ce, []int{7}
 }
-func (m *FindNoteRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_FindNoteRequest.Unmarshal(m, b)
+func (m *SearchNoteRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SearchNoteRequest.Unmarshal(m, b)
 }
-func (m *FindNoteRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_FindNoteRequest.Marshal(b, m, deterministic)
+func (m *SearchNoteRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SearchNoteRequest.Marshal(b, m, deterministic)
 }
-func (dst *FindNoteRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_FindNoteRequest.Merge(dst, src)
+func (dst *SearchNoteRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SearchNoteRequest.Merge(dst, src)
 }
-func (m *FindNoteRequest) XXX_Size() int {
-	return xxx_messageInfo_FindNoteRequest.Size(m)
+func (m *SearchNoteRequest) XXX_Size() int {
+	return xxx_messageInfo_SearchNoteRequest.Size(m)
 }
-func (m *FindNoteRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_FindNoteRequest.DiscardUnknown(m)
+func (m *SearchNoteRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SearchNoteRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_FindNoteRequest proto.InternalMessageInfo
+var xxx_messageInfo_SearchNoteRequest proto.InternalMessageInfo
 
-func (m *FindNoteRequest) GetSearchTerms() string {
+func (m *SearchNoteRequest) GetSearchTerms() string {
 	if m != nil {
 		return m.SearchTerms
 	}
 	return ""
 }
 
-func (m *FindNoteRequest) GetAuthorGuid() string {
+func (m *SearchNoteRequest) GetAuthorGuid() string {
 	if m != nil {
 		return m.AuthorGuid
 	}
 	return ""
 }
 
-func (m *FindNoteRequest) GetPatientGuid() string {
+func (m *SearchNoteRequest) GetPatientGuid() string {
 	if m != nil {
 		return m.PatientGuid
 	}
 	return ""
 }
 
-func (m *FindNoteRequest) GetVisitGuid() string {
+func (m *SearchNoteRequest) GetVisitGuid() string {
 	if m != nil {
 		return m.VisitGuid
 	}
 	return ""
 }
 
-type FindNoteResponse struct {
+type SearchNoteResponse struct {
 	Status               *NoteServiceResponseStatus `protobuf:"bytes,1,opt,name=status,proto3" json:"status,omitempty"`
 	Note                 []*Note                    `protobuf:"bytes,2,rep,name=note,proto3" json:"note,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                   `json:"-"`
@@ -383,40 +383,148 @@ type FindNoteResponse struct {
 	XXX_sizecache        int32                      `json:"-"`
 }
 
-func (m *FindNoteResponse) Reset()         { *m = FindNoteResponse{} }
-func (m *FindNoteResponse) String() string { return proto.CompactTextString(m) }
-func (*FindNoteResponse) ProtoMessage()    {}
-func (*FindNoteResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_noteservice_82685a2fa37c9ea2, []int{8}
+func (m *SearchNoteResponse) Reset()         { *m = SearchNoteResponse{} }
+func (m *SearchNoteResponse) String() string { return proto.CompactTextString(m) }
+func (*SearchNoteResponse) ProtoMessage()    {}
+func (*SearchNoteResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_noteservice_63f246504ca616ce, []int{8}
 }
-func (m *FindNoteResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_FindNoteResponse.Unmarshal(m, b)
+func (m *SearchNoteResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SearchNoteResponse.Unmarshal(m, b)
 }
-func (m *FindNoteResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_FindNoteResponse.Marshal(b, m, deterministic)
+func (m *SearchNoteResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SearchNoteResponse.Marshal(b, m, deterministic)
 }
-func (dst *FindNoteResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_FindNoteResponse.Merge(dst, src)
+func (dst *SearchNoteResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SearchNoteResponse.Merge(dst, src)
 }
-func (m *FindNoteResponse) XXX_Size() int {
-	return xxx_messageInfo_FindNoteResponse.Size(m)
+func (m *SearchNoteResponse) XXX_Size() int {
+	return xxx_messageInfo_SearchNoteResponse.Size(m)
 }
-func (m *FindNoteResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_FindNoteResponse.DiscardUnknown(m)
+func (m *SearchNoteResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SearchNoteResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_FindNoteResponse proto.InternalMessageInfo
+var xxx_messageInfo_SearchNoteResponse proto.InternalMessageInfo
 
-func (m *FindNoteResponse) GetStatus() *NoteServiceResponseStatus {
+func (m *SearchNoteResponse) GetStatus() *NoteServiceResponseStatus {
 	if m != nil {
 		return m.Status
 	}
 	return nil
 }
 
-func (m *FindNoteResponse) GetNote() []*Note {
+func (m *SearchNoteResponse) GetNote() []*Note {
 	if m != nil {
 		return m.Note
+	}
+	return nil
+}
+
+type SearchNoteFragmentRequest struct {
+	SearchTerms          string   `protobuf:"bytes,1,opt,name=search_terms,json=searchTerms,proto3" json:"search_terms,omitempty"`
+	AuthorGuid           string   `protobuf:"bytes,2,opt,name=author_guid,json=authorGuid,proto3" json:"author_guid,omitempty"`
+	PatientGuid          string   `protobuf:"bytes,3,opt,name=patient_guid,json=patientGuid,proto3" json:"patient_guid,omitempty"`
+	VisitGuid            string   `protobuf:"bytes,4,opt,name=visit_guid,json=visitGuid,proto3" json:"visit_guid,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *SearchNoteFragmentRequest) Reset()         { *m = SearchNoteFragmentRequest{} }
+func (m *SearchNoteFragmentRequest) String() string { return proto.CompactTextString(m) }
+func (*SearchNoteFragmentRequest) ProtoMessage()    {}
+func (*SearchNoteFragmentRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_noteservice_63f246504ca616ce, []int{9}
+}
+func (m *SearchNoteFragmentRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SearchNoteFragmentRequest.Unmarshal(m, b)
+}
+func (m *SearchNoteFragmentRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SearchNoteFragmentRequest.Marshal(b, m, deterministic)
+}
+func (dst *SearchNoteFragmentRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SearchNoteFragmentRequest.Merge(dst, src)
+}
+func (m *SearchNoteFragmentRequest) XXX_Size() int {
+	return xxx_messageInfo_SearchNoteFragmentRequest.Size(m)
+}
+func (m *SearchNoteFragmentRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SearchNoteFragmentRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SearchNoteFragmentRequest proto.InternalMessageInfo
+
+func (m *SearchNoteFragmentRequest) GetSearchTerms() string {
+	if m != nil {
+		return m.SearchTerms
+	}
+	return ""
+}
+
+func (m *SearchNoteFragmentRequest) GetAuthorGuid() string {
+	if m != nil {
+		return m.AuthorGuid
+	}
+	return ""
+}
+
+func (m *SearchNoteFragmentRequest) GetPatientGuid() string {
+	if m != nil {
+		return m.PatientGuid
+	}
+	return ""
+}
+
+func (m *SearchNoteFragmentRequest) GetVisitGuid() string {
+	if m != nil {
+		return m.VisitGuid
+	}
+	return ""
+}
+
+type SearchNoteFragmentResponse struct {
+	Status               *NoteServiceResponseStatus `protobuf:"bytes,1,opt,name=status,proto3" json:"status,omitempty"`
+	NoteFragment         []*NoteFragment            `protobuf:"bytes,2,rep,name=note_fragment,json=noteFragment,proto3" json:"note_fragment,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}                   `json:"-"`
+	XXX_unrecognized     []byte                     `json:"-"`
+	XXX_sizecache        int32                      `json:"-"`
+}
+
+func (m *SearchNoteFragmentResponse) Reset()         { *m = SearchNoteFragmentResponse{} }
+func (m *SearchNoteFragmentResponse) String() string { return proto.CompactTextString(m) }
+func (*SearchNoteFragmentResponse) ProtoMessage()    {}
+func (*SearchNoteFragmentResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_noteservice_63f246504ca616ce, []int{10}
+}
+func (m *SearchNoteFragmentResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SearchNoteFragmentResponse.Unmarshal(m, b)
+}
+func (m *SearchNoteFragmentResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SearchNoteFragmentResponse.Marshal(b, m, deterministic)
+}
+func (dst *SearchNoteFragmentResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SearchNoteFragmentResponse.Merge(dst, src)
+}
+func (m *SearchNoteFragmentResponse) XXX_Size() int {
+	return xxx_messageInfo_SearchNoteFragmentResponse.Size(m)
+}
+func (m *SearchNoteFragmentResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SearchNoteFragmentResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SearchNoteFragmentResponse proto.InternalMessageInfo
+
+func (m *SearchNoteFragmentResponse) GetStatus() *NoteServiceResponseStatus {
+	if m != nil {
+		return m.Status
+	}
+	return nil
+}
+
+func (m *SearchNoteFragmentResponse) GetNoteFragment() []*NoteFragment {
+	if m != nil {
+		return m.NoteFragment
 	}
 	return nil
 }
@@ -433,7 +541,7 @@ func (m *UpdateNoteRequest) Reset()         { *m = UpdateNoteRequest{} }
 func (m *UpdateNoteRequest) String() string { return proto.CompactTextString(m) }
 func (*UpdateNoteRequest) ProtoMessage()    {}
 func (*UpdateNoteRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_noteservice_82685a2fa37c9ea2, []int{9}
+	return fileDescriptor_noteservice_63f246504ca616ce, []int{11}
 }
 func (m *UpdateNoteRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UpdateNoteRequest.Unmarshal(m, b)
@@ -478,7 +586,7 @@ func (m *UpdateNoteResponse) Reset()         { *m = UpdateNoteResponse{} }
 func (m *UpdateNoteResponse) String() string { return proto.CompactTextString(m) }
 func (*UpdateNoteResponse) ProtoMessage()    {}
 func (*UpdateNoteResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_noteservice_82685a2fa37c9ea2, []int{10}
+	return fileDescriptor_noteservice_63f246504ca616ce, []int{12}
 }
 func (m *UpdateNoteResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UpdateNoteResponse.Unmarshal(m, b)
@@ -513,8 +621,10 @@ func init() {
 	proto.RegisterType((*DeleteNoteResponse)(nil), "ehr.noteservice.DeleteNoteResponse")
 	proto.RegisterType((*RetrieveNoteRequest)(nil), "ehr.noteservice.RetrieveNoteRequest")
 	proto.RegisterType((*RetrieveNoteResponse)(nil), "ehr.noteservice.RetrieveNoteResponse")
-	proto.RegisterType((*FindNoteRequest)(nil), "ehr.noteservice.FindNoteRequest")
-	proto.RegisterType((*FindNoteResponse)(nil), "ehr.noteservice.FindNoteResponse")
+	proto.RegisterType((*SearchNoteRequest)(nil), "ehr.noteservice.SearchNoteRequest")
+	proto.RegisterType((*SearchNoteResponse)(nil), "ehr.noteservice.SearchNoteResponse")
+	proto.RegisterType((*SearchNoteFragmentRequest)(nil), "ehr.noteservice.SearchNoteFragmentRequest")
+	proto.RegisterType((*SearchNoteFragmentResponse)(nil), "ehr.noteservice.SearchNoteFragmentResponse")
 	proto.RegisterType((*UpdateNoteRequest)(nil), "ehr.noteservice.UpdateNoteRequest")
 	proto.RegisterType((*UpdateNoteResponse)(nil), "ehr.noteservice.UpdateNoteResponse")
 }
@@ -531,11 +641,12 @@ const _ = grpc.SupportPackageIsVersion4
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type NoteServiceClient interface {
-	NewNote(ctx context.Context, in *CreateNoteRequest, opts ...grpc.CallOption) (*CreateNoteResponse, error)
-	DeleteNote(ctx context.Context, in *DeleteNoteRequest, opts ...grpc.CallOption) (*DeleteNoteResponse, error)
+	CreateNote(ctx context.Context, in *CreateNoteRequest, opts ...grpc.CallOption) (*CreateNoteResponse, error)
 	RetrieveNote(ctx context.Context, in *RetrieveNoteRequest, opts ...grpc.CallOption) (*RetrieveNoteResponse, error)
-	FindNote(ctx context.Context, in *FindNoteRequest, opts ...grpc.CallOption) (*FindNoteResponse, error)
 	UpdateNote(ctx context.Context, in *UpdateNoteRequest, opts ...grpc.CallOption) (*UpdateNoteResponse, error)
+	DeleteNote(ctx context.Context, in *DeleteNoteRequest, opts ...grpc.CallOption) (*DeleteNoteResponse, error)
+	SearchNote(ctx context.Context, in *SearchNoteRequest, opts ...grpc.CallOption) (*SearchNoteResponse, error)
+	SearchNoteFragments(ctx context.Context, in *SearchNoteFragmentRequest, opts ...grpc.CallOption) (*SearchNoteFragmentResponse, error)
 }
 
 type noteServiceClient struct {
@@ -546,18 +657,9 @@ func NewNoteServiceClient(cc *grpc.ClientConn) NoteServiceClient {
 	return &noteServiceClient{cc}
 }
 
-func (c *noteServiceClient) NewNote(ctx context.Context, in *CreateNoteRequest, opts ...grpc.CallOption) (*CreateNoteResponse, error) {
+func (c *noteServiceClient) CreateNote(ctx context.Context, in *CreateNoteRequest, opts ...grpc.CallOption) (*CreateNoteResponse, error) {
 	out := new(CreateNoteResponse)
-	err := c.cc.Invoke(ctx, "/ehr.noteservice.NoteService/NewNote", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *noteServiceClient) DeleteNote(ctx context.Context, in *DeleteNoteRequest, opts ...grpc.CallOption) (*DeleteNoteResponse, error) {
-	out := new(DeleteNoteResponse)
-	err := c.cc.Invoke(ctx, "/ehr.noteservice.NoteService/DeleteNote", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/ehr.noteservice.NoteService/CreateNote", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -573,15 +675,6 @@ func (c *noteServiceClient) RetrieveNote(ctx context.Context, in *RetrieveNoteRe
 	return out, nil
 }
 
-func (c *noteServiceClient) FindNote(ctx context.Context, in *FindNoteRequest, opts ...grpc.CallOption) (*FindNoteResponse, error) {
-	out := new(FindNoteResponse)
-	err := c.cc.Invoke(ctx, "/ehr.noteservice.NoteService/FindNote", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *noteServiceClient) UpdateNote(ctx context.Context, in *UpdateNoteRequest, opts ...grpc.CallOption) (*UpdateNoteResponse, error) {
 	out := new(UpdateNoteResponse)
 	err := c.cc.Invoke(ctx, "/ehr.noteservice.NoteService/UpdateNote", in, out, opts...)
@@ -591,51 +684,61 @@ func (c *noteServiceClient) UpdateNote(ctx context.Context, in *UpdateNoteReques
 	return out, nil
 }
 
+func (c *noteServiceClient) DeleteNote(ctx context.Context, in *DeleteNoteRequest, opts ...grpc.CallOption) (*DeleteNoteResponse, error) {
+	out := new(DeleteNoteResponse)
+	err := c.cc.Invoke(ctx, "/ehr.noteservice.NoteService/DeleteNote", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *noteServiceClient) SearchNote(ctx context.Context, in *SearchNoteRequest, opts ...grpc.CallOption) (*SearchNoteResponse, error) {
+	out := new(SearchNoteResponse)
+	err := c.cc.Invoke(ctx, "/ehr.noteservice.NoteService/SearchNote", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *noteServiceClient) SearchNoteFragments(ctx context.Context, in *SearchNoteFragmentRequest, opts ...grpc.CallOption) (*SearchNoteFragmentResponse, error) {
+	out := new(SearchNoteFragmentResponse)
+	err := c.cc.Invoke(ctx, "/ehr.noteservice.NoteService/SearchNoteFragments", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // NoteServiceServer is the server API for NoteService service.
 type NoteServiceServer interface {
-	NewNote(context.Context, *CreateNoteRequest) (*CreateNoteResponse, error)
-	DeleteNote(context.Context, *DeleteNoteRequest) (*DeleteNoteResponse, error)
+	CreateNote(context.Context, *CreateNoteRequest) (*CreateNoteResponse, error)
 	RetrieveNote(context.Context, *RetrieveNoteRequest) (*RetrieveNoteResponse, error)
-	FindNote(context.Context, *FindNoteRequest) (*FindNoteResponse, error)
 	UpdateNote(context.Context, *UpdateNoteRequest) (*UpdateNoteResponse, error)
+	DeleteNote(context.Context, *DeleteNoteRequest) (*DeleteNoteResponse, error)
+	SearchNote(context.Context, *SearchNoteRequest) (*SearchNoteResponse, error)
+	SearchNoteFragments(context.Context, *SearchNoteFragmentRequest) (*SearchNoteFragmentResponse, error)
 }
 
 func RegisterNoteServiceServer(s *grpc.Server, srv NoteServiceServer) {
 	s.RegisterService(&_NoteService_serviceDesc, srv)
 }
 
-func _NoteService_NewNote_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _NoteService_CreateNote_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CreateNoteRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(NoteServiceServer).NewNote(ctx, in)
+		return srv.(NoteServiceServer).CreateNote(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/ehr.noteservice.NoteService/NewNote",
+		FullMethod: "/ehr.noteservice.NoteService/CreateNote",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(NoteServiceServer).NewNote(ctx, req.(*CreateNoteRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _NoteService_DeleteNote_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(DeleteNoteRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(NoteServiceServer).DeleteNote(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/ehr.noteservice.NoteService/DeleteNote",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(NoteServiceServer).DeleteNote(ctx, req.(*DeleteNoteRequest))
+		return srv.(NoteServiceServer).CreateNote(ctx, req.(*CreateNoteRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -658,24 +761,6 @@ func _NoteService_RetrieveNote_Handler(srv interface{}, ctx context.Context, dec
 	return interceptor(ctx, in, info, handler)
 }
 
-func _NoteService_FindNote_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(FindNoteRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(NoteServiceServer).FindNote(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/ehr.noteservice.NoteService/FindNote",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(NoteServiceServer).FindNote(ctx, req.(*FindNoteRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _NoteService_UpdateNote_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UpdateNoteRequest)
 	if err := dec(in); err != nil {
@@ -694,68 +779,129 @@ func _NoteService_UpdateNote_Handler(srv interface{}, ctx context.Context, dec f
 	return interceptor(ctx, in, info, handler)
 }
 
+func _NoteService_DeleteNote_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DeleteNoteRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NoteServiceServer).DeleteNote(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/ehr.noteservice.NoteService/DeleteNote",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NoteServiceServer).DeleteNote(ctx, req.(*DeleteNoteRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _NoteService_SearchNote_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SearchNoteRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NoteServiceServer).SearchNote(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/ehr.noteservice.NoteService/SearchNote",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NoteServiceServer).SearchNote(ctx, req.(*SearchNoteRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _NoteService_SearchNoteFragments_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SearchNoteFragmentRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NoteServiceServer).SearchNoteFragments(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/ehr.noteservice.NoteService/SearchNoteFragments",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NoteServiceServer).SearchNoteFragments(ctx, req.(*SearchNoteFragmentRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _NoteService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "ehr.noteservice.NoteService",
 	HandlerType: (*NoteServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "NewNote",
-			Handler:    _NoteService_NewNote_Handler,
-		},
-		{
-			MethodName: "DeleteNote",
-			Handler:    _NoteService_DeleteNote_Handler,
+			MethodName: "CreateNote",
+			Handler:    _NoteService_CreateNote_Handler,
 		},
 		{
 			MethodName: "RetrieveNote",
 			Handler:    _NoteService_RetrieveNote_Handler,
 		},
 		{
-			MethodName: "FindNote",
-			Handler:    _NoteService_FindNote_Handler,
-		},
-		{
 			MethodName: "UpdateNote",
 			Handler:    _NoteService_UpdateNote_Handler,
+		},
+		{
+			MethodName: "DeleteNote",
+			Handler:    _NoteService_DeleteNote_Handler,
+		},
+		{
+			MethodName: "SearchNote",
+			Handler:    _NoteService_SearchNote_Handler,
+		},
+		{
+			MethodName: "SearchNoteFragments",
+			Handler:    _NoteService_SearchNoteFragments_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
 	Metadata: "noteservice.proto",
 }
 
-func init() { proto.RegisterFile("noteservice.proto", fileDescriptor_noteservice_82685a2fa37c9ea2) }
+func init() { proto.RegisterFile("noteservice.proto", fileDescriptor_noteservice_63f246504ca616ce) }
 
-var fileDescriptor_noteservice_82685a2fa37c9ea2 = []byte{
-	// 485 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xbc, 0x54, 0x4d, 0x6f, 0x13, 0x31,
-	0x10, 0xcd, 0x47, 0x69, 0x9a, 0x49, 0x95, 0x12, 0x03, 0x52, 0x58, 0x09, 0x91, 0xba, 0x54, 0xaa,
-	0x38, 0xec, 0x21, 0x1c, 0xb8, 0xb7, 0x88, 0xde, 0x2a, 0xe1, 0x16, 0x51, 0x21, 0xa1, 0x68, 0x1b,
-	0x8f, 0xba, 0x96, 0x68, 0xbc, 0xd8, 0xde, 0x20, 0x21, 0xc4, 0xdf, 0xe0, 0x27, 0xf1, 0xb7, 0x90,
-	0xed, 0x4d, 0xe3, 0xd6, 0xdb, 0x85, 0x43, 0xe1, 0xb6, 0x7e, 0x7e, 0xf3, 0xe6, 0x79, 0xf2, 0x26,
-	0x30, 0x5a, 0x48, 0x83, 0x1a, 0xd5, 0x52, 0xcc, 0x31, 0x2d, 0x94, 0x34, 0x92, 0xec, 0x60, 0xae,
-	0xd2, 0x00, 0x4e, 0xc0, 0x1e, 0xfc, 0x65, 0x02, 0xb9, 0x31, 0x85, 0xff, 0xa6, 0x02, 0x9e, 0x9e,
-	0x48, 0x83, 0xa7, 0x9e, 0xc6, 0x50, 0x17, 0x72, 0xa1, 0xf1, 0xd4, 0x64, 0xa6, 0xd4, 0x64, 0x0a,
-	0x7d, 0x4b, 0x9d, 0xcd, 0x25, 0xc7, 0x71, 0x7b, 0xd2, 0x3e, 0x18, 0x4e, 0x9f, 0xa4, 0x56, 0xd9,
-	0x09, 0x78, 0xd2, 0x91, 0xe4, 0xa8, 0xd9, 0x96, 0x45, 0xec, 0x27, 0x19, 0x43, 0xef, 0x0a, 0xb5,
-	0xce, 0x2e, 0x71, 0xdc, 0x99, 0xb4, 0x0f, 0xfa, 0x6c, 0x75, 0xa4, 0xaf, 0x61, 0x74, 0xa4, 0x30,
-	0x33, 0x68, 0x1b, 0x32, 0xfc, 0x52, 0xa2, 0x36, 0x84, 0xc2, 0x86, 0x75, 0xe6, 0xd4, 0x07, 0xd3,
-	0x61, 0xba, 0xf2, 0x9d, 0x3a, 0x92, 0xbb, 0xa3, 0xdf, 0x81, 0x84, 0x85, 0xde, 0x22, 0x39, 0x84,
-	0x4d, 0xed, 0x1c, 0x54, 0xb5, 0x2f, 0xd3, 0x5b, 0x6f, 0x4e, 0xef, 0x7c, 0x18, 0xab, 0x2a, 0xaf,
-	0xbb, 0x77, 0x1a, 0xba, 0xef, 0xc1, 0xe8, 0x0d, 0x7e, 0xc6, 0x9b, 0xb6, 0x87, 0xd0, 0x11, 0xdc,
-	0x35, 0xee, 0xb2, 0x8e, 0xe0, 0xf4, 0x1c, 0x48, 0x48, 0xba, 0x3f, 0x8b, 0x74, 0x1f, 0x1e, 0x31,
-	0x34, 0x4a, 0xe0, 0xb2, 0xd1, 0xc0, 0x0f, 0x78, 0x7c, 0x93, 0xf6, 0x9f, 0xa7, 0xf4, 0xb3, 0x0d,
-	0x3b, 0x6f, 0xc5, 0x82, 0x87, 0x1e, 0x77, 0x61, 0x5b, 0x63, 0xa6, 0xe6, 0xf9, 0xcc, 0xa0, 0xba,
-	0xf2, 0x0e, 0xfa, 0x6c, 0xe0, 0xb1, 0x33, 0x0b, 0x91, 0xe7, 0x30, 0xc8, 0x4a, 0x93, 0x4b, 0x35,
-	0xbb, 0x2c, 0x05, 0xaf, 0x12, 0x03, 0x1e, 0x3a, 0x2e, 0x05, 0xb7, 0x1a, 0x45, 0x66, 0x04, 0x2e,
-	0x8c, 0x67, 0x74, 0xbd, 0x46, 0x85, 0x39, 0xca, 0x33, 0x80, 0xa5, 0xd0, 0xa2, 0x22, 0x6c, 0x38,
-	0x42, 0xdf, 0x21, 0xf6, 0x9a, 0x7e, 0x83, 0x87, 0x6b, 0x63, 0xff, 0x64, 0x2a, 0xdd, 0x3b, 0xa7,
-	0x72, 0x0c, 0xa3, 0xf7, 0x05, 0xcf, 0x1a, 0xb3, 0xf3, 0x57, 0xe3, 0x3d, 0x07, 0x12, 0x0a, 0xdd,
-	0xdf, 0x33, 0xa6, 0xbf, 0xba, 0x30, 0x08, 0x58, 0xe4, 0x0c, 0x7a, 0x27, 0xf8, 0xd5, 0x22, 0x84,
-	0x46, 0x72, 0xd1, 0xfe, 0x26, 0x7b, 0x8d, 0x1c, 0xdf, 0x91, 0xb6, 0xc8, 0x07, 0x80, 0xf5, 0x7e,
-	0xd4, 0x08, 0x47, 0x1b, 0x56, 0x23, 0x1c, 0x2f, 0x18, 0x6d, 0x91, 0x4f, 0xb0, 0x1d, 0xe6, 0x9e,
-	0xbc, 0x88, 0xca, 0x6a, 0xb6, 0x27, 0xd9, 0xff, 0x03, 0xeb, 0x5a, 0xfe, 0x1d, 0x6c, 0xad, 0xc2,
-	0x43, 0x26, 0x51, 0xd1, 0xad, 0xc0, 0x27, 0xbb, 0x0d, 0x8c, 0x70, 0x14, 0xeb, 0x9f, 0xb2, 0x66,
-	0x14, 0x51, 0x60, 0x6a, 0x46, 0x11, 0x67, 0x81, 0xb6, 0x0e, 0x7b, 0x1f, 0x1f, 0x60, 0xae, 0x8a,
-	0x8b, 0x8b, 0x4d, 0xf7, 0xd7, 0xfe, 0xea, 0x77, 0x00, 0x00, 0x00, 0xff, 0xff, 0x0b, 0x07, 0x38,
-	0xc9, 0x18, 0x06, 0x00, 0x00,
+var fileDescriptor_noteservice_63f246504ca616ce = []byte{
+	// 541 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xcc, 0x55, 0x41, 0x6f, 0xd3, 0x30,
+	0x14, 0x5e, 0xda, 0xb2, 0xd1, 0xd7, 0x52, 0x14, 0x0f, 0x50, 0x17, 0x09, 0x31, 0x3c, 0x26, 0x4d,
+	0x43, 0xca, 0xa1, 0x1c, 0x38, 0x70, 0xdb, 0x10, 0xbb, 0x71, 0x48, 0x41, 0x9b, 0x90, 0x50, 0x95,
+	0x35, 0x8f, 0xc6, 0x12, 0x4d, 0x82, 0xed, 0xf4, 0x84, 0xf8, 0x1f, 0x1c, 0x38, 0xf0, 0x57, 0xf8,
+	0x65, 0xc8, 0x76, 0xda, 0xa4, 0x73, 0x16, 0x7a, 0x28, 0x88, 0x5b, 0xfc, 0xfc, 0xbd, 0xef, 0x7d,
+	0xfe, 0x6a, 0x7f, 0x05, 0x37, 0x49, 0x25, 0x0a, 0xe4, 0x0b, 0x36, 0x45, 0x3f, 0xe3, 0xa9, 0x4c,
+	0xc9, 0x7d, 0x8c, 0xb9, 0x5f, 0x29, 0x7b, 0xa0, 0x16, 0x66, 0xd3, 0x83, 0x58, 0xca, 0xcc, 0x7c,
+	0x53, 0x06, 0x07, 0x6f, 0x53, 0x89, 0x63, 0x03, 0x0b, 0x50, 0x64, 0x69, 0x22, 0x70, 0x2c, 0x43,
+	0x99, 0x0b, 0x32, 0x82, 0xae, 0x82, 0x4e, 0xa6, 0x69, 0x84, 0x43, 0xe7, 0xd0, 0x39, 0x19, 0x8c,
+	0x1e, 0xfa, 0x8a, 0x59, 0x13, 0x18, 0xd0, 0x79, 0x1a, 0xa1, 0x08, 0xee, 0xaa, 0x8a, 0xfa, 0x24,
+	0x43, 0xd8, 0x9b, 0xa3, 0x10, 0xe1, 0x0c, 0x87, 0xad, 0x43, 0xe7, 0xa4, 0x1b, 0x2c, 0x97, 0xf4,
+	0x25, 0xb8, 0xe7, 0x1c, 0x43, 0x89, 0x6a, 0x60, 0x80, 0x5f, 0x72, 0x14, 0x92, 0x50, 0xe8, 0x28,
+	0x65, 0x9a, 0xbd, 0x37, 0x1a, 0xf8, 0x4b, 0xdd, 0xbe, 0x06, 0xe9, 0x3d, 0xfa, 0x15, 0x48, 0xb5,
+	0xd1, 0x48, 0x24, 0x67, 0xb0, 0x2b, 0xb4, 0x82, 0xa2, 0xf7, 0xd4, 0xbf, 0x71, 0x66, 0xff, 0xd6,
+	0x83, 0x05, 0x45, 0xe7, 0x6a, 0x7a, 0xab, 0x61, 0xfa, 0x11, 0xb8, 0xaf, 0xf1, 0x33, 0xae, 0xcb,
+	0x1e, 0x40, 0x8b, 0x45, 0x7a, 0x70, 0x3b, 0x68, 0xb1, 0x88, 0x5e, 0x01, 0xa9, 0x82, 0xb6, 0x27,
+	0x91, 0x1e, 0xc3, 0x7e, 0x80, 0x92, 0x33, 0x5c, 0x34, 0x0a, 0xf8, 0x06, 0x0f, 0xd6, 0x61, 0xff,
+	0xd8, 0xa5, 0xef, 0x0e, 0xb8, 0x63, 0x0c, 0xf9, 0x34, 0xae, 0xaa, 0x7c, 0x0a, 0x7d, 0xa1, 0x8b,
+	0x13, 0x89, 0x7c, 0x6e, 0x34, 0x74, 0x83, 0x9e, 0xa9, 0xbd, 0x53, 0x25, 0xf2, 0x04, 0x7a, 0x61,
+	0x2e, 0xe3, 0x94, 0x4f, 0x66, 0x39, 0x8b, 0x8a, 0x3b, 0x03, 0xa6, 0x74, 0x91, 0xb3, 0x48, 0x71,
+	0x64, 0xa1, 0x64, 0x98, 0x48, 0x83, 0x68, 0x1b, 0x8e, 0xa2, 0xa6, 0x21, 0x8f, 0x01, 0x16, 0x4c,
+	0xb0, 0x02, 0xd0, 0xd1, 0x80, 0xae, 0xae, 0xa8, 0x6d, 0x75, 0x7f, 0xaa, 0xd2, 0xfe, 0x8a, 0x33,
+	0xed, 0x5b, 0x9d, 0xf9, 0xe9, 0xc0, 0x41, 0x39, 0xfe, 0x0d, 0x0f, 0x67, 0x73, 0x4c, 0xe4, 0xff,
+	0xe5, 0xd0, 0x0f, 0x07, 0xbc, 0x3a, 0x8d, 0x5b, 0xb4, 0xea, 0x15, 0xdc, 0x53, 0x0d, 0x93, 0x4f,
+	0x05, 0x79, 0xe1, 0xd9, 0xa3, 0x75, 0xcf, 0x56, 0xa3, 0xfb, 0x49, 0x65, 0x45, 0x2f, 0xc0, 0x7d,
+	0x9f, 0x45, 0x61, 0xe3, 0x1b, 0xdc, 0xe8, 0x9a, 0x5e, 0x01, 0xa9, 0x12, 0x6d, 0xef, 0x7c, 0xa3,
+	0x5f, 0x1d, 0xe8, 0x55, 0x50, 0xe4, 0x12, 0xa0, 0x0c, 0x2d, 0x42, 0x2d, 0x46, 0x2b, 0x0a, 0xbd,
+	0xa3, 0x46, 0x8c, 0x19, 0x4a, 0x77, 0xc8, 0x47, 0xe8, 0x57, 0x5f, 0x3a, 0x79, 0x66, 0xb5, 0xd5,
+	0xe4, 0x85, 0x77, 0xfc, 0x07, 0xd4, 0x8a, 0xfe, 0x12, 0xa0, 0x74, 0xa8, 0x46, 0xb7, 0xf5, 0x3b,
+	0xd4, 0xe8, 0xb6, 0x2d, 0x36, 0xc4, 0x65, 0x44, 0xd6, 0x10, 0x5b, 0x21, 0x5b, 0x43, 0x6c, 0x67,
+	0xac, 0x21, 0x2e, 0xef, 0x6e, 0x0d, 0xb1, 0x15, 0x4b, 0x35, 0xc4, 0x76, 0x3e, 0xd0, 0x1d, 0x92,
+	0xc1, 0xbe, 0xfd, 0x28, 0x04, 0x39, 0x6d, 0xe8, 0xbe, 0xf1, 0xbc, 0xbd, 0xe7, 0x1b, 0x61, 0x97,
+	0x13, 0xcf, 0xf6, 0x3e, 0xdc, 0xc1, 0x98, 0x67, 0xd7, 0xd7, 0xbb, 0xfa, 0xdf, 0xf9, 0xc5, 0xef,
+	0x00, 0x00, 0x00, 0xff, 0xff, 0xc7, 0xc1, 0xf7, 0x9e, 0xdb, 0x07, 0x00, 0x00,
 }

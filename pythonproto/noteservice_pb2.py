@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ehr.noteservice',
   syntax='proto3',
   serialized_options=_b('Z\005ehrpb'),
-  serialized_pb=_b('\n\x11noteservice.proto\x12\x0f\x65hr.noteservice\x1a\nnote.proto\x1a\nhttp.proto\"V\n\x19NoteServiceResponseStatus\x12(\n\thttp_code\x18\x01 \x01(\x0e\x32\x15.ehr.http.StatusCodes\x12\x0f\n\x07message\x18\x02 \x01(\t\"1\n\x11\x43reateNoteRequest\x12\x1c\n\x04note\x18\x01 \x01(\x0b\x32\x0e.ehr.note.Note\"n\n\x12\x43reateNoteResponse\x12:\n\x06status\x18\x01 \x01(\x0b\x32*.ehr.noteservice.NoteServiceResponseStatus\x12\x1c\n\x04note\x18\x02 \x01(\x0b\x32\x0e.ehr.note.Note\"\x1f\n\x11\x44\x65leteNoteRequest\x12\n\n\x02id\x18\x01 \x01(\x03\"P\n\x12\x44\x65leteNoteResponse\x12:\n\x06status\x18\x01 \x01(\x0b\x32*.ehr.noteservice.NoteServiceResponseStatus\"!\n\x13RetrieveNoteRequest\x12\n\n\x02id\x18\x01 \x01(\x03\"p\n\x14RetrieveNoteResponse\x12:\n\x06status\x18\x01 \x01(\x0b\x32*.ehr.noteservice.NoteServiceResponseStatus\x12\x1c\n\x04note\x18\x02 \x01(\x0b\x32\x0e.ehr.note.Note\"f\n\x0f\x46indNoteRequest\x12\x14\n\x0csearch_terms\x18\x01 \x01(\t\x12\x13\n\x0b\x61uthor_guid\x18\x02 \x01(\t\x12\x14\n\x0cpatient_guid\x18\x03 \x01(\t\x12\x12\n\nvisit_guid\x18\x04 \x01(\t\"l\n\x10\x46indNoteResponse\x12:\n\x06status\x18\x01 \x01(\x0b\x32*.ehr.noteservice.NoteServiceResponseStatus\x12\x1c\n\x04note\x18\x02 \x03(\x0b\x32\x0e.ehr.note.Note\"=\n\x11UpdateNoteRequest\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x1c\n\x04note\x18\x02 \x01(\x0b\x32\x0e.ehr.note.Note\"P\n\x12UpdateNoteResponse\x12:\n\x06status\x18\x01 \x01(\x0b\x32*.ehr.noteservice.NoteServiceResponseStatus2\xc7\x03\n\x0bNoteService\x12T\n\x07NewNote\x12\".ehr.noteservice.CreateNoteRequest\x1a#.ehr.noteservice.CreateNoteResponse\"\x00\x12W\n\nDeleteNote\x12\".ehr.noteservice.DeleteNoteRequest\x1a#.ehr.noteservice.DeleteNoteResponse\"\x00\x12]\n\x0cRetrieveNote\x12$.ehr.noteservice.RetrieveNoteRequest\x1a%.ehr.noteservice.RetrieveNoteResponse\"\x00\x12Q\n\x08\x46indNote\x12 .ehr.noteservice.FindNoteRequest\x1a!.ehr.noteservice.FindNoteResponse\"\x00\x12W\n\nUpdateNote\x12\".ehr.noteservice.UpdateNoteRequest\x1a#.ehr.noteservice.UpdateNoteResponse\"\x00\x42\x07Z\x05\x65hrpbb\x06proto3')
+  serialized_pb=_b('\n\x11noteservice.proto\x12\x0f\x65hr.noteservice\x1a\nnote.proto\x1a\nhttp.proto\"V\n\x19NoteServiceResponseStatus\x12(\n\thttp_code\x18\x01 \x01(\x0e\x32\x15.ehr.http.StatusCodes\x12\x0f\n\x07message\x18\x02 \x01(\t\"1\n\x11\x43reateNoteRequest\x12\x1c\n\x04note\x18\x01 \x01(\x0b\x32\x0e.ehr.note.Note\"n\n\x12\x43reateNoteResponse\x12:\n\x06status\x18\x01 \x01(\x0b\x32*.ehr.noteservice.NoteServiceResponseStatus\x12\x1c\n\x04note\x18\x02 \x01(\x0b\x32\x0e.ehr.note.Note\"\x1f\n\x11\x44\x65leteNoteRequest\x12\n\n\x02id\x18\x01 \x01(\x03\"P\n\x12\x44\x65leteNoteResponse\x12:\n\x06status\x18\x01 \x01(\x0b\x32*.ehr.noteservice.NoteServiceResponseStatus\"!\n\x13RetrieveNoteRequest\x12\n\n\x02id\x18\x01 \x01(\x03\"p\n\x14RetrieveNoteResponse\x12:\n\x06status\x18\x01 \x01(\x0b\x32*.ehr.noteservice.NoteServiceResponseStatus\x12\x1c\n\x04note\x18\x02 \x01(\x0b\x32\x0e.ehr.note.Note\"h\n\x11SearchNoteRequest\x12\x14\n\x0csearch_terms\x18\x01 \x01(\t\x12\x13\n\x0b\x61uthor_guid\x18\x02 \x01(\t\x12\x14\n\x0cpatient_guid\x18\x03 \x01(\t\x12\x12\n\nvisit_guid\x18\x04 \x01(\t\"n\n\x12SearchNoteResponse\x12:\n\x06status\x18\x01 \x01(\x0b\x32*.ehr.noteservice.NoteServiceResponseStatus\x12\x1c\n\x04note\x18\x02 \x03(\x0b\x32\x0e.ehr.note.Note\"p\n\x19SearchNoteFragmentRequest\x12\x14\n\x0csearch_terms\x18\x01 \x01(\t\x12\x13\n\x0b\x61uthor_guid\x18\x02 \x01(\t\x12\x14\n\x0cpatient_guid\x18\x03 \x01(\t\x12\x12\n\nvisit_guid\x18\x04 \x01(\t\"\x87\x01\n\x1aSearchNoteFragmentResponse\x12:\n\x06status\x18\x01 \x01(\x0b\x32*.ehr.noteservice.NoteServiceResponseStatus\x12-\n\rnote_fragment\x18\x02 \x03(\x0b\x32\x16.ehr.note.NoteFragment\"=\n\x11UpdateNoteRequest\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x1c\n\x04note\x18\x02 \x01(\x0b\x32\x0e.ehr.note.Note\"P\n\x12UpdateNoteResponse\x12:\n\x06status\x18\x01 \x01(\x0b\x32*.ehr.noteservice.NoteServiceResponseStatus2\xc2\x04\n\x0bNoteService\x12W\n\nCreateNote\x12\".ehr.noteservice.CreateNoteRequest\x1a#.ehr.noteservice.CreateNoteResponse\"\x00\x12]\n\x0cRetrieveNote\x12$.ehr.noteservice.RetrieveNoteRequest\x1a%.ehr.noteservice.RetrieveNoteResponse\"\x00\x12W\n\nUpdateNote\x12\".ehr.noteservice.UpdateNoteRequest\x1a#.ehr.noteservice.UpdateNoteResponse\"\x00\x12W\n\nDeleteNote\x12\".ehr.noteservice.DeleteNoteRequest\x1a#.ehr.noteservice.DeleteNoteResponse\"\x00\x12W\n\nSearchNote\x12\".ehr.noteservice.SearchNoteRequest\x1a#.ehr.noteservice.SearchNoteResponse\"\x00\x12p\n\x13SearchNoteFragments\x12*.ehr.noteservice.SearchNoteFragmentRequest\x1a+.ehr.noteservice.SearchNoteFragmentResponse\"\x00\x42\x07Z\x05\x65hrpbb\x06proto3')
   ,
   dependencies=[note__pb2.DESCRIPTOR,http__pb2.DESCRIPTOR,])
 
@@ -266,36 +266,36 @@ _RETRIEVENOTERESPONSE = _descriptor.Descriptor(
 )
 
 
-_FINDNOTEREQUEST = _descriptor.Descriptor(
-  name='FindNoteRequest',
-  full_name='ehr.noteservice.FindNoteRequest',
+_SEARCHNOTEREQUEST = _descriptor.Descriptor(
+  name='SearchNoteRequest',
+  full_name='ehr.noteservice.SearchNoteRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='search_terms', full_name='ehr.noteservice.FindNoteRequest.search_terms', index=0,
+      name='search_terms', full_name='ehr.noteservice.SearchNoteRequest.search_terms', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='author_guid', full_name='ehr.noteservice.FindNoteRequest.author_guid', index=1,
+      name='author_guid', full_name='ehr.noteservice.SearchNoteRequest.author_guid', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='patient_guid', full_name='ehr.noteservice.FindNoteRequest.patient_guid', index=2,
+      name='patient_guid', full_name='ehr.noteservice.SearchNoteRequest.patient_guid', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='visit_guid', full_name='ehr.noteservice.FindNoteRequest.visit_guid', index=3,
+      name='visit_guid', full_name='ehr.noteservice.SearchNoteRequest.visit_guid', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -314,26 +314,26 @@ _FINDNOTEREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=577,
-  serialized_end=679,
+  serialized_end=681,
 )
 
 
-_FINDNOTERESPONSE = _descriptor.Descriptor(
-  name='FindNoteResponse',
-  full_name='ehr.noteservice.FindNoteResponse',
+_SEARCHNOTERESPONSE = _descriptor.Descriptor(
+  name='SearchNoteResponse',
+  full_name='ehr.noteservice.SearchNoteResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='ehr.noteservice.FindNoteResponse.status', index=0,
+      name='status', full_name='ehr.noteservice.SearchNoteResponse.status', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='note', full_name='ehr.noteservice.FindNoteResponse.note', index=1,
+      name='note', full_name='ehr.noteservice.SearchNoteResponse.note', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -351,8 +351,98 @@ _FINDNOTERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=681,
-  serialized_end=789,
+  serialized_start=683,
+  serialized_end=793,
+)
+
+
+_SEARCHNOTEFRAGMENTREQUEST = _descriptor.Descriptor(
+  name='SearchNoteFragmentRequest',
+  full_name='ehr.noteservice.SearchNoteFragmentRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='search_terms', full_name='ehr.noteservice.SearchNoteFragmentRequest.search_terms', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='author_guid', full_name='ehr.noteservice.SearchNoteFragmentRequest.author_guid', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='patient_guid', full_name='ehr.noteservice.SearchNoteFragmentRequest.patient_guid', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='visit_guid', full_name='ehr.noteservice.SearchNoteFragmentRequest.visit_guid', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=795,
+  serialized_end=907,
+)
+
+
+_SEARCHNOTEFRAGMENTRESPONSE = _descriptor.Descriptor(
+  name='SearchNoteFragmentResponse',
+  full_name='ehr.noteservice.SearchNoteFragmentResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='status', full_name='ehr.noteservice.SearchNoteFragmentResponse.status', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='note_fragment', full_name='ehr.noteservice.SearchNoteFragmentResponse.note_fragment', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=910,
+  serialized_end=1045,
 )
 
 
@@ -389,8 +479,8 @@ _UPDATENOTEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=791,
-  serialized_end=852,
+  serialized_start=1047,
+  serialized_end=1108,
 )
 
 
@@ -420,8 +510,8 @@ _UPDATENOTERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=854,
-  serialized_end=934,
+  serialized_start=1110,
+  serialized_end=1190,
 )
 
 _NOTESERVICERESPONSESTATUS.fields_by_name['http_code'].enum_type = http__pb2._STATUSCODES
@@ -431,8 +521,10 @@ _CREATENOTERESPONSE.fields_by_name['note'].message_type = note__pb2._NOTE
 _DELETENOTERESPONSE.fields_by_name['status'].message_type = _NOTESERVICERESPONSESTATUS
 _RETRIEVENOTERESPONSE.fields_by_name['status'].message_type = _NOTESERVICERESPONSESTATUS
 _RETRIEVENOTERESPONSE.fields_by_name['note'].message_type = note__pb2._NOTE
-_FINDNOTERESPONSE.fields_by_name['status'].message_type = _NOTESERVICERESPONSESTATUS
-_FINDNOTERESPONSE.fields_by_name['note'].message_type = note__pb2._NOTE
+_SEARCHNOTERESPONSE.fields_by_name['status'].message_type = _NOTESERVICERESPONSESTATUS
+_SEARCHNOTERESPONSE.fields_by_name['note'].message_type = note__pb2._NOTE
+_SEARCHNOTEFRAGMENTRESPONSE.fields_by_name['status'].message_type = _NOTESERVICERESPONSESTATUS
+_SEARCHNOTEFRAGMENTRESPONSE.fields_by_name['note_fragment'].message_type = note__pb2._NOTEFRAGMENT
 _UPDATENOTEREQUEST.fields_by_name['note'].message_type = note__pb2._NOTE
 _UPDATENOTERESPONSE.fields_by_name['status'].message_type = _NOTESERVICERESPONSESTATUS
 DESCRIPTOR.message_types_by_name['NoteServiceResponseStatus'] = _NOTESERVICERESPONSESTATUS
@@ -442,8 +534,10 @@ DESCRIPTOR.message_types_by_name['DeleteNoteRequest'] = _DELETENOTEREQUEST
 DESCRIPTOR.message_types_by_name['DeleteNoteResponse'] = _DELETENOTERESPONSE
 DESCRIPTOR.message_types_by_name['RetrieveNoteRequest'] = _RETRIEVENOTEREQUEST
 DESCRIPTOR.message_types_by_name['RetrieveNoteResponse'] = _RETRIEVENOTERESPONSE
-DESCRIPTOR.message_types_by_name['FindNoteRequest'] = _FINDNOTEREQUEST
-DESCRIPTOR.message_types_by_name['FindNoteResponse'] = _FINDNOTERESPONSE
+DESCRIPTOR.message_types_by_name['SearchNoteRequest'] = _SEARCHNOTEREQUEST
+DESCRIPTOR.message_types_by_name['SearchNoteResponse'] = _SEARCHNOTERESPONSE
+DESCRIPTOR.message_types_by_name['SearchNoteFragmentRequest'] = _SEARCHNOTEFRAGMENTREQUEST
+DESCRIPTOR.message_types_by_name['SearchNoteFragmentResponse'] = _SEARCHNOTEFRAGMENTRESPONSE
 DESCRIPTOR.message_types_by_name['UpdateNoteRequest'] = _UPDATENOTEREQUEST
 DESCRIPTOR.message_types_by_name['UpdateNoteResponse'] = _UPDATENOTERESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -497,19 +591,33 @@ RetrieveNoteResponse = _reflection.GeneratedProtocolMessageType('RetrieveNoteRes
   ))
 _sym_db.RegisterMessage(RetrieveNoteResponse)
 
-FindNoteRequest = _reflection.GeneratedProtocolMessageType('FindNoteRequest', (_message.Message,), dict(
-  DESCRIPTOR = _FINDNOTEREQUEST,
+SearchNoteRequest = _reflection.GeneratedProtocolMessageType('SearchNoteRequest', (_message.Message,), dict(
+  DESCRIPTOR = _SEARCHNOTEREQUEST,
   __module__ = 'noteservice_pb2'
-  # @@protoc_insertion_point(class_scope:ehr.noteservice.FindNoteRequest)
+  # @@protoc_insertion_point(class_scope:ehr.noteservice.SearchNoteRequest)
   ))
-_sym_db.RegisterMessage(FindNoteRequest)
+_sym_db.RegisterMessage(SearchNoteRequest)
 
-FindNoteResponse = _reflection.GeneratedProtocolMessageType('FindNoteResponse', (_message.Message,), dict(
-  DESCRIPTOR = _FINDNOTERESPONSE,
+SearchNoteResponse = _reflection.GeneratedProtocolMessageType('SearchNoteResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SEARCHNOTERESPONSE,
   __module__ = 'noteservice_pb2'
-  # @@protoc_insertion_point(class_scope:ehr.noteservice.FindNoteResponse)
+  # @@protoc_insertion_point(class_scope:ehr.noteservice.SearchNoteResponse)
   ))
-_sym_db.RegisterMessage(FindNoteResponse)
+_sym_db.RegisterMessage(SearchNoteResponse)
+
+SearchNoteFragmentRequest = _reflection.GeneratedProtocolMessageType('SearchNoteFragmentRequest', (_message.Message,), dict(
+  DESCRIPTOR = _SEARCHNOTEFRAGMENTREQUEST,
+  __module__ = 'noteservice_pb2'
+  # @@protoc_insertion_point(class_scope:ehr.noteservice.SearchNoteFragmentRequest)
+  ))
+_sym_db.RegisterMessage(SearchNoteFragmentRequest)
+
+SearchNoteFragmentResponse = _reflection.GeneratedProtocolMessageType('SearchNoteFragmentResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SEARCHNOTEFRAGMENTRESPONSE,
+  __module__ = 'noteservice_pb2'
+  # @@protoc_insertion_point(class_scope:ehr.noteservice.SearchNoteFragmentResponse)
+  ))
+_sym_db.RegisterMessage(SearchNoteFragmentResponse)
 
 UpdateNoteRequest = _reflection.GeneratedProtocolMessageType('UpdateNoteRequest', (_message.Message,), dict(
   DESCRIPTOR = _UPDATENOTEREQUEST,
@@ -534,12 +642,12 @@ _NOTESERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=937,
-  serialized_end=1392,
+  serialized_start=1193,
+  serialized_end=1771,
   methods=[
   _descriptor.MethodDescriptor(
-    name='NewNote',
-    full_name='ehr.noteservice.NoteService.NewNote',
+    name='CreateNote',
+    full_name='ehr.noteservice.NoteService.CreateNote',
     index=0,
     containing_service=None,
     input_type=_CREATENOTEREQUEST,
@@ -547,39 +655,48 @@ _NOTESERVICE = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='DeleteNote',
-    full_name='ehr.noteservice.NoteService.DeleteNote',
-    index=1,
-    containing_service=None,
-    input_type=_DELETENOTEREQUEST,
-    output_type=_DELETENOTERESPONSE,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
     name='RetrieveNote',
     full_name='ehr.noteservice.NoteService.RetrieveNote',
-    index=2,
+    index=1,
     containing_service=None,
     input_type=_RETRIEVENOTEREQUEST,
     output_type=_RETRIEVENOTERESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='FindNote',
-    full_name='ehr.noteservice.NoteService.FindNote',
-    index=3,
-    containing_service=None,
-    input_type=_FINDNOTEREQUEST,
-    output_type=_FINDNOTERESPONSE,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
     name='UpdateNote',
     full_name='ehr.noteservice.NoteService.UpdateNote',
-    index=4,
+    index=2,
     containing_service=None,
     input_type=_UPDATENOTEREQUEST,
     output_type=_UPDATENOTERESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='DeleteNote',
+    full_name='ehr.noteservice.NoteService.DeleteNote',
+    index=3,
+    containing_service=None,
+    input_type=_DELETENOTEREQUEST,
+    output_type=_DELETENOTERESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='SearchNote',
+    full_name='ehr.noteservice.NoteService.SearchNote',
+    index=4,
+    containing_service=None,
+    input_type=_SEARCHNOTEREQUEST,
+    output_type=_SEARCHNOTERESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='SearchNoteFragments',
+    full_name='ehr.noteservice.NoteService.SearchNoteFragments',
+    index=5,
+    containing_service=None,
+    input_type=_SEARCHNOTEFRAGMENTREQUEST,
+    output_type=_SEARCHNOTEFRAGMENTRESPONSE,
     serialized_options=None,
   ),
 ])

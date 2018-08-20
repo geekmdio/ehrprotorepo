@@ -4428,8 +4428,8 @@ public final class Noteservice {
 
   }
 
-  public interface FindNoteRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ehr.noteservice.FindNoteRequest)
+  public interface SearchNoteRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ehr.noteservice.SearchNoteRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4473,18 +4473,18 @@ public final class Noteservice {
         getVisitGuidBytes();
   }
   /**
-   * Protobuf type {@code ehr.noteservice.FindNoteRequest}
+   * Protobuf type {@code ehr.noteservice.SearchNoteRequest}
    */
-  public  static final class FindNoteRequest extends
+  public  static final class SearchNoteRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ehr.noteservice.FindNoteRequest)
-      FindNoteRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:ehr.noteservice.SearchNoteRequest)
+      SearchNoteRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use FindNoteRequest.newBuilder() to construct.
-    private FindNoteRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use SearchNoteRequest.newBuilder() to construct.
+    private SearchNoteRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private FindNoteRequest() {
+    private SearchNoteRequest() {
       searchTerms_ = "";
       authorGuid_ = "";
       patientGuid_ = "";
@@ -4496,7 +4496,7 @@ public final class Noteservice {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private FindNoteRequest(
+    private SearchNoteRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4560,15 +4560,15 @@ public final class Noteservice {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_FindNoteRequest_descriptor;
+      return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_FindNoteRequest_fieldAccessorTable
+      return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ehr.noteservice.Noteservice.FindNoteRequest.class, ehr.noteservice.Noteservice.FindNoteRequest.Builder.class);
+              ehr.noteservice.Noteservice.SearchNoteRequest.class, ehr.noteservice.Noteservice.SearchNoteRequest.Builder.class);
     }
 
     public static final int SEARCH_TERMS_FIELD_NUMBER = 1;
@@ -4764,10 +4764,10 @@ public final class Noteservice {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ehr.noteservice.Noteservice.FindNoteRequest)) {
+      if (!(obj instanceof ehr.noteservice.Noteservice.SearchNoteRequest)) {
         return super.equals(obj);
       }
-      ehr.noteservice.Noteservice.FindNoteRequest other = (ehr.noteservice.Noteservice.FindNoteRequest) obj;
+      ehr.noteservice.Noteservice.SearchNoteRequest other = (ehr.noteservice.Noteservice.SearchNoteRequest) obj;
 
       boolean result = true;
       result = result && getSearchTerms()
@@ -4802,69 +4802,69 @@ public final class Noteservice {
       return hash;
     }
 
-    public static ehr.noteservice.Noteservice.FindNoteRequest parseFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ehr.noteservice.Noteservice.FindNoteRequest parseFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ehr.noteservice.Noteservice.FindNoteRequest parseFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ehr.noteservice.Noteservice.FindNoteRequest parseFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ehr.noteservice.Noteservice.FindNoteRequest parseFrom(byte[] data)
+    public static ehr.noteservice.Noteservice.SearchNoteRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ehr.noteservice.Noteservice.FindNoteRequest parseFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ehr.noteservice.Noteservice.FindNoteRequest parseFrom(java.io.InputStream input)
+    public static ehr.noteservice.Noteservice.SearchNoteRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ehr.noteservice.Noteservice.FindNoteRequest parseFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ehr.noteservice.Noteservice.FindNoteRequest parseDelimitedFrom(java.io.InputStream input)
+    public static ehr.noteservice.Noteservice.SearchNoteRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ehr.noteservice.Noteservice.FindNoteRequest parseDelimitedFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ehr.noteservice.Noteservice.FindNoteRequest parseFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ehr.noteservice.Noteservice.FindNoteRequest parseFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4877,7 +4877,7 @@ public final class Noteservice {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ehr.noteservice.Noteservice.FindNoteRequest prototype) {
+    public static Builder newBuilder(ehr.noteservice.Noteservice.SearchNoteRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -4893,26 +4893,26 @@ public final class Noteservice {
       return builder;
     }
     /**
-     * Protobuf type {@code ehr.noteservice.FindNoteRequest}
+     * Protobuf type {@code ehr.noteservice.SearchNoteRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ehr.noteservice.FindNoteRequest)
-        ehr.noteservice.Noteservice.FindNoteRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:ehr.noteservice.SearchNoteRequest)
+        ehr.noteservice.Noteservice.SearchNoteRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_FindNoteRequest_descriptor;
+        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_FindNoteRequest_fieldAccessorTable
+        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ehr.noteservice.Noteservice.FindNoteRequest.class, ehr.noteservice.Noteservice.FindNoteRequest.Builder.class);
+                ehr.noteservice.Noteservice.SearchNoteRequest.class, ehr.noteservice.Noteservice.SearchNoteRequest.Builder.class);
       }
 
-      // Construct using ehr.noteservice.Noteservice.FindNoteRequest.newBuilder()
+      // Construct using ehr.noteservice.Noteservice.SearchNoteRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4944,17 +4944,17 @@ public final class Noteservice {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_FindNoteRequest_descriptor;
+        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteRequest_descriptor;
       }
 
       @java.lang.Override
-      public ehr.noteservice.Noteservice.FindNoteRequest getDefaultInstanceForType() {
-        return ehr.noteservice.Noteservice.FindNoteRequest.getDefaultInstance();
+      public ehr.noteservice.Noteservice.SearchNoteRequest getDefaultInstanceForType() {
+        return ehr.noteservice.Noteservice.SearchNoteRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ehr.noteservice.Noteservice.FindNoteRequest build() {
-        ehr.noteservice.Noteservice.FindNoteRequest result = buildPartial();
+      public ehr.noteservice.Noteservice.SearchNoteRequest build() {
+        ehr.noteservice.Noteservice.SearchNoteRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4962,8 +4962,8 @@ public final class Noteservice {
       }
 
       @java.lang.Override
-      public ehr.noteservice.Noteservice.FindNoteRequest buildPartial() {
-        ehr.noteservice.Noteservice.FindNoteRequest result = new ehr.noteservice.Noteservice.FindNoteRequest(this);
+      public ehr.noteservice.Noteservice.SearchNoteRequest buildPartial() {
+        ehr.noteservice.Noteservice.SearchNoteRequest result = new ehr.noteservice.Noteservice.SearchNoteRequest(this);
         result.searchTerms_ = searchTerms_;
         result.authorGuid_ = authorGuid_;
         result.patientGuid_ = patientGuid_;
@@ -5006,16 +5006,16 @@ public final class Noteservice {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ehr.noteservice.Noteservice.FindNoteRequest) {
-          return mergeFrom((ehr.noteservice.Noteservice.FindNoteRequest)other);
+        if (other instanceof ehr.noteservice.Noteservice.SearchNoteRequest) {
+          return mergeFrom((ehr.noteservice.Noteservice.SearchNoteRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ehr.noteservice.Noteservice.FindNoteRequest other) {
-        if (other == ehr.noteservice.Noteservice.FindNoteRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(ehr.noteservice.Noteservice.SearchNoteRequest other) {
+        if (other == ehr.noteservice.Noteservice.SearchNoteRequest.getDefaultInstance()) return this;
         if (!other.getSearchTerms().isEmpty()) {
           searchTerms_ = other.searchTerms_;
           onChanged();
@@ -5047,11 +5047,11 @@ public final class Noteservice {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ehr.noteservice.Noteservice.FindNoteRequest parsedMessage = null;
+        ehr.noteservice.Noteservice.SearchNoteRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ehr.noteservice.Noteservice.FindNoteRequest) e.getUnfinishedMessage();
+          parsedMessage = (ehr.noteservice.Noteservice.SearchNoteRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5349,48 +5349,48 @@ public final class Noteservice {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ehr.noteservice.FindNoteRequest)
+      // @@protoc_insertion_point(builder_scope:ehr.noteservice.SearchNoteRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:ehr.noteservice.FindNoteRequest)
-    private static final ehr.noteservice.Noteservice.FindNoteRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:ehr.noteservice.SearchNoteRequest)
+    private static final ehr.noteservice.Noteservice.SearchNoteRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ehr.noteservice.Noteservice.FindNoteRequest();
+      DEFAULT_INSTANCE = new ehr.noteservice.Noteservice.SearchNoteRequest();
     }
 
-    public static ehr.noteservice.Noteservice.FindNoteRequest getDefaultInstance() {
+    public static ehr.noteservice.Noteservice.SearchNoteRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FindNoteRequest>
-        PARSER = new com.google.protobuf.AbstractParser<FindNoteRequest>() {
+    private static final com.google.protobuf.Parser<SearchNoteRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SearchNoteRequest>() {
       @java.lang.Override
-      public FindNoteRequest parsePartialFrom(
+      public SearchNoteRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FindNoteRequest(input, extensionRegistry);
+        return new SearchNoteRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<FindNoteRequest> parser() {
+    public static com.google.protobuf.Parser<SearchNoteRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<FindNoteRequest> getParserForType() {
+    public com.google.protobuf.Parser<SearchNoteRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ehr.noteservice.Noteservice.FindNoteRequest getDefaultInstanceForType() {
+    public ehr.noteservice.Noteservice.SearchNoteRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface FindNoteResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ehr.noteservice.FindNoteResponse)
+  public interface SearchNoteResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ehr.noteservice.SearchNoteResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -5431,18 +5431,18 @@ public final class Noteservice {
         int index);
   }
   /**
-   * Protobuf type {@code ehr.noteservice.FindNoteResponse}
+   * Protobuf type {@code ehr.noteservice.SearchNoteResponse}
    */
-  public  static final class FindNoteResponse extends
+  public  static final class SearchNoteResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ehr.noteservice.FindNoteResponse)
-      FindNoteResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:ehr.noteservice.SearchNoteResponse)
+      SearchNoteResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use FindNoteResponse.newBuilder() to construct.
-    private FindNoteResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use SearchNoteResponse.newBuilder() to construct.
+    private SearchNoteResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private FindNoteResponse() {
+    private SearchNoteResponse() {
       note_ = java.util.Collections.emptyList();
     }
 
@@ -5451,7 +5451,7 @@ public final class Noteservice {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private FindNoteResponse(
+    private SearchNoteResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5516,15 +5516,15 @@ public final class Noteservice {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_FindNoteResponse_descriptor;
+      return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_FindNoteResponse_fieldAccessorTable
+      return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ehr.noteservice.Noteservice.FindNoteResponse.class, ehr.noteservice.Noteservice.FindNoteResponse.Builder.class);
+              ehr.noteservice.Noteservice.SearchNoteResponse.class, ehr.noteservice.Noteservice.SearchNoteResponse.Builder.class);
     }
 
     private int bitField0_;
@@ -5631,10 +5631,10 @@ public final class Noteservice {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ehr.noteservice.Noteservice.FindNoteResponse)) {
+      if (!(obj instanceof ehr.noteservice.Noteservice.SearchNoteResponse)) {
         return super.equals(obj);
       }
-      ehr.noteservice.Noteservice.FindNoteResponse other = (ehr.noteservice.Noteservice.FindNoteResponse) obj;
+      ehr.noteservice.Noteservice.SearchNoteResponse other = (ehr.noteservice.Noteservice.SearchNoteResponse) obj;
 
       boolean result = true;
       result = result && (hasStatus() == other.hasStatus());
@@ -5668,69 +5668,69 @@ public final class Noteservice {
       return hash;
     }
 
-    public static ehr.noteservice.Noteservice.FindNoteResponse parseFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ehr.noteservice.Noteservice.FindNoteResponse parseFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ehr.noteservice.Noteservice.FindNoteResponse parseFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ehr.noteservice.Noteservice.FindNoteResponse parseFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ehr.noteservice.Noteservice.FindNoteResponse parseFrom(byte[] data)
+    public static ehr.noteservice.Noteservice.SearchNoteResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ehr.noteservice.Noteservice.FindNoteResponse parseFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ehr.noteservice.Noteservice.FindNoteResponse parseFrom(java.io.InputStream input)
+    public static ehr.noteservice.Noteservice.SearchNoteResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ehr.noteservice.Noteservice.FindNoteResponse parseFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ehr.noteservice.Noteservice.FindNoteResponse parseDelimitedFrom(java.io.InputStream input)
+    public static ehr.noteservice.Noteservice.SearchNoteResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ehr.noteservice.Noteservice.FindNoteResponse parseDelimitedFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ehr.noteservice.Noteservice.FindNoteResponse parseFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ehr.noteservice.Noteservice.FindNoteResponse parseFrom(
+    public static ehr.noteservice.Noteservice.SearchNoteResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5743,7 +5743,7 @@ public final class Noteservice {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ehr.noteservice.Noteservice.FindNoteResponse prototype) {
+    public static Builder newBuilder(ehr.noteservice.Noteservice.SearchNoteResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5759,26 +5759,26 @@ public final class Noteservice {
       return builder;
     }
     /**
-     * Protobuf type {@code ehr.noteservice.FindNoteResponse}
+     * Protobuf type {@code ehr.noteservice.SearchNoteResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ehr.noteservice.FindNoteResponse)
-        ehr.noteservice.Noteservice.FindNoteResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:ehr.noteservice.SearchNoteResponse)
+        ehr.noteservice.Noteservice.SearchNoteResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_FindNoteResponse_descriptor;
+        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_FindNoteResponse_fieldAccessorTable
+        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ehr.noteservice.Noteservice.FindNoteResponse.class, ehr.noteservice.Noteservice.FindNoteResponse.Builder.class);
+                ehr.noteservice.Noteservice.SearchNoteResponse.class, ehr.noteservice.Noteservice.SearchNoteResponse.Builder.class);
       }
 
-      // Construct using ehr.noteservice.Noteservice.FindNoteResponse.newBuilder()
+      // Construct using ehr.noteservice.Noteservice.SearchNoteResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5815,17 +5815,17 @@ public final class Noteservice {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_FindNoteResponse_descriptor;
+        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteResponse_descriptor;
       }
 
       @java.lang.Override
-      public ehr.noteservice.Noteservice.FindNoteResponse getDefaultInstanceForType() {
-        return ehr.noteservice.Noteservice.FindNoteResponse.getDefaultInstance();
+      public ehr.noteservice.Noteservice.SearchNoteResponse getDefaultInstanceForType() {
+        return ehr.noteservice.Noteservice.SearchNoteResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ehr.noteservice.Noteservice.FindNoteResponse build() {
-        ehr.noteservice.Noteservice.FindNoteResponse result = buildPartial();
+      public ehr.noteservice.Noteservice.SearchNoteResponse build() {
+        ehr.noteservice.Noteservice.SearchNoteResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5833,8 +5833,8 @@ public final class Noteservice {
       }
 
       @java.lang.Override
-      public ehr.noteservice.Noteservice.FindNoteResponse buildPartial() {
-        ehr.noteservice.Noteservice.FindNoteResponse result = new ehr.noteservice.Noteservice.FindNoteResponse(this);
+      public ehr.noteservice.Noteservice.SearchNoteResponse buildPartial() {
+        ehr.noteservice.Noteservice.SearchNoteResponse result = new ehr.noteservice.Noteservice.SearchNoteResponse(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (statusBuilder_ == null) {
@@ -5890,16 +5890,16 @@ public final class Noteservice {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ehr.noteservice.Noteservice.FindNoteResponse) {
-          return mergeFrom((ehr.noteservice.Noteservice.FindNoteResponse)other);
+        if (other instanceof ehr.noteservice.Noteservice.SearchNoteResponse) {
+          return mergeFrom((ehr.noteservice.Noteservice.SearchNoteResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ehr.noteservice.Noteservice.FindNoteResponse other) {
-        if (other == ehr.noteservice.Noteservice.FindNoteResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(ehr.noteservice.Noteservice.SearchNoteResponse other) {
+        if (other == ehr.noteservice.Noteservice.SearchNoteResponse.getDefaultInstance()) return this;
         if (other.hasStatus()) {
           mergeStatus(other.getStatus());
         }
@@ -5944,11 +5944,11 @@ public final class Noteservice {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ehr.noteservice.Noteservice.FindNoteResponse parsedMessage = null;
+        ehr.noteservice.Noteservice.SearchNoteResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ehr.noteservice.Noteservice.FindNoteResponse) e.getUnfinishedMessage();
+          parsedMessage = (ehr.noteservice.Noteservice.SearchNoteResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -6328,41 +6328,1981 @@ public final class Noteservice {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ehr.noteservice.FindNoteResponse)
+      // @@protoc_insertion_point(builder_scope:ehr.noteservice.SearchNoteResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:ehr.noteservice.FindNoteResponse)
-    private static final ehr.noteservice.Noteservice.FindNoteResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:ehr.noteservice.SearchNoteResponse)
+    private static final ehr.noteservice.Noteservice.SearchNoteResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ehr.noteservice.Noteservice.FindNoteResponse();
+      DEFAULT_INSTANCE = new ehr.noteservice.Noteservice.SearchNoteResponse();
     }
 
-    public static ehr.noteservice.Noteservice.FindNoteResponse getDefaultInstance() {
+    public static ehr.noteservice.Noteservice.SearchNoteResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FindNoteResponse>
-        PARSER = new com.google.protobuf.AbstractParser<FindNoteResponse>() {
+    private static final com.google.protobuf.Parser<SearchNoteResponse>
+        PARSER = new com.google.protobuf.AbstractParser<SearchNoteResponse>() {
       @java.lang.Override
-      public FindNoteResponse parsePartialFrom(
+      public SearchNoteResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FindNoteResponse(input, extensionRegistry);
+        return new SearchNoteResponse(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<FindNoteResponse> parser() {
+    public static com.google.protobuf.Parser<SearchNoteResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<FindNoteResponse> getParserForType() {
+    public com.google.protobuf.Parser<SearchNoteResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ehr.noteservice.Noteservice.FindNoteResponse getDefaultInstanceForType() {
+    public ehr.noteservice.Noteservice.SearchNoteResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SearchNoteFragmentRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ehr.noteservice.SearchNoteFragmentRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string search_terms = 1;</code>
+     */
+    java.lang.String getSearchTerms();
+    /**
+     * <code>string search_terms = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getSearchTermsBytes();
+
+    /**
+     * <code>string author_guid = 2;</code>
+     */
+    java.lang.String getAuthorGuid();
+    /**
+     * <code>string author_guid = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getAuthorGuidBytes();
+
+    /**
+     * <code>string patient_guid = 3;</code>
+     */
+    java.lang.String getPatientGuid();
+    /**
+     * <code>string patient_guid = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getPatientGuidBytes();
+
+    /**
+     * <code>string visit_guid = 4;</code>
+     */
+    java.lang.String getVisitGuid();
+    /**
+     * <code>string visit_guid = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getVisitGuidBytes();
+  }
+  /**
+   * Protobuf type {@code ehr.noteservice.SearchNoteFragmentRequest}
+   */
+  public  static final class SearchNoteFragmentRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ehr.noteservice.SearchNoteFragmentRequest)
+      SearchNoteFragmentRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SearchNoteFragmentRequest.newBuilder() to construct.
+    private SearchNoteFragmentRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SearchNoteFragmentRequest() {
+      searchTerms_ = "";
+      authorGuid_ = "";
+      patientGuid_ = "";
+      visitGuid_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SearchNoteFragmentRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              searchTerms_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              authorGuid_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              patientGuid_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              visitGuid_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteFragmentRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteFragmentRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ehr.noteservice.Noteservice.SearchNoteFragmentRequest.class, ehr.noteservice.Noteservice.SearchNoteFragmentRequest.Builder.class);
+    }
+
+    public static final int SEARCH_TERMS_FIELD_NUMBER = 1;
+    private volatile java.lang.Object searchTerms_;
+    /**
+     * <code>string search_terms = 1;</code>
+     */
+    public java.lang.String getSearchTerms() {
+      java.lang.Object ref = searchTerms_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        searchTerms_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string search_terms = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSearchTermsBytes() {
+      java.lang.Object ref = searchTerms_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        searchTerms_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AUTHOR_GUID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object authorGuid_;
+    /**
+     * <code>string author_guid = 2;</code>
+     */
+    public java.lang.String getAuthorGuid() {
+      java.lang.Object ref = authorGuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authorGuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string author_guid = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAuthorGuidBytes() {
+      java.lang.Object ref = authorGuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authorGuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PATIENT_GUID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object patientGuid_;
+    /**
+     * <code>string patient_guid = 3;</code>
+     */
+    public java.lang.String getPatientGuid() {
+      java.lang.Object ref = patientGuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        patientGuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string patient_guid = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPatientGuidBytes() {
+      java.lang.Object ref = patientGuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        patientGuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VISIT_GUID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object visitGuid_;
+    /**
+     * <code>string visit_guid = 4;</code>
+     */
+    public java.lang.String getVisitGuid() {
+      java.lang.Object ref = visitGuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        visitGuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string visit_guid = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVisitGuidBytes() {
+      java.lang.Object ref = visitGuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        visitGuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getSearchTermsBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, searchTerms_);
+      }
+      if (!getAuthorGuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, authorGuid_);
+      }
+      if (!getPatientGuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, patientGuid_);
+      }
+      if (!getVisitGuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, visitGuid_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getSearchTermsBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, searchTerms_);
+      }
+      if (!getAuthorGuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, authorGuid_);
+      }
+      if (!getPatientGuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, patientGuid_);
+      }
+      if (!getVisitGuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, visitGuid_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ehr.noteservice.Noteservice.SearchNoteFragmentRequest)) {
+        return super.equals(obj);
+      }
+      ehr.noteservice.Noteservice.SearchNoteFragmentRequest other = (ehr.noteservice.Noteservice.SearchNoteFragmentRequest) obj;
+
+      boolean result = true;
+      result = result && getSearchTerms()
+          .equals(other.getSearchTerms());
+      result = result && getAuthorGuid()
+          .equals(other.getAuthorGuid());
+      result = result && getPatientGuid()
+          .equals(other.getPatientGuid());
+      result = result && getVisitGuid()
+          .equals(other.getVisitGuid());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SEARCH_TERMS_FIELD_NUMBER;
+      hash = (53 * hash) + getSearchTerms().hashCode();
+      hash = (37 * hash) + AUTHOR_GUID_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthorGuid().hashCode();
+      hash = (37 * hash) + PATIENT_GUID_FIELD_NUMBER;
+      hash = (53 * hash) + getPatientGuid().hashCode();
+      hash = (37 * hash) + VISIT_GUID_FIELD_NUMBER;
+      hash = (53 * hash) + getVisitGuid().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ehr.noteservice.Noteservice.SearchNoteFragmentRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ehr.noteservice.SearchNoteFragmentRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ehr.noteservice.SearchNoteFragmentRequest)
+        ehr.noteservice.Noteservice.SearchNoteFragmentRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteFragmentRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteFragmentRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ehr.noteservice.Noteservice.SearchNoteFragmentRequest.class, ehr.noteservice.Noteservice.SearchNoteFragmentRequest.Builder.class);
+      }
+
+      // Construct using ehr.noteservice.Noteservice.SearchNoteFragmentRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        searchTerms_ = "";
+
+        authorGuid_ = "";
+
+        patientGuid_ = "";
+
+        visitGuid_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteFragmentRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public ehr.noteservice.Noteservice.SearchNoteFragmentRequest getDefaultInstanceForType() {
+        return ehr.noteservice.Noteservice.SearchNoteFragmentRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ehr.noteservice.Noteservice.SearchNoteFragmentRequest build() {
+        ehr.noteservice.Noteservice.SearchNoteFragmentRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ehr.noteservice.Noteservice.SearchNoteFragmentRequest buildPartial() {
+        ehr.noteservice.Noteservice.SearchNoteFragmentRequest result = new ehr.noteservice.Noteservice.SearchNoteFragmentRequest(this);
+        result.searchTerms_ = searchTerms_;
+        result.authorGuid_ = authorGuid_;
+        result.patientGuid_ = patientGuid_;
+        result.visitGuid_ = visitGuid_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ehr.noteservice.Noteservice.SearchNoteFragmentRequest) {
+          return mergeFrom((ehr.noteservice.Noteservice.SearchNoteFragmentRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ehr.noteservice.Noteservice.SearchNoteFragmentRequest other) {
+        if (other == ehr.noteservice.Noteservice.SearchNoteFragmentRequest.getDefaultInstance()) return this;
+        if (!other.getSearchTerms().isEmpty()) {
+          searchTerms_ = other.searchTerms_;
+          onChanged();
+        }
+        if (!other.getAuthorGuid().isEmpty()) {
+          authorGuid_ = other.authorGuid_;
+          onChanged();
+        }
+        if (!other.getPatientGuid().isEmpty()) {
+          patientGuid_ = other.patientGuid_;
+          onChanged();
+        }
+        if (!other.getVisitGuid().isEmpty()) {
+          visitGuid_ = other.visitGuid_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ehr.noteservice.Noteservice.SearchNoteFragmentRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ehr.noteservice.Noteservice.SearchNoteFragmentRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object searchTerms_ = "";
+      /**
+       * <code>string search_terms = 1;</code>
+       */
+      public java.lang.String getSearchTerms() {
+        java.lang.Object ref = searchTerms_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          searchTerms_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string search_terms = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSearchTermsBytes() {
+        java.lang.Object ref = searchTerms_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          searchTerms_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string search_terms = 1;</code>
+       */
+      public Builder setSearchTerms(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        searchTerms_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string search_terms = 1;</code>
+       */
+      public Builder clearSearchTerms() {
+        
+        searchTerms_ = getDefaultInstance().getSearchTerms();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string search_terms = 1;</code>
+       */
+      public Builder setSearchTermsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        searchTerms_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object authorGuid_ = "";
+      /**
+       * <code>string author_guid = 2;</code>
+       */
+      public java.lang.String getAuthorGuid() {
+        java.lang.Object ref = authorGuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authorGuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string author_guid = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAuthorGuidBytes() {
+        java.lang.Object ref = authorGuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authorGuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string author_guid = 2;</code>
+       */
+      public Builder setAuthorGuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        authorGuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string author_guid = 2;</code>
+       */
+      public Builder clearAuthorGuid() {
+        
+        authorGuid_ = getDefaultInstance().getAuthorGuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string author_guid = 2;</code>
+       */
+      public Builder setAuthorGuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        authorGuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object patientGuid_ = "";
+      /**
+       * <code>string patient_guid = 3;</code>
+       */
+      public java.lang.String getPatientGuid() {
+        java.lang.Object ref = patientGuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          patientGuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string patient_guid = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPatientGuidBytes() {
+        java.lang.Object ref = patientGuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          patientGuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string patient_guid = 3;</code>
+       */
+      public Builder setPatientGuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        patientGuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string patient_guid = 3;</code>
+       */
+      public Builder clearPatientGuid() {
+        
+        patientGuid_ = getDefaultInstance().getPatientGuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string patient_guid = 3;</code>
+       */
+      public Builder setPatientGuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        patientGuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object visitGuid_ = "";
+      /**
+       * <code>string visit_guid = 4;</code>
+       */
+      public java.lang.String getVisitGuid() {
+        java.lang.Object ref = visitGuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          visitGuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string visit_guid = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVisitGuidBytes() {
+        java.lang.Object ref = visitGuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          visitGuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string visit_guid = 4;</code>
+       */
+      public Builder setVisitGuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        visitGuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string visit_guid = 4;</code>
+       */
+      public Builder clearVisitGuid() {
+        
+        visitGuid_ = getDefaultInstance().getVisitGuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string visit_guid = 4;</code>
+       */
+      public Builder setVisitGuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        visitGuid_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ehr.noteservice.SearchNoteFragmentRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:ehr.noteservice.SearchNoteFragmentRequest)
+    private static final ehr.noteservice.Noteservice.SearchNoteFragmentRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ehr.noteservice.Noteservice.SearchNoteFragmentRequest();
+    }
+
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SearchNoteFragmentRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SearchNoteFragmentRequest>() {
+      @java.lang.Override
+      public SearchNoteFragmentRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SearchNoteFragmentRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SearchNoteFragmentRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SearchNoteFragmentRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ehr.noteservice.Noteservice.SearchNoteFragmentRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SearchNoteFragmentResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ehr.noteservice.SearchNoteFragmentResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ehr.noteservice.NoteServiceResponseStatus status = 1;</code>
+     */
+    boolean hasStatus();
+    /**
+     * <code>.ehr.noteservice.NoteServiceResponseStatus status = 1;</code>
+     */
+    ehr.noteservice.Noteservice.NoteServiceResponseStatus getStatus();
+    /**
+     * <code>.ehr.noteservice.NoteServiceResponseStatus status = 1;</code>
+     */
+    ehr.noteservice.Noteservice.NoteServiceResponseStatusOrBuilder getStatusOrBuilder();
+
+    /**
+     * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+     */
+    java.util.List<ehr.note.NoteOuterClass.NoteFragment> 
+        getNoteFragmentList();
+    /**
+     * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+     */
+    ehr.note.NoteOuterClass.NoteFragment getNoteFragment(int index);
+    /**
+     * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+     */
+    int getNoteFragmentCount();
+    /**
+     * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+     */
+    java.util.List<? extends ehr.note.NoteOuterClass.NoteFragmentOrBuilder> 
+        getNoteFragmentOrBuilderList();
+    /**
+     * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+     */
+    ehr.note.NoteOuterClass.NoteFragmentOrBuilder getNoteFragmentOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code ehr.noteservice.SearchNoteFragmentResponse}
+   */
+  public  static final class SearchNoteFragmentResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ehr.noteservice.SearchNoteFragmentResponse)
+      SearchNoteFragmentResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SearchNoteFragmentResponse.newBuilder() to construct.
+    private SearchNoteFragmentResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SearchNoteFragmentResponse() {
+      noteFragment_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SearchNoteFragmentResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              ehr.noteservice.Noteservice.NoteServiceResponseStatus.Builder subBuilder = null;
+              if (status_ != null) {
+                subBuilder = status_.toBuilder();
+              }
+              status_ = input.readMessage(ehr.noteservice.Noteservice.NoteServiceResponseStatus.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(status_);
+                status_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                noteFragment_ = new java.util.ArrayList<ehr.note.NoteOuterClass.NoteFragment>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              noteFragment_.add(
+                  input.readMessage(ehr.note.NoteOuterClass.NoteFragment.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          noteFragment_ = java.util.Collections.unmodifiableList(noteFragment_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteFragmentResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteFragmentResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ehr.noteservice.Noteservice.SearchNoteFragmentResponse.class, ehr.noteservice.Noteservice.SearchNoteFragmentResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private ehr.noteservice.Noteservice.NoteServiceResponseStatus status_;
+    /**
+     * <code>.ehr.noteservice.NoteServiceResponseStatus status = 1;</code>
+     */
+    public boolean hasStatus() {
+      return status_ != null;
+    }
+    /**
+     * <code>.ehr.noteservice.NoteServiceResponseStatus status = 1;</code>
+     */
+    public ehr.noteservice.Noteservice.NoteServiceResponseStatus getStatus() {
+      return status_ == null ? ehr.noteservice.Noteservice.NoteServiceResponseStatus.getDefaultInstance() : status_;
+    }
+    /**
+     * <code>.ehr.noteservice.NoteServiceResponseStatus status = 1;</code>
+     */
+    public ehr.noteservice.Noteservice.NoteServiceResponseStatusOrBuilder getStatusOrBuilder() {
+      return getStatus();
+    }
+
+    public static final int NOTE_FRAGMENT_FIELD_NUMBER = 2;
+    private java.util.List<ehr.note.NoteOuterClass.NoteFragment> noteFragment_;
+    /**
+     * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+     */
+    public java.util.List<ehr.note.NoteOuterClass.NoteFragment> getNoteFragmentList() {
+      return noteFragment_;
+    }
+    /**
+     * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+     */
+    public java.util.List<? extends ehr.note.NoteOuterClass.NoteFragmentOrBuilder> 
+        getNoteFragmentOrBuilderList() {
+      return noteFragment_;
+    }
+    /**
+     * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+     */
+    public int getNoteFragmentCount() {
+      return noteFragment_.size();
+    }
+    /**
+     * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+     */
+    public ehr.note.NoteOuterClass.NoteFragment getNoteFragment(int index) {
+      return noteFragment_.get(index);
+    }
+    /**
+     * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+     */
+    public ehr.note.NoteOuterClass.NoteFragmentOrBuilder getNoteFragmentOrBuilder(
+        int index) {
+      return noteFragment_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (status_ != null) {
+        output.writeMessage(1, getStatus());
+      }
+      for (int i = 0; i < noteFragment_.size(); i++) {
+        output.writeMessage(2, noteFragment_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (status_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getStatus());
+      }
+      for (int i = 0; i < noteFragment_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, noteFragment_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ehr.noteservice.Noteservice.SearchNoteFragmentResponse)) {
+        return super.equals(obj);
+      }
+      ehr.noteservice.Noteservice.SearchNoteFragmentResponse other = (ehr.noteservice.Noteservice.SearchNoteFragmentResponse) obj;
+
+      boolean result = true;
+      result = result && (hasStatus() == other.hasStatus());
+      if (hasStatus()) {
+        result = result && getStatus()
+            .equals(other.getStatus());
+      }
+      result = result && getNoteFragmentList()
+          .equals(other.getNoteFragmentList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasStatus()) {
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getStatus().hashCode();
+      }
+      if (getNoteFragmentCount() > 0) {
+        hash = (37 * hash) + NOTE_FRAGMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getNoteFragmentList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ehr.noteservice.Noteservice.SearchNoteFragmentResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ehr.noteservice.SearchNoteFragmentResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ehr.noteservice.SearchNoteFragmentResponse)
+        ehr.noteservice.Noteservice.SearchNoteFragmentResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteFragmentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteFragmentResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ehr.noteservice.Noteservice.SearchNoteFragmentResponse.class, ehr.noteservice.Noteservice.SearchNoteFragmentResponse.Builder.class);
+      }
+
+      // Construct using ehr.noteservice.Noteservice.SearchNoteFragmentResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getNoteFragmentFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (statusBuilder_ == null) {
+          status_ = null;
+        } else {
+          status_ = null;
+          statusBuilder_ = null;
+        }
+        if (noteFragmentBuilder_ == null) {
+          noteFragment_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          noteFragmentBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ehr.noteservice.Noteservice.internal_static_ehr_noteservice_SearchNoteFragmentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public ehr.noteservice.Noteservice.SearchNoteFragmentResponse getDefaultInstanceForType() {
+        return ehr.noteservice.Noteservice.SearchNoteFragmentResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ehr.noteservice.Noteservice.SearchNoteFragmentResponse build() {
+        ehr.noteservice.Noteservice.SearchNoteFragmentResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ehr.noteservice.Noteservice.SearchNoteFragmentResponse buildPartial() {
+        ehr.noteservice.Noteservice.SearchNoteFragmentResponse result = new ehr.noteservice.Noteservice.SearchNoteFragmentResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (statusBuilder_ == null) {
+          result.status_ = status_;
+        } else {
+          result.status_ = statusBuilder_.build();
+        }
+        if (noteFragmentBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            noteFragment_ = java.util.Collections.unmodifiableList(noteFragment_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.noteFragment_ = noteFragment_;
+        } else {
+          result.noteFragment_ = noteFragmentBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ehr.noteservice.Noteservice.SearchNoteFragmentResponse) {
+          return mergeFrom((ehr.noteservice.Noteservice.SearchNoteFragmentResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ehr.noteservice.Noteservice.SearchNoteFragmentResponse other) {
+        if (other == ehr.noteservice.Noteservice.SearchNoteFragmentResponse.getDefaultInstance()) return this;
+        if (other.hasStatus()) {
+          mergeStatus(other.getStatus());
+        }
+        if (noteFragmentBuilder_ == null) {
+          if (!other.noteFragment_.isEmpty()) {
+            if (noteFragment_.isEmpty()) {
+              noteFragment_ = other.noteFragment_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureNoteFragmentIsMutable();
+              noteFragment_.addAll(other.noteFragment_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.noteFragment_.isEmpty()) {
+            if (noteFragmentBuilder_.isEmpty()) {
+              noteFragmentBuilder_.dispose();
+              noteFragmentBuilder_ = null;
+              noteFragment_ = other.noteFragment_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              noteFragmentBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getNoteFragmentFieldBuilder() : null;
+            } else {
+              noteFragmentBuilder_.addAllMessages(other.noteFragment_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ehr.noteservice.Noteservice.SearchNoteFragmentResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ehr.noteservice.Noteservice.SearchNoteFragmentResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private ehr.noteservice.Noteservice.NoteServiceResponseStatus status_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ehr.noteservice.Noteservice.NoteServiceResponseStatus, ehr.noteservice.Noteservice.NoteServiceResponseStatus.Builder, ehr.noteservice.Noteservice.NoteServiceResponseStatusOrBuilder> statusBuilder_;
+      /**
+       * <code>.ehr.noteservice.NoteServiceResponseStatus status = 1;</code>
+       */
+      public boolean hasStatus() {
+        return statusBuilder_ != null || status_ != null;
+      }
+      /**
+       * <code>.ehr.noteservice.NoteServiceResponseStatus status = 1;</code>
+       */
+      public ehr.noteservice.Noteservice.NoteServiceResponseStatus getStatus() {
+        if (statusBuilder_ == null) {
+          return status_ == null ? ehr.noteservice.Noteservice.NoteServiceResponseStatus.getDefaultInstance() : status_;
+        } else {
+          return statusBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ehr.noteservice.NoteServiceResponseStatus status = 1;</code>
+       */
+      public Builder setStatus(ehr.noteservice.Noteservice.NoteServiceResponseStatus value) {
+        if (statusBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          status_ = value;
+          onChanged();
+        } else {
+          statusBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ehr.noteservice.NoteServiceResponseStatus status = 1;</code>
+       */
+      public Builder setStatus(
+          ehr.noteservice.Noteservice.NoteServiceResponseStatus.Builder builderForValue) {
+        if (statusBuilder_ == null) {
+          status_ = builderForValue.build();
+          onChanged();
+        } else {
+          statusBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ehr.noteservice.NoteServiceResponseStatus status = 1;</code>
+       */
+      public Builder mergeStatus(ehr.noteservice.Noteservice.NoteServiceResponseStatus value) {
+        if (statusBuilder_ == null) {
+          if (status_ != null) {
+            status_ =
+              ehr.noteservice.Noteservice.NoteServiceResponseStatus.newBuilder(status_).mergeFrom(value).buildPartial();
+          } else {
+            status_ = value;
+          }
+          onChanged();
+        } else {
+          statusBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ehr.noteservice.NoteServiceResponseStatus status = 1;</code>
+       */
+      public Builder clearStatus() {
+        if (statusBuilder_ == null) {
+          status_ = null;
+          onChanged();
+        } else {
+          status_ = null;
+          statusBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ehr.noteservice.NoteServiceResponseStatus status = 1;</code>
+       */
+      public ehr.noteservice.Noteservice.NoteServiceResponseStatus.Builder getStatusBuilder() {
+        
+        onChanged();
+        return getStatusFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ehr.noteservice.NoteServiceResponseStatus status = 1;</code>
+       */
+      public ehr.noteservice.Noteservice.NoteServiceResponseStatusOrBuilder getStatusOrBuilder() {
+        if (statusBuilder_ != null) {
+          return statusBuilder_.getMessageOrBuilder();
+        } else {
+          return status_ == null ?
+              ehr.noteservice.Noteservice.NoteServiceResponseStatus.getDefaultInstance() : status_;
+        }
+      }
+      /**
+       * <code>.ehr.noteservice.NoteServiceResponseStatus status = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ehr.noteservice.Noteservice.NoteServiceResponseStatus, ehr.noteservice.Noteservice.NoteServiceResponseStatus.Builder, ehr.noteservice.Noteservice.NoteServiceResponseStatusOrBuilder> 
+          getStatusFieldBuilder() {
+        if (statusBuilder_ == null) {
+          statusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ehr.noteservice.Noteservice.NoteServiceResponseStatus, ehr.noteservice.Noteservice.NoteServiceResponseStatus.Builder, ehr.noteservice.Noteservice.NoteServiceResponseStatusOrBuilder>(
+                  getStatus(),
+                  getParentForChildren(),
+                  isClean());
+          status_ = null;
+        }
+        return statusBuilder_;
+      }
+
+      private java.util.List<ehr.note.NoteOuterClass.NoteFragment> noteFragment_ =
+        java.util.Collections.emptyList();
+      private void ensureNoteFragmentIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          noteFragment_ = new java.util.ArrayList<ehr.note.NoteOuterClass.NoteFragment>(noteFragment_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ehr.note.NoteOuterClass.NoteFragment, ehr.note.NoteOuterClass.NoteFragment.Builder, ehr.note.NoteOuterClass.NoteFragmentOrBuilder> noteFragmentBuilder_;
+
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public java.util.List<ehr.note.NoteOuterClass.NoteFragment> getNoteFragmentList() {
+        if (noteFragmentBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(noteFragment_);
+        } else {
+          return noteFragmentBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public int getNoteFragmentCount() {
+        if (noteFragmentBuilder_ == null) {
+          return noteFragment_.size();
+        } else {
+          return noteFragmentBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public ehr.note.NoteOuterClass.NoteFragment getNoteFragment(int index) {
+        if (noteFragmentBuilder_ == null) {
+          return noteFragment_.get(index);
+        } else {
+          return noteFragmentBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public Builder setNoteFragment(
+          int index, ehr.note.NoteOuterClass.NoteFragment value) {
+        if (noteFragmentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNoteFragmentIsMutable();
+          noteFragment_.set(index, value);
+          onChanged();
+        } else {
+          noteFragmentBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public Builder setNoteFragment(
+          int index, ehr.note.NoteOuterClass.NoteFragment.Builder builderForValue) {
+        if (noteFragmentBuilder_ == null) {
+          ensureNoteFragmentIsMutable();
+          noteFragment_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          noteFragmentBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public Builder addNoteFragment(ehr.note.NoteOuterClass.NoteFragment value) {
+        if (noteFragmentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNoteFragmentIsMutable();
+          noteFragment_.add(value);
+          onChanged();
+        } else {
+          noteFragmentBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public Builder addNoteFragment(
+          int index, ehr.note.NoteOuterClass.NoteFragment value) {
+        if (noteFragmentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNoteFragmentIsMutable();
+          noteFragment_.add(index, value);
+          onChanged();
+        } else {
+          noteFragmentBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public Builder addNoteFragment(
+          ehr.note.NoteOuterClass.NoteFragment.Builder builderForValue) {
+        if (noteFragmentBuilder_ == null) {
+          ensureNoteFragmentIsMutable();
+          noteFragment_.add(builderForValue.build());
+          onChanged();
+        } else {
+          noteFragmentBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public Builder addNoteFragment(
+          int index, ehr.note.NoteOuterClass.NoteFragment.Builder builderForValue) {
+        if (noteFragmentBuilder_ == null) {
+          ensureNoteFragmentIsMutable();
+          noteFragment_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          noteFragmentBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public Builder addAllNoteFragment(
+          java.lang.Iterable<? extends ehr.note.NoteOuterClass.NoteFragment> values) {
+        if (noteFragmentBuilder_ == null) {
+          ensureNoteFragmentIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, noteFragment_);
+          onChanged();
+        } else {
+          noteFragmentBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public Builder clearNoteFragment() {
+        if (noteFragmentBuilder_ == null) {
+          noteFragment_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          noteFragmentBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public Builder removeNoteFragment(int index) {
+        if (noteFragmentBuilder_ == null) {
+          ensureNoteFragmentIsMutable();
+          noteFragment_.remove(index);
+          onChanged();
+        } else {
+          noteFragmentBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public ehr.note.NoteOuterClass.NoteFragment.Builder getNoteFragmentBuilder(
+          int index) {
+        return getNoteFragmentFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public ehr.note.NoteOuterClass.NoteFragmentOrBuilder getNoteFragmentOrBuilder(
+          int index) {
+        if (noteFragmentBuilder_ == null) {
+          return noteFragment_.get(index);  } else {
+          return noteFragmentBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public java.util.List<? extends ehr.note.NoteOuterClass.NoteFragmentOrBuilder> 
+           getNoteFragmentOrBuilderList() {
+        if (noteFragmentBuilder_ != null) {
+          return noteFragmentBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(noteFragment_);
+        }
+      }
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public ehr.note.NoteOuterClass.NoteFragment.Builder addNoteFragmentBuilder() {
+        return getNoteFragmentFieldBuilder().addBuilder(
+            ehr.note.NoteOuterClass.NoteFragment.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public ehr.note.NoteOuterClass.NoteFragment.Builder addNoteFragmentBuilder(
+          int index) {
+        return getNoteFragmentFieldBuilder().addBuilder(
+            index, ehr.note.NoteOuterClass.NoteFragment.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ehr.note.NoteFragment note_fragment = 2;</code>
+       */
+      public java.util.List<ehr.note.NoteOuterClass.NoteFragment.Builder> 
+           getNoteFragmentBuilderList() {
+        return getNoteFragmentFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ehr.note.NoteOuterClass.NoteFragment, ehr.note.NoteOuterClass.NoteFragment.Builder, ehr.note.NoteOuterClass.NoteFragmentOrBuilder> 
+          getNoteFragmentFieldBuilder() {
+        if (noteFragmentBuilder_ == null) {
+          noteFragmentBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ehr.note.NoteOuterClass.NoteFragment, ehr.note.NoteOuterClass.NoteFragment.Builder, ehr.note.NoteOuterClass.NoteFragmentOrBuilder>(
+                  noteFragment_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          noteFragment_ = null;
+        }
+        return noteFragmentBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ehr.noteservice.SearchNoteFragmentResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ehr.noteservice.SearchNoteFragmentResponse)
+    private static final ehr.noteservice.Noteservice.SearchNoteFragmentResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ehr.noteservice.Noteservice.SearchNoteFragmentResponse();
+    }
+
+    public static ehr.noteservice.Noteservice.SearchNoteFragmentResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SearchNoteFragmentResponse>
+        PARSER = new com.google.protobuf.AbstractParser<SearchNoteFragmentResponse>() {
+      @java.lang.Override
+      public SearchNoteFragmentResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SearchNoteFragmentResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SearchNoteFragmentResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SearchNoteFragmentResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ehr.noteservice.Noteservice.SearchNoteFragmentResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7682,15 +9622,25 @@ public final class Noteservice {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ehr_noteservice_RetrieveNoteResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ehr_noteservice_FindNoteRequest_descriptor;
+    internal_static_ehr_noteservice_SearchNoteRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ehr_noteservice_FindNoteRequest_fieldAccessorTable;
+      internal_static_ehr_noteservice_SearchNoteRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ehr_noteservice_FindNoteResponse_descriptor;
+    internal_static_ehr_noteservice_SearchNoteResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ehr_noteservice_FindNoteResponse_fieldAccessorTable;
+      internal_static_ehr_noteservice_SearchNoteResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ehr_noteservice_SearchNoteFragmentRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ehr_noteservice_SearchNoteFragmentRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ehr_noteservice_SearchNoteFragmentResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ehr_noteservice_SearchNoteFragmentResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ehr_noteservice_UpdateNoteRequest_descriptor;
   private static final 
@@ -7724,28 +9674,37 @@ public final class Noteservice {
       "teRequest\022\n\n\002id\030\001 \001(\003\"p\n\024RetrieveNoteRes" +
       "ponse\022:\n\006status\030\001 \001(\0132*.ehr.noteservice." +
       "NoteServiceResponseStatus\022\034\n\004note\030\002 \001(\0132" +
-      "\016.ehr.note.Note\"f\n\017FindNoteRequest\022\024\n\014se" +
-      "arch_terms\030\001 \001(\t\022\023\n\013author_guid\030\002 \001(\t\022\024\n" +
-      "\014patient_guid\030\003 \001(\t\022\022\n\nvisit_guid\030\004 \001(\t\"" +
-      "l\n\020FindNoteResponse\022:\n\006status\030\001 \001(\0132*.eh" +
-      "r.noteservice.NoteServiceResponseStatus\022" +
-      "\034\n\004note\030\002 \003(\0132\016.ehr.note.Note\"=\n\021UpdateN" +
-      "oteRequest\022\n\n\002id\030\001 \001(\003\022\034\n\004note\030\002 \001(\0132\016.e" +
-      "hr.note.Note\"P\n\022UpdateNoteResponse\022:\n\006st" +
-      "atus\030\001 \001(\0132*.ehr.noteservice.NoteService" +
-      "ResponseStatus2\307\003\n\013NoteService\022T\n\007NewNot" +
-      "e\022\".ehr.noteservice.CreateNoteRequest\032#." +
-      "ehr.noteservice.CreateNoteResponse\"\000\022W\n\n" +
-      "DeleteNote\022\".ehr.noteservice.DeleteNoteR" +
-      "equest\032#.ehr.noteservice.DeleteNoteRespo" +
-      "nse\"\000\022]\n\014RetrieveNote\022$.ehr.noteservice." +
-      "RetrieveNoteRequest\032%.ehr.noteservice.Re" +
-      "trieveNoteResponse\"\000\022Q\n\010FindNote\022 .ehr.n" +
-      "oteservice.FindNoteRequest\032!.ehr.noteser" +
-      "vice.FindNoteResponse\"\000\022W\n\nUpdateNote\022\"." +
-      "ehr.noteservice.UpdateNoteRequest\032#.ehr." +
-      "noteservice.UpdateNoteResponse\"\000B\007Z\005ehrp" +
-      "bb\006proto3"
+      "\016.ehr.note.Note\"h\n\021SearchNoteRequest\022\024\n\014" +
+      "search_terms\030\001 \001(\t\022\023\n\013author_guid\030\002 \001(\t\022" +
+      "\024\n\014patient_guid\030\003 \001(\t\022\022\n\nvisit_guid\030\004 \001(" +
+      "\t\"n\n\022SearchNoteResponse\022:\n\006status\030\001 \001(\0132" +
+      "*.ehr.noteservice.NoteServiceResponseSta" +
+      "tus\022\034\n\004note\030\002 \003(\0132\016.ehr.note.Note\"p\n\031Sea" +
+      "rchNoteFragmentRequest\022\024\n\014search_terms\030\001" +
+      " \001(\t\022\023\n\013author_guid\030\002 \001(\t\022\024\n\014patient_gui" +
+      "d\030\003 \001(\t\022\022\n\nvisit_guid\030\004 \001(\t\"\207\001\n\032SearchNo" +
+      "teFragmentResponse\022:\n\006status\030\001 \001(\0132*.ehr" +
+      ".noteservice.NoteServiceResponseStatus\022-" +
+      "\n\rnote_fragment\030\002 \003(\0132\026.ehr.note.NoteFra" +
+      "gment\"=\n\021UpdateNoteRequest\022\n\n\002id\030\001 \001(\003\022\034" +
+      "\n\004note\030\002 \001(\0132\016.ehr.note.Note\"P\n\022UpdateNo" +
+      "teResponse\022:\n\006status\030\001 \001(\0132*.ehr.noteser" +
+      "vice.NoteServiceResponseStatus2\302\004\n\013NoteS" +
+      "ervice\022W\n\nCreateNote\022\".ehr.noteservice.C" +
+      "reateNoteRequest\032#.ehr.noteservice.Creat" +
+      "eNoteResponse\"\000\022]\n\014RetrieveNote\022$.ehr.no" +
+      "teservice.RetrieveNoteRequest\032%.ehr.note" +
+      "service.RetrieveNoteResponse\"\000\022W\n\nUpdate" +
+      "Note\022\".ehr.noteservice.UpdateNoteRequest" +
+      "\032#.ehr.noteservice.UpdateNoteResponse\"\000\022" +
+      "W\n\nDeleteNote\022\".ehr.noteservice.DeleteNo" +
+      "teRequest\032#.ehr.noteservice.DeleteNoteRe" +
+      "sponse\"\000\022W\n\nSearchNote\022\".ehr.noteservice" +
+      ".SearchNoteRequest\032#.ehr.noteservice.Sea" +
+      "rchNoteResponse\"\000\022p\n\023SearchNoteFragments" +
+      "\022*.ehr.noteservice.SearchNoteFragmentReq" +
+      "uest\032+.ehr.noteservice.SearchNoteFragmen" +
+      "tResponse\"\000B\007Z\005ehrpbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7803,26 +9762,38 @@ public final class Noteservice {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ehr_noteservice_RetrieveNoteResponse_descriptor,
         new java.lang.String[] { "Status", "Note", });
-    internal_static_ehr_noteservice_FindNoteRequest_descriptor =
+    internal_static_ehr_noteservice_SearchNoteRequest_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_ehr_noteservice_FindNoteRequest_fieldAccessorTable = new
+    internal_static_ehr_noteservice_SearchNoteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ehr_noteservice_FindNoteRequest_descriptor,
+        internal_static_ehr_noteservice_SearchNoteRequest_descriptor,
         new java.lang.String[] { "SearchTerms", "AuthorGuid", "PatientGuid", "VisitGuid", });
-    internal_static_ehr_noteservice_FindNoteResponse_descriptor =
+    internal_static_ehr_noteservice_SearchNoteResponse_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_ehr_noteservice_FindNoteResponse_fieldAccessorTable = new
+    internal_static_ehr_noteservice_SearchNoteResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ehr_noteservice_FindNoteResponse_descriptor,
+        internal_static_ehr_noteservice_SearchNoteResponse_descriptor,
         new java.lang.String[] { "Status", "Note", });
-    internal_static_ehr_noteservice_UpdateNoteRequest_descriptor =
+    internal_static_ehr_noteservice_SearchNoteFragmentRequest_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_ehr_noteservice_SearchNoteFragmentRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ehr_noteservice_SearchNoteFragmentRequest_descriptor,
+        new java.lang.String[] { "SearchTerms", "AuthorGuid", "PatientGuid", "VisitGuid", });
+    internal_static_ehr_noteservice_SearchNoteFragmentResponse_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_ehr_noteservice_SearchNoteFragmentResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ehr_noteservice_SearchNoteFragmentResponse_descriptor,
+        new java.lang.String[] { "Status", "NoteFragment", });
+    internal_static_ehr_noteservice_UpdateNoteRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
     internal_static_ehr_noteservice_UpdateNoteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ehr_noteservice_UpdateNoteRequest_descriptor,
         new java.lang.String[] { "Id", "Note", });
     internal_static_ehr_noteservice_UpdateNoteResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_ehr_noteservice_UpdateNoteResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ehr_noteservice_UpdateNoteResponse_descriptor,

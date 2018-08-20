@@ -30,15 +30,25 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     optional :status, :message, 1, "ehr.noteservice.NoteServiceResponseStatus"
     optional :note, :message, 2, "ehr.note.Note"
   end
-  add_message "ehr.noteservice.FindNoteRequest" do
+  add_message "ehr.noteservice.SearchNoteRequest" do
     optional :search_terms, :string, 1
     optional :author_guid, :string, 2
     optional :patient_guid, :string, 3
     optional :visit_guid, :string, 4
   end
-  add_message "ehr.noteservice.FindNoteResponse" do
+  add_message "ehr.noteservice.SearchNoteResponse" do
     optional :status, :message, 1, "ehr.noteservice.NoteServiceResponseStatus"
     repeated :note, :message, 2, "ehr.note.Note"
+  end
+  add_message "ehr.noteservice.SearchNoteFragmentRequest" do
+    optional :search_terms, :string, 1
+    optional :author_guid, :string, 2
+    optional :patient_guid, :string, 3
+    optional :visit_guid, :string, 4
+  end
+  add_message "ehr.noteservice.SearchNoteFragmentResponse" do
+    optional :status, :message, 1, "ehr.noteservice.NoteServiceResponseStatus"
+    repeated :note_fragment, :message, 2, "ehr.note.NoteFragment"
   end
   add_message "ehr.noteservice.UpdateNoteRequest" do
     optional :id, :int64, 1
@@ -58,8 +68,10 @@ module Ehr
     DeleteNoteResponse = Google::Protobuf::DescriptorPool.generated_pool.lookup("ehr.noteservice.DeleteNoteResponse").msgclass
     RetrieveNoteRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("ehr.noteservice.RetrieveNoteRequest").msgclass
     RetrieveNoteResponse = Google::Protobuf::DescriptorPool.generated_pool.lookup("ehr.noteservice.RetrieveNoteResponse").msgclass
-    FindNoteRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("ehr.noteservice.FindNoteRequest").msgclass
-    FindNoteResponse = Google::Protobuf::DescriptorPool.generated_pool.lookup("ehr.noteservice.FindNoteResponse").msgclass
+    SearchNoteRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("ehr.noteservice.SearchNoteRequest").msgclass
+    SearchNoteResponse = Google::Protobuf::DescriptorPool.generated_pool.lookup("ehr.noteservice.SearchNoteResponse").msgclass
+    SearchNoteFragmentRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("ehr.noteservice.SearchNoteFragmentRequest").msgclass
+    SearchNoteFragmentResponse = Google::Protobuf::DescriptorPool.generated_pool.lookup("ehr.noteservice.SearchNoteFragmentResponse").msgclass
     UpdateNoteRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("ehr.noteservice.UpdateNoteRequest").msgclass
     UpdateNoteResponse = Google::Protobuf::DescriptorPool.generated_pool.lookup("ehr.noteservice.UpdateNoteResponse").msgclass
   end

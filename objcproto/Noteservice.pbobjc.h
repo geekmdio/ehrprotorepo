@@ -28,6 +28,7 @@
 CF_EXTERN_C_BEGIN
 
 @class Note;
+@class NoteFragment;
 @class NoteServiceResponseStatus;
 GPB_ENUM_FWD_DECLARE(StatusCodes);
 
@@ -165,16 +166,16 @@ typedef GPB_ENUM(RetrieveNoteResponse_FieldNumber) {
 
 @end
 
-#pragma mark - FindNoteRequest
+#pragma mark - SearchNoteRequest
 
-typedef GPB_ENUM(FindNoteRequest_FieldNumber) {
-  FindNoteRequest_FieldNumber_SearchTerms = 1,
-  FindNoteRequest_FieldNumber_AuthorGuid = 2,
-  FindNoteRequest_FieldNumber_PatientGuid = 3,
-  FindNoteRequest_FieldNumber_VisitGuid = 4,
+typedef GPB_ENUM(SearchNoteRequest_FieldNumber) {
+  SearchNoteRequest_FieldNumber_SearchTerms = 1,
+  SearchNoteRequest_FieldNumber_AuthorGuid = 2,
+  SearchNoteRequest_FieldNumber_PatientGuid = 3,
+  SearchNoteRequest_FieldNumber_VisitGuid = 4,
 };
 
-@interface FindNoteRequest : GPBMessage
+@interface SearchNoteRequest : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *searchTerms;
 
@@ -186,14 +187,14 @@ typedef GPB_ENUM(FindNoteRequest_FieldNumber) {
 
 @end
 
-#pragma mark - FindNoteResponse
+#pragma mark - SearchNoteResponse
 
-typedef GPB_ENUM(FindNoteResponse_FieldNumber) {
-  FindNoteResponse_FieldNumber_Status = 1,
-  FindNoteResponse_FieldNumber_NoteArray = 2,
+typedef GPB_ENUM(SearchNoteResponse_FieldNumber) {
+  SearchNoteResponse_FieldNumber_Status = 1,
+  SearchNoteResponse_FieldNumber_NoteArray = 2,
 };
 
-@interface FindNoteResponse : GPBMessage
+@interface SearchNoteResponse : GPBMessage
 
 @property(nonatomic, readwrite, strong, null_resettable) NoteServiceResponseStatus *status;
 /** Test to see if @c status has been set. */
@@ -202,6 +203,46 @@ typedef GPB_ENUM(FindNoteResponse_FieldNumber) {
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<Note*> *noteArray;
 /** The number of items in @c noteArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger noteArray_Count;
+
+@end
+
+#pragma mark - SearchNoteFragmentRequest
+
+typedef GPB_ENUM(SearchNoteFragmentRequest_FieldNumber) {
+  SearchNoteFragmentRequest_FieldNumber_SearchTerms = 1,
+  SearchNoteFragmentRequest_FieldNumber_AuthorGuid = 2,
+  SearchNoteFragmentRequest_FieldNumber_PatientGuid = 3,
+  SearchNoteFragmentRequest_FieldNumber_VisitGuid = 4,
+};
+
+@interface SearchNoteFragmentRequest : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *searchTerms;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *authorGuid;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *patientGuid;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *visitGuid;
+
+@end
+
+#pragma mark - SearchNoteFragmentResponse
+
+typedef GPB_ENUM(SearchNoteFragmentResponse_FieldNumber) {
+  SearchNoteFragmentResponse_FieldNumber_Status = 1,
+  SearchNoteFragmentResponse_FieldNumber_NoteFragmentArray = 2,
+};
+
+@interface SearchNoteFragmentResponse : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) NoteServiceResponseStatus *status;
+/** Test to see if @c status has been set. */
+@property(nonatomic, readwrite) BOOL hasStatus;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NoteFragment*> *noteFragmentArray;
+/** The number of items in @c noteFragmentArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger noteFragmentArray_Count;
 
 @end
 

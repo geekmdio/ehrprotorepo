@@ -166,16 +166,16 @@ typedef GPB_ENUM(RetrieveNoteResponse_FieldNumber) {
 
 @end
 
-#pragma mark - SearchNoteRequest
+#pragma mark - SearchNotesRequest
 
-typedef GPB_ENUM(SearchNoteRequest_FieldNumber) {
-  SearchNoteRequest_FieldNumber_SearchTerms = 1,
-  SearchNoteRequest_FieldNumber_AuthorGuid = 2,
-  SearchNoteRequest_FieldNumber_PatientGuid = 3,
-  SearchNoteRequest_FieldNumber_VisitGuid = 4,
+typedef GPB_ENUM(SearchNotesRequest_FieldNumber) {
+  SearchNotesRequest_FieldNumber_SearchTerms = 1,
+  SearchNotesRequest_FieldNumber_AuthorGuid = 2,
+  SearchNotesRequest_FieldNumber_PatientGuid = 3,
+  SearchNotesRequest_FieldNumber_VisitGuid = 4,
 };
 
-@interface SearchNoteRequest : GPBMessage
+@interface SearchNotesRequest : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *searchTerms;
 
@@ -187,22 +187,22 @@ typedef GPB_ENUM(SearchNoteRequest_FieldNumber) {
 
 @end
 
-#pragma mark - SearchNoteResponse
+#pragma mark - SearchNotesResponse
 
-typedef GPB_ENUM(SearchNoteResponse_FieldNumber) {
-  SearchNoteResponse_FieldNumber_Status = 1,
-  SearchNoteResponse_FieldNumber_NoteArray = 2,
+typedef GPB_ENUM(SearchNotesResponse_FieldNumber) {
+  SearchNotesResponse_FieldNumber_Status = 1,
+  SearchNotesResponse_FieldNumber_NotesArray = 2,
 };
 
-@interface SearchNoteResponse : GPBMessage
+@interface SearchNotesResponse : GPBMessage
 
 @property(nonatomic, readwrite, strong, null_resettable) NoteServiceResponseStatus *status;
 /** Test to see if @c status has been set. */
 @property(nonatomic, readwrite) BOOL hasStatus;
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<Note*> *noteArray;
-/** The number of items in @c noteArray without causing the array to be created. */
-@property(nonatomic, readonly) NSUInteger noteArray_Count;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<Note*> *notesArray;
+/** The number of items in @c notesArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger notesArray_Count;
 
 @end
 

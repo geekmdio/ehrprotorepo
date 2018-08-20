@@ -37,16 +37,16 @@ message RetrieveNoteResponse {
     note.Note note = 2;
 }
 
-message SearchNoteRequest {
+message SearchNotesRequest {
     string search_terms = 1;
     string author_guid = 2;
     string patient_guid = 3;
     string visit_guid = 4;
 }
 
-message SearchNoteResponse {
+message SearchNotesResponse {
     NoteServiceResponseStatus status = 1;
-    repeated note.Note note = 2;
+    repeated note.Note notes = 2;
 }
 
 message SearchNoteFragmentRequest {
@@ -81,7 +81,7 @@ service NoteService {
 
     rpc DeleteNote(DeleteNoteRequest) returns (DeleteNoteResponse) {};
 
-    rpc SearchNote(SearchNoteRequest) returns (SearchNoteResponse) {};
+    rpc SearchNotes(SearchNotesRequest) returns (SearchNotesResponse) {};
 
     rpc SearchNoteFragments(SearchNoteFragmentRequest) returns (SearchNoteFragmentResponse) {}
 }

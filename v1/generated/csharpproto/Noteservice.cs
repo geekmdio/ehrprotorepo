@@ -36,35 +36,35 @@ namespace Ehr.Noteservice {
             "U2VydmljZVJlc3BvbnNlU3RhdHVzIiEKE1JldHJpZXZlTm90ZVJlcXVlc3QS",
             "CgoCaWQYASABKAMicAoUUmV0cmlldmVOb3RlUmVzcG9uc2USOgoGc3RhdHVz",
             "GAEgASgLMiouZWhyLm5vdGVzZXJ2aWNlLk5vdGVTZXJ2aWNlUmVzcG9uc2VT",
-            "dGF0dXMSHAoEbm90ZRgCIAEoCzIOLmVoci5ub3RlLk5vdGUiaAoRU2VhcmNo",
-            "Tm90ZVJlcXVlc3QSFAoMc2VhcmNoX3Rlcm1zGAEgASgJEhMKC2F1dGhvcl9n",
-            "dWlkGAIgASgJEhQKDHBhdGllbnRfZ3VpZBgDIAEoCRISCgp2aXNpdF9ndWlk",
-            "GAQgASgJIm4KElNlYXJjaE5vdGVSZXNwb25zZRI6CgZzdGF0dXMYASABKAsy",
-            "Ki5laHIubm90ZXNlcnZpY2UuTm90ZVNlcnZpY2VSZXNwb25zZVN0YXR1cxIc",
-            "CgRub3RlGAIgAygLMg4uZWhyLm5vdGUuTm90ZSKDAQoZU2VhcmNoTm90ZUZy",
-            "YWdtZW50UmVxdWVzdBIUCgxzZWFyY2hfdGVybXMYASABKAkSEwoLYXV0aG9y",
-            "X2d1aWQYAiABKAkSFAoMcGF0aWVudF9ndWlkGAMgASgJEhIKCnZpc2l0X2d1",
-            "aWQYBCABKAkSEQoJbm90ZV9ndWlkGAUgASgJIocBChpTZWFyY2hOb3RlRnJh",
-            "Z21lbnRSZXNwb25zZRI6CgZzdGF0dXMYASABKAsyKi5laHIubm90ZXNlcnZp",
-            "Y2UuTm90ZVNlcnZpY2VSZXNwb25zZVN0YXR1cxItCg1ub3RlX2ZyYWdtZW50",
-            "GAIgAygLMhYuZWhyLm5vdGUuTm90ZUZyYWdtZW50Ij0KEVVwZGF0ZU5vdGVS",
-            "ZXF1ZXN0EgoKAmlkGAEgASgDEhwKBG5vdGUYAiABKAsyDi5laHIubm90ZS5O",
-            "b3RlIlAKElVwZGF0ZU5vdGVSZXNwb25zZRI6CgZzdGF0dXMYASABKAsyKi5l",
-            "aHIubm90ZXNlcnZpY2UuTm90ZVNlcnZpY2VSZXNwb25zZVN0YXR1czLCBAoL",
-            "Tm90ZVNlcnZpY2USVwoKQ3JlYXRlTm90ZRIiLmVoci5ub3Rlc2VydmljZS5D",
-            "cmVhdGVOb3RlUmVxdWVzdBojLmVoci5ub3Rlc2VydmljZS5DcmVhdGVOb3Rl",
-            "UmVzcG9uc2UiABJdCgxSZXRyaWV2ZU5vdGUSJC5laHIubm90ZXNlcnZpY2Uu",
-            "UmV0cmlldmVOb3RlUmVxdWVzdBolLmVoci5ub3Rlc2VydmljZS5SZXRyaWV2",
-            "ZU5vdGVSZXNwb25zZSIAElcKClVwZGF0ZU5vdGUSIi5laHIubm90ZXNlcnZp",
-            "Y2UuVXBkYXRlTm90ZVJlcXVlc3QaIy5laHIubm90ZXNlcnZpY2UuVXBkYXRl",
-            "Tm90ZVJlc3BvbnNlIgASVwoKRGVsZXRlTm90ZRIiLmVoci5ub3Rlc2Vydmlj",
-            "ZS5EZWxldGVOb3RlUmVxdWVzdBojLmVoci5ub3Rlc2VydmljZS5EZWxldGVO",
-            "b3RlUmVzcG9uc2UiABJXCgpTZWFyY2hOb3RlEiIuZWhyLm5vdGVzZXJ2aWNl",
-            "LlNlYXJjaE5vdGVSZXF1ZXN0GiMuZWhyLm5vdGVzZXJ2aWNlLlNlYXJjaE5v",
-            "dGVSZXNwb25zZSIAEnAKE1NlYXJjaE5vdGVGcmFnbWVudHMSKi5laHIubm90",
-            "ZXNlcnZpY2UuU2VhcmNoTm90ZUZyYWdtZW50UmVxdWVzdBorLmVoci5ub3Rl",
-            "c2VydmljZS5TZWFyY2hOb3RlRnJhZ21lbnRSZXNwb25zZSIAQgdaBWVocnBi",
-            "YgZwcm90bzM="));
+            "dGF0dXMSHAoEbm90ZRgCIAEoCzIOLmVoci5ub3RlLk5vdGUiaQoSU2VhcmNo",
+            "Tm90ZXNSZXF1ZXN0EhQKDHNlYXJjaF90ZXJtcxgBIAEoCRITCgthdXRob3Jf",
+            "Z3VpZBgCIAEoCRIUCgxwYXRpZW50X2d1aWQYAyABKAkSEgoKdmlzaXRfZ3Vp",
+            "ZBgEIAEoCSJwChNTZWFyY2hOb3Rlc1Jlc3BvbnNlEjoKBnN0YXR1cxgBIAEo",
+            "CzIqLmVoci5ub3Rlc2VydmljZS5Ob3RlU2VydmljZVJlc3BvbnNlU3RhdHVz",
+            "Eh0KBW5vdGVzGAIgAygLMg4uZWhyLm5vdGUuTm90ZSKDAQoZU2VhcmNoTm90",
+            "ZUZyYWdtZW50UmVxdWVzdBIUCgxzZWFyY2hfdGVybXMYASABKAkSEwoLYXV0",
+            "aG9yX2d1aWQYAiABKAkSFAoMcGF0aWVudF9ndWlkGAMgASgJEhIKCnZpc2l0",
+            "X2d1aWQYBCABKAkSEQoJbm90ZV9ndWlkGAUgASgJIocBChpTZWFyY2hOb3Rl",
+            "RnJhZ21lbnRSZXNwb25zZRI6CgZzdGF0dXMYASABKAsyKi5laHIubm90ZXNl",
+            "cnZpY2UuTm90ZVNlcnZpY2VSZXNwb25zZVN0YXR1cxItCg1ub3RlX2ZyYWdt",
+            "ZW50GAIgAygLMhYuZWhyLm5vdGUuTm90ZUZyYWdtZW50Ij0KEVVwZGF0ZU5v",
+            "dGVSZXF1ZXN0EgoKAmlkGAEgASgDEhwKBG5vdGUYAiABKAsyDi5laHIubm90",
+            "ZS5Ob3RlIlAKElVwZGF0ZU5vdGVSZXNwb25zZRI6CgZzdGF0dXMYASABKAsy",
+            "Ki5laHIubm90ZXNlcnZpY2UuTm90ZVNlcnZpY2VSZXNwb25zZVN0YXR1czLF",
+            "BAoLTm90ZVNlcnZpY2USVwoKQ3JlYXRlTm90ZRIiLmVoci5ub3Rlc2Vydmlj",
+            "ZS5DcmVhdGVOb3RlUmVxdWVzdBojLmVoci5ub3Rlc2VydmljZS5DcmVhdGVO",
+            "b3RlUmVzcG9uc2UiABJdCgxSZXRyaWV2ZU5vdGUSJC5laHIubm90ZXNlcnZp",
+            "Y2UuUmV0cmlldmVOb3RlUmVxdWVzdBolLmVoci5ub3Rlc2VydmljZS5SZXRy",
+            "aWV2ZU5vdGVSZXNwb25zZSIAElcKClVwZGF0ZU5vdGUSIi5laHIubm90ZXNl",
+            "cnZpY2UuVXBkYXRlTm90ZVJlcXVlc3QaIy5laHIubm90ZXNlcnZpY2UuVXBk",
+            "YXRlTm90ZVJlc3BvbnNlIgASVwoKRGVsZXRlTm90ZRIiLmVoci5ub3Rlc2Vy",
+            "dmljZS5EZWxldGVOb3RlUmVxdWVzdBojLmVoci5ub3Rlc2VydmljZS5EZWxl",
+            "dGVOb3RlUmVzcG9uc2UiABJaCgtTZWFyY2hOb3RlcxIjLmVoci5ub3Rlc2Vy",
+            "dmljZS5TZWFyY2hOb3Rlc1JlcXVlc3QaJC5laHIubm90ZXNlcnZpY2UuU2Vh",
+            "cmNoTm90ZXNSZXNwb25zZSIAEnAKE1NlYXJjaE5vdGVGcmFnbWVudHMSKi5l",
+            "aHIubm90ZXNlcnZpY2UuU2VhcmNoTm90ZUZyYWdtZW50UmVxdWVzdBorLmVo",
+            "ci5ub3Rlc2VydmljZS5TZWFyY2hOb3RlRnJhZ21lbnRSZXNwb25zZSIAQgda",
+            "BWVocnBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Ehr.Note.NoteReflection.Descriptor, global::Ehr.Http.HttpReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -75,8 +75,8 @@ namespace Ehr.Noteservice {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Noteservice.DeleteNoteResponse), global::Ehr.Noteservice.DeleteNoteResponse.Parser, new[]{ "Status" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Noteservice.RetrieveNoteRequest), global::Ehr.Noteservice.RetrieveNoteRequest.Parser, new[]{ "Id" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Noteservice.RetrieveNoteResponse), global::Ehr.Noteservice.RetrieveNoteResponse.Parser, new[]{ "Status", "Note" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Noteservice.SearchNoteRequest), global::Ehr.Noteservice.SearchNoteRequest.Parser, new[]{ "SearchTerms", "AuthorGuid", "PatientGuid", "VisitGuid" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Noteservice.SearchNoteResponse), global::Ehr.Noteservice.SearchNoteResponse.Parser, new[]{ "Status", "Note" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Noteservice.SearchNotesRequest), global::Ehr.Noteservice.SearchNotesRequest.Parser, new[]{ "SearchTerms", "AuthorGuid", "PatientGuid", "VisitGuid" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Noteservice.SearchNotesResponse), global::Ehr.Noteservice.SearchNotesResponse.Parser, new[]{ "Status", "Notes" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Noteservice.SearchNoteFragmentRequest), global::Ehr.Noteservice.SearchNoteFragmentRequest.Parser, new[]{ "SearchTerms", "AuthorGuid", "PatientGuid", "VisitGuid", "NoteGuid" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Noteservice.SearchNoteFragmentResponse), global::Ehr.Noteservice.SearchNoteFragmentResponse.Parser, new[]{ "Status", "NoteFragment" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ehr.Noteservice.UpdateNoteRequest), global::Ehr.Noteservice.UpdateNoteRequest.Parser, new[]{ "Id", "Note" }, null, null, null),
@@ -1110,11 +1110,11 @@ namespace Ehr.Noteservice {
 
   }
 
-  public sealed partial class SearchNoteRequest : pb::IMessage<SearchNoteRequest> {
-    private static readonly pb::MessageParser<SearchNoteRequest> _parser = new pb::MessageParser<SearchNoteRequest>(() => new SearchNoteRequest());
+  public sealed partial class SearchNotesRequest : pb::IMessage<SearchNotesRequest> {
+    private static readonly pb::MessageParser<SearchNotesRequest> _parser = new pb::MessageParser<SearchNotesRequest>(() => new SearchNotesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SearchNoteRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<SearchNotesRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -1127,14 +1127,14 @@ namespace Ehr.Noteservice {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SearchNoteRequest() {
+    public SearchNotesRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SearchNoteRequest(SearchNoteRequest other) : this() {
+    public SearchNotesRequest(SearchNotesRequest other) : this() {
       searchTerms_ = other.searchTerms_;
       authorGuid_ = other.authorGuid_;
       patientGuid_ = other.patientGuid_;
@@ -1143,8 +1143,8 @@ namespace Ehr.Noteservice {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SearchNoteRequest Clone() {
-      return new SearchNoteRequest(this);
+    public SearchNotesRequest Clone() {
+      return new SearchNotesRequest(this);
     }
 
     /// <summary>Field number for the "search_terms" field.</summary>
@@ -1193,11 +1193,11 @@ namespace Ehr.Noteservice {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as SearchNoteRequest);
+      return Equals(other as SearchNotesRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SearchNoteRequest other) {
+    public bool Equals(SearchNotesRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1274,7 +1274,7 @@ namespace Ehr.Noteservice {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SearchNoteRequest other) {
+    public void MergeFrom(SearchNotesRequest other) {
       if (other == null) {
         return;
       }
@@ -1323,11 +1323,11 @@ namespace Ehr.Noteservice {
 
   }
 
-  public sealed partial class SearchNoteResponse : pb::IMessage<SearchNoteResponse> {
-    private static readonly pb::MessageParser<SearchNoteResponse> _parser = new pb::MessageParser<SearchNoteResponse>(() => new SearchNoteResponse());
+  public sealed partial class SearchNotesResponse : pb::IMessage<SearchNotesResponse> {
+    private static readonly pb::MessageParser<SearchNotesResponse> _parser = new pb::MessageParser<SearchNotesResponse>(() => new SearchNotesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SearchNoteResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<SearchNotesResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -1340,22 +1340,22 @@ namespace Ehr.Noteservice {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SearchNoteResponse() {
+    public SearchNotesResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SearchNoteResponse(SearchNoteResponse other) : this() {
+    public SearchNotesResponse(SearchNotesResponse other) : this() {
       status_ = other.status_ != null ? other.status_.Clone() : null;
-      note_ = other.note_.Clone();
+      notes_ = other.notes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SearchNoteResponse Clone() {
-      return new SearchNoteResponse(this);
+    public SearchNotesResponse Clone() {
+      return new SearchNotesResponse(this);
     }
 
     /// <summary>Field number for the "status" field.</summary>
@@ -1369,23 +1369,23 @@ namespace Ehr.Noteservice {
       }
     }
 
-    /// <summary>Field number for the "note" field.</summary>
-    public const int NoteFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Ehr.Note.Note> _repeated_note_codec
+    /// <summary>Field number for the "notes" field.</summary>
+    public const int NotesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Ehr.Note.Note> _repeated_notes_codec
         = pb::FieldCodec.ForMessage(18, global::Ehr.Note.Note.Parser);
-    private readonly pbc::RepeatedField<global::Ehr.Note.Note> note_ = new pbc::RepeatedField<global::Ehr.Note.Note>();
+    private readonly pbc::RepeatedField<global::Ehr.Note.Note> notes_ = new pbc::RepeatedField<global::Ehr.Note.Note>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Ehr.Note.Note> Note {
-      get { return note_; }
+    public pbc::RepeatedField<global::Ehr.Note.Note> Notes {
+      get { return notes_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as SearchNoteResponse);
+      return Equals(other as SearchNotesResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SearchNoteResponse other) {
+    public bool Equals(SearchNotesResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1393,7 +1393,7 @@ namespace Ehr.Noteservice {
         return true;
       }
       if (!object.Equals(Status, other.Status)) return false;
-      if(!note_.Equals(other.note_)) return false;
+      if(!notes_.Equals(other.notes_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1401,7 +1401,7 @@ namespace Ehr.Noteservice {
     public override int GetHashCode() {
       int hash = 1;
       if (status_ != null) hash ^= Status.GetHashCode();
-      hash ^= note_.GetHashCode();
+      hash ^= notes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1419,7 +1419,7 @@ namespace Ehr.Noteservice {
         output.WriteRawTag(10);
         output.WriteMessage(Status);
       }
-      note_.WriteTo(output, _repeated_note_codec);
+      notes_.WriteTo(output, _repeated_notes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1431,7 +1431,7 @@ namespace Ehr.Noteservice {
       if (status_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Status);
       }
-      size += note_.CalculateSize(_repeated_note_codec);
+      size += notes_.CalculateSize(_repeated_notes_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1439,7 +1439,7 @@ namespace Ehr.Noteservice {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SearchNoteResponse other) {
+    public void MergeFrom(SearchNotesResponse other) {
       if (other == null) {
         return;
       }
@@ -1449,7 +1449,7 @@ namespace Ehr.Noteservice {
         }
         Status.MergeFrom(other.Status);
       }
-      note_.Add(other.note_);
+      notes_.Add(other.notes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1469,7 +1469,7 @@ namespace Ehr.Noteservice {
             break;
           }
           case 18: {
-            note_.AddEntriesFrom(input, _repeated_note_codec);
+            notes_.AddEntriesFrom(input, _repeated_notes_codec);
             break;
           }
         }

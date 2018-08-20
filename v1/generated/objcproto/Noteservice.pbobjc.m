@@ -395,22 +395,22 @@ typedef struct RetrieveNoteResponse__storage_ {
 
 @end
 
-#pragma mark - SearchNoteRequest
+#pragma mark - SearchNotesRequest
 
-@implementation SearchNoteRequest
+@implementation SearchNotesRequest
 
 @dynamic searchTerms;
 @dynamic authorGuid;
 @dynamic patientGuid;
 @dynamic visitGuid;
 
-typedef struct SearchNoteRequest__storage_ {
+typedef struct SearchNotesRequest__storage_ {
   uint32_t _has_storage_[1];
   NSString *searchTerms;
   NSString *authorGuid;
   NSString *patientGuid;
   NSString *visitGuid;
-} SearchNoteRequest__storage_;
+} SearchNotesRequest__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -421,47 +421,47 @@ typedef struct SearchNoteRequest__storage_ {
       {
         .name = "searchTerms",
         .dataTypeSpecific.className = NULL,
-        .number = SearchNoteRequest_FieldNumber_SearchTerms,
+        .number = SearchNotesRequest_FieldNumber_SearchTerms,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(SearchNoteRequest__storage_, searchTerms),
+        .offset = (uint32_t)offsetof(SearchNotesRequest__storage_, searchTerms),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "authorGuid",
         .dataTypeSpecific.className = NULL,
-        .number = SearchNoteRequest_FieldNumber_AuthorGuid,
+        .number = SearchNotesRequest_FieldNumber_AuthorGuid,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(SearchNoteRequest__storage_, authorGuid),
+        .offset = (uint32_t)offsetof(SearchNotesRequest__storage_, authorGuid),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "patientGuid",
         .dataTypeSpecific.className = NULL,
-        .number = SearchNoteRequest_FieldNumber_PatientGuid,
+        .number = SearchNotesRequest_FieldNumber_PatientGuid,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(SearchNoteRequest__storage_, patientGuid),
+        .offset = (uint32_t)offsetof(SearchNotesRequest__storage_, patientGuid),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "visitGuid",
         .dataTypeSpecific.className = NULL,
-        .number = SearchNoteRequest_FieldNumber_VisitGuid,
+        .number = SearchNotesRequest_FieldNumber_VisitGuid,
         .hasIndex = 3,
-        .offset = (uint32_t)offsetof(SearchNoteRequest__storage_, visitGuid),
+        .offset = (uint32_t)offsetof(SearchNotesRequest__storage_, visitGuid),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[SearchNoteRequest class]
+        [GPBDescriptor allocDescriptorForClass:[SearchNotesRequest class]
                                      rootClass:[NoteserviceRoot class]
                                           file:NoteserviceRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(SearchNoteRequest__storage_)
+                                   storageSize:sizeof(SearchNotesRequest__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -471,18 +471,18 @@ typedef struct SearchNoteRequest__storage_ {
 
 @end
 
-#pragma mark - SearchNoteResponse
+#pragma mark - SearchNotesResponse
 
-@implementation SearchNoteResponse
+@implementation SearchNotesResponse
 
 @dynamic hasStatus, status;
-@dynamic noteArray, noteArray_Count;
+@dynamic notesArray, notesArray_Count;
 
-typedef struct SearchNoteResponse__storage_ {
+typedef struct SearchNotesResponse__storage_ {
   uint32_t _has_storage_[1];
   NoteServiceResponseStatus *status;
-  NSMutableArray *noteArray;
-} SearchNoteResponse__storage_;
+  NSMutableArray *notesArray;
+} SearchNotesResponse__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -493,29 +493,29 @@ typedef struct SearchNoteResponse__storage_ {
       {
         .name = "status",
         .dataTypeSpecific.className = GPBStringifySymbol(NoteServiceResponseStatus),
-        .number = SearchNoteResponse_FieldNumber_Status,
+        .number = SearchNotesResponse_FieldNumber_Status,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(SearchNoteResponse__storage_, status),
+        .offset = (uint32_t)offsetof(SearchNotesResponse__storage_, status),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "noteArray",
+        .name = "notesArray",
         .dataTypeSpecific.className = GPBStringifySymbol(Note),
-        .number = SearchNoteResponse_FieldNumber_NoteArray,
+        .number = SearchNotesResponse_FieldNumber_NotesArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(SearchNoteResponse__storage_, noteArray),
+        .offset = (uint32_t)offsetof(SearchNotesResponse__storage_, notesArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[SearchNoteResponse class]
+        [GPBDescriptor allocDescriptorForClass:[SearchNotesResponse class]
                                      rootClass:[NoteserviceRoot class]
                                           file:NoteserviceRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(SearchNoteResponse__storage_)
+                                   storageSize:sizeof(SearchNotesResponse__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;

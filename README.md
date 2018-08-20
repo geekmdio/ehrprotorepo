@@ -12,7 +12,7 @@ Currently supported:
 VERSION 0.3.1 NOTES:
 - Changed NoteService to use int64 type so that it's aligned with the Note and NoteFragment Id type. 
 
-VERSION 0.4.0 NOTES:
+VERSION 0.4.0 NOTES: Warning, there are breaking changes.
 - Refactored NoteService
     - NewNote is now CreateNote
     - Added FindNoteFragment service

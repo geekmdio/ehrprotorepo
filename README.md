@@ -1,4 +1,4 @@
-# EHRProtoRepo v0.4.0
+# EHRProtoRepo v0.5.0
 
 Repository dedicated to protocol buffers for electronic health records data.
 
@@ -8,6 +8,10 @@ Currently supported:
 1. Medical Issues (Rough list of about 220)
 2. Note Objects
 3. Note Service
+
+VERSION 0.5.0 NOTES: Warning, there are breaking changes.
+- Refactored NoteService
+    - SearchNote -> SearchNotes and the response and request messages also reflect the plural nature of the return results.
 
 VERSION 0.4.0 NOTES: Warning, there are breaking changes.
 - Refactored NoteService

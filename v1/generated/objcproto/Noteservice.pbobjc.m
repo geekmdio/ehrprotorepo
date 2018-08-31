@@ -217,9 +217,11 @@ typedef struct CreateNoteResponse__storage_ {
 @implementation DeleteNoteRequest
 
 @dynamic id_p;
+@dynamic guid;
 
 typedef struct DeleteNoteRequest__storage_ {
   uint32_t _has_storage_[1];
+  NSString *guid;
   int64_t id_p;
 } DeleteNoteRequest__storage_;
 
@@ -237,6 +239,15 @@ typedef struct DeleteNoteRequest__storage_ {
         .offset = (uint32_t)offsetof(DeleteNoteRequest__storage_, id_p),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt64,
+      },
+      {
+        .name = "guid",
+        .dataTypeSpecific.className = NULL,
+        .number = DeleteNoteRequest_FieldNumber_Guid,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(DeleteNoteRequest__storage_, guid),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -303,9 +314,11 @@ typedef struct DeleteNoteResponse__storage_ {
 @implementation RetrieveNoteRequest
 
 @dynamic id_p;
+@dynamic guid;
 
 typedef struct RetrieveNoteRequest__storage_ {
   uint32_t _has_storage_[1];
+  NSString *guid;
   int64_t id_p;
 } RetrieveNoteRequest__storage_;
 
@@ -323,6 +336,15 @@ typedef struct RetrieveNoteRequest__storage_ {
         .offset = (uint32_t)offsetof(RetrieveNoteRequest__storage_, id_p),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt64,
+      },
+      {
+        .name = "guid",
+        .dataTypeSpecific.className = NULL,
+        .number = RetrieveNoteRequest_FieldNumber_Guid,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(RetrieveNoteRequest__storage_, guid),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -671,10 +693,12 @@ typedef struct SearchNoteFragmentResponse__storage_ {
 @implementation UpdateNoteRequest
 
 @dynamic id_p;
+@dynamic guid;
 @dynamic hasNote, note;
 
 typedef struct UpdateNoteRequest__storage_ {
   uint32_t _has_storage_[1];
+  NSString *guid;
   Note *note;
   int64_t id_p;
 } UpdateNoteRequest__storage_;
@@ -695,10 +719,19 @@ typedef struct UpdateNoteRequest__storage_ {
         .dataType = GPBDataTypeInt64,
       },
       {
+        .name = "guid",
+        .dataTypeSpecific.className = NULL,
+        .number = UpdateNoteRequest_FieldNumber_Guid,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(UpdateNoteRequest__storage_, guid),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
         .name = "note",
         .dataTypeSpecific.className = GPBStringifySymbol(Note),
         .number = UpdateNoteRequest_FieldNumber_Note,
-        .hasIndex = 1,
+        .hasIndex = 2,
         .offset = (uint32_t)offsetof(UpdateNoteRequest__storage_, note),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,

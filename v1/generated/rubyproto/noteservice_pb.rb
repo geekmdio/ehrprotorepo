@@ -19,12 +19,14 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   end
   add_message "ehr.noteservice.DeleteNoteRequest" do
     optional :id, :int64, 1
+    optional :guid, :string, 2
   end
   add_message "ehr.noteservice.DeleteNoteResponse" do
     optional :status, :message, 1, "ehr.noteservice.NoteServiceResponseStatus"
   end
   add_message "ehr.noteservice.RetrieveNoteRequest" do
     optional :id, :int64, 1
+    optional :guid, :string, 2
   end
   add_message "ehr.noteservice.RetrieveNoteResponse" do
     optional :status, :message, 1, "ehr.noteservice.NoteServiceResponseStatus"
@@ -53,7 +55,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   end
   add_message "ehr.noteservice.UpdateNoteRequest" do
     optional :id, :int64, 1
-    optional :note, :message, 2, "ehr.note.Note"
+    optional :guid, :string, 2
+    optional :note, :message, 3, "ehr.note.Note"
   end
   add_message "ehr.noteservice.UpdateNoteResponse" do
     optional :status, :message, 1, "ehr.noteservice.NoteServiceResponseStatus"

@@ -2074,6 +2074,16 @@ public final class Noteservice {
      * <code>int64 id = 1;</code>
      */
     long getId();
+
+    /**
+     * <code>string guid = 2;</code>
+     */
+    java.lang.String getGuid();
+    /**
+     * <code>string guid = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getGuidBytes();
   }
   /**
    * Protobuf type {@code ehr.noteservice.DeleteNoteRequest}
@@ -2089,6 +2099,7 @@ public final class Noteservice {
     }
     private DeleteNoteRequest() {
       id_ = 0L;
+      guid_ = "";
     }
 
     @java.lang.Override
@@ -2118,6 +2129,12 @@ public final class Noteservice {
             case 8: {
 
               id_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              guid_ = s;
               break;
             }
             default: {
@@ -2161,6 +2178,40 @@ public final class Noteservice {
       return id_;
     }
 
+    public static final int GUID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object guid_;
+    /**
+     * <code>string guid = 2;</code>
+     */
+    public java.lang.String getGuid() {
+      java.lang.Object ref = guid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        guid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string guid = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getGuidBytes() {
+      java.lang.Object ref = guid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        guid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2178,6 +2229,9 @@ public final class Noteservice {
       if (id_ != 0L) {
         output.writeInt64(1, id_);
       }
+      if (!getGuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, guid_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2190,6 +2244,9 @@ public final class Noteservice {
       if (id_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, id_);
+      }
+      if (!getGuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, guid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2209,6 +2266,8 @@ public final class Noteservice {
       boolean result = true;
       result = result && (getId()
           == other.getId());
+      result = result && getGuid()
+          .equals(other.getGuid());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2223,6 +2282,8 @@ public final class Noteservice {
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getId());
+      hash = (37 * hash) + GUID_FIELD_NUMBER;
+      hash = (53 * hash) + getGuid().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2358,6 +2419,8 @@ public final class Noteservice {
         super.clear();
         id_ = 0L;
 
+        guid_ = "";
+
         return this;
       }
 
@@ -2385,6 +2448,7 @@ public final class Noteservice {
       public ehr.noteservice.Noteservice.DeleteNoteRequest buildPartial() {
         ehr.noteservice.Noteservice.DeleteNoteRequest result = new ehr.noteservice.Noteservice.DeleteNoteRequest(this);
         result.id_ = id_;
+        result.guid_ = guid_;
         onBuilt();
         return result;
       }
@@ -2435,6 +2499,10 @@ public final class Noteservice {
         if (other == ehr.noteservice.Noteservice.DeleteNoteRequest.getDefaultInstance()) return this;
         if (other.getId() != 0L) {
           setId(other.getId());
+        }
+        if (!other.getGuid().isEmpty()) {
+          guid_ = other.guid_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2487,6 +2555,75 @@ public final class Noteservice {
       public Builder clearId() {
         
         id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object guid_ = "";
+      /**
+       * <code>string guid = 2;</code>
+       */
+      public java.lang.String getGuid() {
+        java.lang.Object ref = guid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          guid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string guid = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getGuidBytes() {
+        java.lang.Object ref = guid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          guid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string guid = 2;</code>
+       */
+      public Builder setGuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        guid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string guid = 2;</code>
+       */
+      public Builder clearGuid() {
+        
+        guid_ = getDefaultInstance().getGuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string guid = 2;</code>
+       */
+      public Builder setGuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        guid_ = value;
         onChanged();
         return this;
       }
@@ -3158,6 +3295,16 @@ public final class Noteservice {
      * <code>int64 id = 1;</code>
      */
     long getId();
+
+    /**
+     * <code>string guid = 2;</code>
+     */
+    java.lang.String getGuid();
+    /**
+     * <code>string guid = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getGuidBytes();
   }
   /**
    * Protobuf type {@code ehr.noteservice.RetrieveNoteRequest}
@@ -3173,6 +3320,7 @@ public final class Noteservice {
     }
     private RetrieveNoteRequest() {
       id_ = 0L;
+      guid_ = "";
     }
 
     @java.lang.Override
@@ -3202,6 +3350,12 @@ public final class Noteservice {
             case 8: {
 
               id_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              guid_ = s;
               break;
             }
             default: {
@@ -3245,6 +3399,40 @@ public final class Noteservice {
       return id_;
     }
 
+    public static final int GUID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object guid_;
+    /**
+     * <code>string guid = 2;</code>
+     */
+    public java.lang.String getGuid() {
+      java.lang.Object ref = guid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        guid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string guid = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getGuidBytes() {
+      java.lang.Object ref = guid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        guid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3262,6 +3450,9 @@ public final class Noteservice {
       if (id_ != 0L) {
         output.writeInt64(1, id_);
       }
+      if (!getGuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, guid_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3274,6 +3465,9 @@ public final class Noteservice {
       if (id_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, id_);
+      }
+      if (!getGuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, guid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3293,6 +3487,8 @@ public final class Noteservice {
       boolean result = true;
       result = result && (getId()
           == other.getId());
+      result = result && getGuid()
+          .equals(other.getGuid());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3307,6 +3503,8 @@ public final class Noteservice {
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getId());
+      hash = (37 * hash) + GUID_FIELD_NUMBER;
+      hash = (53 * hash) + getGuid().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3442,6 +3640,8 @@ public final class Noteservice {
         super.clear();
         id_ = 0L;
 
+        guid_ = "";
+
         return this;
       }
 
@@ -3469,6 +3669,7 @@ public final class Noteservice {
       public ehr.noteservice.Noteservice.RetrieveNoteRequest buildPartial() {
         ehr.noteservice.Noteservice.RetrieveNoteRequest result = new ehr.noteservice.Noteservice.RetrieveNoteRequest(this);
         result.id_ = id_;
+        result.guid_ = guid_;
         onBuilt();
         return result;
       }
@@ -3519,6 +3720,10 @@ public final class Noteservice {
         if (other == ehr.noteservice.Noteservice.RetrieveNoteRequest.getDefaultInstance()) return this;
         if (other.getId() != 0L) {
           setId(other.getId());
+        }
+        if (!other.getGuid().isEmpty()) {
+          guid_ = other.guid_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3571,6 +3776,75 @@ public final class Noteservice {
       public Builder clearId() {
         
         id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object guid_ = "";
+      /**
+       * <code>string guid = 2;</code>
+       */
+      public java.lang.String getGuid() {
+        java.lang.Object ref = guid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          guid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string guid = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getGuidBytes() {
+        java.lang.Object ref = guid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          guid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string guid = 2;</code>
+       */
+      public Builder setGuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        guid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string guid = 2;</code>
+       */
+      public Builder clearGuid() {
+        
+        guid_ = getDefaultInstance().getGuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string guid = 2;</code>
+       */
+      public Builder setGuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        guid_ = value;
         onChanged();
         return this;
       }
@@ -8455,15 +8729,25 @@ public final class Noteservice {
     long getId();
 
     /**
-     * <code>.ehr.note.Note note = 2;</code>
+     * <code>string guid = 2;</code>
+     */
+    java.lang.String getGuid();
+    /**
+     * <code>string guid = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getGuidBytes();
+
+    /**
+     * <code>.ehr.note.Note note = 3;</code>
      */
     boolean hasNote();
     /**
-     * <code>.ehr.note.Note note = 2;</code>
+     * <code>.ehr.note.Note note = 3;</code>
      */
     ehr.note.NoteOuterClass.Note getNote();
     /**
-     * <code>.ehr.note.Note note = 2;</code>
+     * <code>.ehr.note.Note note = 3;</code>
      */
     ehr.note.NoteOuterClass.NoteOrBuilder getNoteOrBuilder();
   }
@@ -8481,6 +8765,7 @@ public final class Noteservice {
     }
     private UpdateNoteRequest() {
       id_ = 0L;
+      guid_ = "";
     }
 
     @java.lang.Override
@@ -8513,6 +8798,12 @@ public final class Noteservice {
               break;
             }
             case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              guid_ = s;
+              break;
+            }
+            case 26: {
               ehr.note.NoteOuterClass.Note.Builder subBuilder = null;
               if (note_ != null) {
                 subBuilder = note_.toBuilder();
@@ -8566,22 +8857,56 @@ public final class Noteservice {
       return id_;
     }
 
-    public static final int NOTE_FIELD_NUMBER = 2;
+    public static final int GUID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object guid_;
+    /**
+     * <code>string guid = 2;</code>
+     */
+    public java.lang.String getGuid() {
+      java.lang.Object ref = guid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        guid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string guid = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getGuidBytes() {
+      java.lang.Object ref = guid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        guid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NOTE_FIELD_NUMBER = 3;
     private ehr.note.NoteOuterClass.Note note_;
     /**
-     * <code>.ehr.note.Note note = 2;</code>
+     * <code>.ehr.note.Note note = 3;</code>
      */
     public boolean hasNote() {
       return note_ != null;
     }
     /**
-     * <code>.ehr.note.Note note = 2;</code>
+     * <code>.ehr.note.Note note = 3;</code>
      */
     public ehr.note.NoteOuterClass.Note getNote() {
       return note_ == null ? ehr.note.NoteOuterClass.Note.getDefaultInstance() : note_;
     }
     /**
-     * <code>.ehr.note.Note note = 2;</code>
+     * <code>.ehr.note.Note note = 3;</code>
      */
     public ehr.note.NoteOuterClass.NoteOrBuilder getNoteOrBuilder() {
       return getNote();
@@ -8604,8 +8929,11 @@ public final class Noteservice {
       if (id_ != 0L) {
         output.writeInt64(1, id_);
       }
+      if (!getGuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, guid_);
+      }
       if (note_ != null) {
-        output.writeMessage(2, getNote());
+        output.writeMessage(3, getNote());
       }
       unknownFields.writeTo(output);
     }
@@ -8620,9 +8948,12 @@ public final class Noteservice {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, id_);
       }
+      if (!getGuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, guid_);
+      }
       if (note_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getNote());
+          .computeMessageSize(3, getNote());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8642,6 +8973,8 @@ public final class Noteservice {
       boolean result = true;
       result = result && (getId()
           == other.getId());
+      result = result && getGuid()
+          .equals(other.getGuid());
       result = result && (hasNote() == other.hasNote());
       if (hasNote()) {
         result = result && getNote()
@@ -8661,6 +8994,8 @@ public final class Noteservice {
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getId());
+      hash = (37 * hash) + GUID_FIELD_NUMBER;
+      hash = (53 * hash) + getGuid().hashCode();
       if (hasNote()) {
         hash = (37 * hash) + NOTE_FIELD_NUMBER;
         hash = (53 * hash) + getNote().hashCode();
@@ -8800,6 +9135,8 @@ public final class Noteservice {
         super.clear();
         id_ = 0L;
 
+        guid_ = "";
+
         if (noteBuilder_ == null) {
           note_ = null;
         } else {
@@ -8833,6 +9170,7 @@ public final class Noteservice {
       public ehr.noteservice.Noteservice.UpdateNoteRequest buildPartial() {
         ehr.noteservice.Noteservice.UpdateNoteRequest result = new ehr.noteservice.Noteservice.UpdateNoteRequest(this);
         result.id_ = id_;
+        result.guid_ = guid_;
         if (noteBuilder_ == null) {
           result.note_ = note_;
         } else {
@@ -8888,6 +9226,10 @@ public final class Noteservice {
         if (other == ehr.noteservice.Noteservice.UpdateNoteRequest.getDefaultInstance()) return this;
         if (other.getId() != 0L) {
           setId(other.getId());
+        }
+        if (!other.getGuid().isEmpty()) {
+          guid_ = other.guid_;
+          onChanged();
         }
         if (other.hasNote()) {
           mergeNote(other.getNote());
@@ -8947,17 +9289,86 @@ public final class Noteservice {
         return this;
       }
 
+      private java.lang.Object guid_ = "";
+      /**
+       * <code>string guid = 2;</code>
+       */
+      public java.lang.String getGuid() {
+        java.lang.Object ref = guid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          guid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string guid = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getGuidBytes() {
+        java.lang.Object ref = guid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          guid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string guid = 2;</code>
+       */
+      public Builder setGuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        guid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string guid = 2;</code>
+       */
+      public Builder clearGuid() {
+        
+        guid_ = getDefaultInstance().getGuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string guid = 2;</code>
+       */
+      public Builder setGuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        guid_ = value;
+        onChanged();
+        return this;
+      }
+
       private ehr.note.NoteOuterClass.Note note_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           ehr.note.NoteOuterClass.Note, ehr.note.NoteOuterClass.Note.Builder, ehr.note.NoteOuterClass.NoteOrBuilder> noteBuilder_;
       /**
-       * <code>.ehr.note.Note note = 2;</code>
+       * <code>.ehr.note.Note note = 3;</code>
        */
       public boolean hasNote() {
         return noteBuilder_ != null || note_ != null;
       }
       /**
-       * <code>.ehr.note.Note note = 2;</code>
+       * <code>.ehr.note.Note note = 3;</code>
        */
       public ehr.note.NoteOuterClass.Note getNote() {
         if (noteBuilder_ == null) {
@@ -8967,7 +9378,7 @@ public final class Noteservice {
         }
       }
       /**
-       * <code>.ehr.note.Note note = 2;</code>
+       * <code>.ehr.note.Note note = 3;</code>
        */
       public Builder setNote(ehr.note.NoteOuterClass.Note value) {
         if (noteBuilder_ == null) {
@@ -8983,7 +9394,7 @@ public final class Noteservice {
         return this;
       }
       /**
-       * <code>.ehr.note.Note note = 2;</code>
+       * <code>.ehr.note.Note note = 3;</code>
        */
       public Builder setNote(
           ehr.note.NoteOuterClass.Note.Builder builderForValue) {
@@ -8997,7 +9408,7 @@ public final class Noteservice {
         return this;
       }
       /**
-       * <code>.ehr.note.Note note = 2;</code>
+       * <code>.ehr.note.Note note = 3;</code>
        */
       public Builder mergeNote(ehr.note.NoteOuterClass.Note value) {
         if (noteBuilder_ == null) {
@@ -9015,7 +9426,7 @@ public final class Noteservice {
         return this;
       }
       /**
-       * <code>.ehr.note.Note note = 2;</code>
+       * <code>.ehr.note.Note note = 3;</code>
        */
       public Builder clearNote() {
         if (noteBuilder_ == null) {
@@ -9029,7 +9440,7 @@ public final class Noteservice {
         return this;
       }
       /**
-       * <code>.ehr.note.Note note = 2;</code>
+       * <code>.ehr.note.Note note = 3;</code>
        */
       public ehr.note.NoteOuterClass.Note.Builder getNoteBuilder() {
         
@@ -9037,7 +9448,7 @@ public final class Noteservice {
         return getNoteFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ehr.note.Note note = 2;</code>
+       * <code>.ehr.note.Note note = 3;</code>
        */
       public ehr.note.NoteOuterClass.NoteOrBuilder getNoteOrBuilder() {
         if (noteBuilder_ != null) {
@@ -9048,7 +9459,7 @@ public final class Noteservice {
         }
       }
       /**
-       * <code>.ehr.note.Note note = 2;</code>
+       * <code>.ehr.note.Note note = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ehr.note.NoteOuterClass.Note, ehr.note.NoteOuterClass.Note.Builder, ehr.note.NoteOuterClass.NoteOrBuilder> 
@@ -9804,45 +10215,46 @@ public final class Noteservice {
       "teRequest\022\034\n\004note\030\001 \001(\0132\016.ehr.note.Note\"" +
       "n\n\022CreateNoteResponse\022:\n\006status\030\001 \001(\0132*." +
       "ehr.noteservice.NoteServiceResponseStatu" +
-      "s\022\034\n\004note\030\002 \001(\0132\016.ehr.note.Note\"\037\n\021Delet" +
-      "eNoteRequest\022\n\n\002id\030\001 \001(\003\"P\n\022DeleteNoteRe" +
-      "sponse\022:\n\006status\030\001 \001(\0132*.ehr.noteservice" +
-      ".NoteServiceResponseStatus\"!\n\023RetrieveNo" +
-      "teRequest\022\n\n\002id\030\001 \001(\003\"p\n\024RetrieveNoteRes" +
-      "ponse\022:\n\006status\030\001 \001(\0132*.ehr.noteservice." +
-      "NoteServiceResponseStatus\022\034\n\004note\030\002 \001(\0132" +
-      "\016.ehr.note.Note\"i\n\022SearchNotesRequest\022\024\n" +
-      "\014search_terms\030\001 \001(\t\022\023\n\013author_guid\030\002 \001(\t" +
-      "\022\024\n\014patient_guid\030\003 \001(\t\022\022\n\nvisit_guid\030\004 \001" +
-      "(\t\"p\n\023SearchNotesResponse\022:\n\006status\030\001 \001(" +
-      "\0132*.ehr.noteservice.NoteServiceResponseS" +
-      "tatus\022\035\n\005notes\030\002 \003(\0132\016.ehr.note.Note\"\203\001\n" +
-      "\031SearchNoteFragmentRequest\022\024\n\014search_ter" +
-      "ms\030\001 \001(\t\022\023\n\013author_guid\030\002 \001(\t\022\024\n\014patient" +
-      "_guid\030\003 \001(\t\022\022\n\nvisit_guid\030\004 \001(\t\022\021\n\tnote_" +
-      "guid\030\005 \001(\t\"\207\001\n\032SearchNoteFragmentRespons" +
-      "e\022:\n\006status\030\001 \001(\0132*.ehr.noteservice.Note" +
-      "ServiceResponseStatus\022-\n\rnote_fragment\030\002" +
-      " \003(\0132\026.ehr.note.NoteFragment\"=\n\021UpdateNo" +
-      "teRequest\022\n\n\002id\030\001 \001(\003\022\034\n\004note\030\002 \001(\0132\016.eh" +
-      "r.note.Note\"P\n\022UpdateNoteResponse\022:\n\006sta" +
+      "s\022\034\n\004note\030\002 \001(\0132\016.ehr.note.Note\"-\n\021Delet" +
+      "eNoteRequest\022\n\n\002id\030\001 \001(\003\022\014\n\004guid\030\002 \001(\t\"P" +
+      "\n\022DeleteNoteResponse\022:\n\006status\030\001 \001(\0132*.e" +
+      "hr.noteservice.NoteServiceResponseStatus" +
+      "\"/\n\023RetrieveNoteRequest\022\n\n\002id\030\001 \001(\003\022\014\n\004g" +
+      "uid\030\002 \001(\t\"p\n\024RetrieveNoteResponse\022:\n\006sta" +
       "tus\030\001 \001(\0132*.ehr.noteservice.NoteServiceR" +
-      "esponseStatus2\305\004\n\013NoteService\022W\n\nCreateN" +
-      "ote\022\".ehr.noteservice.CreateNoteRequest\032" +
-      "#.ehr.noteservice.CreateNoteResponse\"\000\022]" +
-      "\n\014RetrieveNote\022$.ehr.noteservice.Retriev" +
-      "eNoteRequest\032%.ehr.noteservice.RetrieveN" +
-      "oteResponse\"\000\022W\n\nUpdateNote\022\".ehr.notese" +
-      "rvice.UpdateNoteRequest\032#.ehr.noteservic" +
-      "e.UpdateNoteResponse\"\000\022W\n\nDeleteNote\022\".e" +
-      "hr.noteservice.DeleteNoteRequest\032#.ehr.n" +
-      "oteservice.DeleteNoteResponse\"\000\022Z\n\013Searc" +
-      "hNotes\022#.ehr.noteservice.SearchNotesRequ" +
-      "est\032$.ehr.noteservice.SearchNotesRespons" +
-      "e\"\000\022p\n\023SearchNoteFragments\022*.ehr.noteser" +
-      "vice.SearchNoteFragmentRequest\032+.ehr.not" +
-      "eservice.SearchNoteFragmentResponse\"\000B\007Z" +
-      "\005ehrpbb\006proto3"
+      "esponseStatus\022\034\n\004note\030\002 \001(\0132\016.ehr.note.N" +
+      "ote\"i\n\022SearchNotesRequest\022\024\n\014search_term" +
+      "s\030\001 \001(\t\022\023\n\013author_guid\030\002 \001(\t\022\024\n\014patient_" +
+      "guid\030\003 \001(\t\022\022\n\nvisit_guid\030\004 \001(\t\"p\n\023Search" +
+      "NotesResponse\022:\n\006status\030\001 \001(\0132*.ehr.note" +
+      "service.NoteServiceResponseStatus\022\035\n\005not" +
+      "es\030\002 \003(\0132\016.ehr.note.Note\"\203\001\n\031SearchNoteF" +
+      "ragmentRequest\022\024\n\014search_terms\030\001 \001(\t\022\023\n\013" +
+      "author_guid\030\002 \001(\t\022\024\n\014patient_guid\030\003 \001(\t\022" +
+      "\022\n\nvisit_guid\030\004 \001(\t\022\021\n\tnote_guid\030\005 \001(\t\"\207" +
+      "\001\n\032SearchNoteFragmentResponse\022:\n\006status\030" +
+      "\001 \001(\0132*.ehr.noteservice.NoteServiceRespo" +
+      "nseStatus\022-\n\rnote_fragment\030\002 \003(\0132\026.ehr.n" +
+      "ote.NoteFragment\"K\n\021UpdateNoteRequest\022\n\n" +
+      "\002id\030\001 \001(\003\022\014\n\004guid\030\002 \001(\t\022\034\n\004note\030\003 \001(\0132\016." +
+      "ehr.note.Note\"P\n\022UpdateNoteResponse\022:\n\006s" +
+      "tatus\030\001 \001(\0132*.ehr.noteservice.NoteServic" +
+      "eResponseStatus2\305\004\n\013NoteService\022W\n\nCreat" +
+      "eNote\022\".ehr.noteservice.CreateNoteReques" +
+      "t\032#.ehr.noteservice.CreateNoteResponse\"\000" +
+      "\022]\n\014RetrieveNote\022$.ehr.noteservice.Retri" +
+      "eveNoteRequest\032%.ehr.noteservice.Retriev" +
+      "eNoteResponse\"\000\022W\n\nUpdateNote\022\".ehr.note" +
+      "service.UpdateNoteRequest\032#.ehr.noteserv" +
+      "ice.UpdateNoteResponse\"\000\022W\n\nDeleteNote\022\"" +
+      ".ehr.noteservice.DeleteNoteRequest\032#.ehr" +
+      ".noteservice.DeleteNoteResponse\"\000\022Z\n\013Sea" +
+      "rchNotes\022#.ehr.noteservice.SearchNotesRe" +
+      "quest\032$.ehr.noteservice.SearchNotesRespo" +
+      "nse\"\000\022p\n\023SearchNoteFragments\022*.ehr.notes" +
+      "ervice.SearchNoteFragmentRequest\032+.ehr.n" +
+      "oteservice.SearchNoteFragmentResponse\"\000B" +
+      "\007Z\005ehrpbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9881,7 +10293,7 @@ public final class Noteservice {
     internal_static_ehr_noteservice_DeleteNoteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ehr_noteservice_DeleteNoteRequest_descriptor,
-        new java.lang.String[] { "Id", });
+        new java.lang.String[] { "Id", "Guid", });
     internal_static_ehr_noteservice_DeleteNoteResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_ehr_noteservice_DeleteNoteResponse_fieldAccessorTable = new
@@ -9893,7 +10305,7 @@ public final class Noteservice {
     internal_static_ehr_noteservice_RetrieveNoteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ehr_noteservice_RetrieveNoteRequest_descriptor,
-        new java.lang.String[] { "Id", });
+        new java.lang.String[] { "Id", "Guid", });
     internal_static_ehr_noteservice_RetrieveNoteResponse_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_ehr_noteservice_RetrieveNoteResponse_fieldAccessorTable = new
@@ -9929,7 +10341,7 @@ public final class Noteservice {
     internal_static_ehr_noteservice_UpdateNoteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ehr_noteservice_UpdateNoteRequest_descriptor,
-        new java.lang.String[] { "Id", "Note", });
+        new java.lang.String[] { "Id", "Guid", "Note", });
     internal_static_ehr_noteservice_UpdateNoteResponse_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_ehr_noteservice_UpdateNoteResponse_fieldAccessorTable = new

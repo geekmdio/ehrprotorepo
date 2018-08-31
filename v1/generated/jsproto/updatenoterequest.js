@@ -62,6 +62,7 @@ proto.ehr.noteservice.UpdateNoteRequest.prototype.toObject = function(opt_includ
 proto.ehr.noteservice.UpdateNoteRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    guid: jspb.Message.getFieldWithDefault(msg, 2, ""),
     note: (f = msg.getNote()) && proto.ehr.note.Note.toObject(includeInstance, f)
   };
 
@@ -104,6 +105,10 @@ proto.ehr.noteservice.UpdateNoteRequest.deserializeBinaryFromReader = function(m
       msg.setId(value);
       break;
     case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setGuid(value);
+      break;
+    case 3:
       var value = new proto.ehr.note.Note;
       reader.readMessage(value,proto.ehr.note.Note.deserializeBinaryFromReader);
       msg.setNote(value);
@@ -144,10 +149,17 @@ proto.ehr.noteservice.UpdateNoteRequest.serializeBinaryToWriter = function(messa
       f
     );
   }
+  f = message.getGuid();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
   f = message.getNote();
   if (f != null) {
     writer.writeMessage(
-      2,
+      3,
       f,
       proto.ehr.note.Note.serializeBinaryToWriter
     );
@@ -171,18 +183,33 @@ proto.ehr.noteservice.UpdateNoteRequest.prototype.setId = function(value) {
 
 
 /**
- * optional ehr.note.Note note = 2;
+ * optional string guid = 2;
+ * @return {string}
+ */
+proto.ehr.noteservice.UpdateNoteRequest.prototype.getGuid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.ehr.noteservice.UpdateNoteRequest.prototype.setGuid = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional ehr.note.Note note = 3;
  * @return {?proto.ehr.note.Note}
  */
 proto.ehr.noteservice.UpdateNoteRequest.prototype.getNote = function() {
   return /** @type{?proto.ehr.note.Note} */ (
-    jspb.Message.getWrapperField(this, proto.ehr.note.Note, 2));
+    jspb.Message.getWrapperField(this, proto.ehr.note.Note, 3));
 };
 
 
 /** @param {?proto.ehr.note.Note|undefined} value */
 proto.ehr.noteservice.UpdateNoteRequest.prototype.setNote = function(value) {
-  jspb.Message.setWrapperField(this, 2, value);
+  jspb.Message.setWrapperField(this, 3, value);
 };
 
 
@@ -196,7 +223,7 @@ proto.ehr.noteservice.UpdateNoteRequest.prototype.clearNote = function() {
  * @return {!boolean}
  */
 proto.ehr.noteservice.UpdateNoteRequest.prototype.hasNote = function() {
-  return jspb.Message.getField(this, 2) != null;
+  return jspb.Message.getField(this, 3) != null;
 };
 
 

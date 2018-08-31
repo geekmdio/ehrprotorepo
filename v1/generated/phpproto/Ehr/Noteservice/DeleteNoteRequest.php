@@ -17,6 +17,10 @@ class DeleteNoteRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 id = 1;</code>
      */
     private $id = 0;
+    /**
+     * Generated from protobuf field <code>string guid = 2;</code>
+     */
+    private $guid = '';
 
     /**
      * Constructor.
@@ -25,6 +29,7 @@ class DeleteNoteRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $id
+     *     @type string $guid
      * }
      */
     public function __construct($data = NULL) {
@@ -50,6 +55,28 @@ class DeleteNoteRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string guid = 2;</code>
+     * @return string
+     */
+    public function getGuid()
+    {
+        return $this->guid;
+    }
+
+    /**
+     * Generated from protobuf field <code>string guid = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setGuid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->guid = $var;
 
         return $this;
     }

@@ -60,7 +60,8 @@ proto.ehr.noteservice.RetrieveNoteRequest.prototype.toObject = function(opt_incl
  */
 proto.ehr.noteservice.RetrieveNoteRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    id: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    guid: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -101,6 +102,10 @@ proto.ehr.noteservice.RetrieveNoteRequest.deserializeBinaryFromReader = function
       var value = /** @type {number} */ (reader.readInt64());
       msg.setId(value);
       break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setGuid(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -137,6 +142,13 @@ proto.ehr.noteservice.RetrieveNoteRequest.serializeBinaryToWriter = function(mes
       f
     );
   }
+  f = message.getGuid();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
 };
 
 
@@ -152,6 +164,21 @@ proto.ehr.noteservice.RetrieveNoteRequest.prototype.getId = function() {
 /** @param {number} value */
 proto.ehr.noteservice.RetrieveNoteRequest.prototype.setId = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+/**
+ * optional string guid = 2;
+ * @return {string}
+ */
+proto.ehr.noteservice.RetrieveNoteRequest.prototype.getGuid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.ehr.noteservice.RetrieveNoteRequest.prototype.setGuid = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 

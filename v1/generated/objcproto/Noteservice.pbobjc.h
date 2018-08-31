@@ -113,11 +113,14 @@ typedef GPB_ENUM(CreateNoteResponse_FieldNumber) {
 
 typedef GPB_ENUM(DeleteNoteRequest_FieldNumber) {
   DeleteNoteRequest_FieldNumber_Id_p = 1,
+  DeleteNoteRequest_FieldNumber_Guid = 2,
 };
 
 @interface DeleteNoteRequest : GPBMessage
 
 @property(nonatomic, readwrite) int64_t id_p;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *guid;
 
 @end
 
@@ -139,11 +142,14 @@ typedef GPB_ENUM(DeleteNoteResponse_FieldNumber) {
 
 typedef GPB_ENUM(RetrieveNoteRequest_FieldNumber) {
   RetrieveNoteRequest_FieldNumber_Id_p = 1,
+  RetrieveNoteRequest_FieldNumber_Guid = 2,
 };
 
 @interface RetrieveNoteRequest : GPBMessage
 
 @property(nonatomic, readwrite) int64_t id_p;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *guid;
 
 @end
 
@@ -253,12 +259,15 @@ typedef GPB_ENUM(SearchNoteFragmentResponse_FieldNumber) {
 
 typedef GPB_ENUM(UpdateNoteRequest_FieldNumber) {
   UpdateNoteRequest_FieldNumber_Id_p = 1,
-  UpdateNoteRequest_FieldNumber_Note = 2,
+  UpdateNoteRequest_FieldNumber_Guid = 2,
+  UpdateNoteRequest_FieldNumber_Note = 3,
 };
 
 @interface UpdateNoteRequest : GPBMessage
 
 @property(nonatomic, readwrite) int64_t id_p;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *guid;
 
 @property(nonatomic, readwrite, strong, null_resettable) Note *note;
 /** Test to see if @c note has been set. */

@@ -22,6 +22,7 @@ message CreateNoteResponse {
 
 message DeleteNoteRequest {
     int64 id = 1;
+    string guid = 2;
 }
 
 message DeleteNoteResponse {
@@ -30,6 +31,7 @@ message DeleteNoteResponse {
 
 message RetrieveNoteRequest {
     int64 id = 1;
+    string guid = 2;
 }
 
 message RetrieveNoteResponse {
@@ -64,7 +66,8 @@ message SearchNoteFragmentResponse {
 
 message UpdateNoteRequest {
     int64 id = 1;
-    note.Note note = 2;
+    string guid = 2;
+    note.Note note = 3;
 }
 
 message UpdateNoteResponse {

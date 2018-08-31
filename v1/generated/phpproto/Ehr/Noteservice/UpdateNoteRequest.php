@@ -18,7 +18,11 @@ class UpdateNoteRequest extends \Google\Protobuf\Internal\Message
      */
     private $id = 0;
     /**
-     * Generated from protobuf field <code>.ehr.note.Note note = 2;</code>
+     * Generated from protobuf field <code>string guid = 2;</code>
+     */
+    private $guid = '';
+    /**
+     * Generated from protobuf field <code>.ehr.note.Note note = 3;</code>
      */
     private $note = null;
 
@@ -29,6 +33,7 @@ class UpdateNoteRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $id
+     *     @type string $guid
      *     @type \Ehr\Note\Note $note
      * }
      */
@@ -60,7 +65,29 @@ class UpdateNoteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ehr.note.Note note = 2;</code>
+     * Generated from protobuf field <code>string guid = 2;</code>
+     * @return string
+     */
+    public function getGuid()
+    {
+        return $this->guid;
+    }
+
+    /**
+     * Generated from protobuf field <code>string guid = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setGuid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->guid = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.ehr.note.Note note = 3;</code>
      * @return \Ehr\Note\Note
      */
     public function getNote()
@@ -69,7 +96,7 @@ class UpdateNoteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ehr.note.Note note = 2;</code>
+     * Generated from protobuf field <code>.ehr.note.Note note = 3;</code>
      * @param \Ehr\Note\Note $var
      * @return $this
      */
